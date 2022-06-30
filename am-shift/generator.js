@@ -108,6 +108,7 @@ function Generate() {
         var mifiReport = "\n" + "MIFI: " + mifi;
     }
     document.getElementById("salesreport").value = storename + "\n" + date + "\n" + "AM-Shift" + "\n" + "------------------------- " + itemsReport + indigoReport + wemixReport + tkafolReport + adslReport + fixedReport + mifiReport;
+    document.getElementById("copy").disabled = false;
     NextTransform();
 }
 function BackToBasic() {
