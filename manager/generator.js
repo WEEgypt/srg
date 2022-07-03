@@ -328,33 +328,17 @@ function GenerateSalesReport() {
     for (i = 0; i < todaypaygInput.length; i++) {
         todaypayg += parseInt(todaypaygInput[i]) || 0;
     }
-    if (document.getElementById("achievedpayg").value == "") {
-        var achievedpayg = parseInt(0);
-    } else {
-        var achievedpayg = parseInt(document.getElementById("achievedpayg").value);
-    }
-    var utdpayg = todaypayg + achievedpayg;
-    if (document.getElementById("targetpayg").value == "") {
-        var targetpayg = parseInt(0);
-    } else {
-        var targetpayg = parseInt(document.getElementById("targetpayg").value);
-    }
+    var achievedpayg = parseInt(document.getElementById("achievedpayg").value) || 0;
+    var utdpayg = todaypayg + achievedpayg || 0;
+    var targetpayg = parseInt(document.getElementById("targetpayg").value) || 0;
     var todaydataInput = document.getElementById("todaydata").value.split(" ");
     var todaydata = 0;
     for (i = 0; i < todaydataInput.length; i++) {
         todaydata += parseInt(todaydataInput[i]) || 0;
     }
-    if (document.getElementById("achieveddata").value == "") {
-        var achieveddata = parseInt(0);
-    } else {
-        var achieveddata = parseInt(document.getElementById("achieveddata").value);
-    }
-    var utddata = todaydata + achieveddata;
-    if (document.getElementById("targetdata").value == "") {
-        var targetdata = parseInt(0);
-    } else {
-        var targetdata = parseInt(document.getElementById("targetdata").value);
-    }
+    var achieveddata = parseInt(document.getElementById("achieveddata").value) || 0;
+    var utddata = todaydata + achieveddata || 0;
+    var targetdata = parseInt(document.getElementById("targetdata").value) || 0;
     var todaykix17Input = document.getElementById("todaykix17").value.split(" ");
     var todaykix17 = 0;
     for (i = 0; i < todaykix17Input.length; i++) {
@@ -400,17 +384,9 @@ function GenerateSalesReport() {
     for (i = 0; i < todaytazbeet110Input.length; i++) {
         todaytazbeet110 += parseInt(todaytazbeet110Input[i]) || 0;
     }
-    if (document.getElementById("achievedkixtaz").value == "") {
-        var achievedkixtaz = parseInt(0);
-    } else {
-        var achievedkixtaz = parseInt(document.getElementById("achievedkixtaz").value);
-    }
-    var utdkixtaz = todaykix17 + todaykix25 + todaykix35 + todaykix45 + todaykix75 + todaytazbeet30 + todaytazbeet40 + todaytazbeet70 + todaytazbeet110 + achievedkixtaz;
-    if (document.getElementById("targetkixtaz").value == "") {
-        var targetkixtaz = parseInt(0);
-    } else {
-        var targetkixtaz = parseInt(document.getElementById("targetkixtaz").value);
-    }
+    var achievedkixtaz = parseInt(document.getElementById("achievedkixtaz").value) || 0;
+    var utdkixtaz = todaykix17 + todaykix25 + todaykix35 + todaykix45 + todaykix75 + todaytazbeet30 + todaytazbeet40 + todaytazbeet70 + todaytazbeet110 + achievedkixtaz || 0;
+    var targetkixtaz = parseInt(document.getElementById("targetkixtaz").value) || 0;
     var todayahlaweya30Input = document.getElementById("todayahlaweya30").value.split(" ");
     var todayahlaweya30 = 0;
     for (i = 0; i < todayahlaweya30Input.length; i++) {
@@ -421,18 +397,9 @@ function GenerateSalesReport() {
     for (i = 0; i < todayahlaweya50Input.length; i++) {
         todayahlaweya50 += parseInt(todayahlaweya50Input[i]) || 0;
     }
-    if (document.getElementById("achievedahlaweya").value == "") {
-        var achievedahlaweya = parseInt(0);
-    } else {
-        var achievedahlaweya = parseInt(document.getElementById("achievedahlaweya").value);
-    }
-    var utdahlaweya = todayahlaweya30 + todayahlaweya50 + achievedahlaweya;
-    if (document.getElementById("targetahlaweya").value == "") {
-        var targetahlaweya = parseInt(0);
-    } else {
-        var targetahlaweya = parseInt(document.getElementById("targetahlaweya").value);
-    }
-
+    var achievedahlaweya = parseInt(document.getElementById("achievedahlaweya").value) || 0;
+    var utdahlaweya = todayahlaweya30 + todayahlaweya50 + achievedahlaweya || 0;
+    var targetahlaweya = parseInt(document.getElementById("targetahlaweya").value) || 0;
     var todayweclub25Input = document.getElementById("todayweclub25").value.split(" ");
     var todayweclub25 = 0;
     for (i = 0; i < todayweclub25Input.length; i++) {
@@ -453,17 +420,9 @@ function GenerateSalesReport() {
     for (i = 0; i < todayweclub100Input.length; i++) {
         todayweclub100 += parseInt(todayweclub100Input[i]) || 0;
     }
-    if (document.getElementById("achievedweclub").value == "") {
-        var achievedweclub = parseInt(0);
-    } else {
-        var achievedweclub = parseInt(document.getElementById("achievedweclub").value);
-    }
-    var utdweclub = todayweclub25 + todayweclub40 + todayweclub65 + todayweclub100 + achievedweclub;
-    if (document.getElementById("targetweclub").value == "") {
-        var targetweclub = parseInt(0);
-    } else {
-        var targetweclub = parseInt(document.getElementById("targetweclub").value);
-    }
+    var achievedweclub = parseInt(document.getElementById("achievedweclub").value) || 0;
+    var utdweclub = todayweclub25 + todayweclub40 + todayweclub65 + todayweclub100 + achievedweclub || 0;
+    var targetweclub = parseInt(document.getElementById("targetweclub").value) || 0;
     var todaywemix165Input = document.getElementById("todaywemix165").value.split(" ");
     var todaywemix165 = 0;
     for (i = 0; i < todaywemix165Input.length; i++) {
@@ -474,17 +433,9 @@ function GenerateSalesReport() {
     for (i = 0; i < todaywemix240Input.length; i++) {
         todaywemix240 += parseInt(todaywemix240Input[i]) || 0;
     }
-    if (document.getElementById("achievedwemix").value == "") {
-        var achievedwemix = parseInt(0);
-    } else {
-        var achievedwemix = parseInt(document.getElementById("achievedwemix").value);
-    }
-    var utdwemix = todaywemix165 + todaywemix240 + achievedwemix;
-    if (document.getElementById("targetwemix").value == "") {
-        var targetwemix = parseInt(0);
-    } else {
-        var targetwemix = parseInt(document.getElementById("targetwemix").value);
-    }
+    var achievedwemix = parseInt(document.getElementById("achievedwemix").value) || 0;
+    var utdwemix = todaywemix165 + todaywemix240 + achievedwemix || 0;
+    var targetwemix = parseInt(document.getElementById("targetwemix").value) || 0;
     var todayindigofmcInput = document.getElementById("todayindigofmc").value.split(" ");
     var todayindigofmc = 0;
     for (i = 0; i < todayindigofmcInput.length; i++) {
@@ -495,28 +446,16 @@ function GenerateSalesReport() {
     for (i = 0; i < todayindigoopenInput.length; i++) {
         todayindigoopen += parseInt(todayindigoopenInput[i]) || 0;
     }
-    if (document.getElementById("achievedindigo").value == "") {
-        var achievedindigo = parseInt(0);
-    } else {
-        var achievedindigo = parseInt(document.getElementById("achievedindigo").value);
-    }
-    var utdindigo = todayindigofmc + todayindigoopen + achievedindigo;
-    if (document.getElementById("targetindigo").value == "") {
-        var targetindigo = parseInt(0);
-    } else {
-        var targetindigo = parseInt(document.getElementById("targetindigo").value);
-    }
+    var achievedindigo = parseInt(document.getElementById("achievedindigo").value) || 0;
+    var utdindigo = todayindigofmc + todayindigoopen + achievedindigo || 0;
+    var targetindigo = parseInt(document.getElementById("targetindigo").value) || 0;
     var todaytkafolInput = document.getElementById("todaytkafol").value.split(" ");
     var todaytkafol = 0;
     for (i = 0; i < todaytkafolInput.length; i++) {
         todaytkafol += parseInt(todaytkafolInput[i]) || 0;
     }
-    if (document.getElementById("achievedtkafol").value == "") {
-        var achievedtkafol = parseInt(0);
-    } else {
-        var achievedtkafol = parseInt(document.getElementById("achievedtkafol").value);
-    }
-    var utdtkafol = todaytkafol + achievedtkafol;
+    var achievedtkafol = parseInt(document.getElementById("achievedtkafol").value) || 0;
+    var utdtkafol = todaytkafol + achievedtkafol || 0;
     var todaytamweenInput = document.getElementById("todaytamween").value.split(" ");
     var todaytamween = 0;
     for (i = 0; i < todaytamweenInput.length; i++) {
@@ -527,49 +466,25 @@ function GenerateSalesReport() {
     for (i = 0; i < todayadslInput.length; i++) {
         todayadsl += parseInt(todayadslInput[i]) || 0;
     }
-    if (document.getElementById("achievedadsl").value == "") {
-        var achievedadsl = parseInt(0);
-    } else {
-        var achievedadsl = parseInt(document.getElementById("achievedadsl").value);
-    }
-    var utdadsl = todayadsl + achievedadsl;
-    if (document.getElementById("targetadsl").value == "") {
-        var targetadsl = parseInt(0);
-    } else {
-        var targetadsl = parseInt(document.getElementById("targetadsl").value);
-    }
+    var achievedadsl = parseInt(document.getElementById("achievedadsl").value) || 0;
+    var utdadsl = todayadsl + achievedadsl || 0;
+    var targetadsl = parseInt(document.getElementById("targetadsl").value) || 0;
     var todayfixedInput = document.getElementById("todayfixed").value.split(" ");
     var todayfixed = 0;
     for (i = 0; i < todayfixedInput.length; i++) {
         todayfixed += parseInt(todayfixedInput[i]) || 0;
     }
-    if (document.getElementById("achievedfixed").value == "") {
-        var achievedfixed = parseInt(0);
-    } else {
-        var achievedfixed = parseInt(document.getElementById("achievedfixed").value);
-    }
-    var utdfixed = todayfixed + achievedfixed;
-    if (document.getElementById("targetfixed").value == "") {
-        var targetfixed = parseInt(0);
-    } else {
-        var targetfixed = parseInt(document.getElementById("targetfixed").value);
-    }
+    var achievedfixed = parseInt(document.getElementById("achievedfixed").value) || 0;
+    var utdfixed = todayfixed + achievedfixed || 0;
+    var targetfixed = parseInt(document.getElementById("targetfixed").value) || 0;
     var todaymifiInput = document.getElementById("todaymifi").value.split(" ");
     var todaymifi = 0;
     for (i = 0; i < todaymifiInput.length; i++) {
         todaymifi += parseInt(todaymifiInput[i]) || 0;
     }
-    if (document.getElementById("achievedmifi").value == "") {
-        var achievedmifi = parseInt(0);
-    } else {
-        var achievedmifi = parseInt(document.getElementById("achievedmifi").value);
-    }
-    var utdmifi = todaymifi + achievedmifi;
-    if (document.getElementById("targetmifi").value == "") {
-        var targetmifi = parseInt(0);
-    } else {
-        var targetmifi = parseInt(document.getElementById("targetmifi").value);
-    }
+    var achievedmifi = parseInt(document.getElementById("achievedmifi").value) || 0;
+    var utdmifi = todaymifi + achievedmifi || 0;
+    var targetmifi = parseInt(document.getElementById("targetmifi").value) || 0;
     var todaytransactionsInput = document.getElementById("todaytransactions").value.split(" ");
     var todaytransactions = 0;
     for (i = 0; i < todaytransactionsInput.length; i++) {
@@ -775,11 +690,11 @@ function GenerateSalesReport() {
     } else {
         var todaymififordailysales = " + " + todaymifi + " MIFI";
     }
-    var vsMobile = Math.round((utdmobile / targetmobile) * 100) || 0;
-    var reMobile = Math.round((((utdmobile / targetmobile) * 100) / day) * daysinmonth) || 0;
+    var vsMobile = ~~Number(Math.round((utdmobile / targetmobile) * 100)) || 0;
+    var reMobile = ~~Number(Math.round((((utdmobile / targetmobile) * 100) / day) * daysinmonth)) || 0;
 
-    var vsIndigo = Math.round((utdindigo / targetindigo) * 100) || 0;
-    var reIndigo = Math.round((((utdindigo / targetindigo) * 100) / day) * daysinmonth) || 0;
+    var vsIndigo = ~~Number(Math.round((utdindigo / targetindigo) * 100)) || 0;
+    var reIndigo = ~~Number(Math.round((((utdindigo / targetindigo) * 100) / day) * daysinmonth)) || 0;
     document.getElementById("salesreport").value =
         "Date: " +
         date +
