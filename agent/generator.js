@@ -375,6 +375,7 @@ function GenerateSalesReport() {
     var utdmobile = utdpayg + utddata + utdkixtaz + utdahlaweya + utdweclub + utdwemix + utdindigo || 0;
     var targetmobile = targetpayg + targetdata + targetkixtaz + targetwemix + targetahlaweya + targetweclub + targetindigo || 0;
     var vsMobile = ~~Number(Math.round((utdmobile / targetmobile) * 100)) || 0;
+    var reMobile = ~~Number(Math.round((((utdmobile / targetmobile) * 100) / day) * daysinmonth)) || 0;
     var dailymobile =
         todaypayg +
             todaydata +
@@ -625,8 +626,12 @@ function GenerateSalesReport() {
         targetmobile +
         "/" +
         utdmobile +
-        " (" +
+        " (VS: " +
         vsMobile +
+        "%" +
+        ")" +
+        " (RE: " +
+        reMobile +
         "%" +
         ")" +
         "\n" +
