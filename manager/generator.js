@@ -80,7 +80,6 @@ function Continue() {
     document.getElementById("todayindigofmc").value = "";
     document.getElementById("todayindigoopen").value = "";
     document.getElementById("todaytkafol").value = "";
-    document.getElementById("todaytamween").value = "";
     document.getElementById("todayadsl").value = "";
     document.getElementById("todayfixed").value = "";
     document.getElementById("todaymifi").value = "";
@@ -143,7 +142,6 @@ function NewMonth() {
     document.getElementById("todayindigofmc").value = "";
     document.getElementById("todayindigoopen").value = "";
     document.getElementById("todaytkafol").value = "";
-    document.getElementById("todaytamween").value = "";
     document.getElementById("todayadsl").value = "";
     document.getElementById("todayfixed").value = "";
     document.getElementById("todaymifi").value = "";
@@ -280,7 +278,6 @@ function Back5() {
     document.getElementById("todayindigofmc").value = localStorage.getItem("undotodayindigofmc");
     document.getElementById("todayindigoopen").value = localStorage.getItem("undotodayindigoopen");
     document.getElementById("todaytkafol").value = localStorage.getItem("undotodaytkafol");
-    document.getElementById("todaytamween").value = localStorage.getItem("undotodaytamween");
     document.getElementById("todayadsl").value = localStorage.getItem("undotodayadsl");
     document.getElementById("todayfixed").value = localStorage.getItem("undotodayfixed");
     document.getElementById("todaymifi").value = localStorage.getItem("undotodaymifi");
@@ -456,11 +453,6 @@ function GenerateSalesReport() {
     }
     var achievedtkafol = parseInt(document.getElementById("achievedtkafol").value) || 0;
     var utdtkafol = todaytkafol + achievedtkafol || 0;
-    var todaytamweenInput = document.getElementById("todaytamween").value.split(" ");
-    var todaytamween = 0;
-    for (i = 0; i < todaytamweenInput.length; i++) {
-        todaytamween += parseInt(todaytamweenInput[i]) || 0;
-    }
     var todayadslInput = document.getElementById("todayadsl").value.split(" ");
     var todayadsl = 0;
     for (i = 0; i < todayadslInput.length; i++) {
@@ -786,9 +778,6 @@ function GenerateSalesReport() {
         todayfixedfordailysales +
         todaymififordailysales +
         "\n" +
-        "🚩 Tamween Sales: " +
-        todaytamween +
-        "\n" +
         "Daily Required: " +
         dailyrequiredreport +
         "\n" +
@@ -893,7 +882,6 @@ function GenerateSalesReport() {
     localStorage.setItem("undotodayindigofmc", document.getElementById("todayindigofmc").value);
     localStorage.setItem("undotodayindigoopen", document.getElementById("todayindigoopen").value);
     localStorage.setItem("undotodaytkafol", document.getElementById("todaytkafol").value);
-    localStorage.setItem("undotodaytamween", document.getElementById("todaytamween").value);
     localStorage.setItem("undotodayadsl", document.getElementById("todayadsl").value);
     localStorage.setItem("undotodayfixed", document.getElementById("todayfixed").value);
     localStorage.setItem("undotodaymifi", document.getElementById("todaymifi").value);
@@ -947,7 +935,6 @@ function GenerateSalesReport() {
     document.getElementById("todayindigoopen").value = "";
     document.getElementById("achievedtkafol").value = utdtkafol;
     document.getElementById("todaytkafol").value = "";
-    document.getElementById("todaytamween").value = "";
     document.getElementById("achievedadsl").value = utdadsl;
     document.getElementById("todayadsl").value = "";
     document.getElementById("achievedfixed").value = utdfixed;
