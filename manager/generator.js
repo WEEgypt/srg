@@ -966,7 +966,7 @@ function Copy1() {
 }
 function Share1() {
     var message = window.encodeURIComponent(document.getElementById("salesreport").value);
-    var link = "https://wa.me/?text=";
+    var link = "whatsapp://send?text=";
     window.open(link + message);
 }
 function Save1() {
