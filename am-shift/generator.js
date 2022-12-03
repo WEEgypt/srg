@@ -125,7 +125,7 @@ function Copy() {
 }
 function Share() {
     var message = window.encodeURIComponent(document.getElementById("salesreport").value);
-    var link = "https://wa.me/?text=";
+    var link = "whatsapp://send?text=";
     window.open(link + message);
 }
 function Thanks() {
