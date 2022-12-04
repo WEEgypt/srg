@@ -81,7 +81,11 @@ function Generate() {
     }
     var items = payg + data + kix + taz + ahlaweya + weclub + wemix + indigo;
     var itemsReport = "\n" + "Items: " + items;
-    var indigoReport = "\n" + "Indigo: " + indigo;
+    if (indigo == "0") {
+        var indigoReport = "";
+    } else {
+        var indigoReport = "\n" + "Indigo: " + indigo;
+    }
     if (wemix == "0") {
         var wemixReport = "";
     } else {
