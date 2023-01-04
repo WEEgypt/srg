@@ -370,7 +370,7 @@ function GenerateSalesReport() {
     if (todayfixed == "0") {
         var todayfixedfordailysales = "";
     } else {
-        var todayfixedfordailysales = " + " + todayfixed + " Fixed";
+        var todayfixedfordailysales = " + " + todayfixed + " LL.";
     }
     var vsMobile = ~~Number(Math.round((utdmobile / targetmobile) * 100)) || 0;
     var vsFixed = ~~Number(Math.round((utdfixed / targetfixed) * 100)) || 0;
@@ -423,49 +423,49 @@ function GenerateSalesReport() {
         targetmobileSpace = "   ";
     }
     if (utdindigo < "10") {
-        utdindigoSpace = "        ";
-    } else if (utdindigo >= "10" && utdindigo < "100") {
         utdindigoSpace = "       ";
-    } else if (utdindigo >= "100" && utdindigo < "1000") {
+    } else if (utdindigo >= "10" && utdindigo < "100") {
         utdindigoSpace = "      ";
-    } else {
+    } else if (utdindigo >= "100" && utdindigo < "1000") {
         utdindigoSpace = "     ";
+    } else {
+        utdindigoSpace = "    ";
     }
     if (utdwemix < "10") {
-        utdwemixSpace = "        ";
-    } else if (utdwemix >= "10" && utdwemix < "100") {
         utdwemixSpace = "       ";
-    } else if (utdwemix >= "100" && utdwemix < "1000") {
+    } else if (utdwemix >= "10" && utdwemix < "100") {
         utdwemixSpace = "      ";
-    } else {
+    } else if (utdwemix >= "100" && utdwemix < "1000") {
         utdwemixSpace = "     ";
+    } else {
+        utdwemixSpace = "    ";
     }
     if (utdadsl < "10") {
-        utdadslSpace = "        ";
-    } else if (utdadsl >= "10" && utdadsl < "100") {
         utdadslSpace = "       ";
-    } else if (utdadsl >= "100" && utdadsl < "1000") {
+    } else if (utdadsl >= "10" && utdadsl < "100") {
         utdadslSpace = "      ";
-    } else {
+    } else if (utdadsl >= "100" && utdadsl < "1000") {
         utdadslSpace = "     ";
+    } else {
+        utdadslSpace = "    ";
     }
     if (utdfixed < "10") {
-        utdfixedSpace = "        ";
-    } else if (utdfixed >= "10" && utdfixed < "100") {
         utdfixedSpace = "       ";
-    } else if (utdfixed >= "100" && utdfixed < "1000") {
+    } else if (utdfixed >= "10" && utdfixed < "100") {
         utdfixedSpace = "      ";
-    } else {
+    } else if (utdfixed >= "100" && utdfixed < "1000") {
         utdfixedSpace = "     ";
+    } else {
+        utdfixedSpace = "    ";
     }
     if (utdmobile < "10") {
-        utdmobileSpace = "        ";
-    } else if (utdmobile >= "10" && utdmobile < "100") {
         utdmobileSpace = "       ";
-    } else if (utdmobile >= "100" && utdmobile < "1000") {
+    } else if (utdmobile >= "10" && utdmobile < "100") {
         utdmobileSpace = "      ";
-    } else {
+    } else if (utdmobile >= "100" && utdmobile < "1000") {
         utdmobileSpace = "     ";
+    } else {
+        utdmobileSpace = "    ";
     }
     document.getElementById("salesreport").value =
         "Store: " +
@@ -527,9 +527,9 @@ function GenerateSalesReport() {
         todayfixedfordailysales +
         "\n" +
         "\n" +
-        "Products:    T.     Ach.     Per." +
+        "Products:   T.     Ach.    Per." +
         "\n" +
-        "Indigo:      " +
+        "Indigo:     " +
         targetindigo +
         targetindigoSpace +
         utdindigo +
@@ -537,7 +537,7 @@ function GenerateSalesReport() {
         vsIndigo +
         "%" +
         "\n" +
-        "We Mix:      " +
+        "We Mix:     " +
         targetwemix +
         targetwemixSpace +
         utdwemix +
@@ -545,7 +545,7 @@ function GenerateSalesReport() {
         vsWemix +
         "%" +
         "\n" +
-        "ADSL:        " +
+        "ADSL:       " +
         targetadsl +
         targetadslSpace +
         utdadsl +
@@ -553,7 +553,7 @@ function GenerateSalesReport() {
         vsAdsl +
         "%" +
         "\n" +
-        "Fixed:       " +
+        "Fixed:      " +
         targetfixed +
         targetfixedSpace +
         utdfixed +
@@ -561,7 +561,7 @@ function GenerateSalesReport() {
         vsFixed +
         "%" +
         "\n" +
-        "Target:      " +
+        "Target:     " +
         targetmobile +
         targetmobileSpace +
         utdmobile +
