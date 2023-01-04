@@ -362,31 +362,6 @@ function GenerateSalesReport() {
     var utdmobile = utdpayg + utddata + utdkixtaz + utdahlaweya + utdweclub + utdwemix + utdindigo;
     var targetmobile = targetpayg + targetdata + targetkixtaz + targetwemix + targetahlaweya + targetweclub + targetindigo;
     var dailymobile = todaypayg + todaydata + todaykix + todaytazbeet + todayahlaweya + todayweclub + todaywemix + todayindigo;
-    if (todaykix == "0") {
-        var todaykixreport = "0";
-    } else {
-        var todaykixreport = todaykix;
-    }
-    if (todaytazbeet == "0") {
-        var todaytazbeetreport = "0";
-    } else {
-        var todaytazbeetreport = todaytazbeet;
-    }
-    if (todayahlaweya == "0") {
-        var todayahlaweyareport = "0";
-    } else {
-        var todayahlaweyareport = todayahlaweya;
-    }
-    if (todayweclub == "0") {
-        var todayweclubreport = "";
-    } else {
-        var todayweclubreport = todayweclub;
-    }
-    if (todaywemix == "0") {
-        var todaywemixreport = "0";
-    } else {
-        var todaywemixreport = todaywemix;
-    }
     if (todayadsl == "0") {
         var todayadslfordailysales = "";
     } else {
@@ -421,19 +396,19 @@ function GenerateSalesReport() {
         todaydata +
         "\n" +
         "We Mix: " +
-        todaywemixreport +
+        todaywemix +
         "\n" +
         "Kix: " +
-        todaykixreport +
+        todaykix +
         "\n" +
         "Tazbeet: " +
-        todaytazbeetreport +
+        todaytazbeet +
         "\n" +
         "We Club: " +
-        todayweclubreport +
+        todayweclub +
         "\n" +
         "Ahlaweya: " +
-        todayahlaweyareport +
+        todayahlaweya +
         "\n" +
         "New ADSL: " +
         todayadsl +
