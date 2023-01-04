@@ -750,7 +750,7 @@ function GenerateSalesReport() {
         todaymififordailysales +
         "\n" +
         "\n" +
-        "Products     T.     Ach.     Per." +
+        "Products:    T.     Ach.     Per." +
         "\n" +
         "Indigo:      " +
         targetindigo +
