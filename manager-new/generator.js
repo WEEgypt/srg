@@ -728,7 +728,7 @@ function GenerateSalesReport() {
         "New ADSL: " +
         todayadsl +
         "\n" +
-        "NEW Landline: " +
+        "New Landline: " +
         todayfixed +
         "\n" +
         "SIM Swap: " +
@@ -739,6 +739,9 @@ function GenerateSalesReport() {
         "\n" +
         "Indigo Bills: " +
         todaybillindigo +
+        "\n" +
+        "Landline Bills: " +
+        todaybillfixed +
         "\n" +
         "------------------------- " +
         "\n" +
