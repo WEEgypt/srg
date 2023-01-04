@@ -377,6 +377,96 @@ function GenerateSalesReport() {
     var vsAdsl = ~~Number(Math.round((utdadsl / targetadsl) * 100)) || 0;
     var vsWemix = ~~Number(Math.round((utdwemix / targetwemix) * 100)) || 0;
     var vsIndigo = ~~Number(Math.round((utdindigo / targetindigo) * 100)) || 0;
+    if (targetindigo < "10") {
+        targetindigoSpace = "      ";
+    } else if (targetindigo >= "10" && targetindigo < "100") {
+        targetindigoSpace = "     ";
+    } else if (targetindigo >= "100" && targetindigo < "1000") {
+        targetindigoSpace = "    ";
+    } else {
+        targetindigoSpace = "   ";
+    }
+    if (targetwemix < "10") {
+        targetwemixSpace = "      ";
+    } else if (targetwemix >= "10" && targetwemix < "100") {
+        targetwemixSpace = "     ";
+    } else if (targetwemix >= "100" && targetwemix < "1000") {
+        targetwemixSpace = "    ";
+    } else {
+        targetwemixSpace = "   ";
+    }
+    if (targetadsl < "10") {
+        targetadslSpace = "      ";
+    } else if (targetadsl >= "10" && targetadsl < "100") {
+        targetadslSpace = "     ";
+    } else if (targetadsl >= "100" && targetadsl < "1000") {
+        targetadslSpace = "    ";
+    } else {
+        targetadslSpace = "   ";
+    }
+    if (targetfixed < "10") {
+        targetfixedSpace = "      ";
+    } else if (targetfixed >= "10" && targetfixed < "100") {
+        targetfixedSpace = "     ";
+    } else if (targetfixed >= "100" && targetfixed < "1000") {
+        targetfixedSpace = "    ";
+    } else {
+        targetfixedSpace = "   ";
+    }
+    if (targetmobile < "10") {
+        targetmobileSpace = "      ";
+    } else if (targetmobile >= "10" && targetmobile < "100") {
+        targetmobileSpace = "     ";
+    } else if (targetmobile >= "100" && targetmobile < "1000") {
+        targetmobileSpace = "    ";
+    } else {
+        targetmobileSpace = "   ";
+    }
+    if (utdindigo < "10") {
+        utdindigoSpace = "        ";
+    } else if (utdindigo >= "10" && utdindigo < "100") {
+        utdindigoSpace = "       ";
+    } else if (utdindigo >= "100" && utdindigo < "1000") {
+        utdindigoSpace = "      ";
+    } else {
+        utdindigoSpace = "     ";
+    }
+    if (utdwemix < "10") {
+        utdwemixSpace = "        ";
+    } else if (utdwemix >= "10" && utdwemix < "100") {
+        utdwemixSpace = "       ";
+    } else if (utdwemix >= "100" && utdwemix < "1000") {
+        utdwemixSpace = "      ";
+    } else {
+        utdwemixSpace = "     ";
+    }
+    if (utdadsl < "10") {
+        utdadslSpace = "        ";
+    } else if (utdadsl >= "10" && utdadsl < "100") {
+        utdadslSpace = "       ";
+    } else if (utdadsl >= "100" && utdadsl < "1000") {
+        utdadslSpace = "      ";
+    } else {
+        utdadslSpace = "     ";
+    }
+    if (utdfixed < "10") {
+        utdfixedSpace = "        ";
+    } else if (utdfixed >= "10" && utdfixed < "100") {
+        utdfixedSpace = "       ";
+    } else if (utdfixed >= "100" && utdfixed < "1000") {
+        utdfixedSpace = "      ";
+    } else {
+        utdfixedSpace = "     ";
+    }
+    if (utdmobile < "10") {
+        utdmobileSpace = "        ";
+    } else if (utdmobile >= "10" && utdmobile < "100") {
+        utdmobileSpace = "       ";
+    } else if (utdmobile >= "100" && utdmobile < "1000") {
+        utdmobileSpace = "      ";
+    } else {
+        utdmobileSpace = "     ";
+    }
     document.getElementById("salesreport").value =
         "Store: " +
         storename +
@@ -441,41 +531,41 @@ function GenerateSalesReport() {
         "\n" +
         "Indigo:      " +
         targetindigo +
-        "      " +
+        targetindigoSpace +
         utdindigo +
-        "        " +
+        utdindigoSpace +
         vsIndigo +
         "%" +
         "\n" +
         "We Mix:      " +
         targetwemix +
-        "      " +
+        targetwemixSpace +
         utdwemix +
-        "        " +
+        utdwemixSpace +
         vsWemix +
         "%" +
         "\n" +
         "ADSL:        " +
         targetadsl +
-        "      " +
+        targetadslSpace +
         utdadsl +
-        "        " +
+        utdadslSpace +
         vsAdsl +
         "%" +
         "\n" +
         "Fixed:       " +
         targetfixed +
-        "      " +
+        targetfixedSpace +
         utdfixed +
-        "        " +
+        utdfixedSpace +
         vsFixed +
         "%" +
         "\n" +
         "Target:      " +
         targetmobile +
-        "      " +
+        targetmobileSpace +
         utdmobile +
-        "        " +
+        utdmobileSpace +
         vsMobile +
         "%" +
         "\n" +
@@ -545,15 +635,15 @@ function GenerateSalesReport() {
     NextTransform();
 }
 function Copy1() {
-    var salesreport = document.getElementById("salesreport");
-    navigator.clipboard.writeText(salesreport.value);
+    var salesreport = document.getElementById("salesreport").value;
+    navigator.clipboard.writeText("```" + salesreport + "```");
     document.getElementById("copy1").disabled = true;
     document.getElementById("copy2").disabled = true;
 }
 function Share1() {
     var message = window.encodeURIComponent(document.getElementById("salesreport").value);
     var link = "whatsapp://send?text=";
-    window.open(link + message);
+    window.open(link + "```" + message + "```");
 }
 function Save1() {
     localStorage.setItem("storename", document.getElementById("storename").value);
