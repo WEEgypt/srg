@@ -553,7 +553,7 @@ function Copy1() {
 function Share1() {
     var message = window.encodeURIComponent(document.getElementById("salesreport").value);
     var link = "whatsapp://send?text=";
-    window.open(link + "```" + message + "```");
+    window.open(link + message);
 }
 function Save1() {
     localStorage.setItem("storename", document.getElementById("storename").value);
