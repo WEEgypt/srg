@@ -34,6 +34,7 @@ textarea {
     height: 460px;
     padding: 10px 10px 10px 10px;
     box-sizing: border-box;
+    font-family: monospace;
 }
 input[type="number"],
 input[type="text"] {
