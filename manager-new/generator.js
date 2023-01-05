@@ -518,7 +518,7 @@ function GenerateSalesReport() {
         "Landline Bills: " +
         todaybillfixed +
         "\n" +
-        "------------------------- " +
+        "------------------------- ```" +
         "\n" +
         "Today Sales: " +
         dailymobile +
@@ -569,7 +569,7 @@ function GenerateSalesReport() {
         vsMobile +
         "%" +
         "\n" +
-        "------------------------- " +
+        "```------------------------- " +
         "\n" +
         "Total BSS: " +
         todaybssamount +
@@ -635,15 +635,15 @@ function GenerateSalesReport() {
     NextTransform();
 }
 function Copy1() {
-    var salesreport = document.getElementById("salesreport").value;
-    navigator.clipboard.writeText("```" + salesreport + "```");
+    var salesreportValue = document.getElementById("salesreport").value;
+    navigator.clipboard.writeText(salesreportValue);
     document.getElementById("copy1").disabled = true;
     document.getElementById("copy2").disabled = true;
 }
 function Share1() {
     var message = window.encodeURIComponent(document.getElementById("salesreport").value);
     var link = "whatsapp://send?text=";
-    window.open(link + "```" + message + "```");
+    window.open(link + message);
 }
 function Save1() {
     localStorage.setItem("storename", document.getElementById("storename").value);
@@ -680,9 +680,9 @@ function Save2() {
 function Thanks() {
     if (thanks.style.display === "none") {
         thanks.style.display = "block";
-        document.getElementById("more").innerHTML = "˅";
+        document.getElementById("more").innerHTML = "Our Management ˄";
     } else {
         thanks.style.display = "none";
-        document.getElementById("more").innerHTML = "˄";
+        document.getElementById("more").innerHTML = "Our Management ˅";
     }
 }
