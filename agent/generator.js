@@ -41,8 +41,6 @@ function Continue() {
     document.getElementById("targetdata").value = localStorage.getItem("targetdata.4agent");
     document.getElementById("achievedkixtaz").value = localStorage.getItem("achievedkixtaz.4agent");
     document.getElementById("targetkixtaz").value = localStorage.getItem("targetkixtaz.4agent");
-    document.getElementById("achievedahlaweya").value = localStorage.getItem("achievedahlaweya.4agent");
-    document.getElementById("targetahlaweya").value = localStorage.getItem("targetahlaweya.4agent");
     document.getElementById("achievedweclub").value = localStorage.getItem("achievedweclub.4agent");
     document.getElementById("targetweclub").value = localStorage.getItem("targetweclub.4agent");
     document.getElementById("achievedwemix").value = localStorage.getItem("achievedwemix.4agent");
@@ -67,8 +65,6 @@ function Continue() {
     document.getElementById("todaytazbeet40").value = "";
     document.getElementById("todaytazbeet70").value = "";
     document.getElementById("todaytazbeet110").value = "";
-    document.getElementById("todayahlaweya30").value = "";
-    document.getElementById("todayahlaweya50").value = "";
     document.getElementById("todayweclub25").value = "";
     document.getElementById("todayweclub40").value = "";
     document.getElementById("todayweclub65").value = "";
@@ -100,8 +96,6 @@ function NewMonth() {
     document.getElementById("targetdata").value = "";
     document.getElementById("achievedkixtaz").value = "";
     document.getElementById("targetkixtaz").value = "";
-    document.getElementById("achievedahlaweya").value = "";
-    document.getElementById("targetahlaweya").value = "";
     document.getElementById("achievedweclub").value = "";
     document.getElementById("targetweclub").value = "";
     document.getElementById("achievedwemix").value = "";
@@ -126,8 +120,6 @@ function NewMonth() {
     document.getElementById("todaytazbeet40").value = "";
     document.getElementById("todaytazbeet70").value = "";
     document.getElementById("todaytazbeet110").value = "";
-    document.getElementById("todayahlaweya30").value = "";
-    document.getElementById("todayahlaweya50").value = "";
     document.getElementById("todayweclub25").value = "";
     document.getElementById("todayweclub40").value = "";
     document.getElementById("todayweclub65").value = "";
@@ -240,7 +232,6 @@ function Back5() {
     document.getElementById("achievedpayg").value = localStorage.getItem("undoachievedpayg.4agent");
     document.getElementById("achieveddata").value = localStorage.getItem("undoachieveddata.4agent");
     document.getElementById("achievedkixtaz").value = localStorage.getItem("undoachievedkixtaz.4agent");
-    document.getElementById("achievedahlaweya").value = localStorage.getItem("undoachievedahlaweya.4agent");
     document.getElementById("achievedweclub").value = localStorage.getItem("undoachievedweclub.4agent");
     document.getElementById("achievedwemix").value = localStorage.getItem("undoachievedwemix.4agent");
     document.getElementById("achievedindigo").value = localStorage.getItem("undoachievedindigo.4agent");
@@ -259,8 +250,6 @@ function Back5() {
     document.getElementById("todaytazbeet40").value = localStorage.getItem("undotodaytazbeet40.4agent");
     document.getElementById("todaytazbeet70").value = localStorage.getItem("undotodaytazbeet70.4agent");
     document.getElementById("todaytazbeet110").value = localStorage.getItem("undotodaytazbeet110.4agent");
-    document.getElementById("todayahlaweya30").value = localStorage.getItem("undotodayahlaweya30.4agent");
-    document.getElementById("todayahlaweya50").value = localStorage.getItem("undotodayahlaweya50.4agent");
     document.getElementById("todayweclub25").value = localStorage.getItem("undotodayweclub25.4agent");
     document.getElementById("todayweclub40").value = localStorage.getItem("undotodayweclub40.4agent");
     document.getElementById("todayweclub65").value = localStorage.getItem("undotodayweclub65.4agent");
@@ -328,11 +317,6 @@ function GenerateSalesReport() {
     var achievedkixtaz = parseInt(document.getElementById("achievedkixtaz").value) || 0;
     var utdkixtaz = todaykix17 + todaykix25 + todaykix35 + todaykix45 + todaykix75 + todaytazbeet30 + todaytazbeet40 + todaytazbeet70 + todaytazbeet110 + achievedkixtaz || 0;
     var targetkixtaz = parseInt(document.getElementById("targetkixtaz").value) || 0;
-    var todayahlaweya30 = parseInt(document.getElementById("todayahlaweya30").value) || 0;
-    var todayahlaweya50 = parseInt(document.getElementById("todayahlaweya50").value) || 0;
-    var achievedahlaweya = parseInt(document.getElementById("achievedahlaweya").value) || 0;
-    var utdahlaweya = todayahlaweya30 + todayahlaweya50 + achievedahlaweya || 0;
-    var targetahlaweya = parseInt(document.getElementById("targetahlaweya").value) || 0;
     var todayweclub25 = parseInt(document.getElementById("todayweclub25").value) || 0;
     var todayweclub40 = parseInt(document.getElementById("todayweclub40").value) || 0;
     var todayweclub65 = parseInt(document.getElementById("todayweclub65").value) || 0;
@@ -372,8 +356,8 @@ function GenerateSalesReport() {
     var todaymnp = parseInt(document.getElementById("todaymnp").value) || 0;
     var todaybssamount = parseInt(document.getElementById("todaybssamount").value) || 0;
     var todayossamount = parseInt(document.getElementById("todayossamount").value) || 0;
-    var utdmobile = utdpayg + utddata + utdkixtaz + utdahlaweya + utdweclub + utdwemix + utdindigo || 0;
-    var targetmobile = targetpayg + targetdata + targetkixtaz + targetwemix + targetahlaweya + targetweclub + targetindigo || 0;
+    var utdmobile = utdpayg + utddata + utdkixtaz + utdweclub + utdwemix + utdindigo || 0;
+    var targetmobile = targetpayg + targetdata + targetkixtaz + targetwemix + targetweclub + targetindigo || 0;
     var vsMobile = ~~Number(Math.round((utdmobile / targetmobile) * 100)) || 0;
     var reMobile = ~~Number(Math.round((((utdmobile / targetmobile) * 100) / day) * daysinmonth)) || 0;
     var dailymobile =
@@ -388,8 +372,6 @@ function GenerateSalesReport() {
             todaytazbeet40 +
             todaytazbeet70 +
             todaytazbeet110 +
-            todayahlaweya30 +
-            todayahlaweya50 +
             todayweclub25 +
             todayweclub40 +
             todayweclub65 +
@@ -454,22 +436,6 @@ function GenerateSalesReport() {
         var tazbeetreport = "0";
     } else {
         var tazbeetreport = todaytazbeetreport;
-    }
-    if (todayahlaweya30 == "0") {
-        var todayahlaweya30report = "";
-    } else {
-        var todayahlaweya30report = todayahlaweya30 + "*30 ";
-    }
-    if (todayahlaweya50 == "0") {
-        var todayahlaweya50report = "";
-    } else {
-        var todayahlaweya50report = todayahlaweya50 + "*50 ";
-    }
-    var todayahlaweyareport = todayahlaweya30report + todayahlaweya50report;
-    if (todayahlaweyareport == "") {
-        var ahlaweyareport = "0";
-    } else {
-        var ahlaweyareport = todayahlaweyareport;
     }
     if (todayweclub25 == "0") {
         var todayweclub25report = "";
@@ -543,7 +509,7 @@ function GenerateSalesReport() {
         "\n" +
         "------------------------- " +
         "\n" +
-        "PAYG: " +
+        "Payg: " +
         todaypayg +
         "\n" +
         "Data: " +
@@ -554,9 +520,6 @@ function GenerateSalesReport() {
         "\n" +
         "Tazbeet: " +
         tazbeetreport +
-        "\n" +
-        "Ahlaweya: " +
-        ahlaweyareport +
         "\n" +
         "We Club: " +
         weclubreport +
@@ -635,7 +598,7 @@ function GenerateSalesReport() {
         "%" +
         ")" +
         "\n" +
-        "PAYG: " +
+        "Payg: " +
         targetpayg +
         "/" +
         utdpayg +
@@ -649,11 +612,6 @@ function GenerateSalesReport() {
         targetkixtaz +
         "/" +
         utdkixtaz +
-        "\n" +
-        "Ahlaweya: " +
-        targetahlaweya +
-        "/" +
-        utdahlaweya +
         "\n" +
         "We Club: " +
         targetweclub +
@@ -698,8 +656,6 @@ function GenerateSalesReport() {
     localStorage.setItem("undotodaytazbeet40.4agent", document.getElementById("todaytazbeet40").value);
     localStorage.setItem("undotodaytazbeet70.4agent", document.getElementById("todaytazbeet70").value);
     localStorage.setItem("undotodaytazbeet110.4agent", document.getElementById("todaytazbeet110").value);
-    localStorage.setItem("undotodayahlaweya30.4agent", document.getElementById("todayahlaweya30").value);
-    localStorage.setItem("undotodayahlaweya50.4agent", document.getElementById("todayahlaweya50").value);
     localStorage.setItem("undotodayweclub25.4agent", document.getElementById("todayweclub25").value);
     localStorage.setItem("undotodayweclub40.4agent", document.getElementById("todayweclub40").value);
     localStorage.setItem("undotodayweclub65.4agent", document.getElementById("todayweclub65").value);
@@ -722,7 +678,6 @@ function GenerateSalesReport() {
     localStorage.setItem("undoachievedpayg.4agent", document.getElementById("achievedpayg").value);
     localStorage.setItem("undoachieveddata.4agent", document.getElementById("achieveddata").value);
     localStorage.setItem("undoachievedkixtaz.4agent", document.getElementById("achievedkixtaz").value);
-    localStorage.setItem("undoachievedahlaweya.4agent", document.getElementById("achievedahlaweya").value);
     localStorage.setItem("undoachievedweclub.4agent", document.getElementById("achievedweclub").value);
     localStorage.setItem("undoachievedwemix.4agent", document.getElementById("achievedwemix").value);
     localStorage.setItem("undoachievedindigo.4agent", document.getElementById("achievedindigo").value);
@@ -744,9 +699,6 @@ function GenerateSalesReport() {
     document.getElementById("todaytazbeet40").value = "";
     document.getElementById("todaytazbeet70").value = "";
     document.getElementById("todaytazbeet110").value = "";
-    document.getElementById("achievedahlaweya").value = utdahlaweya;
-    document.getElementById("todayahlaweya30").value = "";
-    document.getElementById("todayahlaweya50").value = "";
     document.getElementById("achievedweclub").value = utdweclub;
     document.getElementById("todayweclub25").value = "";
     document.getElementById("todayweclub40").value = "";
@@ -800,8 +752,6 @@ function Save1() {
     localStorage.setItem("targetdata.4agent", document.getElementById("targetdata").value);
     localStorage.setItem("achievedkixtaz.4agent", document.getElementById("achievedkixtaz").value);
     localStorage.setItem("targetkixtaz.4agent", document.getElementById("targetkixtaz").value);
-    localStorage.setItem("achievedahlaweya.4agent", document.getElementById("achievedahlaweya").value);
-    localStorage.setItem("targetahlaweya.4agent", document.getElementById("targetahlaweya").value);
     localStorage.setItem("achievedweclub.4agent", document.getElementById("achievedweclub").value);
     localStorage.setItem("targetweclub.4agent", document.getElementById("targetweclub").value);
     localStorage.setItem("achievedwemix.4agent", document.getElementById("achievedwemix").value);
