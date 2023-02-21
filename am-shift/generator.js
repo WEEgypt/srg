@@ -39,11 +39,6 @@ function Generate() {
     for (i = 0; i < tazInput.length; i++) {
         taz += parseInt(tazInput[i]) || 0;
     }
-    var ahlaweyaInput = document.getElementById("ahlaweya").value.split(" ");
-    var ahlaweya = 0;
-    for (i = 0; i < ahlaweyaInput.length; i++) {
-        ahlaweya += parseInt(ahlaweyaInput[i]) || 0;
-    }
     var weclubInput = document.getElementById("weclub").value.split(" ");
     var weclub = 0;
     for (i = 0; i < weclubInput.length; i++) {
@@ -79,7 +74,7 @@ function Generate() {
     for (i = 0; i < mifiInput.length; i++) {
         mifi += parseInt(mifiInput[i]) || 0;
     }
-    var items = payg + data + kix + taz + ahlaweya + weclub + wemix + indigo;
+    var items = payg + data + kix + taz + weclub + wemix + indigo;
     var itemsReport = "\n" + "Items: " + items;
     if (indigo == "0") {
         var indigoReport = "";
