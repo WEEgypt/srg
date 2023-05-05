@@ -61,6 +61,13 @@ function Continue() {
     document.getElementById("todaykix35").value = "";
     document.getElementById("todaykix45").value = "";
     document.getElementById("todaykix75").value = "";
+    document.getElementById("todayskix20").value = "";
+    document.getElementById("todayskix25").value = "";
+    document.getElementById("todayskix35").value = "";
+    document.getElementById("todayskix45").value = "";
+    document.getElementById("todayskix65").value = "";
+    document.getElementById("todayskix80").value = "";
+    document.getElementById("todayskix100").value = "";
     document.getElementById("todaytazbeet30").value = "";
     document.getElementById("todaytazbeet40").value = "";
     document.getElementById("todaytazbeet70").value = "";
@@ -116,6 +123,13 @@ function NewMonth() {
     document.getElementById("todaykix35").value = "";
     document.getElementById("todaykix45").value = "";
     document.getElementById("todaykix75").value = "";
+    document.getElementById("todayskix20").value = "";
+    document.getElementById("todayskix25").value = "";
+    document.getElementById("todayskix35").value = "";
+    document.getElementById("todayskix45").value = "";
+    document.getElementById("todayskix65").value = "";
+    document.getElementById("todayskix80").value = "";
+    document.getElementById("todayskix100").value = "";
     document.getElementById("todaytazbeet30").value = "";
     document.getElementById("todaytazbeet40").value = "";
     document.getElementById("todaytazbeet70").value = "";
@@ -246,6 +260,13 @@ function Back5() {
     document.getElementById("todaykix35").value = localStorage.getItem("undotodaykix35.4agent");
     document.getElementById("todaykix45").value = localStorage.getItem("undotodaykix45.4agent");
     document.getElementById("todaykix75").value = localStorage.getItem("undotodaykix75.4agent");
+    document.getElementById("todayskix20").value = localStorage.getItem("undotodayskix20.4agent");
+    document.getElementById("todayskix25").value = localStorage.getItem("undotodayskix25.4agent");
+    document.getElementById("todayskix35").value = localStorage.getItem("undotodayskix35.4agent");
+    document.getElementById("todayskix45").value = localStorage.getItem("undotodayskix45.4agent");
+    document.getElementById("todayskix65").value = localStorage.getItem("undotodayskix65.4agent");
+    document.getElementById("todayskix80").value = localStorage.getItem("undotodayskix80.4agent");
+    document.getElementById("todayskix100").value = localStorage.getItem("undotodayskix100.4agent");
     document.getElementById("todaytazbeet30").value = localStorage.getItem("undotodaytazbeet30.4agent");
     document.getElementById("todaytazbeet40").value = localStorage.getItem("undotodaytazbeet40.4agent");
     document.getElementById("todaytazbeet70").value = localStorage.getItem("undotodaytazbeet70.4agent");
@@ -310,12 +331,36 @@ function GenerateSalesReport() {
     var todaykix35 = parseInt(document.getElementById("todaykix35").value) || 0;
     var todaykix45 = parseInt(document.getElementById("todaykix45").value) || 0;
     var todaykix75 = parseInt(document.getElementById("todaykix75").value) || 0;
+    var todayskix20 = parseInt(document.getElementById("todayskix20").value) || 0;
+    var todayskix25 = parseInt(document.getElementById("todayskix25").value) || 0;
+    var todayskix35 = parseInt(document.getElementById("todayskix35").value) || 0;
+    var todayskix45 = parseInt(document.getElementById("todayskix45").value) || 0;
+    var todayskix65 = parseInt(document.getElementById("todayskix65").value) || 0;
+    var todayskix80 = parseInt(document.getElementById("todayskix80").value) || 0;
+    var todayskix100 = parseInt(document.getElementById("todayskix100").value) || 0;
     var todaytazbeet30 = parseInt(document.getElementById("todaytazbeet30").value) || 0;
     var todaytazbeet40 = parseInt(document.getElementById("todaytazbeet40").value) || 0;
     var todaytazbeet70 = parseInt(document.getElementById("todaytazbeet70").value) || 0;
     var todaytazbeet110 = parseInt(document.getElementById("todaytazbeet110").value) || 0;
     var achievedkixtaz = parseInt(document.getElementById("achievedkixtaz").value) || 0;
-    var utdkixtaz = todaykix17 + todaykix25 + todaykix35 + todaykix45 + todaykix75 + todaytazbeet30 + todaytazbeet40 + todaytazbeet70 + todaytazbeet110 + achievedkixtaz || 0;
+    var utdkixtaz =
+        todaykix17 +
+            todaykix25 +
+            todaykix35 +
+            todaykix45 +
+            todaykix75 +
+            todayskix20 +
+            todayskix25 +
+            todayskix35 +
+            todayskix45 +
+            todayskix65 +
+            todayskix80 +
+            todayskix100 +
+            todaytazbeet30 +
+            todaytazbeet40 +
+            todaytazbeet70 +
+            todaytazbeet110 +
+            achievedkixtaz || 0;
     var targetkixtaz = parseInt(document.getElementById("targetkixtaz").value) || 0;
     var todayweclub25 = parseInt(document.getElementById("todayweclub25").value) || 0;
     var todayweclub40 = parseInt(document.getElementById("todayweclub40").value) || 0;
@@ -368,6 +413,13 @@ function GenerateSalesReport() {
             todaykix35 +
             todaykix45 +
             todaykix75 +
+            todayskix20 +
+            todayskix25 +
+            todayskix35 +
+            todayskix45 +
+            todayskix65 +
+            todayskix80 +
+            todayskix100 +
             todaytazbeet30 +
             todaytazbeet40 +
             todaytazbeet70 +
@@ -410,6 +462,47 @@ function GenerateSalesReport() {
         var kixreport = "0";
     } else {
         var kixreport = todaykixreport;
+    }
+    if (todayskix20 == "0") {
+        var todayskix20report = "";
+    } else {
+        var todayskix20report = todayskix20 + "*20 ";
+    }
+    if (todayskix25 == "0") {
+        var todayskix25report = "";
+    } else {
+        var todayskix25report = todayskix25 + "*25 ";
+    }
+    if (todayskix35 == "0") {
+        var todayskix35report = "";
+    } else {
+        var todayskix35report = todayskix35 + "*35 ";
+    }
+    if (todayskix45 == "0") {
+        var todayskix45report = "";
+    } else {
+        var todayskix45report = todayskix45 + "*45 ";
+    }
+    if (todayskix65 == "0") {
+        var todayskix65report = "";
+    } else {
+        var todayskix65report = todayskix65 + "*65 ";
+    }
+    if (todayskix80 == "0") {
+        var todayskix80report = "";
+    } else {
+        var todayskix80report = todayskix80 + "*80 ";
+    }
+    if (todayskix100 == "0") {
+        var todayskix100report = "";
+    } else {
+        var todayskix100report = todayskix100 + "*100 ";
+    }
+    var todayskixreport = todayskix20report + todayskix25report + todayskix35report + todayskix45report + todayskix65report + todayskix80report + todayskix100report;
+    if (todayskixreport == "") {
+        var skixreport = "0";
+    } else {
+        var skixreport = todayskixreport;
     }
     if (todaytazbeet30 == "0") {
         var todaytazbeet30report = "";
@@ -518,6 +611,9 @@ function GenerateSalesReport() {
         "Kix: " +
         kixreport +
         "\n" +
+        "Super Kix: " +
+        skixreport +
+        "\n" +
         "Tazbeet: " +
         tazbeetreport +
         "\n" +
@@ -586,9 +682,9 @@ function GenerateSalesReport() {
         "------------------------- " +
         "\n" +
         "MTD: " +
-        targetmobile +
-        "/" +
         utdmobile +
+        "/" +
+        targetmobile +
         " (VS: " +
         vsMobile +
         "%" +
@@ -599,52 +695,52 @@ function GenerateSalesReport() {
         ")" +
         "\n" +
         "Payg: " +
-        targetpayg +
-        "/" +
         utdpayg +
+        "/" +
+        targetpayg +
         "\n" +
         "Data: " +
-        targetdata +
-        "/" +
         utddata +
+        "/" +
+        targetdata +
         "\n" +
         "Kix+Taz: " +
-        targetkixtaz +
-        "/" +
         utdkixtaz +
+        "/" +
+        targetkixtaz +
         "\n" +
         "We Club: " +
-        targetweclub +
-        "/" +
         utdweclub +
+        "/" +
+        targetweclub +
         "\n" +
         "We Mix: " +
-        targetwemix +
-        "/" +
         utdwemix +
+        "/" +
+        targetwemix +
         "\n" +
         "Indigo: " +
-        targetindigo +
-        "/" +
         utdindigo +
+        "/" +
+        targetindigo +
         "\n" +
         "Tkafol: " +
         utdtkafol +
         "\n" +
         "ADSL: " +
-        targetadsl +
-        "/" +
         utdadsl +
+        "/" +
+        targetadsl +
         "\n" +
         "Fixed: " +
-        targetfixed +
-        "/" +
         utdfixed +
+        "/" +
+        targetfixed +
         "\n" +
         "MIFI: " +
-        targetmifi +
+        utdmifi +
         "/" +
-        utdmifi;
+        targetmifi;
     localStorage.setItem("undotodaypayg.4agent", document.getElementById("todaypayg").value);
     localStorage.setItem("undotodaydata.4agent", document.getElementById("todaydata").value);
     localStorage.setItem("undotodaykix17.4agent", document.getElementById("todaykix17").value);
@@ -652,6 +748,13 @@ function GenerateSalesReport() {
     localStorage.setItem("undotodaykix35.4agent", document.getElementById("todaykix35").value);
     localStorage.setItem("undotodaykix45.4agent", document.getElementById("todaykix45").value);
     localStorage.setItem("undotodaykix75.4agent", document.getElementById("todaykix75").value);
+    localStorage.setItem("undotodayskix20.4agent", document.getElementById("todayskix20").value);
+    localStorage.setItem("undotodayskix25.4agent", document.getElementById("todayskix25").value);
+    localStorage.setItem("undotodayskix35.4agent", document.getElementById("todayskix35").value);
+    localStorage.setItem("undotodayskix45.4agent", document.getElementById("todayskix45").value);
+    localStorage.setItem("undotodayskix65.4agent", document.getElementById("todayskix65").value);
+    localStorage.setItem("undotodayskix80.4agent", document.getElementById("todayskix80").value);
+    localStorage.setItem("undotodayskix100.4agent", document.getElementById("todayskix100").value);
     localStorage.setItem("undotodaytazbeet30.4agent", document.getElementById("todaytazbeet30").value);
     localStorage.setItem("undotodaytazbeet40.4agent", document.getElementById("todaytazbeet40").value);
     localStorage.setItem("undotodaytazbeet70.4agent", document.getElementById("todaytazbeet70").value);
@@ -695,6 +798,13 @@ function GenerateSalesReport() {
     document.getElementById("todaykix35").value = "";
     document.getElementById("todaykix45").value = "";
     document.getElementById("todaykix75").value = "";
+    document.getElementById("todayskix20").value = "";
+    document.getElementById("todayskix25").value = "";
+    document.getElementById("todayskix35").value = "";
+    document.getElementById("todayskix45").value = "";
+    document.getElementById("todayskix65").value = "";
+    document.getElementById("todayskix80").value = "";
+    document.getElementById("todayskix100").value = "";
     document.getElementById("todaytazbeet30").value = "";
     document.getElementById("todaytazbeet40").value = "";
     document.getElementById("todaytazbeet70").value = "";
