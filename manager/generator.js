@@ -484,9 +484,6 @@ function GenerateSalesReport() {
         "Data: " +
         todaydata +
         "\n" +
-        "We Mix: " +
-        todaywemix +
-        "\n" +
         "Kix: " +
         todaykix +
         "\n" +
@@ -498,6 +495,9 @@ function GenerateSalesReport() {
         "\n" +
         "We Club: " +
         todayweclub +
+        "\n" +
+        "We Mix: " +
+        todaywemix +
         "\n" +
         "ADSL: " +
         todayadsl +
