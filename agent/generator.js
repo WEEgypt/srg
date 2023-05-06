@@ -39,8 +39,10 @@ function Continue() {
     document.getElementById("targetpayg").value = localStorage.getItem("targetpayg.4agent");
     document.getElementById("achieveddata").value = localStorage.getItem("achieveddata.4agent");
     document.getElementById("targetdata").value = localStorage.getItem("targetdata.4agent");
-    document.getElementById("achievedkixtaz").value = localStorage.getItem("achievedkixtaz.4agent");
-    document.getElementById("targetkixtaz").value = localStorage.getItem("targetkixtaz.4agent");
+    document.getElementById("achievedkixandsuper").value = localStorage.getItem("achievedkixandsuper.4agent");
+    document.getElementById("achievedtaz").value = localStorage.getItem("achievedtaz.4agent");
+    document.getElementById("targetkixandsuper").value = localStorage.getItem("targetkixandsuper.4agent");
+    document.getElementById("targettaz").value = localStorage.getItem("targettaz.4agent");
     document.getElementById("achievedweclub").value = localStorage.getItem("achievedweclub.4agent");
     document.getElementById("targetweclub").value = localStorage.getItem("targetweclub.4agent");
     document.getElementById("achievedwemix").value = localStorage.getItem("achievedwemix.4agent");
@@ -101,8 +103,10 @@ function NewMonth() {
     document.getElementById("targetpayg").value = "";
     document.getElementById("achieveddata").value = "";
     document.getElementById("targetdata").value = "";
-    document.getElementById("achievedkixtaz").value = "";
-    document.getElementById("targetkixtaz").value = "";
+    document.getElementById("achievedkixandsuper").value = "";
+    document.getElementById("achievedtaz").value = "";
+    document.getElementById("targetkixandsuper").value = "";
+    document.getElementById("targettaz").value = "";
     document.getElementById("achievedweclub").value = "";
     document.getElementById("targetweclub").value = "";
     document.getElementById("achievedwemix").value = "";
@@ -245,7 +249,8 @@ function Back5() {
     document.getElementById("salesreport").value = "";
     document.getElementById("achievedpayg").value = localStorage.getItem("undoachievedpayg.4agent");
     document.getElementById("achieveddata").value = localStorage.getItem("undoachieveddata.4agent");
-    document.getElementById("achievedkixtaz").value = localStorage.getItem("undoachievedkixtaz.4agent");
+    document.getElementById("achievedkixandsuper").value = localStorage.getItem("undoachievedkixandsuper.4agent");
+    document.getElementById("achievedtaz").value = localStorage.getItem("undoachievedtaz.4agent");
     document.getElementById("achievedweclub").value = localStorage.getItem("undoachievedweclub.4agent");
     document.getElementById("achievedwemix").value = localStorage.getItem("undoachievedwemix.4agent");
     document.getElementById("achievedindigo").value = localStorage.getItem("undoachievedindigo.4agent");
@@ -342,26 +347,12 @@ function GenerateSalesReport() {
     var todaytazbeet40 = parseInt(document.getElementById("todaytazbeet40").value) || 0;
     var todaytazbeet70 = parseInt(document.getElementById("todaytazbeet70").value) || 0;
     var todaytazbeet110 = parseInt(document.getElementById("todaytazbeet110").value) || 0;
-    var achievedkixtaz = parseInt(document.getElementById("achievedkixtaz").value) || 0;
-    var utdkixtaz =
-        todaykix17 +
-            todaykix25 +
-            todaykix35 +
-            todaykix45 +
-            todaykix75 +
-            todayskix20 +
-            todayskix25 +
-            todayskix35 +
-            todayskix45 +
-            todayskix65 +
-            todayskix80 +
-            todayskix100 +
-            todaytazbeet30 +
-            todaytazbeet40 +
-            todaytazbeet70 +
-            todaytazbeet110 +
-            achievedkixtaz || 0;
-    var targetkixtaz = parseInt(document.getElementById("targetkixtaz").value) || 0;
+    var achievedkixandsuper = parseInt(document.getElementById("achievedkixandsuper").value) || 0;
+    var achievedtaz = parseInt(document.getElementById("achievedtaz").value) || 0;
+    var utdkixandsuper = todaykix17 + todaykix25 + todaykix35 + todaykix45 + todaykix75 + todayskix20 + todayskix25 + todayskix35 + todayskix45 + todayskix65 + todayskix80 + todayskix100 + achievedkixandsuper || 0;
+    var utdtaz = todaytazbeet30 + todaytazbeet40 + todaytazbeet70 + todaytazbeet110 + achievedtaz || 0;
+    var targetkixandsuper = parseInt(document.getElementById("targetkixandsuper").value) || 0;
+    var targettaz = parseInt(document.getElementById("targettaz").value) || 0;
     var todayweclub25 = parseInt(document.getElementById("todayweclub25").value) || 0;
     var todayweclub40 = parseInt(document.getElementById("todayweclub40").value) || 0;
     var todayweclub65 = parseInt(document.getElementById("todayweclub65").value) || 0;
@@ -401,8 +392,8 @@ function GenerateSalesReport() {
     var todaymnp = parseInt(document.getElementById("todaymnp").value) || 0;
     var todaybssamount = parseInt(document.getElementById("todaybssamount").value) || 0;
     var todayossamount = parseInt(document.getElementById("todayossamount").value) || 0;
-    var utdmobile = utdpayg + utddata + utdkixtaz + utdweclub + utdwemix + utdindigo || 0;
-    var targetmobile = targetpayg + targetdata + targetkixtaz + targetwemix + targetweclub + targetindigo || 0;
+    var utdmobile = utdpayg + utddata + utdkixandsuper + utdtaz + utdweclub + utdwemix + utdindigo || 0;
+    var targetmobile = targetpayg + targetdata + targetkixandsuper + targettaz + targetwemix + targetweclub + targetindigo || 0;
     var vsMobile = ~~Number(Math.round((utdmobile / targetmobile) * 100)) || 0;
     var reMobile = ~~Number(Math.round((((utdmobile / targetmobile) * 100) / day) * daysinmonth)) || 0;
     var dailymobile =
@@ -459,9 +450,9 @@ function GenerateSalesReport() {
     }
     var todaykixreport = todaykix17report + todaykix25report + todaykix35report + todaykix45report + todaykix75report;
     if (todaykixreport == "") {
-        var kixreport = "0";
+        var kixreport = "";
     } else {
-        var kixreport = todaykixreport;
+        var kixreport = "\n" + "Kix: " + todaykixreport;
     }
     if (todayskix20 == "0") {
         var todayskix20report = "";
@@ -500,9 +491,9 @@ function GenerateSalesReport() {
     }
     var todayskixreport = todayskix20report + todayskix25report + todayskix35report + todayskix45report + todayskix65report + todayskix80report + todayskix100report;
     if (todayskixreport == "") {
-        var skixreport = "0";
+        var skixreport = "";
     } else {
-        var skixreport = todayskixreport;
+        var skixreport = "\n" + "Super Kix: " + todayskixreport;
     }
     if (todaytazbeet30 == "0") {
         var todaytazbeet30report = "";
@@ -526,9 +517,9 @@ function GenerateSalesReport() {
     }
     var todaytazbeetreport = todaytazbeet30report + todaytazbeet40report + todaytazbeet70report + todaytazbeet110report;
     if (todaytazbeetreport == "") {
-        var tazbeetreport = "0";
+        var tazbeetreport = "";
     } else {
-        var tazbeetreport = todaytazbeetreport;
+        var tazbeetreport = "\n" + "Tazbeet: " + todaytazbeetreport;
     }
     if (todayweclub25 == "0") {
         var todayweclub25report = "";
@@ -552,9 +543,9 @@ function GenerateSalesReport() {
     }
     var todayweclubreport = todayweclub25report + todayweclub40report + todayweclub65report + todayweclub100report;
     if (todayweclubreport == "") {
-        var weclubreport = "0";
+        var weclubreport = "";
     } else {
-        var weclubreport = todayweclubreport;
+        var weclubreport = "\n" + "We Club: " + todayweclubreport;
     }
     if (todaywemix165 == "0") {
         var todaywemix165report = "";
@@ -568,15 +559,49 @@ function GenerateSalesReport() {
     }
     var todaywemixreport = todaywemix165report + todaywemix240report;
     if (todaywemixreport == "") {
-        var wemixreport = "0";
+        var wemixreport = "";
     } else {
-        var wemixreport = todaywemixreport;
+        var wemixreport = "\n" + "We Mix: " + todaywemixreport;
     }
-    var dailyrequired = Math.round((targetmobile - utdmobile) / (daysinmonth - day));
-    if (dailyrequired < "0") {
-        var dailyrequiredreport = "0";
+    if (todayindigofmc == "0") {
+        var todayindigofmcreport = "";
     } else {
-        var dailyrequiredreport = dailyrequired;
+        var todayindigofmcreport = "\n" + "Indigo FMC: " + todayindigofmc;
+    }
+    if (todayindigoopen == "0") {
+        var todayindigoopenreport = "";
+    } else {
+        var todayindigoopenreport = "\n" + "Indigo Open: " + todayindigoopen;
+    }
+    if (todaytkafol == "0") {
+        var todaytkafolreport = "";
+    } else {
+        var todaytkafolreport = "\n" + "Tkafol: " + todaytkafol;
+    }
+    if (todayadsl == "0") {
+        var todayadslreport = "";
+    } else {
+        var todayadslreport = "\n" + "ADSL: " + todayadsl;
+    }
+    if (todayfixed == "0") {
+        var todayfixedreport = "";
+    } else {
+        var todayfixedreport = "\n" + "Fixed: " + todayfixed;
+    }
+    if (todaymifi == "0") {
+        var todaymifireport = "";
+    } else {
+        var todaymifireport = "\n" + "MIFI: " + todaymifi;
+    }
+    if (todaypayg == "0") {
+        var todaypaygreport = "";
+    } else {
+        var todaypaygreport = "\n" + "Payg: " + todaypayg;
+    }
+    if (todaydata == "0") {
+        var todaydatareport = "";
+    } else {
+        var todaydatareport = "\n" + "Data: " + todaydata;
     }
     if (todayadsl == "0") {
         var todayadslfordailysales = "";
@@ -593,6 +618,16 @@ function GenerateSalesReport() {
     } else {
         var todaymififordailysales = " + " + todaymifi + " MIFI";
     }
+    var todaysales =
+        todaypaygreport + todaydatareport + kixreport + skixreport + tazbeetreport + weclubreport + wemixreport + todayindigofmcreport + todayindigoopenreport + todaytkafolreport + todayadslreport + todayfixedreport + todaymifireport;
+    var totaltoday = "------------------------- " + "\n" + "Total Today: " + dailymobile + " Mob" + todayadslfordailysales + todayfixedfordailysales + todaymififordailysales + "\n" + "------------------------- ";
+    if (todaysales == "") {
+        var todaysalesreport = "No Sales Today";
+        var totaltodayreport = "------------------------- ";
+    } else {
+        var todaysalesreport = "Sales" + "\n" + todaysales;
+        var totaltodayreport = totaltoday;
+    }
     document.getElementById("salesreport").value =
         "Date: " +
         date +
@@ -602,54 +637,20 @@ function GenerateSalesReport() {
         "\n" +
         "------------------------- " +
         "\n" +
-        "Payg: " +
-        todaypayg +
+        todaysalesreport +
         "\n" +
-        "Data: " +
-        todaydata +
+        totaltodayreport +
         "\n" +
-        "Kix: " +
-        kixreport +
+        "Transaction" +
         "\n" +
-        "Super Kix: " +
-        skixreport +
         "\n" +
-        "Tazbeet: " +
-        tazbeetreport +
-        "\n" +
-        "We Club: " +
-        weclubreport +
-        "\n" +
-        "We Mix: " +
-        wemixreport +
-        "\n" +
-        "Indigo FMC: " +
-        todayindigofmc +
-        "\n" +
-        "Indigo Open: " +
-        todayindigoopen +
-        "\n" +
-        "Tkafol: " +
-        todaytkafol +
-        "\n" +
-        "ADSL: " +
-        todayadsl +
-        "\n" +
-        "Fixed: " +
-        todayfixed +
-        "\n" +
-        "MIFI: " +
-        todaymifi +
-        "\n" +
-        "------------------------- " +
-        "\n" +
-        "Bill Fixed: " +
+        "Fixed Bills: " +
         todaybillfixed +
         "\n" +
-        "Bill Indigo: " +
+        "Indigo Bills: " +
         todaybillindigo +
         "\n" +
-        "Bill ADSL: " +
+        "ADSL Bills: " +
         todaybilladsl +
         "\n" +
         "SIM Swap: " +
@@ -658,8 +659,6 @@ function GenerateSalesReport() {
         "MNP: " +
         todaymnp +
         "\n" +
-        "\n" +
-        "Cash" +
         "\n" +
         "BSS Amount: " +
         todaybssamount +
@@ -672,27 +671,8 @@ function GenerateSalesReport() {
         "\n" +
         "------------------------- " +
         "\n" +
-        "Sales Today: " +
-        dailymobile +
-        " Mob" +
-        todayadslfordailysales +
-        todayfixedfordailysales +
-        todaymififordailysales +
+        "This Month" +
         "\n" +
-        "------------------------- " +
-        "\n" +
-        "MTD: " +
-        utdmobile +
-        "/" +
-        targetmobile +
-        " (VS: " +
-        vsMobile +
-        "%" +
-        ")" +
-        " (RE: " +
-        reMobile +
-        "%" +
-        ")" +
         "\n" +
         "Payg: " +
         utdpayg +
@@ -704,10 +684,16 @@ function GenerateSalesReport() {
         "/" +
         targetdata +
         "\n" +
-        "Kix+Taz: " +
-        utdkixtaz +
+        "\n" +
+        "Kix & Super: " +
+        utdkixandsuper +
         "/" +
-        targetkixtaz +
+        targetkixandsuper +
+        "\n" +
+        "Tazbeet: " +
+        utdtaz +
+        "/" +
+        targettaz +
         "\n" +
         "We Club: " +
         utdweclub +
@@ -724,8 +710,6 @@ function GenerateSalesReport() {
         "/" +
         targetindigo +
         "\n" +
-        "Tkafol: " +
-        utdtkafol +
         "\n" +
         "ADSL: " +
         utdadsl +
@@ -737,10 +721,29 @@ function GenerateSalesReport() {
         "/" +
         targetfixed +
         "\n" +
+        "\n" +
+        "Target: " +
+        targetmobile +
+        "\n" +
+        "Achieved: " +
+        utdmobile +
+        "\n" +
+        "Percentage: " +
+        vsMobile +
+        "%" +
+        "\n" +
+        "Projection: " +
+        reMobile +
+        "%" +
+        "\n" +
+        "\n" +
         "MIFI: " +
         utdmifi +
         "/" +
-        targetmifi;
+        targetmifi +
+        "\n" +
+        "Tkafol & Karama: " +
+        utdtkafol;
     localStorage.setItem("undotodaypayg.4agent", document.getElementById("todaypayg").value);
     localStorage.setItem("undotodaydata.4agent", document.getElementById("todaydata").value);
     localStorage.setItem("undotodaykix17.4agent", document.getElementById("todaykix17").value);
@@ -780,7 +783,8 @@ function GenerateSalesReport() {
     localStorage.setItem("undotodayossamount.4agent", document.getElementById("todayossamount").value);
     localStorage.setItem("undoachievedpayg.4agent", document.getElementById("achievedpayg").value);
     localStorage.setItem("undoachieveddata.4agent", document.getElementById("achieveddata").value);
-    localStorage.setItem("undoachievedkixtaz.4agent", document.getElementById("achievedkixtaz").value);
+    localStorage.setItem("undoachievedkixandsuper.4agent", document.getElementById("achievedkixandsuper").value);
+    localStorage.setItem("undoachievedtaz.4agent", document.getElementById("achievedtaz").value);
     localStorage.setItem("undoachievedweclub.4agent", document.getElementById("achievedweclub").value);
     localStorage.setItem("undoachievedwemix.4agent", document.getElementById("achievedwemix").value);
     localStorage.setItem("undoachievedindigo.4agent", document.getElementById("achievedindigo").value);
@@ -792,7 +796,8 @@ function GenerateSalesReport() {
     document.getElementById("todaypayg").value = "";
     document.getElementById("achieveddata").value = utddata;
     document.getElementById("todaydata").value = "";
-    document.getElementById("achievedkixtaz").value = utdkixtaz;
+    document.getElementById("achievedkixandsuper").value = utdkixandsuper;
+    document.getElementById("achievedtaz").value = utdtaz;
     document.getElementById("todaykix17").value = "";
     document.getElementById("todaykix25").value = "";
     document.getElementById("todaykix35").value = "";
@@ -851,7 +856,7 @@ function Copy1() {
 }
 function Share1() {
     var message = window.encodeURIComponent(document.getElementById("salesreport").value);
-    var link = "whatsapp://send?text=";
+    var link = "https://api.whatsapp.com/send?text=";
     window.open(link + message);
 }
 function Save1() {
@@ -860,8 +865,10 @@ function Save1() {
     localStorage.setItem("targetpayg.4agent", document.getElementById("targetpayg").value);
     localStorage.setItem("achieveddata.4agent", document.getElementById("achieveddata").value);
     localStorage.setItem("targetdata.4agent", document.getElementById("targetdata").value);
-    localStorage.setItem("achievedkixtaz.4agent", document.getElementById("achievedkixtaz").value);
-    localStorage.setItem("targetkixtaz.4agent", document.getElementById("targetkixtaz").value);
+    localStorage.setItem("achievedkixandsuper.4agent", document.getElementById("achievedkixandsuper").value);
+    localStorage.setItem("achievedtaz.4agent", document.getElementById("achievedtaz").value);
+    localStorage.setItem("targetkixandsuper.4agent", document.getElementById("targetkixandsuper").value);
+    localStorage.setItem("targettaz.4agent", document.getElementById("targettaz").value);
     localStorage.setItem("achievedweclub.4agent", document.getElementById("achievedweclub").value);
     localStorage.setItem("targetweclub.4agent", document.getElementById("targetweclub").value);
     localStorage.setItem("achievedwemix.4agent", document.getElementById("achievedwemix").value);
