@@ -499,10 +499,10 @@ function GenerateSalesReport() {
         "We Club: " +
         todayweclub +
         "\n" +
-        "New ADSL: " +
+        "ADSL: " +
         todayadsl +
         "\n" +
-        "New Landline: " +
+        "Fixed: " +
         todayfixed +
         "\n" +
         "SIM Swap: " +
