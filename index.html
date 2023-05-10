@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <title>Sales Report Generator</title>
+        <link rel="icon" href="icon.png" />
+        <link rel="apple-touch-icon" href="icon.png" />
+        <style>
+            :root {
+                --bg: #fff;
+                --color: #000;
+            }
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --bg: #000;
+                    --color: #fff;
+                }
+            }
+            body {
+                background-color: var(--bg);
+                font-family: verdana;
+                font-size: 14px;
+                margin: auto;
+                width: -webkit-fill-available;
+                width: -moz-available;
+                min-width: 360px;
+                max-width: 960px;
+                color: var(--color);
+            }
+            button {
+                width: -webkit-fill-available;
+                width: -moz-available;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="text-align: center;">
+            <div style="display: inline-block; text-align: left; min-width: 300px;">
+                <br />
+                <br />
+                <br />
+                <div>
+                    <h3>Sales Report Generator</h3>
+                    <br />
+                    <br />
+                    <br />
+                    <div>
+                        <button id="agent" onclick="agent()">Agent Sales</button>
+                        <br />
+                        <br />
+                        <button id="manager" onclick="manager()">Store Sales</button>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <footer style="font-size: 9px;">
+                <a id="more" onclick="Thanks()">Our Management ˄</a>
+                <div style="display: block;" id="thanks">
+                    <p>Channel Manager: Ahmed Kasem</p>
+                    <p>Regional Manager: Yehia Tawfik</p>
+                    <p>Area Manager: Eslam Gomaa</p>
+                </div>
+                <p style="font-size: 9px; padding-top: 8px;">Developed by: Mamdouh Khalaf (Sharq Elnil Store Manager)</p>
+            </footer>
+        </div>
+        <script>
+            function agent() {
+                window.open("agent/index.html", "_self");
+            }
+            function manager() {
+                window.open("manager/index.html", "_self");
+            }
+            function Thanks() {
+                if (thanks.style.display === "none") {
+                    thanks.style.display = "block";
+                    document.getElementById("more").innerHTML = "Our Management ˄";
+                } else {
+                    thanks.style.display = "none";
+                    document.getElementById("more").innerHTML = "Our Management ˅";
+                }
+            }
+        </script>
+    </body>
+</html>
