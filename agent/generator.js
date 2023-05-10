@@ -897,9 +897,9 @@ function Save2() {
 function Thanks() {
     if (thanks.style.display === "none") {
         thanks.style.display = "block";
-        document.getElementById("more").innerHTML = "˄";
+        document.getElementById("more").innerHTML = "Our Management ˄";
     } else {
         thanks.style.display = "none";
-        document.getElementById("more").innerHTML = "˅";
+        document.getElementById("more").innerHTML = "Our Management ˅";
     }
 }
