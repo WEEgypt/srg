@@ -6,38 +6,7 @@
         <title>Sales Report Generator</title>
         <link rel="icon" href="icon.png" />
         <link rel="apple-touch-icon" href="icon.png" />
-        <style>
-            :root {
-                --bg: #fff;
-                --color: #000;
-            }
-            @media (prefers-color-scheme: dark) {
-                :root {
-                    --bg: #000;
-                    --color: #fff;
-                }
-            }
-            body {
-                background-color: var(--bg);
-                font-family: verdana;
-                font-size: 14px;
-                margin: auto;
-                width: -webkit-fill-available;
-                width: -moz-available;
-                min-width: 360px;
-                max-width: 960px;
-                color: var(--color);
-            }
-            button {
-                width: -webkit-fill-available;
-                width: -moz-available;
-            }
-            footer {
-                display: inline-block;
-                font-size: 9px;
-                min-width: 300px;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <div style="text-align: center;">
@@ -51,11 +20,12 @@
                     <br />
                     <br />
                     <div>
-                        <button id="agent" onclick="agent()">Agent Sales</button>
+                        <button style="width: 300px;" id="agent" onclick="agent()">Sales report for Agent</button>
                         <br />
                         <br />
-                        <button id="manager" onclick="manager()">Store Sales</button>
+                        <button style="width: 300px;" id="manager" onclick="manager()">Sales report for Store</button>
                     </div>
+                    <div id="Loading" style="display: none;" class="loader"></div>
                 </div>
             </div>
             <br />
