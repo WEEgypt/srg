@@ -16,7 +16,7 @@ function EnableRestore() {
         sessionStorage.setItem("users", "1");
         localStorage.setItem("currentUser", "1");
     }
-    if (localStorage.getItem("currentUser") > "1") {
+    if (localStorage.getItem("users") > "1") {
         multi.style.display = "block";
     }
 }
