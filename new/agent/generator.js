@@ -989,3 +989,9 @@ function Save2() {
 function Back0() {
     window.open("../index.html", "_self");
 }
+function Print1() {
+    var doc = new jsPDF("", "", [80, 220]);
+    doc.setFontSize(12);
+    doc.text(document.getElementById("salesreport").value, 8, 12);
+    window.open(doc.output("bloburl"), "_blank");
+}
