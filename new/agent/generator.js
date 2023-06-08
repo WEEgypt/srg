@@ -16,6 +16,9 @@ function EnableRestore() {
         sessionStorage.setItem("users", "1");
         localStorage.setItem("currentUser", "1");
     }
+    if (localStorage.getItem("currentUser") > "1") {
+        multi.style.display = "block";
+    }
 }
 function GetDate() {
     document.getElementById("day").value = new Date().getDate();
@@ -38,7 +41,6 @@ function BackTransform() {
     gsap.from("#today", { duration: 0.2, xPercent: -50, opacity: 0 });
     gsap.from("#report", { duration: 0.2, xPercent: -50, opacity: 0 });
 }
-
 function Continue1() {
     let x = document.getElementById("users").value;
     localStorage.setItem("currentUser", x);
