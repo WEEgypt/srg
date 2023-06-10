@@ -993,7 +993,6 @@ function Print1() {
     doc.document.write("<html><head><title>Sales Report</title><style>body {font-family: monospace;}</style></head><body>");
     doc.document.write(document.getElementById("salesreport").value.replace(/\n/gi, "<br>"));
     doc.document.write("</body></html>");
-    doc.print();
     doc.document.close();
-    doc.close();
+    doc.print();
 }
