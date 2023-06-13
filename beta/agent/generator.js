@@ -990,7 +990,7 @@ function Back0() {
 function Print1() {
     doc = window.open("", "_blank");
     doc.document.open();
-    doc.document.write("<html><head><title>Sales Report</title><style>body {font-family: monospace;}</style></head><body onload=window.print();setTimeout(window.close,1000);>");
+    doc.document.write("<html><head><title>Sales Report</title><style>body {font-family: monospace; display: flex; justify-content: center}</style></head><body onload=window.print();setTimeout(window.close,1000);>");
     doc.document.write(document.getElementById("salesreport").value.replace(/\n/gi, "<br>"));
     doc.document.write("</body></html>");
     doc.document.close();
