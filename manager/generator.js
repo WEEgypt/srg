@@ -1,9 +1,23 @@
 function EnableRestore() {
-    if (localStorage.getItem("storename") !== null) {
+    if (localStorage.getItem("storeRestore") == "true") {
         basic.style.display = "none";
         restore.style.display = "block";
         row1.style.display = "none";
         row2.style.display = "block";
+        stores.style.display = "block";
+        document.getElementById("store1").innerHTML = localStorage.getItem("storename.store.1");
+        let x = localStorage.getItem("stores");
+        for (i = 0; i < x - 1; i++) {
+            var value = parseInt([i]) + 2;
+            document.getElementById("stores").options.add(new Option(localStorage.getItem("storename.store." + value), value));
+        }
+        sessionStorage.removeItem("stores");
+    } else {
+        sessionStorage.setItem("stores", "1");
+        localStorage.setItem("currentStore", "1");
+    }
+    if (localStorage.getItem("stores") > "1") {
+        multi.style.display = "block";
     }
 }
 function GetDate() {
@@ -28,31 +42,33 @@ function BackTransform() {
     gsap.from("#report", { duration: 0.2, xPercent: -50, opacity: 0 });
 }
 function Continue() {
+    let x = document.getElementById("stores").value;
+    localStorage.setItem("currentStore", x);
     restore.style.display = "none";
     basic.style.display = "block";
     store.style.display = "none";
     row1.style.display = "none";
     row2.style.display = "none";
     today.style.display = "block";
-    document.getElementById("storename").value = localStorage.getItem("storename");
-    document.getElementById("achievedpayg").value = localStorage.getItem("achievedpayg");
-    document.getElementById("targetpayg").value = localStorage.getItem("targetpayg");
-    document.getElementById("achieveddata").value = localStorage.getItem("achieveddata");
-    document.getElementById("targetdata").value = localStorage.getItem("targetdata");
-    document.getElementById("achievedkixandsuper").value = localStorage.getItem("achievedkixandsuper");
-    document.getElementById("targetkixandsuper").value = localStorage.getItem("targetkixandsuper");
-    document.getElementById("achievedtaz").value = localStorage.getItem("achievedtaz");
-    document.getElementById("targettaz").value = localStorage.getItem("targettaz");
-    document.getElementById("achievedweclub").value = localStorage.getItem("achievedweclub");
-    document.getElementById("targetweclub").value = localStorage.getItem("targetweclub");
-    document.getElementById("achievedwemix").value = localStorage.getItem("achievedwemix");
-    document.getElementById("targetwemix").value = localStorage.getItem("targetwemix");
-    document.getElementById("achievedindigo").value = localStorage.getItem("achievedindigo");
-    document.getElementById("targetindigo").value = localStorage.getItem("targetindigo");
-    document.getElementById("achievedadsl").value = localStorage.getItem("achievedadsl");
-    document.getElementById("targetadsl").value = localStorage.getItem("targetadsl");
-    document.getElementById("achievedfixed").value = localStorage.getItem("achievedfixed");
-    document.getElementById("targetfixed").value = localStorage.getItem("targetfixed");
+    document.getElementById("storename").value = localStorage.getItem("storename.store." + x);
+    document.getElementById("achievedpayg").value = localStorage.getItem("achievedpayg.store." + x);
+    document.getElementById("targetpayg").value = localStorage.getItem("targetpayg.store." + x);
+    document.getElementById("achieveddata").value = localStorage.getItem("achieveddata.store." + x);
+    document.getElementById("targetdata").value = localStorage.getItem("targetdata.store." + x);
+    document.getElementById("achievedkixandsuper").value = localStorage.getItem("achievedkixandsuper.store." + x);
+    document.getElementById("targetkixandsuper").value = localStorage.getItem("targetkixandsuper.store." + x);
+    document.getElementById("achievedtaz").value = localStorage.getItem("achievedtaz.store." + x);
+    document.getElementById("targettaz").value = localStorage.getItem("targettaz.store." + x);
+    document.getElementById("achievedweclub").value = localStorage.getItem("achievedweclub.store." + x);
+    document.getElementById("targetweclub").value = localStorage.getItem("targetweclub.store." + x);
+    document.getElementById("achievedwemix").value = localStorage.getItem("achievedwemix.store." + x);
+    document.getElementById("targetwemix").value = localStorage.getItem("targetwemix.store." + x);
+    document.getElementById("achievedindigo").value = localStorage.getItem("achievedindigo.store." + x);
+    document.getElementById("targetindigo").value = localStorage.getItem("targetindigo.store." + x);
+    document.getElementById("achievedadsl").value = localStorage.getItem("achievedadsl.store." + x);
+    document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.store." + x);
+    document.getElementById("achievedfixed").value = localStorage.getItem("achievedfixed.store." + x);
+    document.getElementById("targetfixed").value = localStorage.getItem("targetfixed.store." + x);
     document.getElementById("todaypayg").value = "";
     document.getElementById("todaydata").value = "";
     document.getElementById("todaykix").value = "";
@@ -70,8 +86,56 @@ function Continue() {
     document.getElementById("todaybssamount").value = "";
     document.getElementById("todayossamount").value = "";
     NextTransform();
+    sessionStorage.setItem("stores", localStorage.getItem("stores"));
 }
 function NewMonth() {
+    let x = document.getElementById("stores").value;
+    localStorage.setItem("currentStore", x);
+    restore.style.display = "none";
+    basic.style.display = "block";
+    document.getElementById("storename").value = "";
+    document.getElementById("achievedpayg").value = "";
+    document.getElementById("targetpayg").value = "";
+    document.getElementById("achieveddata").value = "";
+    document.getElementById("targetdata").value = "";
+    document.getElementById("achievedkixandsuper").value = "";
+    document.getElementById("targetkixandsuper").value = "";
+    document.getElementById("achievedtaz").value = "";
+    document.getElementById("targettaz").value = "";
+    document.getElementById("achievedweclub").value = "";
+    document.getElementById("targetweclub").value = "";
+    document.getElementById("achievedwemix").value = "";
+    document.getElementById("targetwemix").value = "";
+    document.getElementById("achievedindigo").value = "";
+    document.getElementById("targetindigo").value = "";
+    document.getElementById("achievedadsl").value = "";
+    document.getElementById("targetadsl").value = "";
+    document.getElementById("achievedfixed").value = "";
+    document.getElementById("targetfixed").value = "";
+    document.getElementById("todaypayg").value = "";
+    document.getElementById("todaydata").value = "";
+    document.getElementById("todaykix").value = "";
+    document.getElementById("todayskix").value = "";
+    document.getElementById("todaytazbeet").value = "";
+    document.getElementById("todayweclub").value = "";
+    document.getElementById("todaywemix").value = "";
+    document.getElementById("todayindigo").value = "";
+    document.getElementById("todayadsl").value = "";
+    document.getElementById("todayfixed").value = "";
+    document.getElementById("todaybillfixed").value = "";
+    document.getElementById("todaybillindigo").value = "";
+    document.getElementById("todaybilladsl").value = "";
+    document.getElementById("todaysimswap").value = "";
+    document.getElementById("todaybssamount").value = "";
+    document.getElementById("todayossamount").value = "";
+    NextTransform();
+    sessionStorage.setItem("stores", localStorage.getItem("stores"));
+}
+function NewStore() {
+    var stores = parseInt(localStorage.getItem("stores"));
+    var x = stores + 1;
+    sessionStorage.setItem("stores", x);
+    localStorage.setItem("currentStore", x);
     restore.style.display = "none";
     basic.style.display = "block";
     document.getElementById("storename").value = "";
@@ -122,6 +186,7 @@ function Back1() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
     BackTransform();
+    sessionStorage.removeItem("stores");
 }
 function Next2() {
     if (basic.style.display === "block") {
@@ -138,7 +203,7 @@ function Back2() {
         basic.style.display = "block";
         store.style.display = "block";
     }
-    if (localStorage.getItem("storename") !== null) {
+    if (localStorage.getItem("storeRestore") == "true") {
         row1.style.display = "none";
         row2.style.display = "block";
     } else {
@@ -645,27 +710,30 @@ function Share1() {
     window.open(link + message);
 }
 function Save1() {
-    localStorage.setItem("storename", document.getElementById("storename").value);
-    localStorage.setItem("achievedpayg", document.getElementById("achievedpayg").value);
-    localStorage.setItem("targetpayg", document.getElementById("targetpayg").value);
-    localStorage.setItem("achieveddata", document.getElementById("achieveddata").value);
-    localStorage.setItem("targetdata", document.getElementById("targetdata").value);
-    localStorage.setItem("achievedkixandsuper", document.getElementById("achievedkixandsuper").value);
-    localStorage.setItem("targetkixandsuper", document.getElementById("targetkixandsuper").value);
-    localStorage.setItem("achievedtaz", document.getElementById("achievedtaz").value);
-    localStorage.setItem("targettaz", document.getElementById("targettaz").value);
-    localStorage.setItem("achievedweclub", document.getElementById("achievedweclub").value);
-    localStorage.setItem("targetweclub", document.getElementById("targetweclub").value);
-    localStorage.setItem("achievedwemix", document.getElementById("achievedwemix").value);
-    localStorage.setItem("targetwemix", document.getElementById("targetwemix").value);
-    localStorage.setItem("achievedindigo", document.getElementById("achievedindigo").value);
-    localStorage.setItem("targetindigo", document.getElementById("targetindigo").value);
-    localStorage.setItem("achievedadsl", document.getElementById("achievedadsl").value);
-    localStorage.setItem("targetadsl", document.getElementById("targetadsl").value);
-    localStorage.setItem("achievedfixed", document.getElementById("achievedfixed").value);
-    localStorage.setItem("targetfixed", document.getElementById("targetfixed").value);
+    let x = parseInt(localStorage.getItem("currentStore"));
+    localStorage.setItem("storename.store." + x, document.getElementById("storename").value || "Store " + x);
+    localStorage.setItem("achievedpayg.store." + x, document.getElementById("achievedpayg").value);
+    localStorage.setItem("targetpayg.store." + x, document.getElementById("targetpayg").value);
+    localStorage.setItem("achieveddata.store." + x, document.getElementById("achieveddata").value);
+    localStorage.setItem("targetdata.store." + x, document.getElementById("targetdata").value);
+    localStorage.setItem("achievedkixandsuper.store." + x, document.getElementById("achievedkixandsuper").value);
+    localStorage.setItem("targetkixandsuper.store." + x, document.getElementById("targetkixandsuper").value);
+    localStorage.setItem("achievedtaz.store." + x, document.getElementById("achievedtaz").value);
+    localStorage.setItem("targettaz.store." + x, document.getElementById("targettaz").value);
+    localStorage.setItem("achievedweclub.store." + x, document.getElementById("achievedweclub").value);
+    localStorage.setItem("targetweclub.store." + x, document.getElementById("targetweclub").value);
+    localStorage.setItem("achievedwemix.store." + x, document.getElementById("achievedwemix").value);
+    localStorage.setItem("targetwemix.store." + x, document.getElementById("targetwemix").value);
+    localStorage.setItem("achievedindigo.store." + x, document.getElementById("achievedindigo").value);
+    localStorage.setItem("targetindigo.store." + x, document.getElementById("targetindigo").value);
+    localStorage.setItem("achievedadsl.store." + x, document.getElementById("achievedadsl").value);
+    localStorage.setItem("targetadsl.store." + x, document.getElementById("targetadsl").value);
+    localStorage.setItem("achievedfixed.store." + x, document.getElementById("achievedfixed").value);
+    localStorage.setItem("targetfixed.store." + x, document.getElementById("targetfixed").value);
     document.getElementById("save1").disabled = true;
     document.getElementById("save2").disabled = true;
+    localStorage.setItem("storeRestore", "true");
+    localStorage.setItem("stores", sessionStorage.getItem("stores"));
 }
 function Copy2() {
     Copy1();
@@ -678,4 +746,12 @@ function Save2() {
 }
 function Back0() {
     window.open("../index.html", "_self");
+}
+function Print1() {
+    doc = window.open("", "_blank");
+    doc.document.open();
+    doc.document.write("<html><head><title>Sales Report</title><style>body {font-family: monospace; display: flex; justify-content: center}</style></head><body onload=window.print();setTimeout(window.close,1000);>");
+    doc.document.write(document.getElementById("salesreport").value.replace(/`/gi, "").replace(/ /gi, "&nbsp;").replace(/\n/gi, "<br>"));
+    doc.document.write("</body></html>");
+    doc.document.close();
 }

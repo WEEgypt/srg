@@ -19,12 +19,20 @@
                 <div style="display: none;" id="restore">
                     <h3>Welcome Back Boss!</h3>
                     <br />
-                    <br />
+                    <div style="display: none;" id="multi">
+                        <label style="font-size: 10px;">Multi stores found, Choose one</label>
+                        <select style="display: none;" id="stores">
+                            <option id="store1" value="1" selected>Store 1</option>
+                        </select>
+                    </div>
                     <br />
                     <button style="width: 300px;" id="continue" onclick="Continue()">Restore Previous Record To Continue</button>
                     <br />
                     <br />
                     <button style="width: 300px;" id="newmonth" onclick="NewMonth()">Start New Month</button>
+                    <br />
+                    <br />
+                    <button style="width: 300px;" id="newstore" onclick="NewStore()">Add Another Store</button>
                     <br />
                     <br />
                     <div id="row0">
@@ -290,12 +298,14 @@
                         <button id="back5" onclick="Back5()">Back</button>
                         <button id="copy1" onclick="Copy1()">Copy</button>
                         <button id="share1" onclick="Share1()">Share</button>
+                        <button id="print1" onclick="Print1()">Print</button>
                         <button id="save1" onclick="Save1()">Save</button>
                     </div>
                     <div style="display: none;" id="row4">
                         <button id="back6" onclick="Back6()">Back</button>
                         <button id="copy2" onclick="Copy2()">Copy</button>
                         <button id="share2" onclick="Share2()">Share</button>
+                        <button id="print1" onclick="Print1()">Print</button>
                         <button id="save2" onclick="Save2()">Save</button>
                     </div>
                 </div>
