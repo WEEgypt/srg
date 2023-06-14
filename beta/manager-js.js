@@ -507,69 +507,69 @@ function GenerateSalesReport() {
         targetmobileSpace = " ";
     }
     if (utdindigo < "10") {
-        utdindigoSpace = "       ";
-    } else if (utdindigo >= "10" && utdindigo < "100") {
         utdindigoSpace = "      ";
-    } else if (utdindigo >= "100" && utdindigo < "1000") {
+    } else if (utdindigo >= "10" && utdindigo < "100") {
         utdindigoSpace = "     ";
-    } else if (utdindigo >= "1000" && utdindigo < "10000") {
+    } else if (utdindigo >= "100" && utdindigo < "1000") {
         utdindigoSpace = "    ";
-    } else if (utdindigo >= "10000" && utdindigo < "100000") {
+    } else if (utdindigo >= "1000" && utdindigo < "10000") {
         utdindigoSpace = "   ";
-    } else {
+    } else if (utdindigo >= "10000" && utdindigo < "100000") {
         utdindigoSpace = "  ";
+    } else {
+        utdindigoSpace = " ";
     }
     if (utdwemix < "10") {
-        utdwemixSpace = "       ";
-    } else if (utdwemix >= "10" && utdwemix < "100") {
         utdwemixSpace = "      ";
-    } else if (utdwemix >= "100" && utdwemix < "1000") {
+    } else if (utdwemix >= "10" && utdwemix < "100") {
         utdwemixSpace = "     ";
-    } else if (utdwemix >= "1000" && utdwemix < "10000") {
+    } else if (utdwemix >= "100" && utdwemix < "1000") {
         utdwemixSpace = "    ";
-    } else if (utdwemix >= "10000" && utdwemix < "100000") {
+    } else if (utdwemix >= "1000" && utdwemix < "10000") {
         utdwemixSpace = "   ";
-    } else {
+    } else if (utdwemix >= "10000" && utdwemix < "100000") {
         utdwemixSpace = "  ";
+    } else {
+        utdwemixSpace = " ";
     }
     if (utdadsl < "10") {
-        utdadslSpace = "       ";
-    } else if (utdadsl >= "10" && utdadsl < "100") {
         utdadslSpace = "      ";
-    } else if (utdadsl >= "100" && utdadsl < "1000") {
+    } else if (utdadsl >= "10" && utdadsl < "100") {
         utdadslSpace = "     ";
-    } else if (utdadsl >= "1000" && utdadsl < "10000") {
+    } else if (utdadsl >= "100" && utdadsl < "1000") {
         utdadslSpace = "    ";
-    } else if (utdadsl >= "10000" && utdadsl < "100000") {
+    } else if (utdadsl >= "1000" && utdadsl < "10000") {
         utdadslSpace = "   ";
-    } else {
+    } else if (utdadsl >= "10000" && utdadsl < "100000") {
         utdadslSpace = "  ";
+    } else {
+        utdadslSpace = " ";
     }
     if (utdfixed < "10") {
-        utdfixedSpace = "       ";
-    } else if (utdfixed >= "10" && utdfixed < "100") {
         utdfixedSpace = "      ";
-    } else if (utdfixed >= "100" && utdfixed < "1000") {
+    } else if (utdfixed >= "10" && utdfixed < "100") {
         utdfixedSpace = "     ";
-    } else if (utdfixed >= "1000" && utdfixed < "10000") {
+    } else if (utdfixed >= "100" && utdfixed < "1000") {
         utdfixedSpace = "    ";
-    } else if (utdfixed >= "10000" && utdfixed < "100000") {
+    } else if (utdfixed >= "1000" && utdfixed < "10000") {
         utdfixedSpace = "   ";
-    } else {
+    } else if (utdfixed >= "10000" && utdfixed < "100000") {
         utdfixedSpace = "  ";
+    } else {
+        utdfixedSpace = " ";
     }
     if (utdmobile < "10") {
-        utdmobileSpace = "       ";
-    } else if (utdmobile >= "10" && utdmobile < "100") {
         utdmobileSpace = "      ";
-    } else if (utdmobile >= "100" && utdmobile < "1000") {
+    } else if (utdmobile >= "10" && utdmobile < "100") {
         utdmobileSpace = "     ";
-    } else if (utdmobile >= "1000" && utdmobile < "10000") {
+    } else if (utdmobile >= "100" && utdmobile < "1000") {
         utdmobileSpace = "    ";
-    } else if (utdmobile >= "10000" && utdmobile < "100000") {
+    } else if (utdmobile >= "1000" && utdmobile < "10000") {
         utdmobileSpace = "   ";
-    } else {
+    } else if (utdmobile >= "10000" && utdmobile < "100000") {
         utdmobileSpace = "  ";
+    } else {
+        utdmobileSpace = " ";
     }
     document.getElementById("salesreport").value =
         "Store: " +
@@ -631,7 +631,7 @@ function GenerateSalesReport() {
         todayfixedfordailysales +
         "\n" +
         "\n" +
-        "Products:   T.     Ach.    Per." +
+        "Products:   T.     Ach.   Per." +
         "\n" +
         "Indigo:     " +
         targetindigo +
