@@ -554,9 +554,9 @@ function GenerateSalesReport() {
     } else if (utdfixed >= "1000" && utdfixed < "10000") {
         utdfixedSpace = "    ";
     } else if (utdfixed >= "10000" && utdfixed < "100000") {
-        utdfixedSpace = "    ";
-    } else {
         utdfixedSpace = "   ";
+    } else {
+        utdfixedSpace = "  ";
     }
     if (utdmobile < "10") {
         utdmobileSpace = "       ";
@@ -567,9 +567,9 @@ function GenerateSalesReport() {
     } else if (utdmobile >= "1000" && utdmobile < "10000") {
         utdmobileSpace = "    ";
     } else if (utdmobile >= "10000" && utdmobile < "100000") {
-        utdmobileSpace = "    ";
-    } else {
         utdmobileSpace = "   ";
+    } else {
+        utdmobileSpace = "  ";
     }
     document.getElementById("salesreport").value =
         "Store: " +
