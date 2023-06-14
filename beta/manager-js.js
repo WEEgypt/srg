@@ -447,8 +447,12 @@ function GenerateSalesReport() {
         targetindigoSpace = "     ";
     } else if (targetindigo >= "100" && targetindigo < "1000") {
         targetindigoSpace = "    ";
-    } else {
+    } else if (targetindigo >= "1000" && targetindigo < "10000") {
         targetindigoSpace = "   ";
+    } else if (targetindigo >= "10000" && targetindigo < "100000") {
+        targetindigoSpace = "  ";
+    } else {
+        targetindigoSpace = " ";
     }
     if (targetwemix < "10") {
         targetwemixSpace = "      ";
@@ -456,8 +460,12 @@ function GenerateSalesReport() {
         targetwemixSpace = "     ";
     } else if (targetwemix >= "100" && targetwemix < "1000") {
         targetwemixSpace = "    ";
-    } else {
+    } else if (targetwemix >= "1000" && targetwemix < "10000") {
         targetwemixSpace = "   ";
+    } else if (targetwemix >= "10000" && targetwemix < "100000") {
+        targetwemixSpace = "  ";
+    } else {
+        targetwemixSpace = " ";
     }
     if (targetadsl < "10") {
         targetadslSpace = "      ";
@@ -465,8 +473,12 @@ function GenerateSalesReport() {
         targetadslSpace = "     ";
     } else if (targetadsl >= "100" && targetadsl < "1000") {
         targetadslSpace = "    ";
-    } else {
+    } else if (targetadsl >= "1000" && targetadsl < "10000") {
         targetadslSpace = "   ";
+    } else if (targetadsl >= "10000" && targetadsl < "100000") {
+        targetadslSpace = "  ";
+    } else {
+        targetadslSpace = " ";
     }
     if (targetfixed < "10") {
         targetfixedSpace = "      ";
@@ -474,8 +486,12 @@ function GenerateSalesReport() {
         targetfixedSpace = "     ";
     } else if (targetfixed >= "100" && targetfixed < "1000") {
         targetfixedSpace = "    ";
-    } else {
+    } else if (targetfixed >= "1000" && targetfixed < "10000") {
         targetfixedSpace = "   ";
+    } else if (targetfixed >= "10000" && targetfixed < "100000") {
+        targetfixedSpace = "  ";
+    } else {
+        targetfixedSpace = " ";
     }
     if (targetmobile < "10") {
         targetmobileSpace = "      ";
@@ -483,8 +499,12 @@ function GenerateSalesReport() {
         targetmobileSpace = "     ";
     } else if (targetmobile >= "100" && targetmobile < "1000") {
         targetmobileSpace = "    ";
-    } else {
+    } else if (targetmobile >= "1000" && targetmobile < "10000") {
         targetmobileSpace = "   ";
+    } else if (targetmobile >= "10000" && targetmobile < "100000") {
+        targetmobileSpace = "  ";
+    } else {
+        targetmobileSpace = " ";
     }
     if (utdindigo < "10") {
         utdindigoSpace = "       ";
@@ -492,8 +512,12 @@ function GenerateSalesReport() {
         utdindigoSpace = "      ";
     } else if (utdindigo >= "100" && utdindigo < "1000") {
         utdindigoSpace = "     ";
-    } else {
+    } else if (utdindigo >= "1000" && utdindigo < "10000") {
         utdindigoSpace = "    ";
+    } else if (utdindigo >= "10000" && utdindigo < "100000") {
+        utdindigoSpace = "   ";
+    } else {
+        utdindigoSpace = "  ";
     }
     if (utdwemix < "10") {
         utdwemixSpace = "       ";
@@ -501,8 +525,12 @@ function GenerateSalesReport() {
         utdwemixSpace = "      ";
     } else if (utdwemix >= "100" && utdwemix < "1000") {
         utdwemixSpace = "     ";
-    } else {
+    } else if (utdwemix >= "1000" && utdwemix < "10000") {
         utdwemixSpace = "    ";
+    } else if (utdwemix >= "10000" && utdwemix < "100000") {
+        utdwemixSpace = "   ";
+    } else {
+        utdwemixSpace = "  ";
     }
     if (utdadsl < "10") {
         utdadslSpace = "       ";
@@ -510,8 +538,12 @@ function GenerateSalesReport() {
         utdadslSpace = "      ";
     } else if (utdadsl >= "100" && utdadsl < "1000") {
         utdadslSpace = "     ";
-    } else {
+    } else if (utdadsl >= "1000" && utdadsl < "10000") {
         utdadslSpace = "    ";
+    } else if (utdadsl >= "10000" && utdadsl < "100000") {
+        utdadslSpace = "   ";
+    } else {
+        utdadslSpace = "  ";
     }
     if (utdfixed < "10") {
         utdfixedSpace = "       ";
@@ -519,8 +551,12 @@ function GenerateSalesReport() {
         utdfixedSpace = "      ";
     } else if (utdfixed >= "100" && utdfixed < "1000") {
         utdfixedSpace = "     ";
-    } else {
+    } else if (utdfixed >= "1000" && utdfixed < "10000") {
         utdfixedSpace = "    ";
+    } else if (utdfixed >= "10000" && utdfixed < "100000") {
+        utdfixedSpace = "    ";
+    } else {
+        utdfixedSpace = "   ";
     }
     if (utdmobile < "10") {
         utdmobileSpace = "       ";
@@ -528,8 +564,12 @@ function GenerateSalesReport() {
         utdmobileSpace = "      ";
     } else if (utdmobile >= "100" && utdmobile < "1000") {
         utdmobileSpace = "     ";
-    } else {
+    } else if (utdmobile >= "1000" && utdmobile < "10000") {
         utdmobileSpace = "    ";
+    } else if (utdmobile >= "10000" && utdmobile < "100000") {
+        utdmobileSpace = "    ";
+    } else {
+        utdmobileSpace = "   ";
     }
     document.getElementById("salesreport").value =
         "Store: " +
