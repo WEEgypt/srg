@@ -746,12 +746,19 @@ function Copy1() {
 }
 function Share1() {
     var salesreportValue = document.getElementById("salesreport").value;
-  navigator.share({
-	title: "Sales Report",
-    text: salesreportValue,
-  })
-    .then(() => console.log('Successful share'))
-    .catch((error) => console.log('Error sharing', error));
+    if (navigator.share) {
+        navigator
+            .share({
+                title: "Sales Report",
+                text: salesreportValue,
+            })
+            .then(() => console.log("Successful share"))
+            .catch((error) => console.log("Error sharing", error));
+    } else {
+        var message = window.encodeURIComponent(document.getElementById("salesreport").value);
+        var link = "https://api.whatsapp.com/send?text=";
+        window.open(link + message);
+    }
 }
 function Save1() {
     let x = parseInt(localStorage.getItem("currentStore"));
