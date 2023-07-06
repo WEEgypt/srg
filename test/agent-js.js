@@ -942,9 +942,20 @@ function Copy1() {
     document.getElementById("copy2").disabled = true;
 }
 function Share1() {
-    var message = window.encodeURIComponent(document.getElementById("salesreport").value);
-    var link = "https://api.whatsapp.com/send?text=";
-    window.open(link + message);
+    var salesreportValue = document.getElementById("salesreport").value;
+    if (navigator.share) {
+        navigator
+            .share({
+                title: "Sales Report",
+                text: salesreportValue,
+            })
+            .then(() => console.log("Successful share"))
+            .catch((error) => console.log("Error sharing", error));
+    } else {
+        var message = window.encodeURIComponent(document.getElementById("salesreport").value);
+        var link = "https://api.whatsapp.com/send?text=";
+        window.open(link + message);
+    }
 }
 function Save1() {
     let x = parseInt(localStorage.getItem("currentUser"));
