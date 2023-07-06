@@ -747,13 +747,10 @@ function Copy1() {
 function Share1() {
     var salesreportValue = document.getElementById("salesreport").value;
     if (navigator.share) {
-        navigator
-            .share({
-                title: "Sales Report",
-                text: salesreportValue,
-            })
-            .then(() => console.log("Successful share"))
-            .catch((error) => console.log("Error sharing", error));
+        navigator.share({
+            title: "Sales Report",
+            text: salesreportValue,
+        });
     } else {
         var message = window.encodeURIComponent(document.getElementById("salesreport").value);
         var link = "https://api.whatsapp.com/send?text=";
