@@ -683,7 +683,7 @@ function GenerateSalesReport() {
     if (todaypayg == "0") {
         var todaypaygreport = "";
     } else {
-        var todaypaygreport = "\n" + "Payg: " + todaypayg;
+        var todaypaygreport = "\n" + "PAYG: " + todaypayg;
     }
     if (todaydata == "0") {
         var todaydatareport = "";
@@ -761,7 +761,7 @@ function GenerateSalesReport() {
         "This Month" +
         "\n" +
         "\n" +
-        "Payg: " +
+        "PAYG: " +
         utdpayg +
         "/" +
         targetpayg +

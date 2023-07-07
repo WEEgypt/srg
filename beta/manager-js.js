@@ -71,12 +71,30 @@ function Continue() {
     document.getElementById("targetfixed").value = localStorage.getItem("targetfixed.store." + x);
     document.getElementById("todaypayg").value = "";
     document.getElementById("todaydata").value = "";
-    document.getElementById("todaykix").value = "";
-    document.getElementById("todayskix").value = "";
-    document.getElementById("todaytazbeet").value = "";
-    document.getElementById("todayweclub").value = "";
-    document.getElementById("todaywemix").value = "";
-    document.getElementById("todayindigo").value = "";
+    document.getElementById("todaykix17").value = "";
+    document.getElementById("todaykix25").value = "";
+    document.getElementById("todaykix35").value = "";
+    document.getElementById("todaykix45").value = "";
+    document.getElementById("todaykix75").value = "";
+    document.getElementById("todayskix20").value = "";
+    document.getElementById("todayskix25").value = "";
+    document.getElementById("todayskix35").value = "";
+    document.getElementById("todayskix45").value = "";
+    document.getElementById("todayskix65").value = "";
+    document.getElementById("todayskix80").value = "";
+    document.getElementById("todayskix100").value = "";
+    document.getElementById("todaytazbeet30").value = "";
+    document.getElementById("todaytazbeet40").value = "";
+    document.getElementById("todaytazbeet70").value = "";
+    document.getElementById("todaytazbeet110").value = "";
+    document.getElementById("todayweclub25").value = "";
+    document.getElementById("todayweclub40").value = "";
+    document.getElementById("todayweclub65").value = "";
+    document.getElementById("todayweclub100").value = "";
+    document.getElementById("todaywemix165").value = "";
+    document.getElementById("todaywemix240").value = "";
+    document.getElementById("todayindigofmc").value = "";
+    document.getElementById("todayindigoopen").value = "";
     document.getElementById("todayadsl").value = "";
     document.getElementById("todayfixed").value = "";
     document.getElementById("todaybillfixed").value = "";
@@ -114,12 +132,30 @@ function NewMonth() {
     document.getElementById("targetfixed").value = "";
     document.getElementById("todaypayg").value = "";
     document.getElementById("todaydata").value = "";
-    document.getElementById("todaykix").value = "";
-    document.getElementById("todayskix").value = "";
-    document.getElementById("todaytazbeet").value = "";
-    document.getElementById("todayweclub").value = "";
-    document.getElementById("todaywemix").value = "";
-    document.getElementById("todayindigo").value = "";
+    document.getElementById("todaykix17").value = "";
+    document.getElementById("todaykix25").value = "";
+    document.getElementById("todaykix35").value = "";
+    document.getElementById("todaykix45").value = "";
+    document.getElementById("todaykix75").value = "";
+    document.getElementById("todayskix20").value = "";
+    document.getElementById("todayskix25").value = "";
+    document.getElementById("todayskix35").value = "";
+    document.getElementById("todayskix45").value = "";
+    document.getElementById("todayskix65").value = "";
+    document.getElementById("todayskix80").value = "";
+    document.getElementById("todayskix100").value = "";
+    document.getElementById("todaytazbeet30").value = "";
+    document.getElementById("todaytazbeet40").value = "";
+    document.getElementById("todaytazbeet70").value = "";
+    document.getElementById("todaytazbeet110").value = "";
+    document.getElementById("todayweclub25").value = "";
+    document.getElementById("todayweclub40").value = "";
+    document.getElementById("todayweclub65").value = "";
+    document.getElementById("todayweclub100").value = "";
+    document.getElementById("todaywemix165").value = "";
+    document.getElementById("todaywemix240").value = "";
+    document.getElementById("todayindigofmc").value = "";
+    document.getElementById("todayindigoopen").value = "";
     document.getElementById("todayadsl").value = "";
     document.getElementById("todayfixed").value = "";
     document.getElementById("todaybillfixed").value = "";
@@ -159,12 +195,30 @@ function NewStore() {
     document.getElementById("targetfixed").value = "";
     document.getElementById("todaypayg").value = "";
     document.getElementById("todaydata").value = "";
-    document.getElementById("todaykix").value = "";
-    document.getElementById("todayskix").value = "";
-    document.getElementById("todaytazbeet").value = "";
-    document.getElementById("todayweclub").value = "";
-    document.getElementById("todaywemix").value = "";
-    document.getElementById("todayindigo").value = "";
+    document.getElementById("todaykix17").value = "";
+    document.getElementById("todaykix25").value = "";
+    document.getElementById("todaykix35").value = "";
+    document.getElementById("todaykix45").value = "";
+    document.getElementById("todaykix75").value = "";
+    document.getElementById("todayskix20").value = "";
+    document.getElementById("todayskix25").value = "";
+    document.getElementById("todayskix35").value = "";
+    document.getElementById("todayskix45").value = "";
+    document.getElementById("todayskix65").value = "";
+    document.getElementById("todayskix80").value = "";
+    document.getElementById("todayskix100").value = "";
+    document.getElementById("todaytazbeet30").value = "";
+    document.getElementById("todaytazbeet40").value = "";
+    document.getElementById("todaytazbeet70").value = "";
+    document.getElementById("todaytazbeet110").value = "";
+    document.getElementById("todayweclub25").value = "";
+    document.getElementById("todayweclub40").value = "";
+    document.getElementById("todayweclub65").value = "";
+    document.getElementById("todayweclub100").value = "";
+    document.getElementById("todaywemix165").value = "";
+    document.getElementById("todaywemix240").value = "";
+    document.getElementById("todayindigofmc").value = "";
+    document.getElementById("todayindigoopen").value = "";
     document.getElementById("todayadsl").value = "";
     document.getElementById("todayfixed").value = "";
     document.getElementById("todaybillfixed").value = "";
@@ -275,12 +329,30 @@ function Back5() {
     document.getElementById("achievedfixed").value = localStorage.getItem("undoachievedfixed");
     document.getElementById("todaypayg").value = localStorage.getItem("undotodaypayg");
     document.getElementById("todaydata").value = localStorage.getItem("undotodaydata");
-    document.getElementById("todaykix").value = localStorage.getItem("undotodaykix");
-    document.getElementById("todayskix").value = localStorage.getItem("undotodayskix");
-    document.getElementById("todaytazbeet").value = localStorage.getItem("undotodaytazbeet");
-    document.getElementById("todayweclub").value = localStorage.getItem("undotodayweclub");
-    document.getElementById("todaywemix").value = localStorage.getItem("undotodaywemix");
-    document.getElementById("todayindigo").value = localStorage.getItem("undotodayindigo");
+    document.getElementById("todaykix17").value = localStorage.getItem("undotodaykix17");
+    document.getElementById("todaykix25").value = localStorage.getItem("undotodaykix25");
+    document.getElementById("todaykix35").value = localStorage.getItem("undotodaykix35");
+    document.getElementById("todaykix45").value = localStorage.getItem("undotodaykix45");
+    document.getElementById("todaykix75").value = localStorage.getItem("undotodaykix75");
+    document.getElementById("todayskix20").value = localStorage.getItem("undotodayskix20");
+    document.getElementById("todayskix25").value = localStorage.getItem("undotodayskix25");
+    document.getElementById("todayskix35").value = localStorage.getItem("undotodayskix35");
+    document.getElementById("todayskix45").value = localStorage.getItem("undotodayskix45");
+    document.getElementById("todayskix65").value = localStorage.getItem("undotodayskix65");
+    document.getElementById("todayskix80").value = localStorage.getItem("undotodayskix80");
+    document.getElementById("todayskix100").value = localStorage.getItem("undotodayskix100");
+    document.getElementById("todaytazbeet30").value = localStorage.getItem("undotodaytazbeet30");
+    document.getElementById("todaytazbeet40").value = localStorage.getItem("undotodaytazbeet40");
+    document.getElementById("todaytazbeet70").value = localStorage.getItem("undotodaytazbeet70");
+    document.getElementById("todaytazbeet110").value = localStorage.getItem("undotodaytazbeet110");
+    document.getElementById("todayweclub25").value = localStorage.getItem("undotodayweclub25");
+    document.getElementById("todayweclub40").value = localStorage.getItem("undotodayweclub40");
+    document.getElementById("todayweclub65").value = localStorage.getItem("undotodayweclub65");
+    document.getElementById("todayweclub100").value = localStorage.getItem("undotodayweclub100");
+    document.getElementById("todaywemix165").value = localStorage.getItem("undotodaywemix165");
+    document.getElementById("todaywemix240").value = localStorage.getItem("undotodaywemix240");
+    document.getElementById("todayindigofmc").value = localStorage.getItem("undotodayindigofmc");
+    document.getElementById("todayindigoopen").value = localStorage.getItem("undotodayindigoopen");
     document.getElementById("todayadsl").value = localStorage.getItem("undotodayadsl");
     document.getElementById("todayfixed").value = localStorage.getItem("undotodayfixed");
     document.getElementById("todaybillfixed").value = localStorage.getItem("undotodaybillfixed");
@@ -332,48 +404,270 @@ function GenerateSalesReport() {
     var achieveddata = parseInt(document.getElementById("achieveddata").value) || 0;
     var utddata = todaydata + achieveddata || 0;
     var targetdata = parseInt(document.getElementById("targetdata").value) || 0;
-    var todaykixInput = document.getElementById("todaykix").value.split(" ");
-    var todaykix = 0;
-    for (i = 0; i < todaykixInput.length; i++) {
-        todaykix += parseInt(todaykixInput[i]) || 0;
+    var todaykix17Input = document.getElementById("todaykix17").value.split(" ");
+    var todaykix17 = 0;
+    for (i = 0; i < todaykix17Input.length; i++) {
+        todaykix17 += parseInt(todaykix17Input[i]) || 0;
     }
-    var todayskixInput = document.getElementById("todayskix").value.split(" ");
-    var todayskix = 0;
-    for (i = 0; i < todayskixInput.length; i++) {
-        todayskix += parseInt(todayskixInput[i]) || 0;
+    var todaykix25Input = document.getElementById("todaykix25").value.split(" ");
+    var todaykix25 = 0;
+    for (i = 0; i < todaykix25Input.length; i++) {
+        todaykix25 += parseInt(todaykix25Input[i]) || 0;
     }
-    var todaytazbeetInput = document.getElementById("todaytazbeet").value.split(" ");
-    var todaytazbeet = 0;
-    for (i = 0; i < todaytazbeetInput.length; i++) {
-        todaytazbeet += parseInt(todaytazbeetInput[i]) || 0;
+    var todaykix35Input = document.getElementById("todaykix35").value.split(" ");
+    var todaykix35 = 0;
+    for (i = 0; i < todaykix35Input.length; i++) {
+        todaykix35 += parseInt(todaykix35Input[i]) || 0;
     }
+    var todaykix45Input = document.getElementById("todaykix45").value.split(" ");
+    var todaykix45 = 0;
+    for (i = 0; i < todaykix45Input.length; i++) {
+        todaykix45 += parseInt(todaykix45Input[i]) || 0;
+    }
+    var todaykix75Input = document.getElementById("todaykix75").value.split(" ");
+    var todaykix75 = 0;
+    for (i = 0; i < todaykix75Input.length; i++) {
+        todaykix75 += parseInt(todaykix75Input[i]) || 0;
+    }
+    var todaykix = todaykix17 + todaykix25 + todaykix35 + todaykix45 + todaykix75 || 0;
+    if (todaykix17 == "0") {
+        var todaykix17report = "";
+    } else {
+        var todaykix17report = todaykix17 + "*17 ";
+    }
+    if (todaykix25 == "0") {
+        var todaykix25report = "";
+    } else {
+        var todaykix25report = todaykix25 + "*25 ";
+    }
+    if (todaykix35 == "0") {
+        var todaykix35report = "";
+    } else {
+        var todaykix35report = todaykix35 + "*35 ";
+    }
+    if (todaykix45 == "0") {
+        var todaykix45report = "";
+    } else {
+        var todaykix45report = todaykix45 + "*45 ";
+    }
+    if (todaykix75 == "0") {
+        var todaykix75report = "";
+    } else {
+        var todaykix75report = todaykix75 + "*75 ";
+    }
+    var todaykixreport = todaykix17report + todaykix25report + todaykix35report + todaykix45report + todaykix75report || 0;
+    var todayskix20Input = document.getElementById("todayskix20").value.split(" ");
+    var todayskix20 = 0;
+    for (i = 0; i < todayskix20Input.length; i++) {
+        todayskix20 += parseInt(todayskix20Input[i]) || 0;
+    }
+    var todayskix25Input = document.getElementById("todayskix25").value.split(" ");
+    var todayskix25 = 0;
+    for (i = 0; i < todayskix25Input.length; i++) {
+        todayskix25 += parseInt(todayskix25Input[i]) || 0;
+    }
+    var todayskix35Input = document.getElementById("todayskix35").value.split(" ");
+    var todayskix35 = 0;
+    for (i = 0; i < todayskix35Input.length; i++) {
+        todayskix35 += parseInt(todayskix35Input[i]) || 0;
+    }
+    var todayskix45Input = document.getElementById("todayskix45").value.split(" ");
+    var todayskix45 = 0;
+    for (i = 0; i < todayskix45Input.length; i++) {
+        todayskix45 += parseInt(todayskix45Input[i]) || 0;
+    }
+    var todayskix65Input = document.getElementById("todayskix65").value.split(" ");
+    var todayskix65 = 0;
+    for (i = 0; i < todayskix65Input.length; i++) {
+        todayskix65 += parseInt(todayskix65Input[i]) || 0;
+    }
+    var todayskix80Input = document.getElementById("todayskix80").value.split(" ");
+    var todayskix80 = 0;
+    for (i = 0; i < todayskix80Input.length; i++) {
+        todayskix80 += parseInt(todayskix80Input[i]) || 0;
+    }
+    var todayskix100Input = document.getElementById("todayskix100").value.split(" ");
+    var todayskix100 = 0;
+    for (i = 0; i < todayskix100Input.length; i++) {
+        todayskix100 += parseInt(todayskix100Input[i]) || 0;
+    }
+    var todayskix = todayskix20 + todayskix25 + todayskix35 + todayskix45 + todayskix65 + todayskix80 + todayskix100 || 0;
+    if (todayskix20 == "0") {
+        var todayskix20report = "";
+    } else {
+        var todayskix20report = todayskix20 + "*20 ";
+    }
+    if (todayskix25 == "0") {
+        var todayskix25report = "";
+    } else {
+        var todayskix25report = todayskix25 + "*25 ";
+    }
+    if (todayskix35 == "0") {
+        var todayskix35report = "";
+    } else {
+        var todayskix35report = todayskix35 + "*35 ";
+    }
+    if (todayskix45 == "0") {
+        var todayskix45report = "";
+    } else {
+        var todayskix45report = todayskix45 + "*45 ";
+    }
+    if (todayskix65 == "0") {
+        var todayskix65report = "";
+    } else {
+        var todayskix65report = todayskix65 + "*65 ";
+    }
+    if (todayskix80 == "0") {
+        var todayskix80report = "";
+    } else {
+        var todayskix80report = todayskix80 + "*80 ";
+    }
+    if (todayskix100 == "0") {
+        var todayskix100report = "";
+    } else {
+        var todayskix100report = todayskix100 + "*100 ";
+    }
+    var todayskixreport = todayskix20report + todayskix25report + todayskix35report + todayskix45report + todayskix65report + todayskix80report + todayskix100report || 0;
+    var todaytazbeet30Input = document.getElementById("todaytazbeet30").value.split(" ");
+    var todaytazbeet30 = 0;
+    for (i = 0; i < todaytazbeet30Input.length; i++) {
+        todaytazbeet30 += parseInt(todaytazbeet30Input[i]) || 0;
+    }
+    var todaytazbeet40Input = document.getElementById("todaytazbeet40").value.split(" ");
+    var todaytazbeet40 = 0;
+    for (i = 0; i < todaytazbeet40Input.length; i++) {
+        todaytazbeet40 += parseInt(todaytazbeet40Input[i]) || 0;
+    }
+    var todaytazbeet70Input = document.getElementById("todaytazbeet70").value.split(" ");
+    var todaytazbeet70 = 0;
+    for (i = 0; i < todaytazbeet70Input.length; i++) {
+        todaytazbeet70 += parseInt(todaytazbeet70Input[i]) || 0;
+    }
+    var todaytazbeet110Input = document.getElementById("todaytazbeet110").value.split(" ");
+    var todaytazbeet110 = 0;
+    for (i = 0; i < todaytazbeet110Input.length; i++) {
+        todaytazbeet110 += parseInt(todaytazbeet110Input[i]) || 0;
+    }
+    var todaytazbeet = todaytazbeet30 + todaytazbeet40 + todaytazbeet70 + todaytazbeet110 || 0;
+    if (todaytazbeet30 == "0") {
+        var todaytazbeet30report = "";
+    } else {
+        var todaytazbeet30report = todaytazbeet30 + "*30 ";
+    }
+    if (todaytazbeet40 == "0") {
+        var todaytazbeet40report = "";
+    } else {
+        var todaytazbeet40report = todaytazbeet40 + "*40 ";
+    }
+    if (todaytazbeet70 == "0") {
+        var todaytazbeet70report = "";
+    } else {
+        var todaytazbeet70report = todaytazbeet70 + "*70 ";
+    }
+    if (todaytazbeet110 == "0") {
+        var todaytazbeet110report = "";
+    } else {
+        var todaytazbeet110report = todaytazbeet110 + "*110 ";
+    }
+    var todaytazbeetreport = todaytazbeet30report + todaytazbeet40report + todaytazbeet70report + todaytazbeet110report || 0;
     var achievedkixandsuper = parseInt(document.getElementById("achievedkixandsuper").value) || 0;
     var utdkixandsuper = todaykix + todayskix + achievedkixandsuper || 0;
     var targetkixandsuper = parseInt(document.getElementById("targetkixandsuper").value) || 0;
     var achievedtaz = parseInt(document.getElementById("achievedtaz").value) || 0;
     var utdtaz = todaytazbeet + achievedtaz || 0;
     var targettaz = parseInt(document.getElementById("targettaz").value) || 0;
-    var todayweclubInput = document.getElementById("todayweclub").value.split(" ");
-    var todayweclub = 0;
-    for (i = 0; i < todayweclubInput.length; i++) {
-        todayweclub += parseInt(todayweclubInput[i]) || 0;
+    var todayweclub25Input = document.getElementById("todayweclub25").value.split(" ");
+    var todayweclub25 = 0;
+    for (i = 0; i < todayweclub25Input.length; i++) {
+        todayweclub25 += parseInt(todayweclub25Input[i]) || 0;
     }
+    var todayweclub40Input = document.getElementById("todayweclub40").value.split(" ");
+    var todayweclub40 = 0;
+    for (i = 0; i < todayweclub40Input.length; i++) {
+        todayweclub40 += parseInt(todayweclub40Input[i]) || 0;
+    }
+    var todayweclub65Input = document.getElementById("todayweclub65").value.split(" ");
+    var todayweclub65 = 0;
+    for (i = 0; i < todayweclub65Input.length; i++) {
+        todayweclub65 += parseInt(todayweclub65Input[i]) || 0;
+    }
+    var todayweclub100Input = document.getElementById("todayweclub100").value.split(" ");
+    var todayweclub100 = 0;
+    for (i = 0; i < todayweclub100Input.length; i++) {
+        todayweclub100 += parseInt(todayweclub100Input[i]) || 0;
+    }
+    var todayweclub = todayweclub25 + todayweclub40 + todayweclub65 + todayweclub100 || 0;
+    if (todayweclub25 == "0") {
+        var todayweclub25report = "";
+    } else {
+        var todayweclub25report = todayweclub25 + "*25 ";
+    }
+    if (todayweclub40 == "0") {
+        var todayweclub40report = "";
+    } else {
+        var todayweclub40report = todayweclub40 + "*40 ";
+    }
+    if (todayweclub65 == "0") {
+        var todayweclub65report = "";
+    } else {
+        var todayweclub65report = todayweclub65 + "*65 ";
+    }
+    if (todayweclub100 == "0") {
+        var todayweclub100report = "";
+    } else {
+        var todayweclub100report = todayweclub100 + "*100 ";
+    }
+    var todayweclubreport = todayweclub25report + todayweclub40report + todayweclub65report + todayweclub100report || 0;
     var achievedweclub = parseInt(document.getElementById("achievedweclub").value) || 0;
     var utdweclub = todayweclub + achievedweclub || 0;
     var targetweclub = parseInt(document.getElementById("targetweclub").value) || 0;
-    var todaywemixInput = document.getElementById("todaywemix").value.split(" ");
-    var todaywemix = 0;
-    for (i = 0; i < todaywemixInput.length; i++) {
-        todaywemix += parseInt(todaywemixInput[i]) || 0;
+    var todaywemix165Input = document.getElementById("todaywemix165").value.split(" ");
+    var todaywemix165 = 0;
+    for (i = 0; i < todaywemix165Input.length; i++) {
+        todaywemix165 += parseInt(todaywemix165Input[i]) || 0;
     }
+    var todaywemix240Input = document.getElementById("todaywemix240").value.split(" ");
+    var todaywemix240 = 0;
+    for (i = 0; i < todaywemix240Input.length; i++) {
+        todaywemix240 += parseInt(todaywemix240Input[i]) || 0;
+    }
+    var todaywemix = todaywemix165 + todaywemix240 || 0;
+    if (todaywemix165 == "0") {
+        var todaywemix165report = "";
+    } else {
+        var todaywemix165report = todaywemix165 + "*165 ";
+    }
+    if (todaywemix240 == "0") {
+        var todaywemix240report = "";
+    } else {
+        var todaywemix240report = todaywemix240 + "*240 ";
+    }
+    var todaywemixreport = todaywemix165report + todaywemix240report || 0;
     var achievedwemix = parseInt(document.getElementById("achievedwemix").value) || 0;
     var utdwemix = todaywemix + achievedwemix || 0;
     var targetwemix = parseInt(document.getElementById("targetwemix").value) || 0;
-    var todayindigoInput = document.getElementById("todayindigo").value.split(" ");
-    var todayindigo = 0;
-    for (i = 0; i < todayindigoInput.length; i++) {
-        todayindigo += parseInt(todayindigoInput[i]) || 0;
+    var todayindigofmcInput = document.getElementById("todayindigofmc").value.split(" ");
+    var todayindigofmc = 0;
+    for (i = 0; i < todayindigofmcInput.length; i++) {
+        todayindigofmc += parseInt(todayindigofmcInput[i]) || 0;
     }
+    var todayindigoopenInput = document.getElementById("todayindigoopen").value.split(" ");
+    var todayindigoopen = 0;
+    for (i = 0; i < todayindigoopenInput.length; i++) {
+        todayindigoopen += parseInt(todayindigoopenInput[i]) || 0;
+    }
+    var todayindigo = todayindigofmc + todayindigoopen || 0;
+    if (todayindigofmc == "0") {
+        var todayindigofmcreport = "";
+    } else {
+        var todayindigofmcreport = todayindigofmc + "*FMC ";
+    }
+    if (todayindigoopen == "0") {
+        var todayindigoopenreport = "";
+    } else {
+        var todayindigoopenreport = todayindigoopen + "*Open ";
+    }
+    var todayindigoreport = todayindigofmcreport + todayindigoopenreport || 0;
     var achievedindigo = parseInt(document.getElementById("achievedindigo").value) || 0;
     var utdindigo = todayindigo + achievedindigo || 0;
     var targetindigo = parseInt(document.getElementById("targetindigo").value) || 0;
@@ -581,34 +875,35 @@ function GenerateSalesReport() {
         "-------------------------" +
         "\n" +
         "Indigo: " +
-        todayindigo +
+        todayindigoreport +
         "\n" +
-        "Payg: " +
+        "PAYG: " +
         todaypayg +
         "\n" +
         "Data: " +
         todaydata +
         "\n" +
         "Kix: " +
-        todaykix +
+        todaykixreport +
         "\n" +
         "Super Kix: " +
-        todayskix +
+        todayskixreport +
         "\n" +
         "Tazbeet: " +
-        todaytazbeet +
+        todaytazbeetreport +
         "\n" +
         "We Club: " +
-        todayweclub +
+        todayweclubreport +
         "\n" +
         "We Mix: " +
-        todaywemix +
+        todaywemixreport +
         "\n" +
         "ADSL: " +
         todayadsl +
         "\n" +
         "Fixed: " +
         todayfixed +
+        "\n" +
         "\n" +
         "SIM Swap: " +
         todaysimswap +
@@ -682,12 +977,30 @@ function GenerateSalesReport() {
         todayossamount;
     localStorage.setItem("undotodaypayg", document.getElementById("todaypayg").value);
     localStorage.setItem("undotodaydata", document.getElementById("todaydata").value);
-    localStorage.setItem("undotodaykix", document.getElementById("todaykix").value);
-    localStorage.setItem("undotodayskix", document.getElementById("todayskix").value);
-    localStorage.setItem("undotodaytazbeet", document.getElementById("todaytazbeet").value);
-    localStorage.setItem("undotodayweclub", document.getElementById("todayweclub").value);
-    localStorage.setItem("undotodaywemix", document.getElementById("todaywemix").value);
-    localStorage.setItem("undotodayindigo", document.getElementById("todayindigo").value);
+    localStorage.setItem("undotodaykix17", document.getElementById("todaykix17").value);
+    localStorage.setItem("undotodaykix25", document.getElementById("todaykix25").value);
+    localStorage.setItem("undotodaykix35", document.getElementById("todaykix35").value);
+    localStorage.setItem("undotodaykix45", document.getElementById("todaykix45").value);
+    localStorage.setItem("undotodaykix75", document.getElementById("todaykix75").value);
+    localStorage.setItem("undotodayskix20", document.getElementById("todayskix20").value);
+    localStorage.setItem("undotodayskix25", document.getElementById("todayskix25").value);
+    localStorage.setItem("undotodayskix35", document.getElementById("todayskix35").value);
+    localStorage.setItem("undotodayskix45", document.getElementById("todayskix45").value);
+    localStorage.setItem("undotodayskix65", document.getElementById("todayskix65").value);
+    localStorage.setItem("undotodayskix80", document.getElementById("todayskix80").value);
+    localStorage.setItem("undotodayskix100", document.getElementById("todayskix100").value);
+    localStorage.setItem("undotodaytazbeet30", document.getElementById("todaytazbeet30").value);
+    localStorage.setItem("undotodaytazbeet40", document.getElementById("todaytazbeet40").value);
+    localStorage.setItem("undotodaytazbeet70", document.getElementById("todaytazbeet70").value);
+    localStorage.setItem("undotodaytazbeet110", document.getElementById("todaytazbeet110").value);
+    localStorage.setItem("undotodayweclub25", document.getElementById("todayweclub25").value);
+    localStorage.setItem("undotodayweclub40", document.getElementById("todayweclub40").value);
+    localStorage.setItem("undotodayweclub65", document.getElementById("todayweclub65").value);
+    localStorage.setItem("undotodayweclub100", document.getElementById("todayweclub100").value);
+    localStorage.setItem("undotodaywemix165", document.getElementById("todaywemix165").value);
+    localStorage.setItem("undotodaywemix240", document.getElementById("todaywemix240").value);
+    localStorage.setItem("undotodayindigofmc", document.getElementById("todayindigofmc").value);
+    localStorage.setItem("undotodayindigoopen", document.getElementById("todayindigoopen").value);
     localStorage.setItem("undotodayadsl", document.getElementById("todayadsl").value);
     localStorage.setItem("undotodayfixed", document.getElementById("todayfixed").value);
     localStorage.setItem("undotodaybillfixed", document.getElementById("todaybillfixed").value);
@@ -711,15 +1024,33 @@ function GenerateSalesReport() {
     document.getElementById("todaydata").value = "";
     document.getElementById("achievedkixandsuper").value = utdkixandsuper;
     document.getElementById("achievedtaz").value = utdtaz;
-    document.getElementById("todaykix").value = "";
-    document.getElementById("todayskix").value = "";
-    document.getElementById("todaytazbeet").value = "";
+    document.getElementById("todaykix17").value = "";
+    document.getElementById("todaykix25").value = "";
+    document.getElementById("todaykix35").value = "";
+    document.getElementById("todaykix45").value = "";
+    document.getElementById("todaykix75").value = "";
+    document.getElementById("todayskix20").value = "";
+    document.getElementById("todayskix25").value = "";
+    document.getElementById("todayskix35").value = "";
+    document.getElementById("todayskix45").value = "";
+    document.getElementById("todayskix65").value = "";
+    document.getElementById("todayskix80").value = "";
+    document.getElementById("todayskix100").value = "";
+    document.getElementById("todaytazbeet30").value = "";
+    document.getElementById("todaytazbeet40").value = "";
+    document.getElementById("todaytazbeet70").value = "";
+    document.getElementById("todaytazbeet110").value = "";
     document.getElementById("achievedweclub").value = utdweclub;
-    document.getElementById("todayweclub").value = "";
+    document.getElementById("todayweclub25").value = "";
+    document.getElementById("todayweclub40").value = "";
+    document.getElementById("todayweclub65").value = "";
+    document.getElementById("todayweclub100").value = "";
     document.getElementById("achievedwemix").value = utdwemix;
-    document.getElementById("todaywemix").value = "";
+    document.getElementById("todaywemix165").value = "";
+    document.getElementById("todaywemix240").value = "";
     document.getElementById("achievedindigo").value = utdindigo;
-    document.getElementById("todayindigo").value = "";
+    document.getElementById("todayindigofmc").value = "";
+    document.getElementById("todayindigoopen").value = "";
     document.getElementById("achievedadsl").value = utdadsl;
     document.getElementById("todayadsl").value = "";
     document.getElementById("achievedfixed").value = utdfixed;
