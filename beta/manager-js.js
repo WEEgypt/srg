@@ -95,6 +95,7 @@ function Continue() {
     document.getElementById("todaywemix240").value = "";
     document.getElementById("todayindigofmc").value = "";
     document.getElementById("todayindigoopen").value = "";
+    document.getElementById("todayindigocl").value = "";
     document.getElementById("todayadsl").value = "";
     document.getElementById("todayfixed").value = "";
     document.getElementById("todaybillfixed").value = "";
@@ -156,6 +157,7 @@ function NewMonth() {
     document.getElementById("todaywemix240").value = "";
     document.getElementById("todayindigofmc").value = "";
     document.getElementById("todayindigoopen").value = "";
+    document.getElementById("todayindigocl").value = "";
     document.getElementById("todayadsl").value = "";
     document.getElementById("todayfixed").value = "";
     document.getElementById("todaybillfixed").value = "";
@@ -219,6 +221,7 @@ function NewStore() {
     document.getElementById("todaywemix240").value = "";
     document.getElementById("todayindigofmc").value = "";
     document.getElementById("todayindigoopen").value = "";
+    document.getElementById("todayindigocl").value = "";
     document.getElementById("todayadsl").value = "";
     document.getElementById("todayfixed").value = "";
     document.getElementById("todaybillfixed").value = "";
@@ -353,6 +356,7 @@ function Back5() {
     document.getElementById("todaywemix240").value = localStorage.getItem("undotodaywemix240");
     document.getElementById("todayindigofmc").value = localStorage.getItem("undotodayindigofmc");
     document.getElementById("todayindigoopen").value = localStorage.getItem("undotodayindigoopen");
+    document.getElementById("todayindigocl").value = localStorage.getItem("undotodayindigocl");
     document.getElementById("todayadsl").value = localStorage.getItem("undotodayadsl");
     document.getElementById("todayfixed").value = localStorage.getItem("undotodayfixed");
     document.getElementById("todaybillfixed").value = localStorage.getItem("undotodaybillfixed");
@@ -656,7 +660,12 @@ function GenerateSalesReport() {
     for (i = 0; i < todayindigoopenInput.length; i++) {
         todayindigoopen += parseInt(todayindigoopenInput[i]) || 0;
     }
-    var todayindigo = todayindigofmc + todayindigoopen || 0;
+    var todayindigoclInput = document.getElementById("todayindigocl").value.split(" ");
+    var todayindigocl = 0;
+    for (i = 0; i < todayindigoclInput.length; i++) {
+        todayindigocl += parseInt(todayindigoclInput[i]) || 0;
+    }
+    var todayindigo = todayindigofmc + todayindigoopen + todayindigocl || 0;
     if (todayindigofmc == "0") {
         var todayindigofmcreport = "";
     } else {
@@ -667,7 +676,12 @@ function GenerateSalesReport() {
     } else {
         var todayindigoopenreport = todayindigoopen + "*Open ";
     }
-    var todayindigoreport = todayindigofmcreport + todayindigoopenreport || 0;
+    if (todayindigocl == "0") {
+        var todayindigoclreport = "";
+    } else {
+        var todayindigoclreport = todayindigocl + "*CL ";
+    }
+    var todayindigoreport = todayindigofmcreport + todayindigoopenreport + todayindigoclreport || 0;
     var achievedindigo = parseInt(document.getElementById("achievedindigo").value) || 0;
     var utdindigo = todayindigo + achievedindigo || 0;
     var targetindigo = parseInt(document.getElementById("targetindigo").value) || 0;
@@ -1001,6 +1015,7 @@ function GenerateSalesReport() {
     localStorage.setItem("undotodaywemix240", document.getElementById("todaywemix240").value);
     localStorage.setItem("undotodayindigofmc", document.getElementById("todayindigofmc").value);
     localStorage.setItem("undotodayindigoopen", document.getElementById("todayindigoopen").value);
+    localStorage.setItem("undotodayindigocl", document.getElementById("todayindigocl").value);
     localStorage.setItem("undotodayadsl", document.getElementById("todayadsl").value);
     localStorage.setItem("undotodayfixed", document.getElementById("todayfixed").value);
     localStorage.setItem("undotodaybillfixed", document.getElementById("todaybillfixed").value);
@@ -1051,6 +1066,7 @@ function GenerateSalesReport() {
     document.getElementById("achievedindigo").value = utdindigo;
     document.getElementById("todayindigofmc").value = "";
     document.getElementById("todayindigoopen").value = "";
+    document.getElementById("todayindigocl").value = "";
     document.getElementById("achievedadsl").value = utdadsl;
     document.getElementById("todayadsl").value = "";
     document.getElementById("achievedfixed").value = utdfixed;
