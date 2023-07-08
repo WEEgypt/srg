@@ -905,9 +905,6 @@ function GenerateSalesReport() {
         todayfixed +
         "\n" +
         "\n" +
-        "SIM Swap: " +
-        todaysimswap +
-        "\n" +
         "ADSL Bills: " +
         todaybilladsl +
         "\n" +
@@ -916,6 +913,9 @@ function GenerateSalesReport() {
         "\n" +
         "Landline Bills: " +
         todaybillfixed +
+        "\n" +
+        "SIM Swap: " +
+        todaysimswap +
         "\n" +
         "-------------------------```" +
         "\n" +
