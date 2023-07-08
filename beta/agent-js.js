@@ -731,14 +731,14 @@ function GenerateSalesReport() {
         "Transaction" +
         "\n" +
         "\n" +
-        "Fixed Bills: " +
-        todaybillfixed +
+        "ADSL Bills: " +
+        todaybilladsl +
         "\n" +
         "Indigo Bills: " +
         todaybillindigo +
         "\n" +
-        "ADSL Bills: " +
-        todaybilladsl +
+        "Landline Bills: " +
+        todaybillfixed +
         "\n" +
         "SIM Swap: " +
         todaysimswap +
@@ -771,7 +771,6 @@ function GenerateSalesReport() {
         "/" +
         targetdata +
         "\n" +
-        "\n" +
         "Kix & Super: " +
         utdkixandsuper +
         "/" +
@@ -797,7 +796,6 @@ function GenerateSalesReport() {
         "/" +
         targetindigo +
         "\n" +
-        "\n" +
         "ADSL: " +
         utdadsl +
         "/" +
@@ -807,6 +805,11 @@ function GenerateSalesReport() {
         utdfixed +
         "/" +
         targetfixed +
+        "\n" +
+        "MIFI: " +
+        utdmifi +
+        "/" +
+        targetmifi +
         "\n" +
         "\n" +
         "Target: " +
@@ -823,11 +826,6 @@ function GenerateSalesReport() {
         reMobile +
         "%" +
         "\n" +
-        "\n" +
-        "MIFI: " +
-        utdmifi +
-        "/" +
-        targetmifi +
         "\n" +
         "Tkafol & Karama: " +
         utdtkafol;
