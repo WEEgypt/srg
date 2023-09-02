@@ -264,9 +264,9 @@ function GenerateSalesReport() {
         "\n" +
         "TGT: " +
         targetindigo +
-        "  /Ach: " +
+        " /Ach: " +
         utdindigo +
-        "  /VS: " +
+        " /VS: " +
         vsIndigo +
         "%" +
         "\n" +
@@ -276,9 +276,9 @@ function GenerateSalesReport() {
         "\n" +
         "TGT: " +
         targetwemix +
-        "  /Ach: " +
+        " /Ach: " +
         utdwemix +
-        "  /VS: " +
+        " /VS: " +
         vsWemix +
         "%" +
         "\n" +
@@ -288,9 +288,9 @@ function GenerateSalesReport() {
         "\n" +
         "TGT: " +
         targetfixed +
-        "  /Ach: " +
+        " /Ach: " +
         utdfixed +
-        "  /VS: " +
+        " /VS: " +
         vsFixed +
         "%" +
         "\n" +
@@ -300,9 +300,9 @@ function GenerateSalesReport() {
         "\n" +
         "TGT: " +
         targetadsl +
-        "  /Ach: " +
+        " /Ach: " +
         utdadsl +
-        "  /VS: " +
+        " /VS: " +
         vsAdsl +
         "%" +
         "\n" +
