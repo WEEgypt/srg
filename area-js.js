@@ -161,6 +161,11 @@ function Back5() {
         today.style.display = "block";
     }
     document.getElementById("salesreport").value = "";
+    document.getElementById("achievedmobile").value = localStorage.getItem("undoachievedmobile");
+    document.getElementById("achievedwemix").value = localStorage.getItem("undoachievedwemix");
+    document.getElementById("achievedindigo").value = localStorage.getItem("undoachievedindigo");
+    document.getElementById("achievedadsl").value = localStorage.getItem("undoachievedadsl");
+    document.getElementById("achievedfixed").value = localStorage.getItem("undoachievedfixed");
     document.getElementById("todaymobile").value = localStorage.getItem("undotodaymobile");
     document.getElementById("todaywemix").value = localStorage.getItem("undotodaywemix");
     document.getElementById("todayindigo").value = localStorage.getItem("undotodayindigo");
