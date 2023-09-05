@@ -219,6 +219,7 @@ function GenerateSalesReport() {
     for (i = 0; i < todayindigoInput.length; i++) {
         todayindigo += parseInt(todayindigoInput[i]) || 0;
     }
+    todaypostpaid = todaywegold + todayindigo || 0;
     achievedpostpaid = parseInt(document.getElementById("achievedpostpaid").value) || 0;
     utdpostpaid = todayindigo + todaywegold + achievedpostpaid || 0;
     targetpostpaid = parseInt(document.getElementById("targetpostpaid").value) || 0;
@@ -256,14 +257,17 @@ function GenerateSalesReport() {
         "Today Sales: " +
         todaymobile +
         "\n" +
-        "-------------------------" +
-        "\n" +
-        "\n" +
         "Today We Gold: " +
         todaywegold +
         "\n" +
         "Today Indigo: " +
         todayindigo +
+        "\n" +
+        "-------------------------" +
+        "\n" +
+        "\n" +
+        "Today Postpaid: " +
+        todaypostpaid +
         "\n" +
         "TGT: " +
         targetpostpaid +
