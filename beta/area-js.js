@@ -2,8 +2,8 @@ function EnableRestore() {
     if (localStorage.getItem("areaRestore") == "true") {
         basic.style.display = "none";
         restore.style.display = "block";
-        row1.style.display = "none";
-        row2.style.display = "block";
+        row__1.style.display = "none";
+        row__2.style.display = "block";
     }
 }
 function GetDate() {
@@ -27,12 +27,112 @@ function BackTransform() {
     gsap.from("#today", { duration: 0.2, xPercent: -50, opacity: 0 });
     gsap.from("#report", { duration: 0.2, xPercent: -50, opacity: 0 });
 }
+function Next__1() {
+    Next__2();
+}
+function Next__2() {
+    if (basic.style.display === "block") {
+        basic.style.display = "none";
+        target.style.display = "block";
+    }
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    NextTransform();
+}
+function Next__3() {
+    if (document.getElementById("day").value == 1 && target.style.display === "block") {
+        target.style.display = "none";
+        today.style.display = "block";
+    } else {
+        target.style.display = "none";
+        achieved.style.display = "block";
+    }
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    NextTransform();
+}
+function Next__4() {
+    if (achieved.style.display === "block") {
+        achieved.style.display = "none";
+        today.style.display = "block";
+    }
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    NextTransform();
+}
+function Back__1() {
+    window.open("index.html", "_self");
+}
+
+function Back__2() {
+    if (basic.style.display === "block") {
+        basic.style.display = "none";
+        restore.style.display = "block";
+    }
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    BackTransform();
+}
+function Back__3() {
+    if (target.style.display === "block") {
+        target.style.display = "none";
+        basic.style.display = "block";
+        area.style.display = "block";
+    }
+    if (localStorage.getItem("areaRestore") == "true") {
+        row__1.style.display = "none";
+        row__2.style.display = "block";
+    } else {
+        row__1.style.display = "block";
+        row__2.style.display = "none";
+    }
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    BackTransform();
+}
+function Back__4() {
+    if (achieved.style.display === "block") {
+        achieved.style.display = "none";
+        target.style.display = "block";
+    }
+    basic.style.display = "none";
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    BackTransform();
+}
+function Back__5() {
+    if (document.getElementById("day").value == 1 && today.style.display === "block") {
+        today.style.display = "none";
+        target.style.display = "block";
+    } else {
+        today.style.display = "none";
+        achieved.style.display = "block";
+    }
+    basic.style.display = "none";
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    BackTransform();
+}
+function Back__6() {
+    if (report.style.display === "block") {
+        report.style.display = "none";
+        today.style.display = "block";
+    }
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    BackTransform();
+}
+function Back__7() {
+    Back__6();
+    basic.style.display = "block";
+    area.style.display = "none";
+}
 function Continue() {
     restore.style.display = "none";
     basic.style.display = "block";
     area.style.display = "none";
-    row1.style.display = "none";
-    row2.style.display = "none";
+    row__1.style.display = "none";
+    row__2.style.display = "none";
     today.style.display = "block";
     document.getElementById("areaname").value = localStorage.getItem("areaname");
     document.getElementById("achievedmobile").value = localStorage.getItem("achievedmobile");
@@ -75,102 +175,6 @@ function NewMonth() {
     document.getElementById("todayfixed").value = "";
     NextTransform();
 }
-function Next1() {
-    Next2();
-}
-function Back1() {
-    if (basic.style.display === "block") {
-        basic.style.display = "none";
-        restore.style.display = "block";
-    }
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-    BackTransform();
-}
-function Next2() {
-    if (basic.style.display === "block") {
-        basic.style.display = "none";
-        target.style.display = "block";
-    }
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-    NextTransform();
-}
-function Back2() {
-    if (target.style.display === "block") {
-        target.style.display = "none";
-        basic.style.display = "block";
-        area.style.display = "block";
-    }
-    if (localStorage.getItem("areaRestore") == "true") {
-        row1.style.display = "none";
-        row2.style.display = "block";
-    } else {
-        row1.style.display = "block";
-        row2.style.display = "none";
-    }
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-    BackTransform();
-}
-function Next3() {
-    if (document.getElementById("day").value == 1 && target.style.display === "block") {
-        target.style.display = "none";
-        today.style.display = "block";
-    } else {
-        target.style.display = "none";
-        achieved.style.display = "block";
-    }
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-    NextTransform();
-}
-function Back3() {
-    if (achieved.style.display === "block") {
-        achieved.style.display = "none";
-        target.style.display = "block";
-    }
-    basic.style.display = "none";
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-    BackTransform();
-}
-function Next4() {
-    if (achieved.style.display === "block") {
-        achieved.style.display = "none";
-        today.style.display = "block";
-    }
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-    NextTransform();
-}
-function Back4() {
-    if (document.getElementById("day").value == 1 && today.style.display === "block") {
-        today.style.display = "none";
-        target.style.display = "block";
-    } else {
-        today.style.display = "none";
-        achieved.style.display = "block";
-    }
-    basic.style.display = "none";
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-    BackTransform();
-}
-function Back5() {
-    if (report.style.display === "block") {
-        report.style.display = "none";
-        today.style.display = "block";
-    }
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-    BackTransform();
-}
-function Back6() {
-    Back5();
-    basic.style.display = "block";
-    area.style.display = "none";
-}
 function GenerateSalesReport() {
     if (today.style.display === "block") {
         today.style.display = "none";
@@ -178,11 +182,11 @@ function GenerateSalesReport() {
     }
     if (basic.style.display === "block") {
         basic.style.display = "none";
-        row3.style.display = "none";
-        row4.style.display = "block";
+        row__3.style.display = "none";
+        row__4.style.display = "block";
     } else {
-        row3.style.display = "block";
-        row4.style.display = "none";
+        row__3.style.display = "block";
+        row__4.style.display = "none";
     }
     areaname = document.getElementById("areaname").value;
     day = parseInt(document.getElementById("day").value);
@@ -215,7 +219,6 @@ function GenerateSalesReport() {
     for (i = 0; i < todayindigoInput.length; i++) {
         todayindigo += parseInt(todayindigoInput[i]) || 0;
     }
-    todaypostpaid = todaywegold + todayindigo || 0;
     achievedpostpaid = parseInt(document.getElementById("achievedpostpaid").value) || 0;
     utdpostpaid = todayindigo + todaywegold + achievedpostpaid || 0;
     targetpostpaid = parseInt(document.getElementById("targetpostpaid").value) || 0;
@@ -253,14 +256,14 @@ function GenerateSalesReport() {
         "Today Sales: " +
         todaymobile +
         "\n" +
-        "Today We Gold: " +
-        todaywegold +
-        "\n" +
         "-------------------------" +
         "\n" +
         "\n" +
-        "Today Postpaid: " +
-        todaypostpaid +
+        "Today We Gold: " +
+        todaywegold +
+        "\n" +
+        "Today Indigo: " +
+        todayindigo +
         "\n" +
         "TGT: " +
         targetpostpaid +
@@ -318,21 +321,24 @@ function GenerateSalesReport() {
         "VS: " +
         vsMobile +
         "%";
-    document.getElementById("save1").disabled = false;
-    document.getElementById("save2").disabled = false;
-    document.getElementById("copy1").disabled = false;
-    document.getElementById("copy2").disabled = false;
+    document.getElementById("save__1").disabled = false;
+    document.getElementById("save__2").disabled = false;
+    document.getElementById("copy__1").disabled = false;
+    document.getElementById("copy__2").disabled = false;
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
     NextTransform();
 }
-function Copy1() {
+function Copy__1() {
     salesreportValue = document.getElementById("salesreport").value;
     navigator.clipboard.writeText(salesreportValue);
-    document.getElementById("copy1").disabled = true;
-    document.getElementById("copy2").disabled = true;
+    document.getElementById("copy__1").disabled = true;
+    document.getElementById("copy__2").disabled = true;
 }
-function Share1() {
+function Copy__2() {
+    Copy__1();
+}
+function Share__1() {
     salesreportValue = document.getElementById("salesreport").value;
     if (navigator.share) {
         navigator.share({
@@ -345,7 +351,10 @@ function Share1() {
         window.open(link + message);
     }
 }
-function Save1() {
+function Share__2() {
+    Share__1();
+}
+function Save__1() {
     localStorage.setItem("areaname", document.getElementById("areaname").value);
     localStorage.setItem("achievedmobile", utdmobile);
     localStorage.setItem("targetmobile", document.getElementById("targetmobile").value);
@@ -357,23 +366,14 @@ function Save1() {
     localStorage.setItem("targetadsl", document.getElementById("targetadsl").value);
     localStorage.setItem("achievedfixed", utdfixed);
     localStorage.setItem("targetfixed", document.getElementById("targetfixed").value);
-    document.getElementById("save1").disabled = true;
-    document.getElementById("save2").disabled = true;
+    document.getElementById("save__1").disabled = true;
+    document.getElementById("save__2").disabled = true;
     localStorage.setItem("areaRestore", "true");
 }
-function Copy2() {
-    Copy1();
+function Save__2() {
+    Save__1();
 }
-function Share2() {
-    Share1();
-}
-function Save2() {
-    Save1();
-}
-function Back0() {
-    window.open("index.html", "_self");
-}
-function Print1() {
+function Print__1() {
     doc = window.open("", "_blank");
     doc.document.open();
     doc.document.write("<html lang=en><head><title>Area Report</title><style>body {font-family: monospace; display: flex;} div {margin: 0px auto 0px auto;}</style></head><body onload=window.print();setTimeout(window.close,1000);><div>");
