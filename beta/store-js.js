@@ -5,6 +5,7 @@ function EnableRestore() {
         row__1.style.display = "none";
         row__2.style.display = "block";
         sessionStorage.removeItem("stores");
+        sessionStorage.removeItem("newstoreselectmenu");
     } else {
         sessionStorage.setItem("stores", "1");
         localStorage.setItem("currentStore", "1");
@@ -17,6 +18,7 @@ function EnableRestore() {
             value = parseInt([i]) + 1;
             document.getElementById("stores").options.add(new Option(localStorage.getItem("storename.store." + value), value));
         }
+        document.getElementById("stores").options.add(new Option("Add Another Store", "newstore"));
     }
 }
 function GetDate() {
@@ -43,9 +45,15 @@ function BackTransform() {
     gsap.from("#report", { duration: 0.2, xPercent: -50, opacity: 0 });
 }
 function Next__1() {
-    multi.style.display = "none";
-    restore.style.display = "block";
-    NextTransform();
+    if (document.getElementById("stores").value == "newstore") {
+        multi.style.display = "none";
+        sessionStorage.setItem("newstoreselectmenu", "true");
+        NewStore();
+    } else {
+        multi.style.display = "none";
+        restore.style.display = "block";
+        NextTransform();
+    }
 }
 function Next__2() {
     Next__3();
@@ -93,13 +101,24 @@ function Back__2() {
             value = parseInt([i]) + 1;
             document.getElementById("stores").options.add(new Option(localStorage.getItem("storename.store." + value), value));
         }
+        document.getElementById("stores").options.add(new Option("Add Another Store", "newstore"));
         BackTransform();
     } else {
         Back__1();
     }
 }
 function Back__3() {
-    if (basic.style.display === "block") {
+    if (basic.style.display === "block" && sessionStorage.getItem("newstoreselectmenu") == "true") {
+        basic.style.display = "none";
+        multi.style.display = "block";
+        document.getElementById("stores").innerHTML = "";
+        let x = localStorage.getItem("stores");
+        for (i = 0; i < x; i++) {
+            value = parseInt([i]) + 1;
+            document.getElementById("stores").options.add(new Option(localStorage.getItem("storename.store." + value), value));
+        }
+        document.getElementById("stores").options.add(new Option("Add Another Store", "newstore"));
+    } else if (basic.style.display === "block") {
         basic.style.display = "none";
         restore.style.display = "block";
     }
@@ -107,6 +126,7 @@ function Back__3() {
     document.documentElement.scrollTop = 0;
     BackTransform();
     sessionStorage.removeItem("stores");
+    sessionStorage.removeItem("newstoreselectmenu");
 }
 function Back__4() {
     if (target.style.display === "block") {
