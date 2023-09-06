@@ -5,7 +5,7 @@ function EnableRestore() {
         row__1.style.display = "none";
         row__2.style.display = "block";
         sessionStorage.removeItem("users");
-        sessionStorage.removeItem("newuserselectmenu");
+        sessionStorage.removeItem("newuser");
     } else {
         sessionStorage.setItem("users", "1");
         localStorage.setItem("currentUser", "1");
@@ -47,7 +47,6 @@ function BackTransform() {
 function Next__1() {
     if (document.getElementById("users").value == "newuser") {
         multi.style.display = "none";
-        sessionStorage.setItem("newuserselectmenu", "true");
         NewUser();
     } else {
         multi.style.display = "none";
@@ -108,7 +107,7 @@ function Back__2() {
     }
 }
 function Back__3() {
-    if (basic.style.display === "block" && sessionStorage.getItem("newuserselectmenu") == "true") {
+    if (basic.style.display === "block" && localStorage.getItem("users") > "1" && sessionStorage.getItem("newuser") == "true") {
         basic.style.display = "none";
         multi.style.display = "block";
         document.getElementById("users").innerHTML = "";
@@ -126,7 +125,7 @@ function Back__3() {
     document.documentElement.scrollTop = 0;
     BackTransform();
     sessionStorage.removeItem("users");
-    sessionStorage.removeItem("newuserselectmenu");
+    sessionStorage.removeItem("newuser");
 }
 function Back__4() {
     if (target.style.display === "block") {
@@ -325,6 +324,7 @@ function NewMonth() {
     sessionStorage.setItem("users", localStorage.getItem("users"));
 }
 function NewUser() {
+    sessionStorage.setItem("newuser", "true");
     users = parseInt(localStorage.getItem("users"));
     x = users + 1;
     sessionStorage.setItem("users", x);

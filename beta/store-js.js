@@ -5,7 +5,7 @@ function EnableRestore() {
         row__1.style.display = "none";
         row__2.style.display = "block";
         sessionStorage.removeItem("stores");
-        sessionStorage.removeItem("newstoreselectmenu");
+        sessionStorage.removeItem("newstore");
     } else {
         sessionStorage.setItem("stores", "1");
         localStorage.setItem("currentStore", "1");
@@ -47,7 +47,6 @@ function BackTransform() {
 function Next__1() {
     if (document.getElementById("stores").value == "newstore") {
         multi.style.display = "none";
-        sessionStorage.setItem("newstoreselectmenu", "true");
         NewStore();
     } else {
         multi.style.display = "none";
@@ -108,7 +107,7 @@ function Back__2() {
     }
 }
 function Back__3() {
-    if (basic.style.display === "block" && sessionStorage.getItem("newstoreselectmenu") == "true") {
+    if (basic.style.display === "block" && localStorage.getItem("stores") > "1" && sessionStorage.getItem("newstore") == "true") {
         basic.style.display = "none";
         multi.style.display = "block";
         document.getElementById("stores").innerHTML = "";
@@ -126,7 +125,7 @@ function Back__3() {
     document.documentElement.scrollTop = 0;
     BackTransform();
     sessionStorage.removeItem("stores");
-    sessionStorage.removeItem("newstoreselectmenu");
+    sessionStorage.removeItem("newstore");
 }
 function Back__4() {
     if (target.style.display === "block") {
@@ -313,6 +312,7 @@ function NewMonth() {
     sessionStorage.setItem("stores", localStorage.getItem("stores"));
 }
 function NewStore() {
+    sessionStorage.setItem("newstore", "true");
     stores = parseInt(localStorage.getItem("stores"));
     x = stores + 1;
     sessionStorage.setItem("stores", x);
