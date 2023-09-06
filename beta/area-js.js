@@ -266,12 +266,14 @@ function GenerateSalesReport() {
         "\n" +
         "Today We Gold: " +
         todaywegold +
-        " >> Ach: " +
+        "\n" +
+        ">> Ach: " +
         utdwegold +
         "\n" +
         "Today Indigo: " +
         todayindigo +
-        " >> Ach: " +
+        "\n" +
+        ">> Ach: " +
         utdindigo +
         "\n" +
         "TGT: " +
