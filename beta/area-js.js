@@ -139,7 +139,8 @@ function Continue() {
     document.getElementById("targetmobile").value = localStorage.getItem("targetmobile");
     document.getElementById("achievedwemix").value = localStorage.getItem("achievedwemix");
     document.getElementById("targetwemix").value = localStorage.getItem("targetwemix");
-    document.getElementById("achievedpostpaid").value = localStorage.getItem("achievedpostpaid");
+    document.getElementById("achievedwegold").value = localStorage.getItem("achievedwegold");
+    document.getElementById("achievedindigo").value = localStorage.getItem("achievedindigo");
     document.getElementById("targetpostpaid").value = localStorage.getItem("targetpostpaid");
     document.getElementById("achievedadsl").value = localStorage.getItem("achievedadsl");
     document.getElementById("targetadsl").value = localStorage.getItem("targetadsl");
@@ -161,7 +162,8 @@ function NewMonth() {
     document.getElementById("targetmobile").value = "";
     document.getElementById("achievedwemix").value = "";
     document.getElementById("targetwemix").value = "";
-    document.getElementById("achievedpostpaid").value = "";
+    document.getElementById("achievedwegold").value = "";
+    document.getElementById("achievedindigo").value = "";
     document.getElementById("targetpostpaid").value = "";
     document.getElementById("achievedadsl").value = "";
     document.getElementById("targetadsl").value = "";
@@ -214,14 +216,16 @@ function GenerateSalesReport() {
     for (i = 0; i < todaywegoldInput.length; i++) {
         todaywegold += parseInt(todaywegoldInput[i]) || 0;
     }
+    achievedwegold = parseInt(document.getElementById("achievedwegold").value) || 0;
+    utdwegold = todaywegold + achievedwegold || 0;
     todayindigoInput = document.getElementById("todayindigo").value.split(" ");
     todayindigo = 0;
     for (i = 0; i < todayindigoInput.length; i++) {
         todayindigo += parseInt(todayindigoInput[i]) || 0;
     }
-    todaypostpaid = todaywegold + todayindigo || 0;
-    achievedpostpaid = parseInt(document.getElementById("achievedpostpaid").value) || 0;
-    utdpostpaid = todayindigo + todaywegold + achievedpostpaid || 0;
+    achievedindigo = parseInt(document.getElementById("achievedindigo").value) || 0;
+    utdindigo = todayindigo + achievedindigo || 0;
+    utdpostpaid = utdwegold + utdindigo || 0;
     targetpostpaid = parseInt(document.getElementById("targetpostpaid").value) || 0;
     todayadslInput = document.getElementById("todayadsl").value.split(" ");
     todayadsl = 0;
@@ -257,17 +261,18 @@ function GenerateSalesReport() {
         "Today Sales: " +
         todaymobile +
         "\n" +
-        "Today We Gold: " +
-        todaywegold +
-        "\n" +
-        "Today Indigo: " +
-        todayindigo +
-        "\n" +
         "-------------------------" +
         "\n" +
         "\n" +
-        "Today Postpaid: " +
-        todaypostpaid +
+        "Today We Gold: " +
+        todaywegold +
+        " >> Ach: " +
+        utdwegold +
+        "\n" +
+        "Today Indigo: " +
+        todayindigo +
+        " >> Ach: " +
+        utdindigo +
         "\n" +
         "TGT: " +
         targetpostpaid +
@@ -364,7 +369,8 @@ function Save__1() {
     localStorage.setItem("targetmobile", document.getElementById("targetmobile").value);
     localStorage.setItem("achievedwemix", utdwemix);
     localStorage.setItem("targetwemix", document.getElementById("targetwemix").value);
-    localStorage.setItem("achievedpostpaid", utdpostpaid);
+    localStorage.setItem("achievedwegold", utdwegold);
+    localStorage.setItem("achievedindigo", utdindigo);
     localStorage.setItem("targetpostpaid", document.getElementById("targetpostpaid").value);
     localStorage.setItem("achievedadsl", utdadsl);
     localStorage.setItem("targetadsl", document.getElementById("targetadsl").value);

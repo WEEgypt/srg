@@ -204,7 +204,8 @@ function Continue() {
     document.getElementById("targetweclub").value = localStorage.getItem("targetweclub.4agent." + x);
     document.getElementById("achievedwemix").value = localStorage.getItem("achievedwemix.4agent." + x);
     document.getElementById("targetwemix").value = localStorage.getItem("targetwemix.4agent." + x);
-    document.getElementById("achievedpostpaid").value = localStorage.getItem("achievedpostpaid.4agent." + x);
+    document.getElementById("achievedwegold").value = localStorage.getItem("achievedwegold.4agent." + x);
+    document.getElementById("achievedindigo").value = localStorage.getItem("achievedindigo.4agent." + x);
     document.getElementById("targetpostpaid").value = localStorage.getItem("targetpostpaid.4agent." + x);
     document.getElementById("achievedtkafol").value = localStorage.getItem("achievedtkafol.4agent." + x);
     document.getElementById("achievedadsl").value = localStorage.getItem("achievedadsl.4agent." + x);
@@ -273,7 +274,8 @@ function NewMonth() {
     document.getElementById("targetweclub").value = "";
     document.getElementById("achievedwemix").value = "";
     document.getElementById("targetwemix").value = "";
-    document.getElementById("achievedpostpaid").value = "";
+    document.getElementById("achievedwegold").value = "";
+    document.getElementById("achievedindigo").value = "";
     document.getElementById("targetpostpaid").value = "";
     document.getElementById("achievedtkafol").value = "";
     document.getElementById("achievedadsl").value = "";
@@ -345,7 +347,8 @@ function NewUser() {
     document.getElementById("targetweclub").value = "";
     document.getElementById("achievedwemix").value = "";
     document.getElementById("targetwemix").value = "";
-    document.getElementById("achievedpostpaid").value = "";
+    document.getElementById("achievedwegold").value = "";
+    document.getElementById("achievedindigo").value = "";
     document.getElementById("targetpostpaid").value = "";
     document.getElementById("achievedtkafol").value = "";
     document.getElementById("achievedadsl").value = "";
@@ -451,17 +454,20 @@ function GenerateSalesReport() {
     achievedwemix = parseInt(document.getElementById("achievedwemix").value) || 0;
     utdwemix = todaywemix165 + todaywemix240 + achievedwemix || 0;
     targetwemix = parseInt(document.getElementById("targetwemix").value) || 0;
-    todayindigofmc = parseInt(document.getElementById("todayindigofmc").value) || 0;
-    todayindigoopen = parseInt(document.getElementById("todayindigoopen").value) || 0;
-    todayindigocl = parseInt(document.getElementById("todayindigocl").value) || 0;
     todaygold200 = parseInt(document.getElementById("todaygold200").value) || 0;
     todaygold400 = parseInt(document.getElementById("todaygold400").value) || 0;
     todaygold600 = parseInt(document.getElementById("todaygold600").value) || 0;
     todaygold800 = parseInt(document.getElementById("todaygold800").value) || 0;
     todaygold1000 = parseInt(document.getElementById("todaygold1000").value) || 0;
     todaygold1500 = parseInt(document.getElementById("todaygold1500").value) || 0;
-    achievedpostpaid = parseInt(document.getElementById("achievedpostpaid").value) || 0;
-    utdpostpaid = todayindigofmc + todayindigoopen + todayindigocl + todaygold200 + todaygold400 + todaygold600 + todaygold800 + todaygold1000 + todaygold1500 + achievedpostpaid || 0;
+    achievedwegold = parseInt(document.getElementById("achievedwegold").value) || 0;
+    utdwegold = todaygold200 + todaygold400 + todaygold600 + todaygold800 + todaygold1000 + todaygold1500 + achievedwegold || 0;
+    todayindigofmc = parseInt(document.getElementById("todayindigofmc").value) || 0;
+    todayindigoopen = parseInt(document.getElementById("todayindigoopen").value) || 0;
+    todayindigocl = parseInt(document.getElementById("todayindigocl").value) || 0;
+    achievedindigo = parseInt(document.getElementById("achievedindigo").value) || 0;
+    utdindigo = todayindigofmc + todayindigoopen + todayindigocl + achievedindigo || 0;
+    utdpostpaid = utdwegold + utdindigo || 0;
     targetpostpaid = parseInt(document.getElementById("targetpostpaid").value) || 0;
     todaytkafol = parseInt(document.getElementById("todaytkafol").value) || 0;
     achievedtkafol = parseInt(document.getElementById("achievedtkafol").value) || 0;
@@ -814,6 +820,12 @@ function GenerateSalesReport() {
         "/" +
         targetwemix +
         "\n" +
+        "We Gold: " +
+        utdwegold +
+        "\n" +
+        "Indigo: " +
+        utdindigo +
+        "\n" +
         "Postpaid: " +
         utdpostpaid +
         "/" +
@@ -841,11 +853,11 @@ function GenerateSalesReport() {
         "Achieved: " +
         utdmobile +
         "\n" +
-        "Percentage: " +
+        "VS: " +
         vsMobile +
         "%" +
         "\n" +
-        "Projection: " +
+        "RE: " +
         reMobile +
         "%" +
         "\n" +
@@ -900,7 +912,8 @@ function Save__1() {
     localStorage.setItem("targetweclub.4agent." + x, document.getElementById("targetweclub").value);
     localStorage.setItem("achievedwemix.4agent." + x, utdwemix);
     localStorage.setItem("targetwemix.4agent." + x, document.getElementById("targetwemix").value);
-    localStorage.setItem("achievedpostpaid.4agent." + x, utdpostpaid);
+    localStorage.setItem("achievedwegold.4agent." + x, utdwegold);
+    localStorage.setItem("achievedindigo.4agent." + x, utdindigo);
     localStorage.setItem("targetpostpaid.4agent." + x, document.getElementById("targetpostpaid").value);
     localStorage.setItem("achievedtkafol.4agent." + x, utdtkafol);
     localStorage.setItem("achievedadsl.4agent." + x, utdadsl);
