@@ -19,7 +19,7 @@
                 <div style="display: none;" id="multi">
                     <h3>Multi users found</h3>
                     <br />
-                    <label style="font-size: 10px;">Choose your name</label>
+                    <label style="font-size: 10px;">Choose your name or add another one</label>
                     <br />
                     <br />
                     <select id="users"> </select>
@@ -38,8 +38,10 @@
                     <button style="width: 300px;" id="newmonth" onclick="NewMonth()">Start New Month</button>
                     <br />
                     <br />
-                    <button style="width: 300px;" id="newuser" onclick="NewUser()">Add Another Agent</button>
-                    <br />
+                    <div id="newuser">
+                        <button style="width: 300px;" onclick="NewUser()">Add Another Agent</button>
+                        <br />
+                    </div>
                     <br />
                     <button onclick="Back__2()">Back</button>
                 </div>

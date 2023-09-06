@@ -51,6 +51,7 @@ function Next__1() {
     } else {
         multi.style.display = "none";
         restore.style.display = "block";
+        newuser.style.display = "none";
         NextTransform();
     }
 }

@@ -19,7 +19,7 @@
                 <div style="display: none;" id="multi">
                     <h3>Multi stores found</h3>
                     <br />
-                    <label style="font-size: 10px;">Choose your store</label>
+                    <label style="font-size: 10px;">Choose your store or add another one</label>
                     <br />
                     <br />
                     <select id="stores"> </select>
@@ -38,8 +38,10 @@
                     <button style="width: 300px;" id="newmonth" onclick="NewMonth()">Start New Month</button>
                     <br />
                     <br />
-                    <button style="width: 300px;" id="newstore" onclick="NewStore()">Add Another Store</button>
-                    <br />
+                    <div id="newstore">
+                        <button style="width: 300px;" onclick="NewStore()">Add Another Store</button>
+                        <br />
+                    </div>
                     <br />
                     <button onclick="Back__2()">Back</button>
                 </div>
