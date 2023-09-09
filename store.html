@@ -16,15 +16,21 @@
                 <br />
                 <br />
                 <br />
+                <div style="display: none;" id="multi">
+                    <h3>Multi stores found</h3>
+                    <br />
+                    <label style="font-size: 10px;">Choose your store or add another one</label>
+                    <br />
+                    <br />
+                    <select id="stores"> </select>
+                    <br />
+                    <br />
+                    <br />
+                    <button id="back__1" onclick="Back__1()">Back</button>
+                    <button id="next__1" onclick="Next__1()">Next</button>
+                </div>
                 <div style="display: none;" id="restore">
                     <h3>Welcome Back Boss!</h3>
-                    <div style="display: none;" id="multi">
-                        <br />
-                        <label style="font-size: 10px;">Multi stores found, Choose one</label>
-                        <select style="display: none;" id="stores">
-                            <option id="store1" value="1" selected>Store 1</option>
-                        </select>
-                    </div>
                     <br />
                     <button style="width: 300px;" id="continue" onclick="Continue()">Restore Previous Record To Continue</button>
                     <br />
@@ -32,12 +38,13 @@
                     <button style="width: 300px;" id="newmonth" onclick="NewMonth()">Start New Month</button>
                     <br />
                     <br />
-                    <button style="width: 300px;" id="newstore" onclick="NewStore()">Add Another Store</button>
-                    <br />
-                    <br />
-                    <div id="row0">
-                        <button onclick="Back0()">Back</button>
+                    <div id="newstore">
+                        <button style="width: 300px;" onclick="NewStore()">Add Another Store</button>
+                        <br />
+                        <br />
                     </div>
+                    <br />
+                    <button onclick="Back__2()">Back</button>
                 </div>
                 <div style="display: block;" id="basic">
                     <h3>Required Information</h3>
@@ -117,13 +124,13 @@
                         <br />
                         <br />
                     </div>
-                    <div style="display: block;" id="row1">
-                        <button id="back0" onclick="Back0()">Back</button>
-                        <button id="next1" onclick="Next1()">Next</button>
+                    <div style="display: block;" id="row__1">
+                        <button id="back__2" onclick="Back__2()">Back</button>
+                        <button id="next__2" onclick="Next__2()">Next</button>
                     </div>
-                    <div style="display: none;" id="row2">
-                        <button id="back1" onclick="Back1()">Back</button>
-                        <button id="next2" onclick="Next2()">Next</button>
+                    <div style="display: none;" id="row__2">
+                        <button id="back__3" onclick="Back__3()">Back</button>
+                        <button id="next__3" onclick="Next__3()">Next</button>
                     </div>
                 </div>
                 <div style="display: none;" id="target">
@@ -137,8 +144,8 @@
                     <input type="number" id="targetdata" />
                     <br />
                     <br />
-                    <label>Kix & Super:</label>
-                    <input type="number" id="targetkixandsuper" />
+                    <label>Super Kix:</label>
+                    <input type="number" id="targetsuperkix" />
                     <br />
                     <br />
                     <label>Tazbeet:</label>
@@ -153,8 +160,8 @@
                     <input type="number" id="targetwemix" />
                     <br />
                     <br />
-                    <label>Indigo:</label>
-                    <input type="number" id="targetindigo" />
+                    <label>Postpaid:</label>
+                    <input type="number" id="targetpostpaid" />
                     <br />
                     <br />
                     <label>ADSL:</label>
@@ -166,10 +173,10 @@
                     <br />
                     <br />
                     <br />
-                    <button id="back2" onclick="Back2()">Back</button>
-                    <button id="next3" onclick="Next3()">Next</button>
+                    <button id="back__4" onclick="Back__4()">Back</button>
+                    <button id="next__4" onclick="Next__4()">Next</button>
                 </div>
-                <div style="display: none;" id="achived">
+                <div style="display: none;" id="achieved">
                     <h3>Put Your Sales Till Yesterday</h3>
                     <br />
                     <label>PAYG:</label>
@@ -180,8 +187,8 @@
                     <input type="number" id="achieveddata" />
                     <br />
                     <br />
-                    <label>Kix & Super:</label>
-                    <input type="number" id="achievedkixandsuper" />
+                    <label>Super Kix:</label>
+                    <input type="number" id="achievedsuperkix" />
                     <br />
                     <br />
                     <label>Tazbeet:</label>
@@ -194,6 +201,10 @@
                     <br />
                     <label>We Mix:</label>
                     <input type="number" id="achievedwemix" />
+                    <br />
+                    <br />
+                    <label>We Gold:</label>
+                    <input type="number" id="achievedwegold" />
                     <br />
                     <br />
                     <label>Indigo:</label>
@@ -209,8 +220,8 @@
                     <br />
                     <br />
                     <br />
-                    <button id="back3" onclick="Back3()">Back</button>
-                    <button id="next4" onclick="Next4()">Next</button>
+                    <button id="back__5" onclick="Back__5()">Back</button>
+                    <button id="next__5" onclick="Next__5()">Next</button>
                 </div>
                 <div style="display: none;" id="today">
                     <h3>What About Today?</h3>
@@ -224,53 +235,32 @@
                     <br />
                     <br />
                     <br />
-                    <label>Kix 17:</label>
-                    <input type="text" pattern="[0-9 ]+" id="todaykix17" />
-                    <br />
-                    <br />
-                    <label>Kix 25:</label>
-                    <input type="text" pattern="[0-9 ]+" id="todaykix25" />
-                    <br />
-                    <br />
-                    <label>Kix 35:</label>
-                    <input type="text" pattern="[0-9 ]+" id="todaykix35" />
-                    <br />
-                    <br />
-                    <label>Kix 45:</label>
-                    <input type="text" pattern="[0-9 ]+" id="todaykix45" />
-                    <br />
-                    <br />
-                    <label>Kix 75:</label>
-                    <input type="text" pattern="[0-9 ]+" id="todaykix75" />
-                    <br />
-                    <br />
-                    <br />
                     <label>Super Kix 20:</label>
-                    <input type="text" pattern="[0-9 ]+" id="todayskix20" />
+                    <input type="text" pattern="[0-9 ]+" id="todaysuperkix20" />
                     <br />
                     <br />
                     <label>Super Kix 25:</label>
-                    <input type="text" pattern="[0-9 ]+" id="todayskix25" />
+                    <input type="text" pattern="[0-9 ]+" id="todaysuperkix25" />
                     <br />
                     <br />
                     <label>Super Kix 35:</label>
-                    <input type="text" pattern="[0-9 ]+" id="todayskix35" />
+                    <input type="text" pattern="[0-9 ]+" id="todaysuperkix35" />
                     <br />
                     <br />
                     <label>Super Kix 45:</label>
-                    <input type="text" pattern="[0-9 ]+" id="todayskix45" />
+                    <input type="text" pattern="[0-9 ]+" id="todaysuperkix45" />
                     <br />
                     <br />
                     <label>Super Kix 65:</label>
-                    <input type="text" pattern="[0-9 ]+" id="todayskix65" />
+                    <input type="text" pattern="[0-9 ]+" id="todaysuperkix65" />
                     <br />
                     <br />
                     <label>Super Kix 80:</label>
-                    <input type="text" pattern="[0-9 ]+" id="todayskix80" />
+                    <input type="text" pattern="[0-9 ]+" id="todaysuperkix80" />
                     <br />
                     <br />
                     <label>Super Kix 100:</label>
-                    <input type="text" pattern="[0-9 ]+" id="todayskix100" />
+                    <input type="text" pattern="[0-9 ]+" id="todaysuperkix100" />
                     <br />
                     <br />
                     <br />
@@ -317,6 +307,31 @@
                     <br />
                     <br />
                     <br />
+                    <label>We Gold 200:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaygold200" />
+                    <br />
+                    <br />
+                    <label>We Gold 400:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaygold400" />
+                    <br />
+                    <br />
+                    <label>We Gold 600:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaygold600" />
+                    <br />
+                    <br />
+                    <label>We Gold 800:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaygold800" />
+                    <br />
+                    <br />
+                    <label>We Gold 1000:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaygold1000" />
+                    <br />
+                    <br />
+                    <label>We Gold 1500:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaygold1500" />
+                    <br />
+                    <br />
+                    <br />
                     <label>Indigo FMC:</label>
                     <input type="text" pattern="[0-9 ]+" id="todayindigofmc" />
                     <br />
@@ -343,7 +358,7 @@
                     <input type="text" pattern="[0-9 ]+" id="todaybilladsl" />
                     <br />
                     <br />
-                    <label>Indigo Bills:</label>
+                    <label>Postpaid Bills:</label>
                     <input type="text" pattern="[0-9 ]+" id="todaybillindigo" />
                     <br />
                     <br />
@@ -365,7 +380,7 @@
                     <br />
                     <br />
                     <br />
-                    <button id="back4" onclick="Back4()">Back</button>
+                    <button id="back__6" onclick="Back__6()">Back</button>
                     <button id="generate" onclick="GenerateSalesReport()">Generate</button>
                 </div>
                 <div style="display: none;" id="report">
@@ -374,19 +389,19 @@
                     <textarea id="salesreport" readonly></textarea>
                     <br />
                     <br />
-                    <div style="display: none;" id="row3">
-                        <button id="back5" onclick="Back5()">Back</button>
-                        <button id="copy1" onclick="Copy1()">Copy</button>
-                        <button id="share1" onclick="Share1()">Share</button>
-                        <button id="print1" onclick="Print1()">Print</button>
-                        <button id="save1" onclick="Save1()">Save</button>
+                    <div style="display: none;" id="row__3">
+                        <button id="back__7" onclick="Back__7()">Back</button>
+                        <button id="copy__1" onclick="Copy__1()">Copy</button>
+                        <button id="share__1" onclick="Share__1()">Share</button>
+                        <button id="print__1" onclick="Print__1()">Print</button>
+                        <button id="save__1" onclick="Save__1()">Save</button>
                     </div>
-                    <div style="display: none;" id="row4">
-                        <button id="back6" onclick="Back6()">Back</button>
-                        <button id="copy2" onclick="Copy2()">Copy</button>
-                        <button id="share2" onclick="Share2()">Share</button>
-                        <button id="print1" onclick="Print1()">Print</button>
-                        <button id="save2" onclick="Save2()">Save</button>
+                    <div style="display: none;" id="row__4">
+                        <button id="back__8" onclick="Back__8()">Back</button>
+                        <button id="copy__2" onclick="Copy__2()">Copy</button>
+                        <button id="share__2" onclick="Share__2()">Share</button>
+                        <button id="print__1" onclick="Print__1()">Print</button>
+                        <button id="save__2" onclick="Save__2()">Save</button>
                     </div>
                 </div>
             </div>
