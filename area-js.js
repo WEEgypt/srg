@@ -141,7 +141,7 @@ function Continue() {
     document.getElementById("targetwemix").value = localStorage.getItem("targetwemix");
     document.getElementById("achievedwegold").value = localStorage.getItem("achievedwegold");
     document.getElementById("achievedindigo").value = localStorage.getItem("achievedindigo");
-    document.getElementById("targetpostpaid").value = localStorage.getItem("targetpostpaid") || localStorage.getItem("targetindigo");
+    document.getElementById("targetpostpaid").value = localStorage.getItem("targetpostpaid");
     document.getElementById("achievedadsl").value = localStorage.getItem("achievedadsl");
     document.getElementById("targetadsl").value = localStorage.getItem("targetadsl");
     document.getElementById("achievedfixed").value = localStorage.getItem("achievedfixed");

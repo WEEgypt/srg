@@ -196,8 +196,8 @@ function Continue() {
     document.getElementById("targetpayg").value = localStorage.getItem("targetpayg.4agent." + x);
     document.getElementById("achieveddata").value = localStorage.getItem("achieveddata.4agent." + x);
     document.getElementById("targetdata").value = localStorage.getItem("targetdata.4agent." + x);
-    document.getElementById("achievedsuperkix").value = localStorage.getItem("achievedsuperkix.4agent." + x) || localStorage.getItem("achievedkixandsuper.4agent." + x);
-    document.getElementById("targetsuperkix").value = localStorage.getItem("targetsuperkix.4agent." + x) || localStorage.getItem("targetkixandsuper.4agent." + x);
+    document.getElementById("achievedsuperkix").value = localStorage.getItem("achievedsuperkix.4agent." + x);
+    document.getElementById("targetsuperkix").value = localStorage.getItem("targetsuperkix.4agent." + x);
     document.getElementById("achievedtaz").value = localStorage.getItem("achievedtaz.4agent." + x);
     document.getElementById("targettaz").value = localStorage.getItem("targettaz.4agent." + x);
     document.getElementById("achievedweclub").value = localStorage.getItem("achievedweclub.4agent." + x);
@@ -206,7 +206,7 @@ function Continue() {
     document.getElementById("targetwemix").value = localStorage.getItem("targetwemix.4agent." + x);
     document.getElementById("achievedwegold").value = localStorage.getItem("achievedwegold.4agent." + x);
     document.getElementById("achievedindigo").value = localStorage.getItem("achievedindigo.4agent." + x);
-    document.getElementById("targetpostpaid").value = localStorage.getItem("targetpostpaid.4agent." + x) || localStorage.getItem("targetindigo.4agent." + x);
+    document.getElementById("targetpostpaid").value = localStorage.getItem("targetpostpaid.4agent." + x);
     document.getElementById("achievedtkafol").value = localStorage.getItem("achievedtkafol.4agent." + x);
     document.getElementById("achievedadsl").value = localStorage.getItem("achievedadsl.4agent." + x);
     document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.4agent." + x);

@@ -196,8 +196,8 @@ function Continue() {
     document.getElementById("targetpayg").value = localStorage.getItem("targetpayg.store." + x);
     document.getElementById("achieveddata").value = localStorage.getItem("achieveddata.store." + x);
     document.getElementById("targetdata").value = localStorage.getItem("targetdata.store." + x);
-    document.getElementById("achievedsuperkix").value = localStorage.getItem("achievedsuperkix.store." + x) || localStorage.getItem("achievedkixandsuper.store." + x);
-    document.getElementById("targetsuperkix").value = localStorage.getItem("targetsuperkix.store." + x) || localStorage.getItem("targetkixandsuper.store." + x);
+    document.getElementById("achievedsuperkix").value = localStorage.getItem("achievedsuperkix.store." + x);
+    document.getElementById("targetsuperkix").value = localStorage.getItem("targetsuperkix.store." + x);
     document.getElementById("achievedtaz").value = localStorage.getItem("achievedtaz.store." + x);
     document.getElementById("targettaz").value = localStorage.getItem("targettaz.store." + x);
     document.getElementById("achievedweclub").value = localStorage.getItem("achievedweclub.store." + x);
@@ -206,7 +206,7 @@ function Continue() {
     document.getElementById("targetwemix").value = localStorage.getItem("targetwemix.store." + x);
     document.getElementById("achievedwegold").value = localStorage.getItem("achievedwegold.store." + x);
     document.getElementById("achievedindigo").value = localStorage.getItem("achievedindigo.store." + x);
-    document.getElementById("targetpostpaid").value = localStorage.getItem("targetpostpaid.store." + x) || localStorage.getItem("targetindigo.store." + x);
+    document.getElementById("targetpostpaid").value = localStorage.getItem("targetpostpaid.store." + x);
     document.getElementById("achievedadsl").value = localStorage.getItem("achievedadsl.store." + x);
     document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.store." + x);
     document.getElementById("achievedfixed").value = localStorage.getItem("achievedfixed.store." + x);
