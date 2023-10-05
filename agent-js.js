@@ -261,7 +261,7 @@ function NewMonth() {
     localStorage.setItem("currentUser", x);
     restore.style.display = "none";
     basic.style.display = "block";
-    document.getElementById("yourname").value = "";
+    document.getElementById("yourname").value = localStorage.getItem("yourname.4agent." + x);
     document.getElementById("achievedpayg").value = "";
     document.getElementById("targetpayg").value = "";
     document.getElementById("achieveddata").value = "";

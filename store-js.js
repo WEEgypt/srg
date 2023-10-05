@@ -255,7 +255,7 @@ function NewMonth() {
     localStorage.setItem("currentStore", x);
     restore.style.display = "none";
     basic.style.display = "block";
-    document.getElementById("storename").value = "";
+    document.getElementById("storename").value = localStorage.getItem("storename.store." + x);
     document.getElementById("achievedpayg").value = "";
     document.getElementById("targetpayg").value = "";
     document.getElementById("achieveddata").value = "";
