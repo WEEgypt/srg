@@ -191,18 +191,18 @@ function Continue() {
     row__1.style.display = "none";
     row__2.style.display = "none";
     today.style.display = "block";
-    document.getElementById("areaname").value = localStorage.getItem("areaname.area." + x);
-    document.getElementById("achievedmobile").value = localStorage.getItem("achievedmobile.area." + x);
-    document.getElementById("targetmobile").value = localStorage.getItem("targetmobile.area." + x);
-    document.getElementById("achievedwemix").value = localStorage.getItem("achievedwemix.area." + x);
-    document.getElementById("targetwemix").value = localStorage.getItem("targetwemix.area." + x);
-    document.getElementById("achievedwegold").value = localStorage.getItem("achievedwegold.area." + x);
-    document.getElementById("achievedindigo").value = localStorage.getItem("achievedindigo.area." + x);
-    document.getElementById("targetpostpaid").value = localStorage.getItem("targetpostpaid.area." + x);
-    document.getElementById("achievedadsl").value = localStorage.getItem("achievedadsl.area." + x);
-    document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.area." + x);
-    document.getElementById("achievedfixed").value = localStorage.getItem("achievedfixed.area." + x);
-    document.getElementById("targetfixed").value = localStorage.getItem("targetfixed.area." + x);
+    document.getElementById("areaname").value = localStorage.getItem("areaname.area." + x) || localStorage.getItem("areaname");
+    document.getElementById("achievedmobile").value = localStorage.getItem("achievedmobile.area." + x) || localStorage.getItem("achievedmobile");
+    document.getElementById("targetmobile").value = localStorage.getItem("targetmobile.area." + x) || localStorage.getItem("targetmobile");
+    document.getElementById("achievedwemix").value = localStorage.getItem("achievedwemix.area." + x) || localStorage.getItem("achievedwemix");
+    document.getElementById("targetwemix").value = localStorage.getItem("targetwemix.area." + x) || localStorage.getItem("targetwemix");
+    document.getElementById("achievedwegold").value = localStorage.getItem("achievedwegold.area." + x) || localStorage.getItem("achievedwegold");
+    document.getElementById("achievedindigo").value = localStorage.getItem("achievedindigo.area." + x) || localStorage.getItem("achievedindigo");
+    document.getElementById("targetpostpaid").value = localStorage.getItem("targetpostpaid.area." + x) || localStorage.getItem("targetpostpaid");
+    document.getElementById("achievedadsl").value = localStorage.getItem("achievedadsl.area." + x) || localStorage.getItem("achievedadsl");
+    document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.area." + x) || localStorage.getItem("targetadsl");
+    document.getElementById("achievedfixed").value = localStorage.getItem("achievedfixed.area." + x) || localStorage.getItem("achievedfixed");
+    document.getElementById("targetfixed").value = localStorage.getItem("targetfixed.area." + x) || localStorage.getItem("targetfixed");
     document.getElementById("todaymobile").value = "";
     document.getElementById("todaywemix").value = "";
     document.getElementById("todaywegold").value = "";
@@ -210,7 +210,7 @@ function Continue() {
     document.getElementById("todayadsl").value = "";
     document.getElementById("todayfixed").value = "";
     NextTransform();
-    sessionStorage.setItem("areas", localStorage.getItem("areas"));
+    sessionStorage.setItem("areas", localStorage.getItem("areas") || 1);
 }
 function NewMonth() {
     let x = document.getElementById("areas").value || 1;
@@ -236,11 +236,11 @@ function NewMonth() {
     document.getElementById("todayadsl").value = "";
     document.getElementById("todayfixed").value = "";
     NextTransform();
-    sessionStorage.setItem("areas", localStorage.getItem("areas"));
+    sessionStorage.setItem("areas", localStorage.getItem("areas") || 1);
 }
 function NewArea() {
     sessionStorage.setItem("newarea", "true");
-    areas = parseInt(localStorage.getItem("areas"));
+    areas = parseInt(localStorage.getItem("areas") || 1);
     x = areas + 1;
     sessionStorage.setItem("areas", x);
     localStorage.setItem("currentArea", x);
