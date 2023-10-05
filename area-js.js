@@ -16,7 +16,7 @@ function EnableRestore() {
         let x = localStorage.getItem("areas");
         for (i = 0; i < x; i++) {
             value = parseInt([i]) + 1;
-            document.getElementById("areas").options.add(new Option(localStorage.getItem("areaname.area." + value), value));
+            document.getElementById("areas").options.add(new Option(localStorage.getItem("areaname"), value));
         }
         document.getElementById("areas").options.add(new Option("Add Another Area", "newarea"));
     }
