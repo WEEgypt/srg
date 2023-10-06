@@ -240,7 +240,7 @@ function NewMonth() {
 }
 function NewArea() {
     sessionStorage.setItem("newarea", "true");
-    areas = parseInt(localStorage.getItem("areas") || 1);
+    areas = parseInt(localStorage.getItem("areas")) || 1;
     x = areas + 1;
     sessionStorage.setItem("areas", x);
     localStorage.setItem("currentArea", x);
