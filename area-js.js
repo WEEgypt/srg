@@ -4,6 +4,21 @@ function EnableRestore() {
         restore.style.display = "block";
         row__1.style.display = "none";
         row__2.style.display = "block";
+        sessionStorage.removeItem("areas");
+        sessionStorage.removeItem("newarea");
+    } else {
+        sessionStorage.setItem("areas", "1");
+        localStorage.setItem("currentArea", "1");
+    }
+    if (localStorage.getItem("areas") > "1") {
+        multi.style.display = "block";
+        restore.style.display = "none";
+        let x = localStorage.getItem("areas");
+        for (i = 0; i < x; i++) {
+            value = parseInt([i]) + 1;
+            document.getElementById("areas").options.add(new Option(localStorage.getItem("areaname.area." + value), value));
+        }
+        document.getElementById("areas").options.add(new Option("Add Another Area", "newarea"));
     }
 }
 function GetDate() {
@@ -12,6 +27,7 @@ function GetDate() {
     document.getElementById("year").value = new Date().getFullYear();
 }
 function NextTransform() {
+    gsap.from("#multi", { duration: 0.2, xPercent: 50, opacity: 0 });
     gsap.from("#restore", { duration: 0.2, xPercent: 50, opacity: 0 });
     gsap.from("#basic", { duration: 0.2, xPercent: 50, opacity: 0 });
     gsap.from("#target", { duration: 0.2, xPercent: 50, opacity: 0 });
@@ -20,6 +36,7 @@ function NextTransform() {
     gsap.from("#report", { duration: 0.2, xPercent: 50, opacity: 0 });
 }
 function BackTransform() {
+    gsap.from("#multi", { duration: 0.2, xPercent: -50, opacity: 0 });
     gsap.from("#restore", { duration: 0.2, xPercent: -50, opacity: 0 });
     gsap.from("#basic", { duration: 0.2, xPercent: -50, opacity: 0 });
     gsap.from("#target", { duration: 0.2, xPercent: -50, opacity: 0 });
@@ -28,9 +45,20 @@ function BackTransform() {
     gsap.from("#report", { duration: 0.2, xPercent: -50, opacity: 0 });
 }
 function Next__1() {
-    Next__2();
+    if (document.getElementById("areas").value == "newarea") {
+        multi.style.display = "none";
+        NewArea();
+    } else {
+        multi.style.display = "none";
+        restore.style.display = "block";
+        newarea.style.display = "none";
+        NextTransform();
+    }
 }
 function Next__2() {
+    Next__3();
+}
+function Next__3() {
     if (basic.style.display === "block") {
         basic.style.display = "none";
         target.style.display = "block";
@@ -39,7 +67,7 @@ function Next__2() {
     document.documentElement.scrollTop = 0;
     NextTransform();
 }
-function Next__3() {
+function Next__4() {
     if (document.getElementById("day").value == 1 && target.style.display === "block") {
         target.style.display = "none";
         today.style.display = "block";
@@ -51,7 +79,7 @@ function Next__3() {
     document.documentElement.scrollTop = 0;
     NextTransform();
 }
-function Next__4() {
+function Next__5() {
     if (achieved.style.display === "block") {
         achieved.style.display = "none";
         today.style.display = "block";
@@ -63,17 +91,44 @@ function Next__4() {
 function Back__1() {
     window.open("index.html", "_self");
 }
-
 function Back__2() {
-    if (basic.style.display === "block") {
+    if (localStorage.getItem("areas") > "1") {
+        document.getElementById("areas").innerHTML = "";
+        multi.style.display = "block";
+        restore.style.display = "none";
+        let x = localStorage.getItem("areas");
+        for (i = 0; i < x; i++) {
+            value = parseInt([i]) + 1;
+            document.getElementById("areas").options.add(new Option(localStorage.getItem("areaname.area." + value), value));
+        }
+        document.getElementById("areas").options.add(new Option("Add Another Area", "newarea"));
+        BackTransform();
+    } else {
+        Back__1();
+    }
+}
+function Back__3() {
+    if (basic.style.display === "block" && localStorage.getItem("areas") > "1" && sessionStorage.getItem("newarea") == "true") {
+        basic.style.display = "none";
+        multi.style.display = "block";
+        document.getElementById("areas").innerHTML = "";
+        let x = localStorage.getItem("areas");
+        for (i = 0; i < x; i++) {
+            value = parseInt([i]) + 1;
+            document.getElementById("areas").options.add(new Option(localStorage.getItem("areaname.area." + value), value));
+        }
+        document.getElementById("areas").options.add(new Option("Add Another Area", "newarea"));
+    } else if (basic.style.display === "block") {
         basic.style.display = "none";
         restore.style.display = "block";
     }
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
     BackTransform();
+    sessionStorage.removeItem("areas");
+    sessionStorage.removeItem("newarea");
 }
-function Back__3() {
+function Back__4() {
     if (target.style.display === "block") {
         target.style.display = "none";
         basic.style.display = "block";
@@ -90,7 +145,7 @@ function Back__3() {
     document.documentElement.scrollTop = 0;
     BackTransform();
 }
-function Back__4() {
+function Back__5() {
     if (achieved.style.display === "block") {
         achieved.style.display = "none";
         target.style.display = "block";
@@ -100,7 +155,7 @@ function Back__4() {
     document.documentElement.scrollTop = 0;
     BackTransform();
 }
-function Back__5() {
+function Back__6() {
     if (document.getElementById("day").value == 1 && today.style.display === "block") {
         today.style.display = "none";
         target.style.display = "block";
@@ -113,7 +168,7 @@ function Back__5() {
     document.documentElement.scrollTop = 0;
     BackTransform();
 }
-function Back__6() {
+function Back__7() {
     if (report.style.display === "block") {
         report.style.display = "none";
         today.style.display = "block";
@@ -122,30 +177,32 @@ function Back__6() {
     document.documentElement.scrollTop = 0;
     BackTransform();
 }
-function Back__7() {
-    Back__6();
+function Back__8() {
+    Back__7();
     basic.style.display = "block";
     area.style.display = "none";
 }
 function Continue() {
+    let x = document.getElementById("areas").value || 1;
+    localStorage.setItem("currentArea", x);
     restore.style.display = "none";
     basic.style.display = "block";
     area.style.display = "none";
     row__1.style.display = "none";
     row__2.style.display = "none";
     today.style.display = "block";
-    document.getElementById("areaname").value = localStorage.getItem("areaname");
-    document.getElementById("achievedmobile").value = localStorage.getItem("achievedmobile");
-    document.getElementById("targetmobile").value = localStorage.getItem("targetmobile");
-    document.getElementById("achievedwemix").value = localStorage.getItem("achievedwemix");
-    document.getElementById("targetwemix").value = localStorage.getItem("targetwemix");
-    document.getElementById("achievedwegold").value = localStorage.getItem("achievedwegold");
-    document.getElementById("achievedindigo").value = localStorage.getItem("achievedindigo");
-    document.getElementById("targetpostpaid").value = localStorage.getItem("targetpostpaid");
-    document.getElementById("achievedadsl").value = localStorage.getItem("achievedadsl");
-    document.getElementById("targetadsl").value = localStorage.getItem("targetadsl");
-    document.getElementById("achievedfixed").value = localStorage.getItem("achievedfixed");
-    document.getElementById("targetfixed").value = localStorage.getItem("targetfixed");
+    document.getElementById("areaname").value = localStorage.getItem("areaname.area." + x) || localStorage.getItem("areaname");
+    document.getElementById("achievedmobile").value = localStorage.getItem("achievedmobile.area." + x) || localStorage.getItem("achievedmobile");
+    document.getElementById("targetmobile").value = localStorage.getItem("targetmobile.area." + x) || localStorage.getItem("targetmobile");
+    document.getElementById("achievedwemix").value = localStorage.getItem("achievedwemix.area." + x) || localStorage.getItem("achievedwemix");
+    document.getElementById("targetwemix").value = localStorage.getItem("targetwemix.area." + x) || localStorage.getItem("targetwemix");
+    document.getElementById("achievedwegold").value = localStorage.getItem("achievedwegold.area." + x) || localStorage.getItem("achievedwegold");
+    document.getElementById("achievedindigo").value = localStorage.getItem("achievedindigo.area." + x) || localStorage.getItem("achievedindigo");
+    document.getElementById("targetpostpaid").value = localStorage.getItem("targetpostpaid.area." + x) || localStorage.getItem("targetpostpaid");
+    document.getElementById("achievedadsl").value = localStorage.getItem("achievedadsl.area." + x) || localStorage.getItem("achievedadsl");
+    document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.area." + x) || localStorage.getItem("targetadsl");
+    document.getElementById("achievedfixed").value = localStorage.getItem("achievedfixed.area." + x) || localStorage.getItem("achievedfixed");
+    document.getElementById("targetfixed").value = localStorage.getItem("targetfixed.area." + x) || localStorage.getItem("targetfixed");
     document.getElementById("todaymobile").value = "";
     document.getElementById("todaywemix").value = "";
     document.getElementById("todaywegold").value = "";
@@ -153,11 +210,43 @@ function Continue() {
     document.getElementById("todayadsl").value = "";
     document.getElementById("todayfixed").value = "";
     NextTransform();
+    sessionStorage.setItem("areas", localStorage.getItem("areas") || 1);
 }
 function NewMonth() {
+    let x = document.getElementById("areas").value || 1;
+    localStorage.setItem("currentArea", x);
     restore.style.display = "none";
     basic.style.display = "block";
-    document.getElementById("areaname").value = localStorage.getItem("areaname");
+    document.getElementById("areaname").value = localStorage.getItem("areaname.area." + x);
+    document.getElementById("achievedmobile").value = "";
+    document.getElementById("targetmobile").value = "";
+    document.getElementById("achievedwemix").value = "";
+    document.getElementById("targetwemix").value = "";
+    document.getElementById("achievedwegold").value = "";
+    document.getElementById("achievedindigo").value = "";
+    document.getElementById("targetpostpaid").value = "";
+    document.getElementById("achievedadsl").value = "";
+    document.getElementById("targetadsl").value = "";
+    document.getElementById("achievedfixed").value = "";
+    document.getElementById("targetfixed").value = "";
+    document.getElementById("todaymobile").value = "";
+    document.getElementById("todaywemix").value = "";
+    document.getElementById("todaywegold").value = "";
+    document.getElementById("todayindigo").value = "";
+    document.getElementById("todayadsl").value = "";
+    document.getElementById("todayfixed").value = "";
+    NextTransform();
+    sessionStorage.setItem("areas", localStorage.getItem("areas") || 1);
+}
+function NewArea() {
+    sessionStorage.setItem("newarea", "true");
+    areas = parseInt(localStorage.getItem("areas")) || 1;
+    x = areas + 1;
+    sessionStorage.setItem("areas", x);
+    localStorage.setItem("currentArea", x);
+    restore.style.display = "none";
+    basic.style.display = "block";
+    document.getElementById("areaname").value = "";
     document.getElementById("achievedmobile").value = "";
     document.getElementById("targetmobile").value = "";
     document.getElementById("achievedwemix").value = "";
@@ -366,21 +455,23 @@ function Share__2() {
     Share__1();
 }
 function Save__1() {
-    localStorage.setItem("areaname", document.getElementById("areaname").value || "Area 1");
-    localStorage.setItem("achievedmobile", utdmobile);
-    localStorage.setItem("targetmobile", document.getElementById("targetmobile").value);
-    localStorage.setItem("achievedwemix", utdwemix);
-    localStorage.setItem("targetwemix", document.getElementById("targetwemix").value);
-    localStorage.setItem("achievedwegold", utdwegold);
-    localStorage.setItem("achievedindigo", utdindigo);
-    localStorage.setItem("targetpostpaid", document.getElementById("targetpostpaid").value);
-    localStorage.setItem("achievedadsl", utdadsl);
-    localStorage.setItem("targetadsl", document.getElementById("targetadsl").value);
-    localStorage.setItem("achievedfixed", utdfixed);
-    localStorage.setItem("targetfixed", document.getElementById("targetfixed").value);
+    let x = parseInt(localStorage.getItem("currentArea"));
+    localStorage.setItem("areaname.area." + x, document.getElementById("areaname").value || "Area " + x);
+    localStorage.setItem("achievedmobile.area." + x, utdmobile);
+    localStorage.setItem("targetmobile.area." + x, document.getElementById("targetmobile").value);
+    localStorage.setItem("achievedwemix.area." + x, utdwemix);
+    localStorage.setItem("targetwemix.area." + x, document.getElementById("targetwemix").value);
+    localStorage.setItem("achievedwegold.area." + x, utdwegold);
+    localStorage.setItem("achievedindigo.area." + x, utdindigo);
+    localStorage.setItem("targetpostpaid.area." + x, document.getElementById("targetpostpaid").value);
+    localStorage.setItem("achievedadsl.area." + x, utdadsl);
+    localStorage.setItem("targetadsl.area." + x, document.getElementById("targetadsl").value);
+    localStorage.setItem("achievedfixed.area." + x, utdfixed);
+    localStorage.setItem("targetfixed.area." + x, document.getElementById("targetfixed").value);
     document.getElementById("save__1").disabled = true;
     document.getElementById("save__2").disabled = true;
     localStorage.setItem("areaRestore", "true");
+    localStorage.setItem("areas", sessionStorage.getItem("areas"));
 }
 function Save__2() {
     Save__1();
