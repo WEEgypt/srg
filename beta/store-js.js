@@ -623,7 +623,6 @@ function GenerateSalesReport() {
         "Fixed: " +
         todayfixed +
         "\n" +
-        "\n" +
         "-------------------------" +
         "\n" +
         "Today Sales: " +
@@ -634,9 +633,7 @@ function GenerateSalesReport() {
         "\n" +
         "-------------------------```" +
         "\n" +
-        "\n" +
         "Products    T.     Ach.   Per." +
-        "\n" +
         "\n" +
         "Postpaid:   " +
         targetpostpaid +
@@ -669,7 +666,6 @@ function GenerateSalesReport() {
         utdmobileSpace +
         vsMobile +
         "%" +
-        "\n" +
         "\n" +
         "```-------------------------" +
         "\n" +
