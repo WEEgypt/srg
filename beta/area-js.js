@@ -314,14 +314,15 @@ function GenerateSalesReport() {
         "\n" +
         "-------------------------" +
         "\n" +
-        "\n" +
         "Today Sales: " +
         todaymobile +
+        " Mob" +
         "\n" +
         "-------------------------" +
         "\n" +
+        "We Gold" +
         "\n" +
-        "Today We Gold: " +
+        "Today: " +
         todaywegold +
         "\n" +
         "TGT: " +
@@ -332,8 +333,11 @@ function GenerateSalesReport() {
         vsPostpaid +
         "%" +
         "\n" +
+        "-------------------------" +
         "\n" +
-        "Today ADSL: " +
+        "ADSL" +
+        "\n" +
+        "Today: " +
         todayadsl +
         "\n" +
         "TGT: " +
@@ -344,8 +348,11 @@ function GenerateSalesReport() {
         vsAdsl +
         "%" +
         "\n" +
+        "-------------------------" +
         "\n" +
-        "Today Fixed: " +
+        "Fixed" +
+        "\n" +
+        "Today: " +
         todayfixed +
         "\n" +
         "TGT: " +
@@ -357,7 +364,6 @@ function GenerateSalesReport() {
         "%" +
         "\n" +
         "-------------------------" +
-        "\n" +
         "\n" +
         "Total Activation: " +
         utdmobile +

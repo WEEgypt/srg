@@ -210,8 +210,6 @@ function Continue() {
     document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.4agent." + x);
     document.getElementById("achievedfixed").value = localStorage.getItem("achievedfixed.4agent." + x);
     document.getElementById("targetfixed").value = localStorage.getItem("targetfixed.4agent." + x);
-    document.getElementById("achievedmifi").value = localStorage.getItem("achievedmifi.4agent." + x);
-    document.getElementById("targetmifi").value = localStorage.getItem("targetmifi.4agent." + x);
     document.getElementById("todaypayg").value = "";
     document.getElementById("todaydata").value = "";
     document.getElementById("todaysuperkix20").value = "";
@@ -241,12 +239,10 @@ function Continue() {
     document.getElementById("todaygold1500").value = "";
     document.getElementById("todayadsl").value = "";
     document.getElementById("todayfixed").value = "";
-    document.getElementById("todaymifi").value = "";
     document.getElementById("todaybillfixed").value = "";
     document.getElementById("todaybillindigo").value = "";
     document.getElementById("todaybilladsl").value = "";
     document.getElementById("todaysimswap").value = "";
-    document.getElementById("todaymnp").value = "";
     document.getElementById("todaybssamount").value = "";
     document.getElementById("todayossamount").value = "";
     NextTransform();
@@ -276,8 +272,6 @@ function NewMonth() {
     document.getElementById("targetadsl").value = "";
     document.getElementById("achievedfixed").value = "";
     document.getElementById("targetfixed").value = "";
-    document.getElementById("achievedmifi").value = "";
-    document.getElementById("targetmifi").value = "";
     document.getElementById("todaypayg").value = "";
     document.getElementById("todaydata").value = "";
     document.getElementById("todaysuperkix20").value = "";
@@ -307,12 +301,10 @@ function NewMonth() {
     document.getElementById("todaygold1500").value = "";
     document.getElementById("todayadsl").value = "";
     document.getElementById("todayfixed").value = "";
-    document.getElementById("todaymifi").value = "";
     document.getElementById("todaybillfixed").value = "";
     document.getElementById("todaybillindigo").value = "";
     document.getElementById("todaybilladsl").value = "";
     document.getElementById("todaysimswap").value = "";
-    document.getElementById("todaymnp").value = "";
     document.getElementById("todaybssamount").value = "";
     document.getElementById("todayossamount").value = "";
     NextTransform();
@@ -345,8 +337,6 @@ function NewUser() {
     document.getElementById("targetadsl").value = "";
     document.getElementById("achievedfixed").value = "";
     document.getElementById("targetfixed").value = "";
-    document.getElementById("achievedmifi").value = "";
-    document.getElementById("targetmifi").value = "";
     document.getElementById("todaypayg").value = "";
     document.getElementById("todaydata").value = "";
     document.getElementById("todaysuperkix20").value = "";
@@ -376,12 +366,10 @@ function NewUser() {
     document.getElementById("todaygold1500").value = "";
     document.getElementById("todayadsl").value = "";
     document.getElementById("todayfixed").value = "";
-    document.getElementById("todaymifi").value = "";
     document.getElementById("todaybillfixed").value = "";
     document.getElementById("todaybillindigo").value = "";
     document.getElementById("todaybilladsl").value = "";
     document.getElementById("todaysimswap").value = "";
-    document.getElementById("todaymnp").value = "";
     document.getElementById("todaybssamount").value = "";
     document.getElementById("todayossamount").value = "";
     NextTransform();
@@ -461,15 +449,10 @@ function GenerateSalesReport() {
     achievedfixed = parseInt(document.getElementById("achievedfixed").value) || 0;
     utdfixed = todayfixed + achievedfixed || 0;
     targetfixed = parseInt(document.getElementById("targetfixed").value) || 0;
-    todaymifi = parseInt(document.getElementById("todaymifi").value) || 0;
-    achievedmifi = parseInt(document.getElementById("achievedmifi").value) || 0;
-    utdmifi = todaymifi + achievedmifi || 0;
-    targetmifi = parseInt(document.getElementById("targetmifi").value) || 0;
     todaybillfixed = parseInt(document.getElementById("todaybillfixed").value) || 0;
     todaybillindigo = parseInt(document.getElementById("todaybillindigo").value) || 0;
     todaybilladsl = parseInt(document.getElementById("todaybilladsl").value) || 0;
     todaysimswap = parseInt(document.getElementById("todaysimswap").value) || 0;
-    todaymnp = parseInt(document.getElementById("todaymnp").value) || 0;
     todaybssamount = parseInt(document.getElementById("todaybssamount").value) || 0;
     todayossamount = parseInt(document.getElementById("todayossamount").value) || 0;
     utdmobile = utdpayg + utddata + utdsuperkix + utdtaz + utdweclub + utdwemix + utdpostpaid || 0;
@@ -630,40 +613,40 @@ function GenerateSalesReport() {
         todayindigoreport = "\n" + "Indigo: " + todayindigo;
     }
     if (todaygold200 == "0") {
-        todaygold200ofmcreport = "";
+        todaygold200report = "";
     } else {
-        todaygold200ofmcreport = todaygold200 + "*200 ";
+        todaygold200report = todaygold200 + "*200 ";
     }
     if (todaygold400 == "0") {
-        todaygold400ofmcreport = "";
+        todaygold400report = "";
     } else {
-        todaygold400ofmcreport = todaygold400 + "*400 ";
+        todaygold400report = todaygold400 + "*400 ";
     }
     if (todaygold600 == "0") {
-        todaygold600ofmcreport = "";
+        todaygold600report = "";
     } else {
-        todaygold600ofmcreport = todaygold600 + "*600 ";
+        todaygold600report = todaygold600 + "*600 ";
     }
     if (todaygold800 == "0") {
-        todaygold800ofmcreport = "";
+        todaygold800report = "";
     } else {
-        todaygold800ofmcreport = todaygold800 + "*800 ";
+        todaygold800report = todaygold800 + "*800 ";
     }
     if (todaygold1000 == "0") {
-        todaygold1000ofmcreport = "";
+        todaygold1000report = "";
     } else {
-        todaygold1000ofmcreport = todaygold1000 + "*1000 ";
+        todaygold1000report = todaygold1000 + "*1000 ";
     }
     if (todaygold1500 == "0") {
-        todaygold1500ofmcreport = "";
+        todaygold1500report = "";
     } else {
-        todaygold1500ofmcreport = todaygold1500 + "*1500 ";
+        todaygold1500report = todaygold1500 + "*1500 ";
     }
-    todaygold = todaygold200ofmcreport + todaygold400ofmcreport + todaygold600ofmcreport + todaygold800ofmcreport + todaygold1000ofmcreport + todaygold1500ofmcreport || 0;
+    todaygold = todaygold200report + todaygold400report + todaygold600report + todaygold800report + todaygold1000report + todaygold1500report || 0;
     if (todaygold == "0") {
         todaygoldreport = "";
     } else {
-        todaygoldreport = "We Gold: " + todaygold;
+        todaygoldreport = "\n" + "We Gold: " + todaygold;
     }
     if (todayadsl == "0") {
         todayadslreport = "";
@@ -674,11 +657,6 @@ function GenerateSalesReport() {
         todayfixedreport = "";
     } else {
         todayfixedreport = "\n" + "Fixed: " + todayfixed;
-    }
-    if (todaymifi == "0") {
-        todaymifireport = "";
-    } else {
-        todaymifireport = "\n" + "MIFI: " + todaymifi;
     }
     if (todaypayg == "0") {
         todaypaygreport = "";
@@ -700,15 +678,10 @@ function GenerateSalesReport() {
     } else {
         todayfixedfordailysales = " + " + todayfixed + " Fixed";
     }
-    if (todaymifi == "0") {
-        todaymififordailysales = "";
-    } else {
-        todaymififordailysales = " + " + todaymifi + " MIFI";
-    }
-    todaysales = todaygoldreport + todayindigoreport + todaypaygreport + todaydatareport + superkixreport + tazbeetreport + weclubreport + wemixreport + todayadslreport + todayfixedreport + todaymifireport;
-    totaltoday = "------------------------- " + "\n" + "Total Today: " + dailymobile + " Mob" + todayadslfordailysales + todayfixedfordailysales + todaymififordailysales + "\n" + "------------------------- ";
+    todaysales = todaygoldreport + todayindigoreport + todaypaygreport + todaydatareport + superkixreport + tazbeetreport + weclubreport + wemixreport + todayadslreport + todayfixedreport;
+    totaltoday = "------------------------- " + "\n" + "Today Sales: " + dailymobile + " Mob" + todayadslfordailysales + todayfixedfordailysales + "\n" + "------------------------- ";
     if (todaysales == "") {
-        todaysalesreport = "No Sales Today";
+        todaysalesreport = "\n" + "No Sales Today";
         totaltodayreport = "------------------------- ";
     } else {
         todaysalesreport = todaysales;
@@ -722,13 +695,9 @@ function GenerateSalesReport() {
         yourname +
         "\n" +
         "------------------------- " +
-        "\n" +
         todaysalesreport +
         "\n" +
         totaltodayreport +
-        "\n" +
-        "Transaction" +
-        "\n" +
         "\n" +
         "ADSL Bills: " +
         todaybilladsl +
@@ -742,9 +711,7 @@ function GenerateSalesReport() {
         "SIM Swap: " +
         todaysimswap +
         "\n" +
-        "MNP: " +
-        todaymnp +
-        "\n" +
+        "------------------------- " +
         "\n" +
         "BSS Amount: " +
         todaybssamount +
@@ -752,13 +719,7 @@ function GenerateSalesReport() {
         "OSS Amount: " +
         todayossamount +
         "\n" +
-        "Total Cash: " +
-        (todaybssamount + todayossamount) +
-        "\n" +
         "------------------------- " +
-        "\n" +
-        "This Month" +
-        "\n" +
         "\n" +
         "PAYG: " +
         utdpayg +
@@ -805,11 +766,7 @@ function GenerateSalesReport() {
         "/" +
         targetfixed +
         "\n" +
-        "MIFI: " +
-        utdmifi +
-        "/" +
-        targetmifi +
-        "\n" +
+        "------------------------- " +
         "\n" +
         "Target: " +
         targetmobile +
@@ -877,8 +834,6 @@ function Save__1() {
     localStorage.setItem("targetadsl.4agent." + x, document.getElementById("targetadsl").value);
     localStorage.setItem("achievedfixed.4agent." + x, utdfixed);
     localStorage.setItem("targetfixed.4agent." + x, document.getElementById("targetfixed").value);
-    localStorage.setItem("achievedmifi.4agent." + x, utdmifi);
-    localStorage.setItem("targetmifi.4agent." + x, document.getElementById("targetmifi").value);
     document.getElementById("save__1").disabled = true;
     document.getElementById("save__2").disabled = true;
     localStorage.setItem("agentRestore", "true");
