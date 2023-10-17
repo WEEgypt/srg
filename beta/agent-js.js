@@ -779,7 +779,8 @@ function GenerateSalesReport() {
         "%" +
         "\n" +
         "RE: " +
-        reMobile;
+        reMobile +
+        "%";
     document.getElementById("save__1").disabled = false;
     document.getElementById("save__2").disabled = false;
     document.getElementById("copy__1").disabled = false;
