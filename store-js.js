@@ -678,6 +678,10 @@ function GenerateSalesReport() {
     document.getElementById("save__2").disabled = false;
     document.getElementById("copy__1").disabled = false;
     document.getElementById("copy__2").disabled = false;
+    document.getElementById("save__1").innerHTML = "Save";
+    document.getElementById("save__2").innerHTML = "Save";
+    document.getElementById("copy__1").innerHTML = "Copy";
+    document.getElementById("copy__2").innerHTML = "Copy";
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
     NextTransform();
@@ -687,6 +691,8 @@ function Copy__1() {
     navigator.clipboard.writeText(salesreportValue);
     document.getElementById("copy__1").disabled = true;
     document.getElementById("copy__2").disabled = true;
+    document.getElementById("copy__1").innerHTML = "Copied";
+    document.getElementById("copy__2").innerHTML = "Copied";
 }
 function Copy__2() {
     Copy__1();
@@ -730,6 +736,8 @@ function Save__1() {
     localStorage.setItem("targetfixed.store." + x, document.getElementById("targetfixed").value);
     document.getElementById("save__1").disabled = true;
     document.getElementById("save__2").disabled = true;
+    document.getElementById("save__1").innerHTML = "Saved";
+    document.getElementById("save__2").innerHTML = "Saved";
     localStorage.setItem("storeRestore", "true");
     localStorage.setItem("stores", sessionStorage.getItem("stores"));
 }
