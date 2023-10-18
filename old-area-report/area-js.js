@@ -89,7 +89,7 @@ function Next__5() {
     NextTransform();
 }
 function Back__1() {
-    window.open("index.html", "_self");
+    window.open("../index.html", "_self");
 }
 function Back__2() {
     if (localStorage.getItem("areas") > "1") {
