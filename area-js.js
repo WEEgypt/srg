@@ -194,7 +194,7 @@ function Continue() {
     document.getElementById("areaname").value = localStorage.getItem("areaname.area." + x);
     document.getElementById("achievedmobile").value = localStorage.getItem("achievedmobile.area." + x);
     document.getElementById("targetmobile").value = localStorage.getItem("targetmobile.area." + x);
-    document.getElementById("achievedwegold").value = ~~Number(localStorage.getItem("achievedwegold.area." + x)) + ~~Number(localStorage.getItem("achievedindigo.area." + x));
+    document.getElementById("achievedwegold").value = localStorage.getItem("achievedwegold.area." + x);
     document.getElementById("targetpostpaid").value = localStorage.getItem("targetpostpaid.area." + x);
     document.getElementById("achievedadsl").value = localStorage.getItem("achievedadsl.area." + x);
     document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.area." + x);
