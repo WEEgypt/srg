@@ -30,19 +30,19 @@ function GetDate() {
 function DaysFix() {
     var daysinmonth = new Date(document.getElementById("year").value, document.getElementById("month").value, 0).getDate();
     if (daysinmonth < 31) {
-        document.getElementById("d31").style.display = "none";
+        document.getElementById("d31").disabled = true;
     } else {
-        document.getElementById("d31").style.display = "block";
+        document.getElementById("d31").disabled = false;
     }
     if (daysinmonth < 30) {
-        document.getElementById("d30").style.display = "none";
+        document.getElementById("d30").disabled = true;
     } else {
-        document.getElementById("d30").style.display = "block";
+        document.getElementById("d30").disabled = false;
     }
     if (daysinmonth < 29) {
-        document.getElementById("d29").style.display = "none";
+        document.getElementById("d29").disabled = true;
     } else {
-        document.getElementById("d29").style.display = "block";
+        document.getElementById("d29").disabled = false;
     }
 }
 function NextTransform() {
