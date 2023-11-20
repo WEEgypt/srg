@@ -35,7 +35,7 @@ function DaysFix() {
         document.getElementById("d31").disabled = false;
     }
     if (daysinmonth < 31 && document.getElementById("day").value == 31) {
-        document.getElementById("day").selectedIndex = "-1";
+        document.getElementById("day").selectedIndex = "";
     }
 
 
