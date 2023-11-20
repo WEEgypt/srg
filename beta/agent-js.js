@@ -29,17 +29,17 @@ function GetDate() {
 }
 function DaysFix() {
     var daysinmonth = new Date(document.getElementById("year").value, document.getElementById("month").value, 0).getDate();
-    if (daysinmonth < 31) {
+    if (daysinmonth < "31") {
         d31.style.display = "none";
     } else {
         d31.style.display = "block";
     }
-    if (daysinmonth < 30) {
+    if (daysinmonth < "30") {
         d30.style.display = "none";
     } else {
         d30.style.display = "block";
     }
-    if (daysinmonth < 29) {
+    if (daysinmonth < "29") {
         d29.style.display = "none";
     } else {
         d29.style.display = "block";
