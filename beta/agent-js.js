@@ -35,7 +35,7 @@ function DaysFix() {
         document.getElementById("d31").disabled = false;
     }
     if (daysinmonth < 31 && document.getElementById("day").value == 31) {
-        document.getElementById("day").selectedIndex = "";
+        document.getElementById("day").selectedIndex = "30";
     }
 
 
@@ -46,11 +46,22 @@ function DaysFix() {
     } else {
         document.getElementById("d30").disabled = false;
     }
+    if (daysinmonth < 30 && document.getElementById("day").value == 30) {
+        document.getElementById("day").selectedIndex = "29";
+    }
+
+
+    
     if (daysinmonth < 29) {
         document.getElementById("d29").disabled = true;
     } else {
         document.getElementById("d29").disabled = false;
     }
+    if (daysinmonth < 29 && document.getElementById("day").value == 29) {
+        document.getElementById("day").selectedIndex = "28";
+    }
+    
+    
 }
 function NextTransform() {
     gsap.from("#multi", { duration: 0.2, xPercent: 50, opacity: 0 });
