@@ -80,5 +80,5 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 300px;
 }
 select option[disabled] {
-	visibility: hidden;
+    display: none;
 }
