@@ -29,29 +29,48 @@ function GetDate() {
 }
 function DaysFix() {
     var daysinmonth = new Date(document.getElementById("year").value, document.getElementById("month").value, 0).getDate();
-    if (daysinmonth < 31) {
-        document.getElementById("d31").disabled = true;
-    } else {
-        document.getElementById("d31").disabled = false;
-    }
     if (daysinmonth < 31 && document.getElementById("day").value == 31) {
         document.getElementById("day").selectedIndex = "30";
-    }
-    if (daysinmonth < 30) {
-        document.getElementById("d30").disabled = true;
-    } else {
-        document.getElementById("d30").disabled = false;
     }
     if (daysinmonth < 30 && document.getElementById("day").value == 30) {
         document.getElementById("day").selectedIndex = "29";
     }
-    if (daysinmonth < 29) {
-        document.getElementById("d29").disabled = true;
-    } else {
-        document.getElementById("d29").disabled = false;
-    }
     if (daysinmonth < 29 && document.getElementById("day").value == 29) {
         document.getElementById("day").selectedIndex = "28";
+    }
+    if (daysinmonth < 31 && document.getElementById("day").length == "32") {
+        const list = document.getElementById("day");
+        list.removeChild(list.lastElementChild);
+    }
+    if (daysinmonth < 30 && document.getElementById("day").length == "31") {
+        const list = document.getElementById("day");
+        list.removeChild(list.lastElementChild);
+    }
+    if (daysinmonth < 29 && document.getElementById("day").length == "30") {
+        const list = document.getElementById("day");
+        list.removeChild(list.lastElementChild);
+    }
+    if (daysinmonth == 31 && document.getElementById("day").length == "31") {
+        document.getElementById("day").options.add(new Option("31", "31"));
+    }
+    if (daysinmonth == 31 && document.getElementById("day").length == "30") {
+        document.getElementById("day").options.add(new Option("30", "30"));
+        document.getElementById("day").options.add(new Option("31", "31"));
+    }
+    if (daysinmonth == 31 && document.getElementById("day").length == "29") {
+        document.getElementById("day").options.add(new Option("29", "29"));
+        document.getElementById("day").options.add(new Option("30", "30"));
+        document.getElementById("day").options.add(new Option("31", "31"));
+    }
+    if (daysinmonth == 30 && document.getElementById("day").length == "30") {
+        document.getElementById("day").options.add(new Option("30", "30"));
+    }
+    if (daysinmonth == 30 && document.getElementById("day").length == "29") {
+        document.getElementById("day").options.add(new Option("29", "29"));
+        document.getElementById("day").options.add(new Option("30", "30"));
+    }
+    if (daysinmonth == 29 && document.getElementById("day").length == "29") {
+        document.getElementById("day").options.add(new Option("29", "29"));
     }
 }
 function NextTransform() {
