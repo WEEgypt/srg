@@ -25,6 +25,53 @@ function GetDate() {
     document.getElementById("day").value = new Date().getDate();
     document.getElementById("month").value = new Date().getMonth() + 1;
     document.getElementById("year").value = new Date().getFullYear();
+    DaysFix();
+}
+function DaysFix() {
+    var daysinmonth = new Date(document.getElementById("year").value, document.getElementById("month").value, 0).getDate();
+    if (daysinmonth < 31 && document.getElementById("day").value == 31) {
+        document.getElementById("day").selectedIndex = "30";
+    }
+    if (daysinmonth < 30 && document.getElementById("day").value == 30) {
+        document.getElementById("day").selectedIndex = "29";
+    }
+    if (daysinmonth < 29 && document.getElementById("day").value == 29) {
+        document.getElementById("day").selectedIndex = "28";
+    }
+    if (daysinmonth < 31 && document.getElementById("day").length == "32") {
+        const list = document.getElementById("day");
+        list.removeChild(list.lastElementChild);
+    }
+    if (daysinmonth < 30 && document.getElementById("day").length == "31") {
+        const list = document.getElementById("day");
+        list.removeChild(list.lastElementChild);
+    }
+    if (daysinmonth < 29 && document.getElementById("day").length == "30") {
+        const list = document.getElementById("day");
+        list.removeChild(list.lastElementChild);
+    }
+    if (daysinmonth == 31 && document.getElementById("day").length == "31") {
+        document.getElementById("day").options.add(new Option("31", "31"));
+    }
+    if (daysinmonth == 31 && document.getElementById("day").length == "30") {
+        document.getElementById("day").options.add(new Option("30", "30"));
+        document.getElementById("day").options.add(new Option("31", "31"));
+    }
+    if (daysinmonth == 31 && document.getElementById("day").length == "29") {
+        document.getElementById("day").options.add(new Option("29", "29"));
+        document.getElementById("day").options.add(new Option("30", "30"));
+        document.getElementById("day").options.add(new Option("31", "31"));
+    }
+    if (daysinmonth == 30 && document.getElementById("day").length == "30") {
+        document.getElementById("day").options.add(new Option("30", "30"));
+    }
+    if (daysinmonth == 30 && document.getElementById("day").length == "29") {
+        document.getElementById("day").options.add(new Option("29", "29"));
+        document.getElementById("day").options.add(new Option("30", "30"));
+    }
+    if (daysinmonth == 29 && document.getElementById("day").length == "29") {
+        document.getElementById("day").options.add(new Option("29", "29"));
+    }
 }
 function NextTransform() {
     gsap.from("#multi", { duration: 0.2, xPercent: 50, opacity: 0 });
@@ -204,8 +251,8 @@ function Continue() {
     document.getElementById("targetweclub").value = localStorage.getItem("targetweclub.4agent." + x);
     document.getElementById("achievedwemix").value = localStorage.getItem("achievedwemix.4agent." + x);
     document.getElementById("targetwemix").value = localStorage.getItem("targetwemix.4agent." + x);
-    document.getElementById("achievedpostpaid").value = localStorage.getItem("achievedpostpaid.4agent." + x);
-    document.getElementById("targetpostpaid").value = localStorage.getItem("targetpostpaid.4agent." + x);
+    document.getElementById("achievedwegold").value = localStorage.getItem("achievedwegold.4agent." + x) || localStorage.getItem("achievedpostpaid.4agent." + x);
+    document.getElementById("targetwegold").value = localStorage.getItem("targetwegold.4agent." + x) || localStorage.getItem("targetpostpaid.4agent." + x);
     document.getElementById("achievedadsl").value = localStorage.getItem("achievedadsl.4agent." + x);
     document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.4agent." + x);
     document.getElementById("achievedfixed").value = localStorage.getItem("achievedfixed.4agent." + x);
@@ -229,8 +276,6 @@ function Continue() {
     document.getElementById("todayweclub100").value = "";
     document.getElementById("todaywemix165").value = "";
     document.getElementById("todaywemix240").value = "";
-    document.getElementById("todayindigoopen").value = "";
-    document.getElementById("todayindigocl").value = "";
     document.getElementById("todaygold200").value = "";
     document.getElementById("todaygold400").value = "";
     document.getElementById("todaygold600").value = "";
@@ -245,7 +290,7 @@ function Continue() {
     document.getElementById("todayadsl1000").value = "";
     document.getElementById("todayfixed").value = "";
     document.getElementById("todaybillfixed").value = "";
-    document.getElementById("todaybillindigo").value = "";
+    document.getElementById("todaybillpostpaid").value = "";
     document.getElementById("todaybilladsl").value = "";
     document.getElementById("todaysimswap").value = "";
     document.getElementById("todaybssamount").value = "";
@@ -260,23 +305,23 @@ function NewMonth() {
     basic.style.display = "block";
     document.getElementById("yourname").value = localStorage.getItem("yourname.4agent." + x);
     document.getElementById("achievedpayg").value = "";
-    document.getElementById("targetpayg").value = "";
+    document.getElementById("targetpayg").value = localStorage.getItem("targetpayg.4agent." + x);
     document.getElementById("achieveddata").value = "";
-    document.getElementById("targetdata").value = "";
+    document.getElementById("targetdata").value = localStorage.getItem("targetdata.4agent." + x);
     document.getElementById("achievedsuperkix").value = "";
-    document.getElementById("targetsuperkix").value = "";
+    document.getElementById("targetsuperkix").value = localStorage.getItem("targetsuperkix.4agent." + x);
     document.getElementById("achievedtaz").value = "";
-    document.getElementById("targettaz").value = "";
+    document.getElementById("targettaz").value = localStorage.getItem("targettaz.4agent." + x);
     document.getElementById("achievedweclub").value = "";
-    document.getElementById("targetweclub").value = "";
+    document.getElementById("targetweclub").value = localStorage.getItem("targetweclub.4agent." + x);
     document.getElementById("achievedwemix").value = "";
-    document.getElementById("targetwemix").value = "";
-    document.getElementById("achievedpostpaid").value = "";
-    document.getElementById("targetpostpaid").value = "";
+    document.getElementById("targetwemix").value = localStorage.getItem("targetwemix.4agent." + x);
+    document.getElementById("achievedwegold").value = "";
+    document.getElementById("targetwegold").value = localStorage.getItem("targetwegold.4agent." + x) || localStorage.getItem("targetpostpaid.4agent." + x);
     document.getElementById("achievedadsl").value = "";
-    document.getElementById("targetadsl").value = "";
+    document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.4agent." + x);
     document.getElementById("achievedfixed").value = "";
-    document.getElementById("targetfixed").value = "";
+    document.getElementById("targetfixed").value = localStorage.getItem("targetfixed.4agent." + x);
     document.getElementById("todaypayg").value = "";
     document.getElementById("todaydata").value = "";
     document.getElementById("todaysuperkix20").value = "";
@@ -296,8 +341,6 @@ function NewMonth() {
     document.getElementById("todayweclub100").value = "";
     document.getElementById("todaywemix165").value = "";
     document.getElementById("todaywemix240").value = "";
-    document.getElementById("todayindigoopen").value = "";
-    document.getElementById("todayindigocl").value = "";
     document.getElementById("todaygold200").value = "";
     document.getElementById("todaygold400").value = "";
     document.getElementById("todaygold600").value = "";
@@ -312,7 +355,7 @@ function NewMonth() {
     document.getElementById("todayadsl1000").value = "";
     document.getElementById("todayfixed").value = "";
     document.getElementById("todaybillfixed").value = "";
-    document.getElementById("todaybillindigo").value = "";
+    document.getElementById("todaybillpostpaid").value = "";
     document.getElementById("todaybilladsl").value = "";
     document.getElementById("todaysimswap").value = "";
     document.getElementById("todaybssamount").value = "";
@@ -341,8 +384,8 @@ function NewUser() {
     document.getElementById("targetweclub").value = "";
     document.getElementById("achievedwemix").value = "";
     document.getElementById("targetwemix").value = "";
-    document.getElementById("achievedpostpaid").value = "";
-    document.getElementById("targetpostpaid").value = "";
+    document.getElementById("achievedwegold").value = "";
+    document.getElementById("targetwegold").value = "";
     document.getElementById("achievedadsl").value = "";
     document.getElementById("targetadsl").value = "";
     document.getElementById("achievedfixed").value = "";
@@ -366,8 +409,6 @@ function NewUser() {
     document.getElementById("todayweclub100").value = "";
     document.getElementById("todaywemix165").value = "";
     document.getElementById("todaywemix240").value = "";
-    document.getElementById("todayindigoopen").value = "";
-    document.getElementById("todayindigocl").value = "";
     document.getElementById("todaygold200").value = "";
     document.getElementById("todaygold400").value = "";
     document.getElementById("todaygold600").value = "";
@@ -382,7 +423,7 @@ function NewUser() {
     document.getElementById("todayadsl1000").value = "";
     document.getElementById("todayfixed").value = "";
     document.getElementById("todaybillfixed").value = "";
-    document.getElementById("todaybillindigo").value = "";
+    document.getElementById("todaybillpostpaid").value = "";
     document.getElementById("todaybilladsl").value = "";
     document.getElementById("todaysimswap").value = "";
     document.getElementById("todaybssamount").value = "";
@@ -451,11 +492,9 @@ function GenerateSalesReport() {
     todaygold800 = parseInt(document.getElementById("todaygold800").value) || 0;
     todaygold1000 = parseInt(document.getElementById("todaygold1000").value) || 0;
     todaygold1500 = parseInt(document.getElementById("todaygold1500").value) || 0;
-    todayindigoopen = parseInt(document.getElementById("todayindigoopen").value) || 0;
-    todayindigocl = parseInt(document.getElementById("todayindigocl").value) || 0;
-    achievedpostpaid = parseInt(document.getElementById("achievedpostpaid").value) || 0;
-    utdpostpaid = todaygold200 + todaygold400 + todaygold600 + todaygold800 + todaygold1000 + todaygold1500 + todayindigoopen + todayindigocl + achievedpostpaid || 0;
-    targetpostpaid = parseInt(document.getElementById("targetpostpaid").value) || 0;
+    achievedwegold = parseInt(document.getElementById("achievedwegold").value) || 0;
+    utdwegold = todaygold200 + todaygold400 + todaygold600 + todaygold800 + todaygold1000 + todaygold1500 + achievedwegold || 0;
+    targetwegold = parseInt(document.getElementById("targetwegold").value) || 0;
     todayadsl140 = parseInt(document.getElementById("todayadsl140").value) || 0;
     todayadsl200 = parseInt(document.getElementById("todayadsl200").value) || 0;
     todayadsl250 = parseInt(document.getElementById("todayadsl250").value) || 0;
@@ -470,13 +509,13 @@ function GenerateSalesReport() {
     utdfixed = todayfixed + achievedfixed || 0;
     targetfixed = parseInt(document.getElementById("targetfixed").value) || 0;
     todaybillfixed = parseInt(document.getElementById("todaybillfixed").value) || 0;
-    todaybillindigo = parseInt(document.getElementById("todaybillindigo").value) || 0;
+    todaybillpostpaid = parseInt(document.getElementById("todaybillpostpaid").value) || 0;
     todaybilladsl = parseInt(document.getElementById("todaybilladsl").value) || 0;
     todaysimswap = parseInt(document.getElementById("todaysimswap").value) || 0;
     todaybssamount = parseInt(document.getElementById("todaybssamount").value) || 0;
     todayossamount = parseInt(document.getElementById("todayossamount").value) || 0;
-    utdmobile = utdpayg + utddata + utdsuperkix + utdtaz + utdweclub + utdwemix + utdpostpaid || 0;
-    targetmobile = targetpayg + targetdata + targetsuperkix + targettaz + targetwemix + targetweclub + targetpostpaid || 0;
+    utdmobile = utdpayg + utddata + utdsuperkix + utdtaz + utdweclub + utdwemix + utdwegold || 0;
+    targetmobile = targetpayg + targetdata + targetsuperkix + targettaz + targetwemix + targetweclub + targetwegold || 0;
     vsMobile = ~~Number(Math.round((utdmobile / targetmobile) * 100)) || 0;
     reMobile = ~~Number(Math.round((((utdmobile / targetmobile) * 100) / day) * daysinmonth)) || 0;
     dailymobile =
@@ -499,8 +538,6 @@ function GenerateSalesReport() {
             todayweclub100 +
             todaywemix165 +
             todaywemix240 +
-            todayindigoopen +
-            todayindigocl +
             todaygold200 +
             todaygold400 +
             todaygold600 +
@@ -616,22 +653,6 @@ function GenerateSalesReport() {
     } else {
         wemixreport = "\n" + "We Mix: " + todaywemixreport;
     }
-    if (todayindigoopen == "0") {
-        todayindigoopenreport = "";
-    } else {
-        todayindigoopenreport = todayindigoopen + "*Open ";
-    }
-    if (todayindigocl == "0") {
-        todayindigoclreport = "";
-    } else {
-        todayindigoclreport = todayindigocl + "*CL ";
-    }
-    todayindigo = todayindigoopenreport + todayindigoclreport || 0;
-    if (todayindigo == "0") {
-        todayindigoreport = "";
-    } else {
-        todayindigoreport = "\n" + "Indigo: " + todayindigo;
-    }
     if (todaygold200 == "0") {
         todaygold200report = "";
     } else {
@@ -730,7 +751,7 @@ function GenerateSalesReport() {
     } else {
         todayfixedfordailysales = " + " + todayfixed + " Fixed";
     }
-    todaysales = todaygoldreport + todayindigoreport + todaypaygreport + todaydatareport + superkixreport + tazbeetreport + weclubreport + wemixreport + todayadslreport + todayfixedreport;
+    todaysales = todaygoldreport + todaypaygreport + todaydatareport + superkixreport + tazbeetreport + weclubreport + wemixreport + todayadslreport + todayfixedreport;
     totaltoday = "------------------------- " + "\n" + "Today Sales: " + dailymobile + " Mob" + todayadslfordailysales + todayfixedfordailysales + "\n" + "------------------------- ";
     if (todaysales == "") {
         todaysalesreport = "\n" + "No Sales Today";
@@ -755,7 +776,7 @@ function GenerateSalesReport() {
         todaybilladsl +
         "\n" +
         "Postpaid Bills: " +
-        todaybillindigo +
+        todaybillpostpaid +
         "\n" +
         "Landline Bills: " +
         todaybillfixed +
@@ -803,10 +824,10 @@ function GenerateSalesReport() {
         "/" +
         targetwemix +
         "\n" +
-        "Postpaid: " +
-        utdpostpaid +
+        "We Gold: " +
+        utdwegold +
         "/" +
-        targetpostpaid +
+        targetwegold +
         "\n" +
         "ADSL: " +
         utdadsl +
@@ -887,8 +908,8 @@ function Save__1() {
     localStorage.setItem("targetweclub.4agent." + x, document.getElementById("targetweclub").value);
     localStorage.setItem("achievedwemix.4agent." + x, utdwemix);
     localStorage.setItem("targetwemix.4agent." + x, document.getElementById("targetwemix").value);
-    localStorage.setItem("achievedpostpaid.4agent." + x, utdpostpaid);
-    localStorage.setItem("targetpostpaid.4agent." + x, document.getElementById("targetpostpaid").value);
+    localStorage.setItem("achievedwegold.4agent." + x, utdwegold);
+    localStorage.setItem("targetwegold.4agent." + x, document.getElementById("targetwegold").value);
     localStorage.setItem("achievedadsl.4agent." + x, utdadsl);
     localStorage.setItem("targetadsl.4agent." + x, document.getElementById("targetadsl").value);
     localStorage.setItem("achievedfixed.4agent." + x, utdfixed);

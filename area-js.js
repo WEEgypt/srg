@@ -25,6 +25,53 @@ function GetDate() {
     document.getElementById("day").value = new Date().getDate();
     document.getElementById("month").value = new Date().getMonth() + 1;
     document.getElementById("year").value = new Date().getFullYear();
+    DaysFix();
+}
+function DaysFix() {
+    var daysinmonth = new Date(document.getElementById("year").value, document.getElementById("month").value, 0).getDate();
+    if (daysinmonth < 31 && document.getElementById("day").value == 31) {
+        document.getElementById("day").selectedIndex = "30";
+    }
+    if (daysinmonth < 30 && document.getElementById("day").value == 30) {
+        document.getElementById("day").selectedIndex = "29";
+    }
+    if (daysinmonth < 29 && document.getElementById("day").value == 29) {
+        document.getElementById("day").selectedIndex = "28";
+    }
+    if (daysinmonth < 31 && document.getElementById("day").length == "32") {
+        const list = document.getElementById("day");
+        list.removeChild(list.lastElementChild);
+    }
+    if (daysinmonth < 30 && document.getElementById("day").length == "31") {
+        const list = document.getElementById("day");
+        list.removeChild(list.lastElementChild);
+    }
+    if (daysinmonth < 29 && document.getElementById("day").length == "30") {
+        const list = document.getElementById("day");
+        list.removeChild(list.lastElementChild);
+    }
+    if (daysinmonth == 31 && document.getElementById("day").length == "31") {
+        document.getElementById("day").options.add(new Option("31", "31"));
+    }
+    if (daysinmonth == 31 && document.getElementById("day").length == "30") {
+        document.getElementById("day").options.add(new Option("30", "30"));
+        document.getElementById("day").options.add(new Option("31", "31"));
+    }
+    if (daysinmonth == 31 && document.getElementById("day").length == "29") {
+        document.getElementById("day").options.add(new Option("29", "29"));
+        document.getElementById("day").options.add(new Option("30", "30"));
+        document.getElementById("day").options.add(new Option("31", "31"));
+    }
+    if (daysinmonth == 30 && document.getElementById("day").length == "30") {
+        document.getElementById("day").options.add(new Option("30", "30"));
+    }
+    if (daysinmonth == 30 && document.getElementById("day").length == "29") {
+        document.getElementById("day").options.add(new Option("29", "29"));
+        document.getElementById("day").options.add(new Option("30", "30"));
+    }
+    if (daysinmonth == 29 && document.getElementById("day").length == "29") {
+        document.getElementById("day").options.add(new Option("29", "29"));
+    }
 }
 function NextTransform() {
     gsap.from("#multi", { duration: 0.2, xPercent: 50, opacity: 0 });
@@ -195,7 +242,7 @@ function Continue() {
     document.getElementById("achievedmobile").value = localStorage.getItem("achievedmobile.area." + x);
     document.getElementById("targetmobile").value = localStorage.getItem("targetmobile.area." + x);
     document.getElementById("achievedwegold").value = localStorage.getItem("achievedwegold.area." + x);
-    document.getElementById("targetpostpaid").value = localStorage.getItem("targetpostpaid.area." + x);
+    document.getElementById("targetwegold").value = localStorage.getItem("targetwegold.area." + x) || localStorage.getItem("targetpostpaid.area." + x);
     document.getElementById("achievedadsl").value = localStorage.getItem("achievedadsl.area." + x);
     document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.area." + x);
     document.getElementById("achievedfixed").value = localStorage.getItem("achievedfixed.area." + x);
@@ -214,13 +261,13 @@ function NewMonth() {
     basic.style.display = "block";
     document.getElementById("areaname").value = localStorage.getItem("areaname.area." + x);
     document.getElementById("achievedmobile").value = "";
-    document.getElementById("targetmobile").value = "";
+    document.getElementById("targetmobile").value = localStorage.getItem("targetmobile.area." + x);
     document.getElementById("achievedwegold").value = "";
-    document.getElementById("targetpostpaid").value = "";
+    document.getElementById("targetwegold").value = localStorage.getItem("targetwegold.area." + x) || localStorage.getItem("targetpostpaid.area." + x);
     document.getElementById("achievedadsl").value = "";
-    document.getElementById("targetadsl").value = "";
+    document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.area." + x);
     document.getElementById("achievedfixed").value = "";
-    document.getElementById("targetfixed").value = "";
+    document.getElementById("targetfixed").value = localStorage.getItem("targetfixed.area." + x);
     document.getElementById("todaymobile").value = "";
     document.getElementById("todaywegold").value = "";
     document.getElementById("todayadsl").value = "";
@@ -240,7 +287,7 @@ function NewArea() {
     document.getElementById("achievedmobile").value = "";
     document.getElementById("targetmobile").value = "";
     document.getElementById("achievedwegold").value = "";
-    document.getElementById("targetpostpaid").value = "";
+    document.getElementById("targetwegold").value = "";
     document.getElementById("achievedadsl").value = "";
     document.getElementById("targetadsl").value = "";
     document.getElementById("achievedfixed").value = "";
@@ -284,7 +331,7 @@ function GenerateSalesReport() {
     }
     achievedwegold = parseInt(document.getElementById("achievedwegold").value) || 0;
     utdwegold = todaywegold + achievedwegold || 0;
-    targetpostpaid = parseInt(document.getElementById("targetpostpaid").value) || 0;
+    targetwegold = parseInt(document.getElementById("targetwegold").value) || 0;
     todayadslInput = document.getElementById("todayadsl").value.split(" ");
     todayadsl = 0;
     for (i = 0; i < todayadslInput.length; i++) {
@@ -304,7 +351,7 @@ function GenerateSalesReport() {
     vsMobile = ~~Number(Math.round((utdmobile / targetmobile) * 100)) || 0;
     vsFixed = ~~Number(Math.round((utdfixed / targetfixed) * 100)) || 0;
     vsAdsl = ~~Number(Math.round((utdadsl / targetadsl) * 100)) || 0;
-    vsPostpaid = ~~Number(Math.round((utdwegold / targetpostpaid) * 100)) || 0;
+    vsGold = ~~Number(Math.round((utdwegold / targetwegold) * 100)) || 0;
     document.getElementById("salesreport").value =
         "Date: " +
         date +
@@ -326,11 +373,11 @@ function GenerateSalesReport() {
         todaywegold +
         "\n" +
         "TGT: " +
-        targetpostpaid +
+        targetwegold +
         " /Ach: " +
         utdwegold +
         " /VS: " +
-        vsPostpaid +
+        vsGold +
         "%" +
         "\n" +
         "-------------------------" +
@@ -419,7 +466,7 @@ function Save__1() {
     localStorage.setItem("achievedmobile.area." + x, utdmobile);
     localStorage.setItem("targetmobile.area." + x, document.getElementById("targetmobile").value);
     localStorage.setItem("achievedwegold.area." + x, utdwegold);
-    localStorage.setItem("targetpostpaid.area." + x, document.getElementById("targetpostpaid").value);
+    localStorage.setItem("targetwegold.area." + x, document.getElementById("targetwegold").value);
     localStorage.setItem("achievedadsl.area." + x, utdadsl);
     localStorage.setItem("targetadsl.area." + x, document.getElementById("targetadsl").value);
     localStorage.setItem("achievedfixed.area." + x, utdfixed);

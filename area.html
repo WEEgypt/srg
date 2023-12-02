@@ -52,7 +52,7 @@
                     <div id="date">
                         <label>Date:</label>
                         <div class="date">
-                            <select id="year">
+                            <select id="year" onchange="DaysFix()">
                                 <option value="" selected disabled hidden>Year</option>
                                 <option value="2022">2022</option>
                                 <option value="2023">2023</option>
@@ -64,7 +64,7 @@
                                 <option value="2029">2029</option>
                                 <option value="2030">2030</option>
                             </select>
-                            <select id="month">
+                            <select id="month" onchange="DaysFix()">
                                 <option value="" selected disabled hidden>Month</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -140,8 +140,8 @@
                     <input type="number" id="targetmobile" />
                     <br />
                     <br />
-                    <label>Postpaid:</label>
-                    <input type="number" id="targetpostpaid" />
+                    <label>We Gold:</label>
+                    <input type="number" id="targetwegold" />
                     <br />
                     <br />
                     <label>ADSL:</label>
