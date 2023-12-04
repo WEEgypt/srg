@@ -242,7 +242,7 @@ function Continue() {
     document.getElementById("achievedmobile").value = localStorage.getItem("achievedmobile.area." + x);
     document.getElementById("targetmobile").value = localStorage.getItem("targetmobile.area." + x);
     document.getElementById("achievedwegold").value = localStorage.getItem("achievedwegold.area." + x);
-    document.getElementById("targetwegold").value = localStorage.getItem("targetwegold.area." + x) || localStorage.getItem("targetpostpaid.area." + x);
+    document.getElementById("targetwegold").value = localStorage.getItem("targetwegold.area." + x);
     document.getElementById("achievedadsl").value = localStorage.getItem("achievedadsl.area." + x);
     document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.area." + x);
     document.getElementById("achievedfixed").value = localStorage.getItem("achievedfixed.area." + x);
@@ -263,7 +263,7 @@ function NewMonth() {
     document.getElementById("achievedmobile").value = "";
     document.getElementById("targetmobile").value = localStorage.getItem("targetmobile.area." + x);
     document.getElementById("achievedwegold").value = "";
-    document.getElementById("targetwegold").value = localStorage.getItem("targetwegold.area." + x) || localStorage.getItem("targetpostpaid.area." + x);
+    document.getElementById("targetwegold").value = localStorage.getItem("targetwegold.area." + x);
     document.getElementById("achievedadsl").value = "";
     document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.area." + x);
     document.getElementById("achievedfixed").value = "";

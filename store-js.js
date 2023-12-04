@@ -251,8 +251,8 @@ function Continue() {
     document.getElementById("targetweclub").value = localStorage.getItem("targetweclub.store." + x);
     document.getElementById("achievedwemix").value = localStorage.getItem("achievedwemix.store." + x);
     document.getElementById("targetwemix").value = localStorage.getItem("targetwemix.store." + x);
-    document.getElementById("achievedwegold").value = localStorage.getItem("achievedwegold.store." + x) || localStorage.getItem("achievedpostpaid.store." + x);
-    document.getElementById("targetwegold").value = localStorage.getItem("targetwegold.store." + x) || localStorage.getItem("targetpostpaid.store." + x);
+    document.getElementById("achievedwegold").value = localStorage.getItem("achievedwegold.store." + x);
+    document.getElementById("targetwegold").value = localStorage.getItem("targetwegold.store." + x);
     document.getElementById("achievedadsl").value = localStorage.getItem("achievedadsl.store." + x);
     document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.store." + x);
     document.getElementById("achievedfixed").value = localStorage.getItem("achievedfixed.store." + x);
@@ -300,7 +300,7 @@ function NewMonth() {
     document.getElementById("achievedwemix").value = "";
     document.getElementById("targetwemix").value = localStorage.getItem("targetwemix.store." + x);
     document.getElementById("achievedwegold").value = "";
-    document.getElementById("targetwegold").value = localStorage.getItem("targetwegold.store." + x) || localStorage.getItem("targetpostpaid.store." + x);
+    document.getElementById("targetwegold").value = localStorage.getItem("targetwegold.store." + x);
     document.getElementById("achievedadsl").value = "";
     document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.store." + x);
     document.getElementById("achievedfixed").value = "";

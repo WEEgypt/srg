@@ -251,8 +251,8 @@ function Continue() {
     document.getElementById("targetweclub").value = localStorage.getItem("targetweclub.4agent." + x);
     document.getElementById("achievedwemix").value = localStorage.getItem("achievedwemix.4agent." + x);
     document.getElementById("targetwemix").value = localStorage.getItem("targetwemix.4agent." + x);
-    document.getElementById("achievedwegold").value = localStorage.getItem("achievedwegold.4agent." + x) || localStorage.getItem("achievedpostpaid.4agent." + x);
-    document.getElementById("targetwegold").value = localStorage.getItem("targetwegold.4agent." + x) || localStorage.getItem("targetpostpaid.4agent." + x);
+    document.getElementById("achievedwegold").value = localStorage.getItem("achievedwegold.4agent." + x);
+    document.getElementById("targetwegold").value = localStorage.getItem("targetwegold.4agent." + x);
     document.getElementById("achievedadsl").value = localStorage.getItem("achievedadsl.4agent." + x);
     document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.4agent." + x);
     document.getElementById("achievedfixed").value = localStorage.getItem("achievedfixed.4agent." + x);
@@ -317,7 +317,7 @@ function NewMonth() {
     document.getElementById("achievedwemix").value = "";
     document.getElementById("targetwemix").value = localStorage.getItem("targetwemix.4agent." + x);
     document.getElementById("achievedwegold").value = "";
-    document.getElementById("targetwegold").value = localStorage.getItem("targetwegold.4agent." + x) || localStorage.getItem("targetpostpaid.4agent." + x);
+    document.getElementById("targetwegold").value = localStorage.getItem("targetwegold.4agent." + x);
     document.getElementById("achievedadsl").value = "";
     document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.4agent." + x);
     document.getElementById("achievedfixed").value = "";
