@@ -504,7 +504,6 @@ function GenerateSalesReport() {
     achievedwegold = parseInt(document.getElementById("achievedwegold").value) || 0;
     utdwegold = todaygold + achievedwegold || 0;
     targetwegold = parseInt(document.getElementById("targetwegold").value) || 0;
-
     todayadsl140Input = document.getElementById("todayadsl140").value.split(" ");
     todayadsl140 = 0;
     for (i = 0; i < todayadsl140Input.length; i++) {
@@ -582,6 +581,7 @@ function GenerateSalesReport() {
     targetmobile = targetpayg + targetdata + targetsuperkix + targettaz + targetwemix + targetweclub + targetwegold;
     dailymobile = todaypayg + todaydata + todaysuperkix + todaytazbeet + todayweclub + todaywemix + todaygold;
     vsPAYG = ~~Number(Math.round((utdpayg / targetpayg) * 100)) || 0;
+    vsData = ~~Number(Math.round((utddata / targetdata) * 100)) || 0;
     vsSuperKix = ~~Number(Math.round((utdsuperkix / targetsuperkix) * 100)) || 0;
     vsTaz = ~~Number(Math.round((utdtaz / targettaz) * 100)) || 0;
     vsWeClub = ~~Number(Math.round((utdweclub / targetweclub) * 100)) || 0;
@@ -591,96 +591,50 @@ function GenerateSalesReport() {
     vsAdsl = ~~Number(Math.round((utdadsl / targetadsl) * 100)) || 0;
     vsWemix = ~~Number(Math.round((utdwemix / targetwemix) * 100)) || 0;
     vsGold = ~~Number(Math.round((utdwegold / targetwegold) * 100)) || 0;
-    if (targetpayg < "10") {
-        PAYGTGTSPACE = "   ";
-    } else if (targetpayg >= "10" && targetpayg < "100") {
-        PAYGTGTSPACE = "  ";
-    } else if (targetpayg >= "100" && targetpayg < "1000") {
-        PAYGTGTSPACE = " ";
+    var targetArray = [targetpayg.toString(), targetdata.toString(), targetsuperkix.toString(), targettaz.toString(), targetweclub.toString(), targetwemix.toString()];
+    let maxTarget = Math.max(...targetArray).toString().length;
+    if (maxTarget < 4) {
+        newMaxTarget = 4;
     } else {
-        PAYGTGTSPACE = " ";
+        newMaxTarget = maxTarget;
     }
-    if (targetsuperkix < "10") {
-        SKIXTGTSPACE = "   ";
-    } else if (targetsuperkix >= "10" && targetsuperkix < "100") {
-        SKIXTGTSPACE = "  ";
-    } else if (targetsuperkix >= "100" && targetsuperkix < "1000") {
-        SKIXTGTSPACE = " ";
+    var targetArrayAdjusted = correctLength(targetArray, newMaxTarget);
+    function correctLength(array, length) {
+        array.map(function (v, i) {
+            if (array[i].length < length) {
+                array[i] += Array(length + 1 - array[i].length).join(" ");
+            }
+        });
+        return array;
+    }
+    targetpaygAdjusted = targetArrayAdjusted[0];
+    targetdataAdjusted = targetArrayAdjusted[1];
+    targetsuperkixAdjusted = targetArrayAdjusted[2];
+    targettazAdjusted = targetArrayAdjusted[3];
+    targetweclubAdjusted = targetArrayAdjusted[4];
+    targetwemixAdjusted = targetArrayAdjusted[5];
+    var utdArray = [utdpayg.toString(), utddata.toString(), utdsuperkix.toString(), utdtaz.toString(), utdweclub.toString(), utdwemix.toString()];
+    let maxUtd = Math.max(...utdArray).toString().length;
+    if (maxUtd < 4) {
+        newMaxUtd = 4;
     } else {
-        SKIXTGTSPACE = " ";
+        newMaxUtd = maxUtd;
     }
-    if (targettaz < "10") {
-        TAZTGTSPACE = "   ";
-    } else if (targettaz >= "10" && targettaz < "100") {
-        TAZTGTSPACE = "  ";
-    } else if (targettaz >= "100" && targettaz < "1000") {
-        TAZTGTSPACE = " ";
-    } else {
-        TAZTGTSPACE = " ";
+    var utdArrayAdjusted = correctLength(utdArray, newMaxUtd);
+    function correctLength(array, length) {
+        array.map(function (v, i) {
+            if (array[i].length < length) {
+                array[i] += Array(length + 1 - array[i].length).join(" ");
+            }
+        });
+        return array;
     }
-    if (targetweclub < "10") {
-        WECLUBTGTSPACE = "   ";
-    } else if (targetweclub >= "10" && targetweclub < "100") {
-        WECLUBTGTSPACE = "  ";
-    } else if (targetweclub >= "100" && targetweclub < "1000") {
-        WECLUBTGTSPACE = " ";
-    } else {
-        WECLUBTGTSPACE = " ";
-    }
-    if (targetwemix < "10") {
-        WEMIXTGTSPACE = "   ";
-    } else if (targetwemix >= "10" && targetwemix < "100") {
-        WEMIXTGTSPACE = "  ";
-    } else if (targetwemix >= "100" && targetwemix < "1000") {
-        WEMIXTGTSPACE = " ";
-    } else {
-        WEMIXTGTSPACE = " ";
-    }
-    if (utdpayg < "10") {
-        PAYGUTDSPACE = "   ";
-    } else if (utdpayg >= "10" && utdpayg < "100") {
-        PAYGUTDSPACE = "  ";
-    } else if (utdpayg >= "100" && utdpayg < "1000") {
-        PAYGUTDSPACE = " ";
-    } else {
-        PAYGUTDSPACE = " ";
-    }
-    if (utdsuperkix < "10") {
-        SKIXUTDSPACE = "   ";
-    } else if (utdsuperkix >= "10" && utdsuperkix < "100") {
-        SKIXUTDSPACE = "  ";
-    } else if (utdsuperkix >= "100" && utdsuperkix < "1000") {
-        SKIXUTDSPACE = " ";
-    } else {
-        SKIXUTDSPACE = " ";
-    }
-    if (utdtaz < "10") {
-        TAZUTDSPACE = "   ";
-    } else if (utdtaz >= "10" && utdtaz < "100") {
-        TAZUTDSPACE = "  ";
-    } else if (utdtaz >= "100" && utdtaz < "1000") {
-        TAZUTDSPACE = " ";
-    } else {
-        TAZUTDSPACE = " ";
-    }
-    if (utdweclub < "10") {
-        WECLUBUTDSPACE = "   ";
-    } else if (utdweclub >= "10" && utdweclub < "100") {
-        WECLUBUTDSPACE = "  ";
-    } else if (utdweclub >= "100" && utdweclub < "1000") {
-        WECLUBUTDSPACE = " ";
-    } else {
-        WECLUBUTDSPACE = " ";
-    }
-    if (utdwemix < "10") {
-        WEMIXUTDSPACE = "   ";
-    } else if (utdwemix >= "10" && utdwemix < "100") {
-        WEMIXUTDSPACE = "  ";
-    } else if (utdwemix >= "100" && utdwemix < "1000") {
-        WEMIXUTDSPACE = " ";
-    } else {
-        WEMIXUTDSPACE = " ";
-    }
+    utdpaygAdjusted = utdArrayAdjusted[0];
+    utddataAdjusted = utdArrayAdjusted[1];
+    utdsuperkixAdjusted = utdArrayAdjusted[2];
+    utdtazAdjusted = utdArrayAdjusted[3];
+    utdweclubAdjusted = utdArrayAdjusted[4];
+    utdwemixAdjusted = utdArrayAdjusted[5];
     document.getElementById("salesreport").value =
         "Date: " +
         date +
@@ -692,56 +646,55 @@ function GenerateSalesReport() {
         "\n" +
         "PAYG:    " +
         "T:" +
-        targetpayg +
-        PAYGTGTSPACE +
-        "A:" +
-        utdpayg +
-        PAYGUTDSPACE +
-        "VS:" +
+        targetpaygAdjusted +
+        " A:" +
+        utdpaygAdjusted +
+        " VS:" +
         vsPAYG +
         "%" +
         "\n" +
-        "C Kix:   " +
+        "Data:    " +
         "T:" +
-        targetsuperkix +
-        SKIXTGTSPACE +
-        "A:" +
-        utdsuperkix +
-        SKIXUTDSPACE +
-        "VS:" +
+        targetdataAdjusted +
+        " A:" +
+        utddataAdjusted +
+        " VS:" +
+        vsData +
+        "%" +
+        "\n" +
+        "Kix:     " +
+        "T:" +
+        targetsuperkixAdjusted +
+        " A:" +
+        utdsuperkixAdjusted +
+        " VS:" +
         vsSuperKix +
         "%" +
         "\n" +
-        "Cont T:  " +
+        "Tazbeet: " +
         "T:" +
-        targettaz +
-        TAZTGTSPACE +
-        "A:" +
-        utdtaz +
-        TAZUTDSPACE +
-        "VS:" +
+        targettazAdjusted +
+        " A:" +
+        utdtazAdjusted +
+        " VS:" +
         vsTaz +
         "%" +
         "\n" +
         "We Club: " +
         "T:" +
-        targetweclub +
-        WECLUBTGTSPACE +
-        "A:" +
-        utdweclub +
-        WECLUBUTDSPACE +
-        "VS:" +
+        targetweclubAdjusted +
+        " A:" +
+        utdweclubAdjusted +
+        " VS:" +
         vsWeClub +
         "%" +
         "\n" +
         "We Mix:  " +
         "T:" +
-        targetwemix +
-        WEMIXTGTSPACE +
-        "A:" +
-        utdwemix +
-        WEMIXUTDSPACE +
-        "VS:" +
+        targetwemixAdjusted +
+        " A:" +
+        utdwemixAdjusted +
+        " VS:" +
         vsWeMix +
         "%" +
         "\n" +
