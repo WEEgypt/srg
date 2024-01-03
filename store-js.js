@@ -276,8 +276,6 @@ function Continue() {
     document.getElementById("todayadsl600").value = "";
     document.getElementById("todayadsl1000").value = "";
     document.getElementById("todayfixed").value = "";
-    document.getElementById("todaybssamount").value = "";
-    document.getElementById("todayossamount").value = "";
     NextTransform();
     sessionStorage.setItem("stores", localStorage.getItem("stores"));
 }
@@ -324,8 +322,6 @@ function NewMonth() {
     document.getElementById("todayadsl600").value = "";
     document.getElementById("todayadsl1000").value = "";
     document.getElementById("todayfixed").value = "";
-    document.getElementById("todaybssamount").value = "";
-    document.getElementById("todayossamount").value = "";
     NextTransform();
     sessionStorage.setItem("stores", localStorage.getItem("stores"));
 }
@@ -375,8 +371,6 @@ function NewStore() {
     document.getElementById("todayadsl600").value = "";
     document.getElementById("todayadsl1000").value = "";
     document.getElementById("todayfixed").value = "";
-    document.getElementById("todaybssamount").value = "";
-    document.getElementById("todayossamount").value = "";
     NextTransform();
 }
 function GenerateSalesReport() {
@@ -584,207 +578,234 @@ function GenerateSalesReport() {
     achievedfixed = parseInt(document.getElementById("achievedfixed").value) || 0;
     utdfixed = todayfixed + achievedfixed || 0;
     targetfixed = parseInt(document.getElementById("targetfixed").value) || 0;
-    todaybssamountInput = document.getElementById("todaybssamount").value.split(" ");
-    todaybssamount = 0;
-    for (i = 0; i < todaybssamountInput.length; i++) {
-        todaybssamount += parseInt(todaybssamountInput[i]) || 0;
-    }
-    todayossamountInput = document.getElementById("todayossamount").value.split(" ");
-    todayossamount = 0;
-    for (i = 0; i < todayossamountInput.length; i++) {
-        todayossamount += parseInt(todayossamountInput[i]) || 0;
-    }
     utdmobile = utdpayg + utddata + utdsuperkix + utdtaz + utdweclub + utdwemix + utdwegold;
     targetmobile = targetpayg + targetdata + targetsuperkix + targettaz + targetwemix + targetweclub + targetwegold;
     dailymobile = todaypayg + todaydata + todaysuperkix + todaytazbeet + todayweclub + todaywemix + todaygold;
-    if (todayadsl == "0") {
-        todayadslfordailysales = "";
-    } else {
-        todayadslfordailysales = " + " + todayadsl + " ADSL";
-    }
-    if (todayfixed == "0") {
-        todayfixedfordailysales = "";
-    } else {
-        todayfixedfordailysales = " + " + todayfixed + " Fixed";
-    }
+    vsPAYG = ~~Number(Math.round((utdpayg / targetpayg) * 100)) || 0;
+    vsSuperKix = ~~Number(Math.round((utdsuperkix / targetsuperkix) * 100)) || 0;
+    vsTaz = ~~Number(Math.round((utdtaz / targettaz) * 100)) || 0;
+    vsWeClub = ~~Number(Math.round((utdweclub / targetweclub) * 100)) || 0;
+    vsWeMix = ~~Number(Math.round((utdwemix / targetwemix) * 100)) || 0;
     vsMobile = ~~Number(Math.round((utdmobile / targetmobile) * 100)) || 0;
     vsFixed = ~~Number(Math.round((utdfixed / targetfixed) * 100)) || 0;
     vsAdsl = ~~Number(Math.round((utdadsl / targetadsl) * 100)) || 0;
     vsWemix = ~~Number(Math.round((utdwemix / targetwemix) * 100)) || 0;
     vsGold = ~~Number(Math.round((utdwegold / targetwegold) * 100)) || 0;
-    if (targetwegold < "10") {
-        targetwegoldSpace = "      ";
-    } else if (targetwegold >= "10" && targetwegold < "100") {
-        targetwegoldSpace = "     ";
-    } else if (targetwegold >= "100" && targetwegold < "1000") {
-        targetwegoldSpace = "    ";
-    } else if (targetwegold >= "1000" && targetwegold < "10000") {
-        targetwegoldSpace = "   ";
-    } else if (targetwegold >= "10000" && targetwegold < "100000") {
-        targetwegoldSpace = "  ";
+    if (targetpayg < "10") {
+        PAYGTGTSPACE = "   ";
+    } else if (targetpayg >= "10" && targetpayg < "100") {
+        PAYGTGTSPACE = "  ";
+    } else if (targetpayg >= "100" && targetpayg < "1000") {
+        PAYGTGTSPACE = " ";
     } else {
-        targetwegoldSpace = " ";
+        PAYGTGTSPACE = " ";
     }
-    if (targetadsl < "10") {
-        targetadslSpace = "      ";
-    } else if (targetadsl >= "10" && targetadsl < "100") {
-        targetadslSpace = "     ";
-    } else if (targetadsl >= "100" && targetadsl < "1000") {
-        targetadslSpace = "    ";
-    } else if (targetadsl >= "1000" && targetadsl < "10000") {
-        targetadslSpace = "   ";
-    } else if (targetadsl >= "10000" && targetadsl < "100000") {
-        targetadslSpace = "  ";
+    if (targetsuperkix < "10") {
+        SKIXTGTSPACE = "   ";
+    } else if (targetsuperkix >= "10" && targetsuperkix < "100") {
+        SKIXTGTSPACE = "  ";
+    } else if (targetsuperkix >= "100" && targetsuperkix < "1000") {
+        SKIXTGTSPACE = " ";
     } else {
-        targetadslSpace = " ";
+        SKIXTGTSPACE = " ";
     }
-    if (targetfixed < "10") {
-        targetfixedSpace = "      ";
-    } else if (targetfixed >= "10" && targetfixed < "100") {
-        targetfixedSpace = "     ";
-    } else if (targetfixed >= "100" && targetfixed < "1000") {
-        targetfixedSpace = "    ";
-    } else if (targetfixed >= "1000" && targetfixed < "10000") {
-        targetfixedSpace = "   ";
-    } else if (targetfixed >= "10000" && targetfixed < "100000") {
-        targetfixedSpace = "  ";
+    if (targettaz < "10") {
+        TAZTGTSPACE = "   ";
+    } else if (targettaz >= "10" && targettaz < "100") {
+        TAZTGTSPACE = "  ";
+    } else if (targettaz >= "100" && targettaz < "1000") {
+        TAZTGTSPACE = " ";
     } else {
-        targetfixedSpace = " ";
+        TAZTGTSPACE = " ";
     }
-    if (targetmobile < "10") {
-        targetmobileSpace = "      ";
-    } else if (targetmobile >= "10" && targetmobile < "100") {
-        targetmobileSpace = "     ";
-    } else if (targetmobile >= "100" && targetmobile < "1000") {
-        targetmobileSpace = "    ";
-    } else if (targetmobile >= "1000" && targetmobile < "10000") {
-        targetmobileSpace = "   ";
-    } else if (targetmobile >= "10000" && targetmobile < "100000") {
-        targetmobileSpace = "  ";
+    if (targetweclub < "10") {
+        WECLUBTGTSPACE = "   ";
+    } else if (targetweclub >= "10" && targetweclub < "100") {
+        WECLUBTGTSPACE = "  ";
+    } else if (targetweclub >= "100" && targetweclub < "1000") {
+        WECLUBTGTSPACE = " ";
     } else {
-        targetmobileSpace = " ";
+        WECLUBTGTSPACE = " ";
     }
-    if (utdwegold < "10") {
-        utdwegoldSpace = "      ";
-    } else if (utdwegold >= "10" && utdwegold < "100") {
-        utdwegoldSpace = "     ";
-    } else if (utdwegold >= "100" && utdwegold < "1000") {
-        utdwegoldSpace = "    ";
-    } else if (utdwegold >= "1000" && utdwegold < "10000") {
-        utdwegoldSpace = "   ";
-    } else if (utdwegold >= "10000" && utdwegold < "100000") {
-        utdwegoldSpace = "  ";
+    if (targetwemix < "10") {
+        WEMIXTGTSPACE = "   ";
+    } else if (targetwemix >= "10" && targetwemix < "100") {
+        WEMIXTGTSPACE = "  ";
+    } else if (targetwemix >= "100" && targetwemix < "1000") {
+        WEMIXTGTSPACE = " ";
     } else {
-        utdwegoldSpace = " ";
+        WEMIXTGTSPACE = " ";
     }
-    if (utdadsl < "10") {
-        utdadslSpace = "      ";
-    } else if (utdadsl >= "10" && utdadsl < "100") {
-        utdadslSpace = "     ";
-    } else if (utdadsl >= "100" && utdadsl < "1000") {
-        utdadslSpace = "    ";
-    } else if (utdadsl >= "1000" && utdadsl < "10000") {
-        utdadslSpace = "   ";
-    } else if (utdadsl >= "10000" && utdadsl < "100000") {
-        utdadslSpace = "  ";
+    if (utdpayg < "10") {
+        PAYGUTDSPACE = "   ";
+    } else if (utdpayg >= "10" && utdpayg < "100") {
+        PAYGUTDSPACE = "  ";
+    } else if (utdpayg >= "100" && utdpayg < "1000") {
+        PAYGUTDSPACE = " ";
     } else {
-        utdadslSpace = " ";
+        PAYGUTDSPACE = " ";
     }
-    if (utdfixed < "10") {
-        utdfixedSpace = "      ";
-    } else if (utdfixed >= "10" && utdfixed < "100") {
-        utdfixedSpace = "     ";
-    } else if (utdfixed >= "100" && utdfixed < "1000") {
-        utdfixedSpace = "    ";
-    } else if (utdfixed >= "1000" && utdfixed < "10000") {
-        utdfixedSpace = "   ";
-    } else if (utdfixed >= "10000" && utdfixed < "100000") {
-        utdfixedSpace = "  ";
+    if (utdsuperkix < "10") {
+        SKIXUTDSPACE = "   ";
+    } else if (utdsuperkix >= "10" && utdsuperkix < "100") {
+        SKIXUTDSPACE = "  ";
+    } else if (utdsuperkix >= "100" && utdsuperkix < "1000") {
+        SKIXUTDSPACE = " ";
     } else {
-        utdfixedSpace = " ";
+        SKIXUTDSPACE = " ";
     }
-    if (utdmobile < "10") {
-        utdmobileSpace = "      ";
-    } else if (utdmobile >= "10" && utdmobile < "100") {
-        utdmobileSpace = "     ";
-    } else if (utdmobile >= "100" && utdmobile < "1000") {
-        utdmobileSpace = "    ";
-    } else if (utdmobile >= "1000" && utdmobile < "10000") {
-        utdmobileSpace = "   ";
-    } else if (utdmobile >= "10000" && utdmobile < "100000") {
-        utdmobileSpace = "  ";
+    if (utdtaz < "10") {
+        TAZUTDSPACE = "   ";
+    } else if (utdtaz >= "10" && utdtaz < "100") {
+        TAZUTDSPACE = "  ";
+    } else if (utdtaz >= "100" && utdtaz < "1000") {
+        TAZUTDSPACE = " ";
     } else {
-        utdmobileSpace = " ";
+        TAZUTDSPACE = " ";
+    }
+    if (utdweclub < "10") {
+        WECLUBUTDSPACE = "   ";
+    } else if (utdweclub >= "10" && utdweclub < "100") {
+        WECLUBUTDSPACE = "  ";
+    } else if (utdweclub >= "100" && utdweclub < "1000") {
+        WECLUBUTDSPACE = " ";
+    } else {
+        WECLUBUTDSPACE = " ";
+    }
+    if (utdwemix < "10") {
+        WEMIXUTDSPACE = "   ";
+    } else if (utdwemix >= "10" && utdwemix < "100") {
+        WEMIXUTDSPACE = "  ";
+    } else if (utdwemix >= "100" && utdwemix < "1000") {
+        WEMIXUTDSPACE = " ";
+    } else {
+        WEMIXUTDSPACE = " ";
     }
     document.getElementById("salesreport").value =
-        "Store: " +
-        storename +
-        "\n" +
         "Date: " +
         date +
         "\n" +
-        "-------------------------" +
+        "Store: " +
+        storename +
         "\n" +
-        "We Gold: " +
-        todaygoldreport +
+        "--------------------------" +
         "\n" +
-        "ADSL: " +
-        todayadslreport +
+        "PAYG:    " +
+        "T:" +
+        targetpayg +
+        PAYGTGTSPACE +
+        "A:" +
+        utdpayg +
+        PAYGUTDSPACE +
+        "VS:" +
+        vsPAYG +
+        "%" +
         "\n" +
-        "Fixed: " +
-        todayfixed +
+        "C Kix:   " +
+        "T:" +
+        targetsuperkix +
+        SKIXTGTSPACE +
+        "A:" +
+        utdsuperkix +
+        SKIXUTDSPACE +
+        "VS:" +
+        vsSuperKix +
+        "%" +
         "\n" +
-        "-------------------------" +
+        "Cont T:  " +
+        "T:" +
+        targettaz +
+        TAZTGTSPACE +
+        "A:" +
+        utdtaz +
+        TAZUTDSPACE +
+        "VS:" +
+        vsTaz +
+        "%" +
+        "\n" +
+        "We Club: " +
+        "T:" +
+        targetweclub +
+        WECLUBTGTSPACE +
+        "A:" +
+        utdweclub +
+        WECLUBUTDSPACE +
+        "VS:" +
+        vsWeClub +
+        "%" +
+        "\n" +
+        "We Mix:  " +
+        "T:" +
+        targetwemix +
+        WEMIXTGTSPACE +
+        "A:" +
+        utdwemix +
+        WEMIXUTDSPACE +
+        "VS:" +
+        vsWeMix +
+        "%" +
+        "\n" +
         "\n" +
         "Today Sales: " +
         dailymobile +
         " Mob" +
-        todayadslfordailysales +
-        todayfixedfordailysales +
         "\n" +
-        "-------------------------```" +
+        "--------------------------" +
         "\n" +
-        "Products    T.     Ach.   Per." +
+        "We Gold" +
         "\n" +
-        "We Gold:    " +
+        "Today: " +
+        todaygoldreport +
+        "\n" +
+        "TGT: " +
         targetwegold +
-        targetwegoldSpace +
+        " /Ach: " +
         utdwegold +
-        utdwegoldSpace +
+        " /VS: " +
         vsGold +
         "%" +
         "\n" +
-        "ADSL:       " +
+        "-------------------------" +
+        "\n" +
+        "ADSL" +
+        "\n" +
+        "Today: " +
+        todayadslreport +
+        "\n" +
+        "TGT: " +
         targetadsl +
-        targetadslSpace +
+        " /Ach: " +
         utdadsl +
-        utdadslSpace +
+        " /VS: " +
         vsAdsl +
         "%" +
         "\n" +
-        "Fixed:      " +
+        "-------------------------" +
+        "\n" +
+        "Fixed" +
+        "\n" +
+        "Today: " +
+        todayfixed +
+        "\n" +
+        "TGT: " +
         targetfixed +
-        targetfixedSpace +
+        " /Ach: " +
         utdfixed +
-        utdfixedSpace +
+        " /VS: " +
         vsFixed +
         "%" +
         "\n" +
-        "Target:     " +
-        targetmobile +
-        targetmobileSpace +
+        "-------------------------" +
+        "\n" +
+        "Total Activation: " +
         utdmobile +
-        utdmobileSpace +
+        "\n" +
+        "TGT: " +
+        targetmobile +
+        "\n" +
+        "VS: " +
         vsMobile +
-        "%" +
-        "\n" +
-        "```-------------------------" +
-        "\n" +
-        "Total BSS: " +
-        todaybssamount +
-        "\n" +
-        "Total OSS: " +
-        todayossamount;
+        "%";
     document.getElementById("save__1").disabled = false;
     document.getElementById("save__2").disabled = false;
     document.getElementById("copy__1").disabled = false;
@@ -798,7 +819,7 @@ function GenerateSalesReport() {
     NextTransform();
 }
 function Copy__1() {
-    salesreportValue = document.getElementById("salesreport").value;
+    salesreportValue = document.getElementById("salesreport").value.replace(/--------------------------/gi, "```--------------------------");
     navigator.clipboard.writeText(salesreportValue);
     document.getElementById("copy__1").disabled = true;
     document.getElementById("copy__2").disabled = true;
@@ -809,7 +830,7 @@ function Copy__2() {
     Copy__1();
 }
 function Share__1() {
-    salesreportValue = document.getElementById("salesreport").value;
+    salesreportValue = document.getElementById("salesreport").value.replace(/--------------------------/gi, "```--------------------------");
     if (navigator.share) {
         navigator.share({
             title: "Sales Report",
@@ -859,7 +880,7 @@ function Print__1() {
     doc = window.open("", "_blank");
     doc.document.open();
     doc.document.write("<html lang=en><head><title>Sales Report</title><style>body {font-family: monospace; display: flex;} div {margin: 0px auto 0px auto;}</style></head><body onload=window.print();setTimeout(window.close,1000);><div>");
-    doc.document.write(document.getElementById("salesreport").value.replace(/`/gi, "").replace(/  /gi, "&nbsp;&nbsp;").replace(/\n/gi, "<br>"));
+    doc.document.write(document.getElementById("salesreport").value.replace(/  /gi, "&nbsp;&nbsp;").replace(/\n/gi, "<br>"));
     doc.document.write("</div></body></html>");
     doc.document.close();
 }
