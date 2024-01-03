@@ -591,91 +591,111 @@ function GenerateSalesReport() {
     vsWemix = ~~Number(Math.round((utdwemix / targetwemix) * 100)) || 0;
     vsGold = ~~Number(Math.round((utdwegold / targetwegold) * 100)) || 0;
     if (targetpayg < "10") {
-        PAYGTGTSPACE = "   ";
+        PAYGTGTSPACE = "    ";
     } else if (targetpayg >= "10" && targetpayg < "100") {
-        PAYGTGTSPACE = "  ";
+        PAYGTGTSPACE = "   ";
     } else if (targetpayg >= "100" && targetpayg < "1000") {
+        PAYGTGTSPACE = "  ";
+    } else if (targetpayg >= "1000" && targetpayg < "10000") {
         PAYGTGTSPACE = " ";
     } else {
         PAYGTGTSPACE = " ";
     }
     if (targetsuperkix < "10") {
-        SKIXTGTSPACE = "   ";
+        SKIXTGTSPACE = "    ";
     } else if (targetsuperkix >= "10" && targetsuperkix < "100") {
-        SKIXTGTSPACE = "  ";
+        SKIXTGTSPACE = "   ";
     } else if (targetsuperkix >= "100" && targetsuperkix < "1000") {
+        SKIXTGTSPACE = "  ";
+    } else if (targetsuperkix >= "1000" && targetsuperkix < "10000") {
         SKIXTGTSPACE = " ";
     } else {
         SKIXTGTSPACE = " ";
     }
     if (targettaz < "10") {
-        TAZTGTSPACE = "   ";
+        TAZTGTSPACE = "    ";
     } else if (targettaz >= "10" && targettaz < "100") {
-        TAZTGTSPACE = "  ";
+        TAZTGTSPACE = "   ";
     } else if (targettaz >= "100" && targettaz < "1000") {
+        TAZTGTSPACE = "  ";
+    } else if (targettaz >= "1000" && targettaz < "10000") {
         TAZTGTSPACE = " ";
     } else {
         TAZTGTSPACE = " ";
     }
     if (targetweclub < "10") {
-        WECLUBTGTSPACE = "   ";
+        WECLUBTGTSPACE = "    ";
     } else if (targetweclub >= "10" && targetweclub < "100") {
-        WECLUBTGTSPACE = "  ";
+        WECLUBTGTSPACE = "   ";
     } else if (targetweclub >= "100" && targetweclub < "1000") {
+        WECLUBTGTSPACE = "  ";
+    } else if (targetweclub >= "1000" && targetweclub < "10000") {
         WECLUBTGTSPACE = " ";
     } else {
         WECLUBTGTSPACE = " ";
     }
     if (targetwemix < "10") {
-        WEMIXTGTSPACE = "   ";
+        WEMIXTGTSPACE = "    ";
     } else if (targetwemix >= "10" && targetwemix < "100") {
-        WEMIXTGTSPACE = "  ";
+        WEMIXTGTSPACE = "   ";
     } else if (targetwemix >= "100" && targetwemix < "1000") {
+        WEMIXTGTSPACE = "  ";
+    } else if (targetwemix >= "1000" && targetwemix < "10000") {
         WEMIXTGTSPACE = " ";
     } else {
         WEMIXTGTSPACE = " ";
     }
     if (utdpayg < "10") {
-        PAYGUTDSPACE = "   ";
+        PAYGUTDSPACE = "    ";
     } else if (utdpayg >= "10" && utdpayg < "100") {
-        PAYGUTDSPACE = "  ";
+        PAYGUTDSPACE = "   ";
     } else if (utdpayg >= "100" && utdpayg < "1000") {
+        PAYGUTDSPACE = "  ";
+    } else if (utdpayg >= "1000" && utdpayg < "10000") {
         PAYGUTDSPACE = " ";
     } else {
         PAYGUTDSPACE = " ";
     }
     if (utdsuperkix < "10") {
-        SKIXUTDSPACE = "   ";
+        SKIXUTDSPACE = "    ";
     } else if (utdsuperkix >= "10" && utdsuperkix < "100") {
-        SKIXUTDSPACE = "  ";
+        SKIXUTDSPACE = "   ";
     } else if (utdsuperkix >= "100" && utdsuperkix < "1000") {
+        SKIXUTDSPACE = "  ";
+    } else if (utdsuperkix >= "1000" && utdsuperkix < "10000") {
         SKIXUTDSPACE = " ";
     } else {
         SKIXUTDSPACE = " ";
     }
     if (utdtaz < "10") {
-        TAZUTDSPACE = "   ";
+        TAZUTDSPACE = "    ";
     } else if (utdtaz >= "10" && utdtaz < "100") {
-        TAZUTDSPACE = "  ";
+        TAZUTDSPACE = "   ";
     } else if (utdtaz >= "100" && utdtaz < "1000") {
+        TAZUTDSPACE = "  ";
+    } else if (utdtaz >= "1000" && utdtaz < "10000") {
         TAZUTDSPACE = " ";
     } else {
         TAZUTDSPACE = " ";
     }
     if (utdweclub < "10") {
-        WECLUBUTDSPACE = "   ";
+        WECLUBUTDSPACE = "    ";
     } else if (utdweclub >= "10" && utdweclub < "100") {
-        WECLUBUTDSPACE = "  ";
+        WECLUBUTDSPACE = "   ";
     } else if (utdweclub >= "100" && utdweclub < "1000") {
+        WECLUBUTDSPACE = "  ";
+    } else if (utdweclub >= "1000" && utdweclub < "10000") {
         WECLUBUTDSPACE = " ";
     } else {
         WECLUBUTDSPACE = " ";
     }
     if (utdwemix < "10") {
-        WEMIXUTDSPACE = "   ";
+        WEMIXUTDSPACE = "    ";
     } else if (utdwemix >= "10" && utdwemix < "100") {
-        WEMIXUTDSPACE = "  ";
+        WEMIXUTDSPACE = "   ";
     } else if (utdwemix >= "100" && utdwemix < "1000") {
+        WEMIXUTDSPACE = "  ";
+    } else if (utdwemix >= "1000" && utdwemix < "10000") {
         WEMIXUTDSPACE = " ";
     } else {
         WEMIXUTDSPACE = " ";
