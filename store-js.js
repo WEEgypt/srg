@@ -644,8 +644,8 @@ function GenerateSalesReport() {
         "\n" +
         "--------------------------" +
         "\n" +
-        "PAYG:    " +
-        "T:" +
+        "PAYG   :" +
+        " T:" +
         targetpaygAdjusted +
         " A:" +
         utdpaygAdjusted +
@@ -653,8 +653,8 @@ function GenerateSalesReport() {
         vsPAYG +
         "%" +
         "\n" +
-        "Data:    " +
-        "T:" +
+        "Data   :" +
+        " T:" +
         targetdataAdjusted +
         " A:" +
         utddataAdjusted +
@@ -662,8 +662,8 @@ function GenerateSalesReport() {
         vsData +
         "%" +
         "\n" +
-        "Kix:     " +
-        "T:" +
+        "Kix    :" +
+        " T:" +
         targetsuperkixAdjusted +
         " A:" +
         utdsuperkixAdjusted +
@@ -671,8 +671,8 @@ function GenerateSalesReport() {
         vsSuperKix +
         "%" +
         "\n" +
-        "Tazbeet: " +
-        "T:" +
+        "Tazbeet:" +
+        " T:" +
         targettazAdjusted +
         " A:" +
         utdtazAdjusted +
@@ -680,8 +680,8 @@ function GenerateSalesReport() {
         vsTaz +
         "%" +
         "\n" +
-        "We Club: " +
-        "T:" +
+        "We Club:" +
+        " T:" +
         targetweclubAdjusted +
         " A:" +
         utdweclubAdjusted +
@@ -689,8 +689,8 @@ function GenerateSalesReport() {
         vsWeClub +
         "%" +
         "\n" +
-        "We Mix:  " +
-        "T:" +
+        "We Mix :" +
+        " T:" +
         targetwemixAdjusted +
         " A:" +
         utdwemixAdjusted +
