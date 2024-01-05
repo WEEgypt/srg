@@ -866,8 +866,10 @@ function GenerateSalesReport() {
         "SIM Swap: " +
         todaysimswap +
         "\n" +
+        "\n" +
         "Cash: " +
         todaycash +
+        " LE" +
         "\n" +
         "#--------------------------" +
         "\n" +
