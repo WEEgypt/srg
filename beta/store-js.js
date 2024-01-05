@@ -276,6 +276,10 @@ function Continue() {
     document.getElementById("todayadsl600").value = "";
     document.getElementById("todayadsl1000").value = "";
     document.getElementById("todayfixed").value = "";
+    document.getElementById("adslbills").value = "";
+    document.getElementById("postpaidbills").value = "";
+    document.getElementById("fixedbills").value = "";
+    document.getElementById("cash").value = "";
     NextTransform();
     sessionStorage.setItem("stores", localStorage.getItem("stores"));
 }
@@ -322,6 +326,10 @@ function NewMonth() {
     document.getElementById("todayadsl600").value = "";
     document.getElementById("todayadsl1000").value = "";
     document.getElementById("todayfixed").value = "";
+    document.getElementById("adslbills").value = "";
+    document.getElementById("postpaidbills").value = "";
+    document.getElementById("fixedbills").value = "";
+    document.getElementById("cash").value = "";
     NextTransform();
     sessionStorage.setItem("stores", localStorage.getItem("stores"));
 }
@@ -371,6 +379,10 @@ function NewStore() {
     document.getElementById("todayadsl600").value = "";
     document.getElementById("todayadsl1000").value = "";
     document.getElementById("todayfixed").value = "";
+    document.getElementById("adslbills").value = "";
+    document.getElementById("postpaidbills").value = "";
+    document.getElementById("fixedbills").value = "";
+    document.getElementById("cash").value = "";
     NextTransform();
 }
 function GenerateSalesReport() {
@@ -578,6 +590,16 @@ function GenerateSalesReport() {
     achievedfixed = parseInt(document.getElementById("achievedfixed").value) || 0;
     utdfixed = todayfixed + achievedfixed || 0;
     targetfixed = parseInt(document.getElementById("targetfixed").value) || 0;
+    if (todayadsl == "0") {
+        todayadslfordailysales = "";
+    } else {
+        todayadslfordailysales = " + " + todayadsl + " ADSL";
+    }
+    if (todayfixed == "0") {
+        todayfixedfordailysales = "";
+    } else {
+        todayfixedfordailysales = " + " + todayfixed + " Fixed";
+    }
     utdmobile = utdpayg + utddata + utdsuperkix + utdtaz + utdweclub + utdwemix + utdwegold;
     targetmobile = targetpayg + targetdata + targetsuperkix + targettaz + targetwemix + targetweclub + targetwegold;
     dailymobile = todaypayg + todaydata + todaysuperkix + todaytazbeet + todayweclub + todaywemix + todaygold;
@@ -603,6 +625,7 @@ function GenerateSalesReport() {
         targetwegold.toString(),
         targetadsl.toString(),
         targetfixed.toString(),
+        targetmobile.toString(),
         "T",
     ];
     var fakeTargetArray = [
@@ -615,6 +638,7 @@ function GenerateSalesReport() {
         targetwegold.toString(),
         targetadsl.toString(),
         targetfixed.toString(),
+        targetmobile.toString(),
     ];
     let maxTarget = Math.max(...fakeTargetArray).toString().length;
     if (maxTarget < 5) {
@@ -640,8 +664,9 @@ function GenerateSalesReport() {
     targetwegoldAdjusted = targetArrayAdjusted[6];
     targetadslAdjusted = targetArrayAdjusted[7];
     targetfixedAdjusted = targetArrayAdjusted[8];
-    var utdArray = [utdpayg.toString(), utddata.toString(), utdsuperkix.toString(), utdtaz.toString(), utdweclub.toString(), utdwemix.toString(), utdwegold.toString(), utdadsl.toString(), utdfixed.toString(), "A"];
-    var fakeUtdArray = [utdpayg.toString(), utddata.toString(), utdsuperkix.toString(), utdtaz.toString(), utdweclub.toString(), utdwemix.toString(), utdwegold.toString(), utdadsl.toString(), utdfixed.toString()];
+    targetmobileAdjusted = targetArrayAdjusted[9];
+    var utdArray = [utdpayg.toString(), utddata.toString(), utdsuperkix.toString(), utdtaz.toString(), utdweclub.toString(), utdwemix.toString(), utdwegold.toString(), utdadsl.toString(), utdfixed.toString(), utdmobile.toString(), "A"];
+    var fakeUtdArray = [utdpayg.toString(), utddata.toString(), utdsuperkix.toString(), utdtaz.toString(), utdweclub.toString(), utdwemix.toString(), utdwegold.toString(), utdadsl.toString(), utdfixed.toString(), utdmobile.toString()];
     let maxUtd = Math.max(...fakeUtdArray).toString().length;
     if (maxUtd < 5) {
         newMaxUtd = 5;
@@ -666,6 +691,7 @@ function GenerateSalesReport() {
     utdwegoldAdjusted = utdArrayAdjusted[6];
     utdadslAdjusted = utdArrayAdjusted[7];
     utdfixedAdjusted = utdArrayAdjusted[8];
+    utdmobileAdjusted = utdArrayAdjusted[9];
     adslbillsInput = document.getElementById("adslbills").value.split(" ");
     adslbills = 0;
     for (i = 0; i < adslbillsInput.length; i++) {
@@ -695,6 +721,18 @@ function GenerateSalesReport() {
         "\n" +
         "--------------------------" +
         "\n" +
+        "\n" +
+        "Today Sales: " +
+        dailymobile +
+        " Mob" +
+        todayadslfordailysales +
+        todayfixedfordailysales +
+        "\n" +
+        "RE: " +
+        reMobile +
+        "%" +
+        "\n" +
+        "\n" +
         "PAYG: " +
         todaypayg +
         "\n" +
@@ -722,32 +760,14 @@ function GenerateSalesReport() {
         "Fixed: " +
         todayfixed +
         "\n" +
-        "--------------------------" +
-        "\n" +
-        "Today Sales: " +
-        dailymobile +
-        "\n" +
-        "--------------------------" +
-        "\n" +
-        "ADSL Bills: " +
-        adslbills +
-        "\n" +
-        "Postpaid Bills: " +
-        postpaidbills +
-        "\n" +
-        "Fixed Bills: " +
-        fixedbills +
-        "\n" +
-        "Cash: " +
-        cash +
         "\n" +
         "#--------------------------" +
         "\n" +
-        "Tariff :   " +
-        targetArrayAdjusted[9] +
+        "Product:   " +
+        targetArrayAdjusted[10] +
         " " +
-        utdArrayAdjusted[9] +
-        " %" +
+        utdArrayAdjusted[10] +
+        " VS" +
         "\n" +
         "--------------------------" +
         "\n" +
@@ -823,21 +843,30 @@ function GenerateSalesReport() {
         vsFixed +
         "%" +
         "\n" +
-        "--------------------------#" +
+        "--------------------------" +
         "\n" +
-        "Total Activation: " +
-        utdmobile +
-        "\n" +
-        "TGT: " +
-        targetmobile +
-        "\n" +
-        "VS: " +
+        "Total  :   " +
+        targetmobileAdjusted +
+        " " +
+        utdmobileAdjusted +
+        " " +
         vsMobile +
         "%" +
         "\n" +
-        "RE: " +
-        reMobile +
-        "%";
+        "--------------------------#" +
+        "\n" +
+        "ADSL Bills: " +
+        adslbills +
+        "\n" +
+        "Postpaid Bills: " +
+        postpaidbills +
+        "\n" +
+        "Fixed Bills: " +
+        fixedbills +
+        "\n" +
+        "Cash: " +
+        cash +
+        " LE";
     document.getElementById("save__1").disabled = false;
     document.getElementById("save__2").disabled = false;
     document.getElementById("copy__1").disabled = false;
