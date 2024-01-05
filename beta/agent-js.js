@@ -588,7 +588,7 @@ function GenerateSalesReport() {
     if (todaysuperkixreport == "") {
         superkixreport = "";
     } else {
-        superkixreport = "\n" + "Super Kix: " + todaysuperkixreport;
+        superkixreport = "\n" + "Kix: " + todaysuperkixreport;
     }
     if (todaytazbeet30 == "0") {
         todaytazbeet30report = "";
@@ -756,7 +756,7 @@ function GenerateSalesReport() {
     } else {
         todayfixedfordailysales = " + " + todayfixed + " Fixed";
     }
-    todaysales = todaygoldreport + todaypaygreport + todaydatareport + superkixreport + tazbeetreport + weclubreport + wemixreport + todayadslreport + todayfixedreport;
+    todaysales = todaypaygreport + todaydatareport + superkixreport + tazbeetreport + weclubreport + wemixreport + todaygoldreport + todayadslreport + todayfixedreport;
     totaltoday = "--------------------------" + "\n" + "Today Sales: " + dailymobile + " Mob" + todayadslfordailysales + todayfixedfordailysales + "\n" + "--------------------------";
     if (todaysales == "") {
         todaysalesreport = "\n" + "No Sales Today";
