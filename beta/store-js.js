@@ -721,18 +721,6 @@ function GenerateSalesReport() {
         "\n" +
         "--------------------------" +
         "\n" +
-        "\n" +
-        "Today Sales: " +
-        dailymobile +
-        " Mob" +
-        todayadslfordailysales +
-        todayfixedfordailysales +
-        "\n" +
-        "RE: " +
-        reMobile +
-        "%" +
-        "\n" +
-        "\n" +
         "PAYG: " +
         todaypayg +
         "\n" +
@@ -760,6 +748,16 @@ function GenerateSalesReport() {
         "Fixed: " +
         todayfixed +
         "\n" +
+        "\n" +
+        "Today Sales: " +
+        dailymobile +
+        " Mob" +
+        todayadslfordailysales +
+        todayfixedfordailysales +
+        "\n" +
+        "RE: " +
+        reMobile +
+        "%" +
         "\n" +
         "#--------------------------" +
         "\n" +
