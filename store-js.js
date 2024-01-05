@@ -276,6 +276,10 @@ function Continue() {
     document.getElementById("todayadsl600").value = "";
     document.getElementById("todayadsl1000").value = "";
     document.getElementById("todayfixed").value = "";
+    document.getElementById("adslbills").value = "";
+    document.getElementById("postpaidbills").value = "";
+    document.getElementById("fixedbills").value = "";
+    document.getElementById("cash").value = "";
     NextTransform();
     sessionStorage.setItem("stores", localStorage.getItem("stores"));
 }
@@ -322,6 +326,10 @@ function NewMonth() {
     document.getElementById("todayadsl600").value = "";
     document.getElementById("todayadsl1000").value = "";
     document.getElementById("todayfixed").value = "";
+    document.getElementById("adslbills").value = "";
+    document.getElementById("postpaidbills").value = "";
+    document.getElementById("fixedbills").value = "";
+    document.getElementById("cash").value = "";
     NextTransform();
     sessionStorage.setItem("stores", localStorage.getItem("stores"));
 }
@@ -371,6 +379,10 @@ function NewStore() {
     document.getElementById("todayadsl600").value = "";
     document.getElementById("todayadsl1000").value = "";
     document.getElementById("todayfixed").value = "";
+    document.getElementById("adslbills").value = "";
+    document.getElementById("postpaidbills").value = "";
+    document.getElementById("fixedbills").value = "";
+    document.getElementById("cash").value = "";
     NextTransform();
 }
 function GenerateSalesReport() {
@@ -391,6 +403,7 @@ function GenerateSalesReport() {
     month = parseInt(document.getElementById("month").value);
     year = parseInt(document.getElementById("year").value);
     date = day + "-" + month + "-" + year;
+    daysinmonth = new Date(year, month, 0).getDate();
     todaypaygInput = document.getElementById("todaypayg").value.split(" ");
     todaypayg = 0;
     for (i = 0; i < todaypaygInput.length; i++) {
@@ -577,6 +590,16 @@ function GenerateSalesReport() {
     achievedfixed = parseInt(document.getElementById("achievedfixed").value) || 0;
     utdfixed = todayfixed + achievedfixed || 0;
     targetfixed = parseInt(document.getElementById("targetfixed").value) || 0;
+    if (todayadsl == "0") {
+        todayadslfordailysales = "";
+    } else {
+        todayadslfordailysales = " + " + todayadsl + " ADSL";
+    }
+    if (todayfixed == "0") {
+        todayfixedfordailysales = "";
+    } else {
+        todayfixedfordailysales = " + " + todayfixed + " Fixed";
+    }
     utdmobile = utdpayg + utddata + utdsuperkix + utdtaz + utdweclub + utdwemix + utdwegold;
     targetmobile = targetpayg + targetdata + targetsuperkix + targettaz + targetwemix + targetweclub + targetwegold;
     dailymobile = todaypayg + todaydata + todaysuperkix + todaytazbeet + todayweclub + todaywemix + todaygold;
@@ -586,15 +609,39 @@ function GenerateSalesReport() {
     vsTaz = ~~Number(Math.round((utdtaz / targettaz) * 100)) || 0;
     vsWeClub = ~~Number(Math.round((utdweclub / targetweclub) * 100)) || 0;
     vsWeMix = ~~Number(Math.round((utdwemix / targetwemix) * 100)) || 0;
-    vsMobile = ~~Number(Math.round((utdmobile / targetmobile) * 100)) || 0;
-    vsFixed = ~~Number(Math.round((utdfixed / targetfixed) * 100)) || 0;
-    vsAdsl = ~~Number(Math.round((utdadsl / targetadsl) * 100)) || 0;
-    vsWemix = ~~Number(Math.round((utdwemix / targetwemix) * 100)) || 0;
     vsGold = ~~Number(Math.round((utdwegold / targetwegold) * 100)) || 0;
-    var targetArray = [targetpayg.toString(), targetdata.toString(), targetsuperkix.toString(), targettaz.toString(), targetweclub.toString(), targetwemix.toString()];
-    let maxTarget = Math.max(...targetArray).toString().length;
-    if (maxTarget < 4) {
-        newMaxTarget = 4;
+    vsAdsl = ~~Number(Math.round((utdadsl / targetadsl) * 100)) || 0;
+    vsFixed = ~~Number(Math.round((utdfixed / targetfixed) * 100)) || 0;
+    vsMobile = ~~Number(Math.round((utdmobile / targetmobile) * 100)) || 0;
+    reMobile = ~~Number(Math.round((((utdmobile / targetmobile) * 100) / day) * daysinmonth)) || 0;
+    var targetArray = [
+        targetpayg.toString(),
+        targetdata.toString(),
+        targetsuperkix.toString(),
+        targettaz.toString(),
+        targetweclub.toString(),
+        targetwemix.toString(),
+        targetwegold.toString(),
+        targetadsl.toString(),
+        targetfixed.toString(),
+        targetmobile.toString(),
+        "T",
+    ];
+    var fakeTargetArray = [
+        targetpayg.toString(),
+        targetdata.toString(),
+        targetsuperkix.toString(),
+        targettaz.toString(),
+        targetweclub.toString(),
+        targetwemix.toString(),
+        targetwegold.toString(),
+        targetadsl.toString(),
+        targetfixed.toString(),
+        targetmobile.toString(),
+    ];
+    let maxTarget = Math.max(...fakeTargetArray).toString().length;
+    if (maxTarget < 5) {
+        newMaxTarget = 5;
     } else {
         newMaxTarget = maxTarget;
     }
@@ -613,10 +660,15 @@ function GenerateSalesReport() {
     targettazAdjusted = targetArrayAdjusted[3];
     targetweclubAdjusted = targetArrayAdjusted[4];
     targetwemixAdjusted = targetArrayAdjusted[5];
-    var utdArray = [utdpayg.toString(), utddata.toString(), utdsuperkix.toString(), utdtaz.toString(), utdweclub.toString(), utdwemix.toString()];
-    let maxUtd = Math.max(...utdArray).toString().length;
-    if (maxUtd < 4) {
-        newMaxUtd = 4;
+    targetwegoldAdjusted = targetArrayAdjusted[6];
+    targetadslAdjusted = targetArrayAdjusted[7];
+    targetfixedAdjusted = targetArrayAdjusted[8];
+    targetmobileAdjusted = targetArrayAdjusted[9];
+    var utdArray = [utdpayg.toString(), utddata.toString(), utdsuperkix.toString(), utdtaz.toString(), utdweclub.toString(), utdwemix.toString(), utdwegold.toString(), utdadsl.toString(), utdfixed.toString(), utdmobile.toString(), "A"];
+    var fakeUtdArray = [utdpayg.toString(), utddata.toString(), utdsuperkix.toString(), utdtaz.toString(), utdweclub.toString(), utdwemix.toString(), utdwegold.toString(), utdadsl.toString(), utdfixed.toString(), utdmobile.toString()];
+    let maxUtd = Math.max(...fakeUtdArray).toString().length;
+    if (maxUtd < 5) {
+        newMaxUtd = 5;
     } else {
         newMaxUtd = maxUtd;
     }
@@ -635,6 +687,30 @@ function GenerateSalesReport() {
     utdtazAdjusted = utdArrayAdjusted[3];
     utdweclubAdjusted = utdArrayAdjusted[4];
     utdwemixAdjusted = utdArrayAdjusted[5];
+    utdwegoldAdjusted = utdArrayAdjusted[6];
+    utdadslAdjusted = utdArrayAdjusted[7];
+    utdfixedAdjusted = utdArrayAdjusted[8];
+    utdmobileAdjusted = utdArrayAdjusted[9];
+    adslbillsInput = document.getElementById("adslbills").value.split(" ");
+    adslbills = 0;
+    for (i = 0; i < adslbillsInput.length; i++) {
+        adslbills += parseInt(adslbillsInput[i]) || 0;
+    }
+    postpaidbillsInput = document.getElementById("postpaidbills").value.split(" ");
+    postpaidbills = 0;
+    for (i = 0; i < postpaidbillsInput.length; i++) {
+        postpaidbills += parseInt(postpaidbillsInput[i]) || 0;
+    }
+    fixedbillsInput = document.getElementById("fixedbills").value.split(" ");
+    fixedbills = 0;
+    for (i = 0; i < fixedbillsInput.length; i++) {
+        fixedbills += parseInt(fixedbillsInput[i]) || 0;
+    }
+    cashInput = document.getElementById("cash").value.split(" ");
+    cash = 0;
+    for (i = 0; i < cashInput.length; i++) {
+        cash += parseInt(cashInput[i]) || 0;
+    }
     document.getElementById("salesreport").value =
         "Date: " +
         date +
@@ -644,121 +720,150 @@ function GenerateSalesReport() {
         "\n" +
         "--------------------------" +
         "\n" +
-        "PAYG   :" +
-        " T:" +
-        targetpaygAdjusted +
-        " A:" +
-        utdpaygAdjusted +
-        " VS:" +
-        vsPAYG +
-        "%" +
+        "PAYG: " +
+        todaypayg +
         "\n" +
-        "Data   :" +
-        " T:" +
-        targetdataAdjusted +
-        " A:" +
-        utddataAdjusted +
-        " VS:" +
-        vsData +
-        "%" +
+        "Data: " +
+        todaydata +
         "\n" +
-        "Kix    :" +
-        " T:" +
-        targetsuperkixAdjusted +
-        " A:" +
-        utdsuperkixAdjusted +
-        " VS:" +
-        vsSuperKix +
-        "%" +
+        "Kix: " +
+        todaysuperkix +
         "\n" +
-        "Tazbeet:" +
-        " T:" +
-        targettazAdjusted +
-        " A:" +
-        utdtazAdjusted +
-        " VS:" +
-        vsTaz +
-        "%" +
+        "Tazbeet: " +
+        todaytazbeet +
         "\n" +
-        "We Club:" +
-        " T:" +
-        targetweclubAdjusted +
-        " A:" +
-        utdweclubAdjusted +
-        " VS:" +
-        vsWeClub +
-        "%" +
+        "We Club: " +
+        todayweclub +
         "\n" +
-        "We Mix :" +
-        " T:" +
-        targetwemixAdjusted +
-        " A:" +
-        utdwemixAdjusted +
-        " VS:" +
-        vsWeMix +
-        "%" +
+        "We Mix: " +
+        todaywemix +
+        "\n" +
+        "We Gold: " +
+        todaygoldreport +
+        "\n" +
+        "ADSL: " +
+        todayadslreport +
+        "\n" +
+        "Fixed: " +
+        todayfixed +
         "\n" +
         "\n" +
         "Today Sales: " +
         dailymobile +
         " Mob" +
+        todayadslfordailysales +
+        todayfixedfordailysales +
+        "\n" +
+        "RE: " +
+        reMobile +
+        "%" +
+        "\n" +
+        "#--------------------------" +
+        "\n" +
+        "Product:   " +
+        targetArrayAdjusted[10] +
+        " " +
+        utdArrayAdjusted[10] +
+        " VS" +
         "\n" +
         "--------------------------" +
         "\n" +
-        "We Gold" +
+        "PAYG   :   " +
+        targetpaygAdjusted +
+        " " +
+        utdpaygAdjusted +
+        " " +
+        vsPAYG +
+        "%" +
         "\n" +
-        "Today: " +
-        todaygoldreport +
+        "Data   :   " +
+        targetdataAdjusted +
+        " " +
+        utddataAdjusted +
+        " " +
+        vsData +
+        "%" +
         "\n" +
-        "TGT: " +
-        targetwegold +
-        " /Ach: " +
-        utdwegold +
-        " /VS: " +
+        "Kix    :   " +
+        targetsuperkixAdjusted +
+        " " +
+        utdsuperkixAdjusted +
+        " " +
+        vsSuperKix +
+        "%" +
+        "\n" +
+        "Tazbeet:   " +
+        targettazAdjusted +
+        " " +
+        utdtazAdjusted +
+        " " +
+        vsTaz +
+        "%" +
+        "\n" +
+        "We Club:   " +
+        targetweclubAdjusted +
+        " " +
+        utdweclubAdjusted +
+        " " +
+        vsWeClub +
+        "%" +
+        "\n" +
+        "We Mix :   " +
+        targetwemixAdjusted +
+        " " +
+        utdwemixAdjusted +
+        " " +
+        vsWeMix +
+        "%" +
+        "\n" +
+        "We Gold:   " +
+        targetwegoldAdjusted +
+        " " +
+        utdwegoldAdjusted +
+        " " +
         vsGold +
         "%" +
         "\n" +
-        "-------------------------" +
-        "\n" +
-        "ADSL" +
-        "\n" +
-        "Today: " +
-        todayadslreport +
-        "\n" +
-        "TGT: " +
-        targetadsl +
-        " /Ach: " +
-        utdadsl +
-        " /VS: " +
+        "ADSL   :   " +
+        targetadslAdjusted +
+        " " +
+        utdadslAdjusted +
+        " " +
         vsAdsl +
         "%" +
         "\n" +
-        "-------------------------" +
-        "\n" +
-        "Fixed" +
-        "\n" +
-        "Today: " +
-        todayfixed +
-        "\n" +
-        "TGT: " +
-        targetfixed +
-        " /Ach: " +
-        utdfixed +
-        " /VS: " +
+        "Fixed  :   " +
+        targetfixedAdjusted +
+        " " +
+        utdfixedAdjusted +
+        " " +
         vsFixed +
         "%" +
         "\n" +
-        "-------------------------" +
+        "--------------------------" +
         "\n" +
-        "Total Activation: " +
-        utdmobile +
-        "\n" +
-        "TGT: " +
-        targetmobile +
-        "\n" +
-        "VS: " +
+        "Total  :   " +
+        targetmobileAdjusted +
+        " " +
+        utdmobileAdjusted +
+        " " +
         vsMobile +
-        "%";
+        "%" +
+        "\n" +
+        "--------------------------#" +
+        "\n" +
+        "ADSL Bills: " +
+        adslbills +
+        "\n" +
+        "Postpaid Bills: " +
+        postpaidbills +
+        "\n" +
+        "Fixed Bills: " +
+        fixedbills +
+        "\n" +
+        "Cash: " +
+        cash +
+        " LE";
     document.getElementById("save__1").disabled = false;
     document.getElementById("save__2").disabled = false;
     document.getElementById("copy__1").disabled = false;
@@ -772,7 +877,7 @@ function GenerateSalesReport() {
     NextTransform();
 }
 function Copy__1() {
-    salesreportValue = document.getElementById("salesreport").value.replace(/--------------------------/gi, "```--------------------------");
+    salesreportValue = document.getElementById("salesreport").value.replace(/#/gi, "```");
     navigator.clipboard.writeText(salesreportValue);
     document.getElementById("copy__1").disabled = true;
     document.getElementById("copy__2").disabled = true;
@@ -783,7 +888,7 @@ function Copy__2() {
     Copy__1();
 }
 function Share__1() {
-    salesreportValue = document.getElementById("salesreport").value.replace(/--------------------------/gi, "```--------------------------");
+    salesreportValue = document.getElementById("salesreport").value.replace(/#/gi, "```");
     if (navigator.share) {
         navigator.share({
             title: "Sales Report",
@@ -833,7 +938,7 @@ function Print__1() {
     doc = window.open("", "_blank");
     doc.document.open();
     doc.document.write("<html lang=en><head><title>Sales Report</title><style>body {font-family: monospace; display: flex;} div {margin: 0px auto 0px auto;}</style></head><body onload=window.print();setTimeout(window.close,1000);><div>");
-    doc.document.write(document.getElementById("salesreport").value.replace(/  /gi, "&nbsp;&nbsp;").replace(/\n/gi, "<br>"));
+    doc.document.write(document.getElementById("salesreport").value.replace(/  /gi, "&nbsp;&nbsp;").replace(/\n/gi, "<br>").replace(/#/gi, ""));
     doc.document.write("</div></body></html>");
     doc.document.close();
 }

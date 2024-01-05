@@ -293,8 +293,7 @@ function Continue() {
     document.getElementById("todaybillpostpaid").value = "";
     document.getElementById("todaybilladsl").value = "";
     document.getElementById("todaysimswap").value = "";
-    document.getElementById("todaybssamount").value = "";
-    document.getElementById("todayossamount").value = "";
+    document.getElementById("todaycash").value = "";
     NextTransform();
     sessionStorage.setItem("users", localStorage.getItem("users"));
 }
@@ -358,8 +357,7 @@ function NewMonth() {
     document.getElementById("todaybillpostpaid").value = "";
     document.getElementById("todaybilladsl").value = "";
     document.getElementById("todaysimswap").value = "";
-    document.getElementById("todaybssamount").value = "";
-    document.getElementById("todayossamount").value = "";
+    document.getElementById("todaycash").value = "";
     NextTransform();
     sessionStorage.setItem("users", localStorage.getItem("users"));
 }
@@ -426,8 +424,7 @@ function NewUser() {
     document.getElementById("todaybillpostpaid").value = "";
     document.getElementById("todaybilladsl").value = "";
     document.getElementById("todaysimswap").value = "";
-    document.getElementById("todaybssamount").value = "";
-    document.getElementById("todayossamount").value = "";
+    document.getElementById("todaycash").value = "";
     NextTransform();
 }
 function GenerateSalesReport() {
@@ -512,10 +509,18 @@ function GenerateSalesReport() {
     todaybillpostpaid = parseInt(document.getElementById("todaybillpostpaid").value) || 0;
     todaybilladsl = parseInt(document.getElementById("todaybilladsl").value) || 0;
     todaysimswap = parseInt(document.getElementById("todaysimswap").value) || 0;
-    todaybssamount = parseInt(document.getElementById("todaybssamount").value) || 0;
-    todayossamount = parseInt(document.getElementById("todayossamount").value) || 0;
+    todaycash = parseInt(document.getElementById("todaycash").value) || 0;
     utdmobile = utdpayg + utddata + utdsuperkix + utdtaz + utdweclub + utdwemix + utdwegold || 0;
     targetmobile = targetpayg + targetdata + targetsuperkix + targettaz + targetwemix + targetweclub + targetwegold || 0;
+    vsPAYG = ~~Number(Math.round((utdpayg / targetpayg) * 100)) || 0;
+    vsData = ~~Number(Math.round((utddata / targetdata) * 100)) || 0;
+    vsSuperKix = ~~Number(Math.round((utdsuperkix / targetsuperkix) * 100)) || 0;
+    vsTaz = ~~Number(Math.round((utdtaz / targettaz) * 100)) || 0;
+    vsWeClub = ~~Number(Math.round((utdweclub / targetweclub) * 100)) || 0;
+    vsWeMix = ~~Number(Math.round((utdwemix / targetwemix) * 100)) || 0;
+    vsGold = ~~Number(Math.round((utdwegold / targetwegold) * 100)) || 0;
+    vsAdsl = ~~Number(Math.round((utdadsl / targetadsl) * 100)) || 0;
+    vsFixed = ~~Number(Math.round((utdfixed / targetfixed) * 100)) || 0;
     vsMobile = ~~Number(Math.round((utdmobile / targetmobile) * 100)) || 0;
     reMobile = ~~Number(Math.round((((utdmobile / targetmobile) * 100) / day) * daysinmonth)) || 0;
     dailymobile =
@@ -752,14 +757,91 @@ function GenerateSalesReport() {
         todayfixedfordailysales = " + " + todayfixed + " Fixed";
     }
     todaysales = todaygoldreport + todaypaygreport + todaydatareport + superkixreport + tazbeetreport + weclubreport + wemixreport + todayadslreport + todayfixedreport;
-    totaltoday = "------------------------- " + "\n" + "Today Sales: " + dailymobile + " Mob" + todayadslfordailysales + todayfixedfordailysales + "\n" + "------------------------- ";
+    totaltoday = "--------------------------" + "\n" + "Today Sales: " + dailymobile + " Mob" + todayadslfordailysales + todayfixedfordailysales + "\n" + "--------------------------";
     if (todaysales == "") {
         todaysalesreport = "\n" + "No Sales Today";
-        totaltodayreport = "------------------------- ";
+        totaltodayreport = "--------------------------";
     } else {
         todaysalesreport = todaysales;
         totaltodayreport = totaltoday;
     }
+    var targetArray = [
+        targetpayg.toString(),
+        targetdata.toString(),
+        targetsuperkix.toString(),
+        targettaz.toString(),
+        targetweclub.toString(),
+        targetwemix.toString(),
+        targetwegold.toString(),
+        targetadsl.toString(),
+        targetfixed.toString(),
+        targetmobile.toString(),
+        "T",
+    ];
+    var fakeTargetArray = [
+        targetpayg.toString(),
+        targetdata.toString(),
+        targetsuperkix.toString(),
+        targettaz.toString(),
+        targetweclub.toString(),
+        targetwemix.toString(),
+        targetwegold.toString(),
+        targetadsl.toString(),
+        targetfixed.toString(),
+        targetmobile.toString(),
+    ];
+    let maxTarget = Math.max(...fakeTargetArray).toString().length;
+    if (maxTarget < 5) {
+        newMaxTarget = 5;
+    } else {
+        newMaxTarget = maxTarget;
+    }
+    var targetArrayAdjusted = correctLength(targetArray, newMaxTarget);
+    function correctLength(array, length) {
+        array.map(function (v, i) {
+            if (array[i].length < length) {
+                array[i] += Array(length + 1 - array[i].length).join(" ");
+            }
+        });
+        return array;
+    }
+    targetpaygAdjusted = targetArrayAdjusted[0];
+    targetdataAdjusted = targetArrayAdjusted[1];
+    targetsuperkixAdjusted = targetArrayAdjusted[2];
+    targettazAdjusted = targetArrayAdjusted[3];
+    targetweclubAdjusted = targetArrayAdjusted[4];
+    targetwemixAdjusted = targetArrayAdjusted[5];
+    targetwegoldAdjusted = targetArrayAdjusted[6];
+    targetadslAdjusted = targetArrayAdjusted[7];
+    targetfixedAdjusted = targetArrayAdjusted[8];
+    targetmobileAdjusted = targetArrayAdjusted[9];
+    var utdArray = [utdpayg.toString(), utddata.toString(), utdsuperkix.toString(), utdtaz.toString(), utdweclub.toString(), utdwemix.toString(), utdwegold.toString(), utdadsl.toString(), utdfixed.toString(), utdmobile.toString(), "A"];
+    var fakeUtdArray = [utdpayg.toString(), utddata.toString(), utdsuperkix.toString(), utdtaz.toString(), utdweclub.toString(), utdwemix.toString(), utdwegold.toString(), utdadsl.toString(), utdfixed.toString(), utdmobile.toString()];
+    let maxUtd = Math.max(...fakeUtdArray).toString().length;
+    if (maxUtd < 5) {
+        newMaxUtd = 5;
+    } else {
+        newMaxUtd = maxUtd;
+    }
+    var utdArrayAdjusted = correctLength(utdArray, newMaxUtd);
+    function correctLength(array, length) {
+        array.map(function (v, i) {
+            if (array[i].length < length) {
+                array[i] += Array(length + 1 - array[i].length).join(" ");
+            }
+        });
+        return array;
+    }
+    utdpaygAdjusted = utdArrayAdjusted[0];
+    utddataAdjusted = utdArrayAdjusted[1];
+    utdsuperkixAdjusted = utdArrayAdjusted[2];
+    utdtazAdjusted = utdArrayAdjusted[3];
+    utdweclubAdjusted = utdArrayAdjusted[4];
+    utdwemixAdjusted = utdArrayAdjusted[5];
+    utdwegoldAdjusted = utdArrayAdjusted[6];
+    utdadslAdjusted = utdArrayAdjusted[7];
+    utdfixedAdjusted = utdArrayAdjusted[8];
+    utdmobileAdjusted = utdArrayAdjusted[9];
     document.getElementById("salesreport").value =
         "Date: " +
         date +
@@ -767,7 +849,7 @@ function GenerateSalesReport() {
         "Name: " +
         yourname +
         "\n" +
-        "------------------------- " +
+        "--------------------------" +
         todaysalesreport +
         "\n" +
         totaltodayreport +
@@ -778,78 +860,108 @@ function GenerateSalesReport() {
         "Postpaid Bills: " +
         todaybillpostpaid +
         "\n" +
-        "Landline Bills: " +
+        "Fixed Bills: " +
         todaybillfixed +
         "\n" +
         "SIM Swap: " +
         todaysimswap +
         "\n" +
-        "------------------------- " +
+        "Cash: " +
+        todaycash +
         "\n" +
-        "BSS Amount: " +
-        todaybssamount +
+        "#--------------------------" +
         "\n" +
-        "OSS Amount: " +
-        todayossamount +
+        "Product:   " +
+        targetArrayAdjusted[10] +
+        " " +
+        utdArrayAdjusted[10] +
+        " VS" +
         "\n" +
-        "------------------------- " +
+        "--------------------------" +
         "\n" +
-        "PAYG: " +
-        utdpayg +
-        "/" +
-        targetpayg +
+        "PAYG   :   " +
+        targetpaygAdjusted +
+        " " +
+        utdpaygAdjusted +
+        " " +
+        vsPAYG +
+        "%" +
         "\n" +
-        "Data: " +
-        utddata +
-        "/" +
-        targetdata +
+        "Data   :   " +
+        targetdataAdjusted +
+        " " +
+        utddataAdjusted +
+        " " +
+        vsData +
+        "%" +
         "\n" +
-        "Super Kix: " +
-        utdsuperkix +
-        "/" +
-        targetsuperkix +
+        "Kix    :   " +
+        targetsuperkixAdjusted +
+        " " +
+        utdsuperkixAdjusted +
+        " " +
+        vsSuperKix +
+        "%" +
         "\n" +
-        "Tazbeet: " +
-        utdtaz +
-        "/" +
-        targettaz +
+        "Tazbeet:   " +
+        targettazAdjusted +
+        " " +
+        utdtazAdjusted +
+        " " +
+        vsTaz +
+        "%" +
         "\n" +
-        "We Club: " +
-        utdweclub +
-        "/" +
-        targetweclub +
+        "We Club:   " +
+        targetweclubAdjusted +
+        " " +
+        utdweclubAdjusted +
+        " " +
+        vsWeClub +
+        "%" +
         "\n" +
-        "We Mix: " +
-        utdwemix +
-        "/" +
-        targetwemix +
+        "We Mix :   " +
+        targetwemixAdjusted +
+        " " +
+        utdwemixAdjusted +
+        " " +
+        vsWeMix +
+        "%" +
         "\n" +
-        "We Gold: " +
-        utdwegold +
-        "/" +
-        targetwegold +
+        "We Gold:   " +
+        targetwegoldAdjusted +
+        " " +
+        utdwegoldAdjusted +
+        " " +
+        vsGold +
+        "%" +
         "\n" +
-        "ADSL: " +
-        utdadsl +
-        "/" +
-        targetadsl +
+        "ADSL   :   " +
+        targetadslAdjusted +
+        " " +
+        utdadslAdjusted +
+        " " +
+        vsAdsl +
+        "%" +
         "\n" +
-        "Fixed: " +
-        utdfixed +
-        "/" +
-        targetfixed +
+        "Fixed  :   " +
+        targetfixedAdjusted +
+        " " +
+        utdfixedAdjusted +
+        " " +
+        vsFixed +
+        "%" +
         "\n" +
-        "------------------------- " +
+        "--------------------------" +
         "\n" +
-        "Target: " +
-        targetmobile +
-        "\n" +
-        "Achieved: " +
-        utdmobile +
-        "\n" +
-        "VS: " +
+        "Total  :   " +
+        targetmobileAdjusted +
+        " " +
+        utdmobileAdjusted +
+        " " +
         vsMobile +
         "%" +
+        "\n" +
+        "--------------------------#" +
         "\n" +
         "RE: " +
         reMobile +
@@ -867,7 +979,7 @@ function GenerateSalesReport() {
     NextTransform();
 }
 function Copy__1() {
-    salesreportValue = document.getElementById("salesreport").value;
+    salesreportValue = document.getElementById("salesreport").value.replace(/#/gi, "```");
     navigator.clipboard.writeText(salesreportValue);
     document.getElementById("copy__1").disabled = true;
     document.getElementById("copy__2").disabled = true;
@@ -878,7 +990,7 @@ function Copy__2() {
     Copy__1();
 }
 function Share__1() {
-    salesreportValue = document.getElementById("salesreport").value;
+    salesreportValue = document.getElementById("salesreport").value.replace(/#/gi, "```");
     if (navigator.share) {
         navigator.share({
             title: "Sales Report",
@@ -928,7 +1040,7 @@ function Print__1() {
     doc = window.open("", "_blank");
     doc.document.open();
     doc.document.write("<html lang=en><head><title>Sales Report</title><style>body {font-family: monospace; display: flex;} div {margin: 0px auto 0px auto;}</style></head><body onload=window.print();setTimeout(window.close,1000);><div>");
-    doc.document.write(document.getElementById("salesreport").value.replace(/\n/gi, "<br>"));
+    doc.document.write(document.getElementById("salesreport").value.replace(/  /gi, "&nbsp;&nbsp;").replace(/\n/gi, "<br>").replace(/#/gi, ""));
     doc.document.write("</div></body></html>");
     doc.document.close();
 }
