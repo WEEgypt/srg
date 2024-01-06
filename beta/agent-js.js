@@ -289,9 +289,9 @@ function Continue() {
     document.getElementById("todayadsl600").value = "";
     document.getElementById("todayadsl1000").value = "";
     document.getElementById("todayfixed").value = "";
-    document.getElementById("todayfixedbills").value = "";
-    document.getElementById("todaypostpaidbills").value = "";
     document.getElementById("todayadslbills").value = "";
+    document.getElementById("todaypostpaidbills").value = "";
+    document.getElementById("todayfixedbills").value = "";
     document.getElementById("todaysimswap").value = "";
     document.getElementById("todaycash").value = "";
     NextTransform();
@@ -353,9 +353,9 @@ function NewMonth() {
     document.getElementById("todayadsl600").value = "";
     document.getElementById("todayadsl1000").value = "";
     document.getElementById("todayfixed").value = "";
-    document.getElementById("todayfixedbills").value = "";
-    document.getElementById("todaypostpaidbills").value = "";
     document.getElementById("todayadslbills").value = "";
+    document.getElementById("todaypostpaidbills").value = "";
+    document.getElementById("todayfixedbills").value = "";
     document.getElementById("todaysimswap").value = "";
     document.getElementById("todaycash").value = "";
     NextTransform();
@@ -420,9 +420,9 @@ function NewUser() {
     document.getElementById("todayadsl600").value = "";
     document.getElementById("todayadsl1000").value = "";
     document.getElementById("todayfixed").value = "";
-    document.getElementById("todayfixedbills").value = "";
-    document.getElementById("todaypostpaidbills").value = "";
     document.getElementById("todayadslbills").value = "";
+    document.getElementById("todaypostpaidbills").value = "";
+    document.getElementById("todayfixedbills").value = "";
     document.getElementById("todaysimswap").value = "";
     document.getElementById("todaycash").value = "";
     NextTransform();
