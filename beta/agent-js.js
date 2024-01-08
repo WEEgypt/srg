@@ -756,6 +756,12 @@ function GenerateSalesReport() {
     } else {
         todayfixedfordailysales = " + " + todayfixed + " Fixed";
     }
+    dailyrequired = ~~Number(Math.ceil((targetmobile - utdmobile) / (daysinmonth - day))) || 0;
+    if (daysinmonth - day == "0" || dailyrequired <= "0") {
+        dailyrequiredreport = "";
+    } else {
+        dailyrequiredreport = "\n" + "Daily Required: " + dailyrequired + " Mob";
+    }
     todaysales = todaypaygreport + todaydatareport + superkixreport + tazbeetreport + weclubreport + wemixreport + todaygoldreport + todayadslreport + todayfixedreport;
     if (todaysales == "") {
         todaysalesreport = "";
@@ -967,6 +973,7 @@ function GenerateSalesReport() {
         "%" +
         "\n" +
         "--------------------------#" +
+        dailyrequiredreport +
         "\n" +
         "RE: " +
         reMobile +
