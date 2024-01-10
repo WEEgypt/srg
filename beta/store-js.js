@@ -624,50 +624,16 @@ function GenerateSalesReport() {
     vsFixed = ~~Number(Math.round((utdfixed / targetfixed) * 100)) || 0;
     vsMobile = ~~Number(Math.round((utdmobile / targetmobile) * 100)) || 0;
     reMobile = ~~Number(Math.round((((utdmobile / targetmobile) * 100) / day) * daysinmonth)) || 0;
-    if (todaypayg == "0") {
-        todaypaygreport = "";
+    dailyrequired = ~~Number(Math.ceil((targetmobile - utdmobile) / (daysinmonth - day))) || 0;
+    if (daysinmonth - day == "0" || dailyrequired <= "0") {
+        dailyrequiredreport = "";
     } else {
-        todaypaygreport = "\n" + "PAYG: " + todaypayg;
+        dailyrequiredreport = "\n" + "--------------------------" + "\n" + "Daily Required: " + dailyrequired + " Mob";
     }
-    if (todaydata == "0") {
-        todaydatareport = "";
+    if (daysinmonth - day == "0") {
+        reMobilereport = "";
     } else {
-        todaydatareport = "\n" + "Data: " + todaydata;
-    }
-    if (todaysuperkix == "") {
-        superkixreport = "";
-    } else {
-        superkixreport = "\n" + "Kix: " + todaysuperkix;
-    }
-    if (todaytazbeet == "") {
-        tazbeetreport = "";
-    } else {
-        tazbeetreport = "\n" + "Tazbeet: " + todaytazbeet;
-    }
-    if (todayweclub == "") {
-        weclubreport = "";
-    } else {
-        weclubreport = "\n" + "We Club: " + todayweclub;
-    }
-    if (todaywemix == "") {
-        wemixreport = "";
-    } else {
-        wemixreport = "\n" + "We Mix: " + todaywemix;
-    }
-    if (todaygold == "0") {
-        todaygoldreport = "";
-    } else {
-        todaygoldreport = "\n" + "We Gold: " + todaygoldreport;
-    }
-    if (todayadsl == "0") {
-        todayadslreport = "";
-    } else {
-        todayadslreport = "\n" + "ADSL: " + todayadslreport;
-    }
-    if (todayfixed == "0") {
-        todayfixedreport = "";
-    } else {
-        todayfixedreport = "\n" + "Fixed: " + todayfixed;
+        reMobilereport = "\n" + "RE: " + reMobile + "%";
     }
     if (todayadsl == "0") {
         todayadslfordailysales = "";
@@ -679,17 +645,10 @@ function GenerateSalesReport() {
     } else {
         todayfixedfordailysales = " + " + todayfixed + " Fixed";
     }
-    dailyrequired = ~~Number(Math.ceil((targetmobile - utdmobile) / (daysinmonth - day))) || 0;
     if (daysinmonth - day == "0" || dailyrequired <= "0") {
-        dailyrequiredreport = "";
+        todaysalesreport = "\n" + "Today Sales: " + dailymobile + " Mob" + todayadslfordailysales + todayfixedfordailysales;
     } else {
-        dailyrequiredreport = "\n" + "Daily Required: " + dailyrequired + " Mob";
-    }
-    todaysales = todaypaygreport + todaydatareport + superkixreport + tazbeetreport + weclubreport + wemixreport + todaygoldreport + todayadslreport + todayfixedreport;
-    if (todaysales == "") {
-        todaysalesreport = "";
-    } else {
-        todaysalesreport = todaysales + "\n" + "--------------------------";
+        todaysalesreport = "--------------------------" + "\n" + "Today Sales: " + dailymobile + " Mob" + todayadslfordailysales + todayfixedfordailysales;
     }
     var targetArray = [
         targetpayg.toString(),
@@ -776,29 +735,37 @@ function GenerateSalesReport() {
         storename +
         "\n" +
         "--------------------------" +
+        "\n" +
+        "PAYG: " +
+        todaypayg +
+        "\n" +
+        "Data: " +
+        todaydata +
+        "\n" +
+        "Kix: " +
+        todaysuperkix +
+        "\n" +
+        "Tazbeet: " +
+        todaytazbeet +
+        "\n" +
+        "We Club: " +
+        todayweclub +
+        "\n" +
+        "We Mix: " +
+        todaywemix +
+        "\n" +
+        "We Gold: " +
+        todaygoldreport +
+        "\n" +
+        "ADSL: " +
+        todayadslreport +
+        "\n" +
+        "Fixed: " +
+        todayfixed +
+        "\n" +
         todaysalesreport +
-        "\n" +
-        "Today Sales: " +
-        dailymobile +
-        " Mob" +
-        todayadslfordailysales +
-        todayfixedfordailysales +
-        "\n" +
-        "--------------------------" +
-        "\n" +
-        "ADSL Bills: " +
-        todayadslbills +
-        "\n" +
-        "Postpaid Bills: " +
-        todaypostpaidbills +
-        "\n" +
-        "Fixed Bills: " +
-        todayfixedbills +
-        "\n" +
-        "\n" +
-        "Cash: " +
-        todaycash +
-        " LE" +
+        dailyrequiredreport +
+        reMobilereport +
         "\n" +
         "#--------------------------" +
         "\n" +
@@ -893,11 +860,19 @@ function GenerateSalesReport() {
         "%" +
         "\n" +
         "--------------------------#" +
-        dailyrequiredreport +
         "\n" +
-        "RE: " +
-        reMobile +
-        "%";
+        "ADSL Bills: " +
+        todayadslbills +
+        "\n" +
+        "Postpaid Bills: " +
+        todaypostpaidbills +
+        "\n" +
+        "Fixed Bills: " +
+        todayfixedbills +
+        "\n" +
+        "Cash: " +
+        todaycash +
+        " LE";
     document.getElementById("save__1").disabled = false;
     document.getElementById("save__2").disabled = false;
     document.getElementById("copy__1").disabled = false;

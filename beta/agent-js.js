@@ -746,6 +746,12 @@ function GenerateSalesReport() {
     } else {
         todayfixedreport = "\n" + "Fixed: " + todayfixed;
     }
+    todaysales = todaypaygreport + todaydatareport + superkixreport + tazbeetreport + weclubreport + wemixreport + todaygoldreport + todayadslreport + todayfixedreport;
+    if (todaysales == "") {
+        todaysalesdetails = "";
+    } else {
+        todaysalesdetails = todaysales + "\n" + "--------------------------";
+    }
     if (todayadsl == "0") {
         todayadslfordailysales = "";
     } else {
@@ -756,17 +762,17 @@ function GenerateSalesReport() {
     } else {
         todayfixedfordailysales = " + " + todayfixed + " Fixed";
     }
+    todaysalesreport = "Today Sales: " + dailymobile + " Mob" + todayadslfordailysales + todayfixedfordailysales;
     dailyrequired = ~~Number(Math.ceil((targetmobile - utdmobile) / (daysinmonth - day))) || 0;
     if (daysinmonth - day == "0" || dailyrequired <= "0") {
         dailyrequiredreport = "";
     } else {
         dailyrequiredreport = "\n" + "Daily Required: " + dailyrequired + " Mob";
     }
-    todaysales = todaypaygreport + todaydatareport + superkixreport + tazbeetreport + weclubreport + wemixreport + todaygoldreport + todayadslreport + todayfixedreport;
-    if (todaysales == "") {
-        todaysalesreport = "";
+    if (daysinmonth - day == "0") {
+        reMobilereport = "";
     } else {
-        todaysalesreport = todaysales + "\n" + "--------------------------";
+        reMobilereport = "\n" + "RE: " + reMobile + "%";
     }
     var targetArray = [
         targetpayg.toString(),
@@ -853,13 +859,9 @@ function GenerateSalesReport() {
         yourname +
         "\n" +
         "--------------------------" +
-        todaysalesreport +
+        todaysalesdetails +
         "\n" +
-        "Today Sales: " +
-        dailymobile +
-        " Mob" +
-        todayadslfordailysales +
-        todayfixedfordailysales +
+        todaysalesreport +
         "\n" +
         "--------------------------" +
         "\n" +
@@ -974,10 +976,7 @@ function GenerateSalesReport() {
         "\n" +
         "--------------------------#" +
         dailyrequiredreport +
-        "\n" +
-        "RE: " +
-        reMobile +
-        "%";
+        reMobilereport;
     document.getElementById("save__1").disabled = false;
     document.getElementById("save__2").disabled = false;
     document.getElementById("copy__1").disabled = false;
