@@ -276,10 +276,10 @@ function Continue() {
     document.getElementById("todayadsl600").value = "";
     document.getElementById("todayadsl1000").value = "";
     document.getElementById("todayfixed").value = "";
-    document.getElementById("adslbills").value = "";
-    document.getElementById("postpaidbills").value = "";
-    document.getElementById("fixedbills").value = "";
-    document.getElementById("cash").value = "";
+    document.getElementById("todayadslbills").value = "";
+    document.getElementById("todaypostpaidbills").value = "";
+    document.getElementById("todayfixedbills").value = "";
+    document.getElementById("todaycash").value = "";
     NextTransform();
     sessionStorage.setItem("stores", localStorage.getItem("stores"));
 }
@@ -326,10 +326,10 @@ function NewMonth() {
     document.getElementById("todayadsl600").value = "";
     document.getElementById("todayadsl1000").value = "";
     document.getElementById("todayfixed").value = "";
-    document.getElementById("adslbills").value = "";
-    document.getElementById("postpaidbills").value = "";
-    document.getElementById("fixedbills").value = "";
-    document.getElementById("cash").value = "";
+    document.getElementById("todayadslbills").value = "";
+    document.getElementById("todaypostpaidbills").value = "";
+    document.getElementById("todayfixedbills").value = "";
+    document.getElementById("todaycash").value = "";
     NextTransform();
     sessionStorage.setItem("stores", localStorage.getItem("stores"));
 }
@@ -379,10 +379,10 @@ function NewStore() {
     document.getElementById("todayadsl600").value = "";
     document.getElementById("todayadsl1000").value = "";
     document.getElementById("todayfixed").value = "";
-    document.getElementById("adslbills").value = "";
-    document.getElementById("postpaidbills").value = "";
-    document.getElementById("fixedbills").value = "";
-    document.getElementById("cash").value = "";
+    document.getElementById("todayadslbills").value = "";
+    document.getElementById("todaypostpaidbills").value = "";
+    document.getElementById("todayfixedbills").value = "";
+    document.getElementById("todaycash").value = "";
     NextTransform();
 }
 function GenerateSalesReport() {
@@ -398,12 +398,12 @@ function GenerateSalesReport() {
         row__3.style.display = "block";
         row__4.style.display = "none";
     }
-    storename = document.getElementById("storename").value;
     day = parseInt(document.getElementById("day").value);
     month = parseInt(document.getElementById("month").value);
     year = parseInt(document.getElementById("year").value);
     date = day + "-" + month + "-" + year;
     daysinmonth = new Date(year, month, 0).getDate();
+    storename = document.getElementById("storename").value;
     todaypaygInput = document.getElementById("todaypayg").value.split(" ");
     todaypayg = 0;
     for (i = 0; i < todaypaygInput.length; i++) {
@@ -590,19 +590,29 @@ function GenerateSalesReport() {
     achievedfixed = parseInt(document.getElementById("achievedfixed").value) || 0;
     utdfixed = todayfixed + achievedfixed || 0;
     targetfixed = parseInt(document.getElementById("targetfixed").value) || 0;
-    if (todayadsl == "0") {
-        todayadslfordailysales = "";
-    } else {
-        todayadslfordailysales = " + " + todayadsl + " ADSL";
+    todayadslbillsInput = document.getElementById("todayadslbills").value.split(" ");
+    todayadslbills = 0;
+    for (i = 0; i < todayadslbillsInput.length; i++) {
+        todayadslbills += parseInt(todayadslbillsInput[i]) || 0;
     }
-    if (todayfixed == "0") {
-        todayfixedfordailysales = "";
-    } else {
-        todayfixedfordailysales = " + " + todayfixed + " Fixed";
+    todaypostpaidbillsInput = document.getElementById("todaypostpaidbills").value.split(" ");
+    todaypostpaidbills = 0;
+    for (i = 0; i < todaypostpaidbillsInput.length; i++) {
+        todaypostpaidbills += parseInt(todaypostpaidbillsInput[i]) || 0;
     }
+    todayfixedbillsInput = document.getElementById("todayfixedbills").value.split(" ");
+    todayfixedbills = 0;
+    for (i = 0; i < todayfixedbillsInput.length; i++) {
+        todayfixedbills += parseInt(todayfixedbillsInput[i]) || 0;
+    }
+    todaycashInput = document.getElementById("todaycash").value.split(" ");
+    todaycash = 0;
+    for (i = 0; i < todaycashInput.length; i++) {
+        todaycash += parseInt(todaycashInput[i]) || 0;
+    }
+    dailymobile = todaypayg + todaydata + todaysuperkix + todaytazbeet + todayweclub + todaywemix + todaygold;
     utdmobile = utdpayg + utddata + utdsuperkix + utdtaz + utdweclub + utdwemix + utdwegold;
     targetmobile = targetpayg + targetdata + targetsuperkix + targettaz + targetwemix + targetweclub + targetwegold;
-    dailymobile = todaypayg + todaydata + todaysuperkix + todaytazbeet + todayweclub + todaywemix + todaygold;
     vsPAYG = ~~Number(Math.round((utdpayg / targetpayg) * 100)) || 0;
     vsData = ~~Number(Math.round((utddata / targetdata) * 100)) || 0;
     vsSuperKix = ~~Number(Math.round((utdsuperkix / targetsuperkix) * 100)) || 0;
@@ -614,6 +624,27 @@ function GenerateSalesReport() {
     vsFixed = ~~Number(Math.round((utdfixed / targetfixed) * 100)) || 0;
     vsMobile = ~~Number(Math.round((utdmobile / targetmobile) * 100)) || 0;
     reMobile = ~~Number(Math.round((((utdmobile / targetmobile) * 100) / day) * daysinmonth)) || 0;
+    dailyrequired = ~~Number(Math.ceil((targetmobile - utdmobile) / (daysinmonth - day))) || 0;
+    if (daysinmonth - day == "0" || dailyrequired <= "0") {
+        dailyrequiredreport = "-";
+    } else {
+        dailyrequiredreport = dailyrequire;
+    }
+    if (daysinmonth - day == "0") {
+        reMobilereport = "-";
+    } else {
+        reMobilereport = reMobile + "%";
+    }
+    if (todayadsl == "0") {
+        todayadslfordailysales = "";
+    } else {
+        todayadslfordailysales = " + " + todayadsl + " ADSL";
+    }
+    if (todayfixed == "0") {
+        todayfixedfordailysales = "";
+    } else {
+        todayfixedfordailysales = " + " + todayfixed + " Fixed";
+    }
     var targetArray = [
         targetpayg.toString(),
         targetdata.toString(),
@@ -691,26 +722,6 @@ function GenerateSalesReport() {
     utdadslAdjusted = utdArrayAdjusted[7];
     utdfixedAdjusted = utdArrayAdjusted[8];
     utdmobileAdjusted = utdArrayAdjusted[9];
-    adslbillsInput = document.getElementById("adslbills").value.split(" ");
-    adslbills = 0;
-    for (i = 0; i < adslbillsInput.length; i++) {
-        adslbills += parseInt(adslbillsInput[i]) || 0;
-    }
-    postpaidbillsInput = document.getElementById("postpaidbills").value.split(" ");
-    postpaidbills = 0;
-    for (i = 0; i < postpaidbillsInput.length; i++) {
-        postpaidbills += parseInt(postpaidbillsInput[i]) || 0;
-    }
-    fixedbillsInput = document.getElementById("fixedbills").value.split(" ");
-    fixedbills = 0;
-    for (i = 0; i < fixedbillsInput.length; i++) {
-        fixedbills += parseInt(fixedbillsInput[i]) || 0;
-    }
-    cashInput = document.getElementById("cash").value.split(" ");
-    cash = 0;
-    for (i = 0; i < cashInput.length; i++) {
-        cash += parseInt(cashInput[i]) || 0;
-    }
     document.getElementById("salesreport").value =
         "Date: " +
         date +
@@ -747,16 +758,21 @@ function GenerateSalesReport() {
         "Fixed: " +
         todayfixed +
         "\n" +
+        "--------------------------" +
         "\n" +
         "Today Sales: " +
-        dailymobile +
+        +dailymobile +
         " Mob" +
         todayadslfordailysales +
         todayfixedfordailysales +
         "\n" +
+        "--------------------------" +
+        "\n" +
+        "Daily Required: " +
+        dailyrequiredreport +
+        "\n" +
         "RE: " +
-        reMobile +
-        "%" +
+        reMobilereport +
         "\n" +
         "#--------------------------" +
         "\n" +
@@ -853,16 +869,16 @@ function GenerateSalesReport() {
         "--------------------------#" +
         "\n" +
         "ADSL Bills: " +
-        adslbills +
+        todayadslbills +
         "\n" +
         "Postpaid Bills: " +
-        postpaidbills +
+        todaypostpaidbills +
         "\n" +
         "Fixed Bills: " +
-        fixedbills +
+        todayfixedbills +
         "\n" +
         "Cash: " +
-        cash +
+        todaycash +
         " LE";
     document.getElementById("save__1").disabled = false;
     document.getElementById("save__2").disabled = false;

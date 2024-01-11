@@ -311,11 +311,11 @@ function GenerateSalesReport() {
         row__3.style.display = "block";
         row__4.style.display = "none";
     }
-    areaname = document.getElementById("areaname").value;
     day = parseInt(document.getElementById("day").value);
     month = parseInt(document.getElementById("month").value);
     year = parseInt(document.getElementById("year").value);
     date = day + "-" + month + "-" + year;
+    areaname = document.getElementById("areaname").value;
     todaymobileInput = document.getElementById("todaymobile").value.split(" ");
     todaymobile = 0;
     for (i = 0; i < todaymobileInput.length; i++) {
@@ -349,9 +349,9 @@ function GenerateSalesReport() {
     utdfixed = todayfixed + achievedfixed || 0;
     targetfixed = parseInt(document.getElementById("targetfixed").value) || 0;
     vsMobile = ~~Number(Math.round((utdmobile / targetmobile) * 100)) || 0;
-    vsFixed = ~~Number(Math.round((utdfixed / targetfixed) * 100)) || 0;
-    vsAdsl = ~~Number(Math.round((utdadsl / targetadsl) * 100)) || 0;
     vsGold = ~~Number(Math.round((utdwegold / targetwegold) * 100)) || 0;
+    vsAdsl = ~~Number(Math.round((utdadsl / targetadsl) * 100)) || 0;
+    vsFixed = ~~Number(Math.round((utdfixed / targetfixed) * 100)) || 0;
     document.getElementById("salesreport").value =
         "Date: " +
         date +
@@ -485,7 +485,7 @@ function Print__1() {
     doc = window.open("", "_blank");
     doc.document.open();
     doc.document.write("<html lang=en><head><title>Area Report</title><style>body {font-family: monospace; display: flex;} div {margin: 0px auto 0px auto;}</style></head><body onload=window.print();setTimeout(window.close,1000);><div>");
-    doc.document.write(document.getElementById("salesreport").value.replace(/`/gi, "").replace(/  /gi, "&nbsp;&nbsp;").replace(/\n/gi, "<br>"));
+    doc.document.write(document.getElementById("salesreport").value.replace(/  /gi, "&nbsp;&nbsp;").replace(/\n/gi, "<br>"));
     doc.document.write("</div></body></html>");
     doc.document.close();
 }
