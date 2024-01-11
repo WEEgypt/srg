@@ -628,7 +628,7 @@ function GenerateSalesReport() {
     if (daysinmonth - day == "0" || dailyrequired <= "0") {
         dailyrequiredreport = "-";
     } else {
-        dailyrequiredreport = dailyrequire;
+        dailyrequiredreport = dailyrequired;
     }
     if (daysinmonth - day == "0") {
         reMobilereport = "-";
