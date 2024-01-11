@@ -752,6 +752,17 @@ function GenerateSalesReport() {
     } else {
         todaysalesdetails = todaysales + "\n" + "--------------------------";
     }
+    dailyrequired = ~~Number(Math.ceil((targetmobile - utdmobile) / (daysinmonth - day))) || 0;
+    if (daysinmonth - day == "0" || dailyrequired <= "0") {
+        dailyrequiredreport = "-";
+    } else {
+        dailyrequiredreport = dailyrequired + " Mob";
+    }
+    if (daysinmonth - day == "0") {
+        reMobilereport = "-";
+    } else {
+        reMobilereport = reMobile + "%";
+    }
     if (todayadsl == "0") {
         todayadslfordailysales = "";
     } else {
@@ -761,18 +772,6 @@ function GenerateSalesReport() {
         todayfixedfordailysales = "";
     } else {
         todayfixedfordailysales = " + " + todayfixed + " Fixed";
-    }
-    todaysalesreport = "Today Sales: " + dailymobile + " Mob" + todayadslfordailysales + todayfixedfordailysales;
-    dailyrequired = ~~Number(Math.ceil((targetmobile - utdmobile) / (daysinmonth - day))) || 0;
-    if (daysinmonth - day == "0" || dailyrequired <= "0") {
-        dailyrequiredreport = "";
-    } else {
-        dailyrequiredreport = "\n" + "Daily Required: " + dailyrequired + " Mob";
-    }
-    if (daysinmonth - day == "0") {
-        reMobilereport = "";
-    } else {
-        reMobilereport = "\n" + "RE: " + reMobile + "%";
     }
     var targetArray = [
         targetpayg.toString(),
@@ -861,26 +860,19 @@ function GenerateSalesReport() {
         "--------------------------" +
         todaysalesdetails +
         "\n" +
-        todaysalesreport +
+        "Today Sales: " +
+        +dailymobile +
+        " Mob" +
+        todayadslfordailysales +
+        todayfixedfordailysales +
         "\n" +
         "--------------------------" +
         "\n" +
-        "ADSL Bills: " +
-        todayadslbills +
+        "Daily Required: " +
+        dailyrequiredreport +
         "\n" +
-        "Postpaid Bills: " +
-        todaypostpaidbills +
-        "\n" +
-        "Fixed Bills: " +
-        todayfixedbills +
-        "\n" +
-        "SIM Swap: " +
-        todaysimswap +
-        "\n" +
-        "\n" +
-        "Cash: " +
-        todaycash +
-        " LE" +
+        "RE: " +
+        reMobilereport +
         "\n" +
         "#--------------------------" +
         "\n" +
@@ -975,8 +967,22 @@ function GenerateSalesReport() {
         "%" +
         "\n" +
         "--------------------------#" +
-        dailyrequiredreport +
-        reMobilereport;
+        "\n" +
+        "ADSL Bills: " +
+        todayadslbills +
+        "\n" +
+        "Postpaid Bills: " +
+        todaypostpaidbills +
+        "\n" +
+        "Fixed Bills: " +
+        todayfixedbills +
+        "\n" +
+        "SIM Swap: " +
+        todaysimswap +
+        "\n" +
+        "Cash: " +
+        todaycash +
+        " LE";
     document.getElementById("save__1").disabled = false;
     document.getElementById("save__2").disabled = false;
     document.getElementById("copy__1").disabled = false;

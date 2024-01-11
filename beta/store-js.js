@@ -626,14 +626,14 @@ function GenerateSalesReport() {
     reMobile = ~~Number(Math.round((((utdmobile / targetmobile) * 100) / day) * daysinmonth)) || 0;
     dailyrequired = ~~Number(Math.ceil((targetmobile - utdmobile) / (daysinmonth - day))) || 0;
     if (daysinmonth - day == "0" || dailyrequired <= "0") {
-        dailyrequiredreport = "";
+        dailyrequiredreport = "-";
     } else {
-        dailyrequiredreport = "\n" + "--------------------------" + "\n" + "Daily Required: " + dailyrequired + " Mob";
+        dailyrequiredreport = dailyrequired + " Mob";
     }
     if (daysinmonth - day == "0") {
-        reMobilereport = "";
+        reMobilereport = "-";
     } else {
-        reMobilereport = "\n" + "RE: " + reMobile + "%";
+        reMobilereport = reMobile + "%";
     }
     if (todayadsl == "0") {
         todayadslfordailysales = "";
@@ -644,11 +644,6 @@ function GenerateSalesReport() {
         todayfixedfordailysales = "";
     } else {
         todayfixedfordailysales = " + " + todayfixed + " Fixed";
-    }
-    if (daysinmonth - day == "0" || dailyrequired <= "0") {
-        todaysalesreport = "\n" + "Today Sales: " + dailymobile + " Mob" + todayadslfordailysales + todayfixedfordailysales;
-    } else {
-        todaysalesreport = "--------------------------" + "\n" + "Today Sales: " + dailymobile + " Mob" + todayadslfordailysales + todayfixedfordailysales;
     }
     var targetArray = [
         targetpayg.toString(),
@@ -763,8 +758,20 @@ function GenerateSalesReport() {
         "Fixed: " +
         todayfixed +
         "\n" +
-        todaysalesreport +
+        "--------------------------" +
+        "\n" +
+        "Today Sales: " +
+        +dailymobile +
+        " Mob" +
+        todayadslfordailysales +
+        todayfixedfordailysales +
+        "\n" +
+        "--------------------------" +
+        "\n" +
+        "Daily Required: " +
         dailyrequiredreport +
+        "\n" +
+        "RE: " +
         reMobilereport +
         "\n" +
         "#--------------------------" +
