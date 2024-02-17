@@ -247,10 +247,13 @@ function Continue() {
     document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.area." + x);
     document.getElementById("achievedfixed").value = localStorage.getItem("achievedfixed.area." + x);
     document.getElementById("targetfixed").value = localStorage.getItem("targetfixed.area." + x);
+    document.getElementById("achievedwallet").value = localStorage.getItem("achievedwallet.area." + x);
+    document.getElementById("targetwallet").value = localStorage.getItem("targetwallet.area." + x);
     document.getElementById("todaymobile").value = "";
     document.getElementById("todaywegold").value = "";
     document.getElementById("todayadsl").value = "";
     document.getElementById("todayfixed").value = "";
+    document.getElementById("todaywallet").value = "";
     NextTransform();
     sessionStorage.setItem("areas", localStorage.getItem("areas"));
 }
@@ -268,10 +271,13 @@ function NewMonth() {
     document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.area." + x);
     document.getElementById("achievedfixed").value = "";
     document.getElementById("targetfixed").value = localStorage.getItem("targetfixed.area." + x);
+    document.getElementById("achievedwallet").value = "";
+    document.getElementById("targetwallet").value = localStorage.getItem("targetwallet.area." + x);
     document.getElementById("todaymobile").value = "";
     document.getElementById("todaywegold").value = "";
     document.getElementById("todayadsl").value = "";
     document.getElementById("todayfixed").value = "";
+    document.getElementById("todaywallet").value = "";
     NextTransform();
     sessionStorage.setItem("areas", localStorage.getItem("areas"));
 }
@@ -292,10 +298,13 @@ function NewArea() {
     document.getElementById("targetadsl").value = "";
     document.getElementById("achievedfixed").value = "";
     document.getElementById("targetfixed").value = "";
+    document.getElementById("achievedwallet").value = "";
+    document.getElementById("targetwallet").value = "";
     document.getElementById("todaymobile").value = "";
     document.getElementById("todaywegold").value = "";
     document.getElementById("todayadsl").value = "";
     document.getElementById("todayfixed").value = "";
+    document.getElementById("todaywallet").value = "";
     NextTransform();
 }
 function GenerateSalesReport() {
@@ -348,10 +357,19 @@ function GenerateSalesReport() {
     achievedfixed = parseInt(document.getElementById("achievedfixed").value) || 0;
     utdfixed = todayfixed + achievedfixed || 0;
     targetfixed = parseInt(document.getElementById("targetfixed").value) || 0;
+    todaywalletInput = document.getElementById("todaywallet").value.split(" ");
+    todaywallet = 0;
+    for (i = 0; i < todaywalletInput.length; i++) {
+        todaywallet += parseInt(todaywalletInput[i]) || 0;
+    }
+    achievedwallet = parseInt(document.getElementById("achievedwallet").value) || 0;
+    utdwallet = todaywallet + achievedwallet || 0;
+    targetwallet = parseInt(document.getElementById("targetwallet").value) || 0;
     vsMobile = ~~Number(Math.round((utdmobile / targetmobile) * 100)) || 0;
     vsGold = ~~Number(Math.round((utdwegold / targetwegold) * 100)) || 0;
     vsAdsl = ~~Number(Math.round((utdadsl / targetadsl) * 100)) || 0;
     vsFixed = ~~Number(Math.round((utdfixed / targetfixed) * 100)) || 0;
+    vsWallet = ~~Number(Math.round((utdwallet / targetwallet) * 100)) || 0;
     document.getElementById("salesreport").value =
         "Date: " +
         date +
@@ -408,6 +426,21 @@ function GenerateSalesReport() {
         utdfixed +
         " /VS: " +
         vsFixed +
+        "%" +
+        "\n" +
+        "-------------------------" +
+        "\n" +
+        "Wallet" +
+        "\n" +
+        "Today: " +
+        todaywallet +
+        "\n" +
+        "TGT: " +
+        targetwallet +
+        " /Ach: " +
+        utdwallet +
+        " /VS: " +
+        vsWallet +
         "%" +
         "\n" +
         "-------------------------" +
@@ -471,6 +504,8 @@ function Save__1() {
     localStorage.setItem("targetadsl.area." + x, document.getElementById("targetadsl").value);
     localStorage.setItem("achievedfixed.area." + x, utdfixed);
     localStorage.setItem("targetfixed.area." + x, document.getElementById("targetfixed").value);
+    localStorage.setItem("achievedwallet.area." + x, utdwallet);
+    localStorage.setItem("targetwallet.area." + x, document.getElementById("targetwallet").value);
     document.getElementById("save__1").disabled = true;
     document.getElementById("save__2").disabled = true;
     document.getElementById("save__1").innerHTML = "Saved";

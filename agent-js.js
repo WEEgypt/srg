@@ -257,6 +257,8 @@ function Continue() {
     document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.4agent." + x);
     document.getElementById("achievedfixed").value = localStorage.getItem("achievedfixed.4agent." + x);
     document.getElementById("targetfixed").value = localStorage.getItem("targetfixed.4agent." + x);
+    document.getElementById("achievedwallet").value = localStorage.getItem("achievedwallet.4agent." + x);
+    document.getElementById("targetwallet").value = localStorage.getItem("targetwallet.4agent." + x);
     document.getElementById("todaypayg").value = "";
     document.getElementById("todaydata").value = "";
     document.getElementById("todaysuperkix20").value = "";
@@ -289,6 +291,7 @@ function Continue() {
     document.getElementById("todayadsl600").value = "";
     document.getElementById("todayadsl1000").value = "";
     document.getElementById("todayfixed").value = "";
+    document.getElementById("todaywallet").value = "";
     document.getElementById("todayadslbills").value = "";
     document.getElementById("todaypostpaidbills").value = "";
     document.getElementById("todayfixedbills").value = "";
@@ -321,6 +324,8 @@ function NewMonth() {
     document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.4agent." + x);
     document.getElementById("achievedfixed").value = "";
     document.getElementById("targetfixed").value = localStorage.getItem("targetfixed.4agent." + x);
+    document.getElementById("achievedwallet").value = "";
+    document.getElementById("targetwallet").value = localStorage.getItem("targetwallet.4agent." + x);
     document.getElementById("todaypayg").value = "";
     document.getElementById("todaydata").value = "";
     document.getElementById("todaysuperkix20").value = "";
@@ -353,6 +358,7 @@ function NewMonth() {
     document.getElementById("todayadsl600").value = "";
     document.getElementById("todayadsl1000").value = "";
     document.getElementById("todayfixed").value = "";
+    document.getElementById("todaywallet").value = "";
     document.getElementById("todayadslbills").value = "";
     document.getElementById("todaypostpaidbills").value = "";
     document.getElementById("todayfixedbills").value = "";
@@ -388,6 +394,8 @@ function NewUser() {
     document.getElementById("targetadsl").value = "";
     document.getElementById("achievedfixed").value = "";
     document.getElementById("targetfixed").value = "";
+    document.getElementById("achievedwallet").value = "";
+    document.getElementById("targetwallet").value = "";
     document.getElementById("todaypayg").value = "";
     document.getElementById("todaydata").value = "";
     document.getElementById("todaysuperkix20").value = "";
@@ -420,6 +428,7 @@ function NewUser() {
     document.getElementById("todayadsl600").value = "";
     document.getElementById("todayadsl1000").value = "";
     document.getElementById("todayfixed").value = "";
+    document.getElementById("todaywallet").value = "";
     document.getElementById("todayadslbills").value = "";
     document.getElementById("todaypostpaidbills").value = "";
     document.getElementById("todayfixedbills").value = "";
@@ -657,6 +666,10 @@ function GenerateSalesReport() {
     achievedfixed = parseInt(document.getElementById("achievedfixed").value) || 0;
     utdfixed = todayfixed + achievedfixed || 0;
     targetfixed = parseInt(document.getElementById("targetfixed").value) || 0;
+    todaywallet = parseInt(document.getElementById("todaywallet").value) || 0;
+    achievedwallet = parseInt(document.getElementById("achievedwallet").value) || 0;
+    utdwallet = todaywallet + achievedwallet || 0;
+    targetwallet = parseInt(document.getElementById("targetwallet").value) || 0;
     todayadslbills = parseInt(document.getElementById("todayadslbills").value) || 0;
     todaypostpaidbills = parseInt(document.getElementById("todaypostpaidbills").value) || 0;
     todayfixedbills = parseInt(document.getElementById("todayfixedbills").value) || 0;
@@ -699,6 +712,7 @@ function GenerateSalesReport() {
     vsGold = ~~Number(Math.round((utdwegold / targetwegold) * 100)) || 0;
     vsAdsl = ~~Number(Math.round((utdadsl / targetadsl) * 100)) || 0;
     vsFixed = ~~Number(Math.round((utdfixed / targetfixed) * 100)) || 0;
+    vsWallet = ~~Number(Math.round((utdwallet / targetwallet) * 100)) || 0;
     vsMobile = ~~Number(Math.round((utdmobile / targetmobile) * 100)) || 0;
     reMobile = ~~Number(Math.round((((utdmobile / targetmobile) * 100) / day) * daysinmonth)) || 0;
     if (todaypayg == "0") {
@@ -746,7 +760,12 @@ function GenerateSalesReport() {
     } else {
         todayfixedreport = "\n" + "Fixed: " + todayfixed;
     }
-    todaysales = todaypaygreport + todaydatareport + superkixreport + tazbeetreport + weclubreport + wemixreport + todaygoldreport + todayadslreport + todayfixedreport;
+    if (todaywallet == "0") {
+        todaywalletreport = "";
+    } else {
+        todaywalletreport = "\n" + "Wallet: " + todaywallet;
+    }
+    todaysales = todaypaygreport + todaydatareport + superkixreport + tazbeetreport + weclubreport + wemixreport + todaygoldreport + todayadslreport + todayfixedreport + todaywalletreport;
     if (todaysales == "") {
         todaysalesdetails = "";
     } else {
@@ -783,6 +802,7 @@ function GenerateSalesReport() {
         targetwegold.toString(),
         targetadsl.toString(),
         targetfixed.toString(),
+        targetwallet.toString(),
         targetmobile.toString(),
         "T",
     ];
@@ -796,6 +816,7 @@ function GenerateSalesReport() {
         targetwegold.toString(),
         targetadsl.toString(),
         targetfixed.toString(),
+        targetwallet.toString(),
         targetmobile.toString(),
     ];
     let maxTarget = Math.max(...fakeTargetArray).toString().length;
@@ -822,9 +843,35 @@ function GenerateSalesReport() {
     targetwegoldAdjusted = targetArrayAdjusted[6];
     targetadslAdjusted = targetArrayAdjusted[7];
     targetfixedAdjusted = targetArrayAdjusted[8];
-    targetmobileAdjusted = targetArrayAdjusted[9];
-    var utdArray = [utdpayg.toString(), utddata.toString(), utdsuperkix.toString(), utdtaz.toString(), utdweclub.toString(), utdwemix.toString(), utdwegold.toString(), utdadsl.toString(), utdfixed.toString(), utdmobile.toString(), "A"];
-    var fakeUtdArray = [utdpayg.toString(), utddata.toString(), utdsuperkix.toString(), utdtaz.toString(), utdweclub.toString(), utdwemix.toString(), utdwegold.toString(), utdadsl.toString(), utdfixed.toString(), utdmobile.toString()];
+    targetwalletAdjusted = targetArrayAdjusted[9];
+    targetmobileAdjusted = targetArrayAdjusted[10];
+    var utdArray = [
+        utdpayg.toString(),
+        utddata.toString(),
+        utdsuperkix.toString(),
+        utdtaz.toString(),
+        utdweclub.toString(),
+        utdwemix.toString(),
+        utdwegold.toString(),
+        utdadsl.toString(),
+        utdfixed.toString(),
+        utdwallet.toString(),
+        utdmobile.toString(),
+        "A",
+    ];
+    var fakeUtdArray = [
+        utdpayg.toString(),
+        utddata.toString(),
+        utdsuperkix.toString(),
+        utdtaz.toString(),
+        utdweclub.toString(),
+        utdwemix.toString(),
+        utdwegold.toString(),
+        utdadsl.toString(),
+        utdfixed.toString(),
+        utdwallet.toString(),
+        utdmobile.toString(),
+    ];
     let maxUtd = Math.max(...fakeUtdArray).toString().length;
     if (maxUtd < 5) {
         newMaxUtd = 5;
@@ -849,7 +896,8 @@ function GenerateSalesReport() {
     utdwegoldAdjusted = utdArrayAdjusted[6];
     utdadslAdjusted = utdArrayAdjusted[7];
     utdfixedAdjusted = utdArrayAdjusted[8];
-    utdmobileAdjusted = utdArrayAdjusted[9];
+    utdwalletAdjusted = utdArrayAdjusted[9];
+    utdmobileAdjusted = utdArrayAdjusted[10];
     document.getElementById("salesreport").value =
         "Date: " +
         date +
@@ -956,6 +1004,14 @@ function GenerateSalesReport() {
         vsFixed +
         "%" +
         "\n" +
+        "Wallet :   " +
+        targetwalletAdjusted +
+        " " +
+        utdwalletAdjusted +
+        " " +
+        vsWallet +
+        "%" +
+        "\n" +
         "--------------------------" +
         "\n" +
         "Total  :   " +
@@ -1043,6 +1099,8 @@ function Save__1() {
     localStorage.setItem("targetadsl.4agent." + x, document.getElementById("targetadsl").value);
     localStorage.setItem("achievedfixed.4agent." + x, utdfixed);
     localStorage.setItem("targetfixed.4agent." + x, document.getElementById("targetfixed").value);
+    localStorage.setItem("achievedwallet.4agent." + x, utdwallet);
+    localStorage.setItem("targetwallet.4agent." + x, document.getElementById("targetwallet").value);
     document.getElementById("save__1").disabled = true;
     document.getElementById("save__2").disabled = true;
     document.getElementById("save__1").innerHTML = "Saved";
