@@ -793,6 +793,7 @@ function GenerateSalesReport() {
         todayfixedfordailysales = " + " + todayfixed + " Fixed";
     }
     var targetArray = [
+        "T",
         targetpayg.toString(),
         targetdata.toString(),
         targetsuperkix.toString(),
@@ -804,7 +805,6 @@ function GenerateSalesReport() {
         targetfixed.toString(),
         targetwallet.toString(),
         targetmobile.toString(),
-        "T",
     ];
     var fakeTargetArray = [
         targetpayg.toString(),
@@ -834,18 +834,20 @@ function GenerateSalesReport() {
         });
         return array;
     }
-    targetpaygAdjusted = targetArrayAdjusted[0];
-    targetdataAdjusted = targetArrayAdjusted[1];
-    targetsuperkixAdjusted = targetArrayAdjusted[2];
-    targettazAdjusted = targetArrayAdjusted[3];
-    targetweclubAdjusted = targetArrayAdjusted[4];
-    targetwemixAdjusted = targetArrayAdjusted[5];
-    targetwegoldAdjusted = targetArrayAdjusted[6];
-    targetadslAdjusted = targetArrayAdjusted[7];
-    targetfixedAdjusted = targetArrayAdjusted[8];
-    targetwalletAdjusted = targetArrayAdjusted[9];
-    targetmobileAdjusted = targetArrayAdjusted[10];
+    targetHeader = targetArrayAdjusted[0];
+    targetpaygAdjusted = targetArrayAdjusted[1];
+    targetdataAdjusted = targetArrayAdjusted[2];
+    targetsuperkixAdjusted = targetArrayAdjusted[3];
+    targettazAdjusted = targetArrayAdjusted[4];
+    targetweclubAdjusted = targetArrayAdjusted[5];
+    targetwemixAdjusted = targetArrayAdjusted[6];
+    targetwegoldAdjusted = targetArrayAdjusted[7];
+    targetadslAdjusted = targetArrayAdjusted[8];
+    targetfixedAdjusted = targetArrayAdjusted[9];
+    targetwalletAdjusted = targetArrayAdjusted[10];
+    targetmobileAdjusted = targetArrayAdjusted[11];
     var utdArray = [
+        "A",
         utdpayg.toString(),
         utddata.toString(),
         utdsuperkix.toString(),
@@ -857,7 +859,6 @@ function GenerateSalesReport() {
         utdfixed.toString(),
         utdwallet.toString(),
         utdmobile.toString(),
-        "A",
     ];
     var fakeUtdArray = [
         utdpayg.toString(),
@@ -887,17 +888,18 @@ function GenerateSalesReport() {
         });
         return array;
     }
-    utdpaygAdjusted = utdArrayAdjusted[0];
-    utddataAdjusted = utdArrayAdjusted[1];
-    utdsuperkixAdjusted = utdArrayAdjusted[2];
-    utdtazAdjusted = utdArrayAdjusted[3];
-    utdweclubAdjusted = utdArrayAdjusted[4];
-    utdwemixAdjusted = utdArrayAdjusted[5];
-    utdwegoldAdjusted = utdArrayAdjusted[6];
-    utdadslAdjusted = utdArrayAdjusted[7];
-    utdfixedAdjusted = utdArrayAdjusted[8];
-    utdwalletAdjusted = utdArrayAdjusted[9];
-    utdmobileAdjusted = utdArrayAdjusted[10];
+    achievedHeader = utdArrayAdjusted[0];
+    utdpaygAdjusted = utdArrayAdjusted[1];
+    utddataAdjusted = utdArrayAdjusted[2];
+    utdsuperkixAdjusted = utdArrayAdjusted[3];
+    utdtazAdjusted = utdArrayAdjusted[4];
+    utdweclubAdjusted = utdArrayAdjusted[5];
+    utdwemixAdjusted = utdArrayAdjusted[6];
+    utdwegoldAdjusted = utdArrayAdjusted[7];
+    utdadslAdjusted = utdArrayAdjusted[8];
+    utdfixedAdjusted = utdArrayAdjusted[9];
+    utdwalletAdjusted = utdArrayAdjusted[10];
+    utdmobileAdjusted = utdArrayAdjusted[11];
     document.getElementById("salesreport").value =
         "Date: " +
         date +
@@ -925,9 +927,9 @@ function GenerateSalesReport() {
         "#--------------------------" +
         "\n" +
         "Product:   " +
-        targetArrayAdjusted[11] +
+        targetHeader +
         " " +
-        utdArrayAdjusted[11] +
+        achievedHeader +
         " VS" +
         "\n" +
         "--------------------------" +
