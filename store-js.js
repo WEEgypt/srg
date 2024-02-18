@@ -827,9 +827,9 @@ function GenerateSalesReport() {
         "#--------------------------" +
         "\n" +
         "Product:   " +
-        targetArrayAdjusted[10] +
+        targetArrayAdjusted[11] +
         " " +
-        utdArrayAdjusted[10] +
+        utdArrayAdjusted[11] +
         " VS" +
         "\n" +
         "--------------------------" +
