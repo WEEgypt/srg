@@ -78,4 +78,5 @@ input[type="number"]::-webkit-outer-spin-button {
 #stores,
 #users {
     width: 300px;
+    text-align-last: center;
 }
