@@ -545,9 +545,9 @@ function GenerateSalesReport() {
     vsWeClub = ~~Number(Math.round((utdweclub / targetweclub) * 100)) || 0;
     vsWeMix = ~~Number(Math.round((utdwemix / targetwemix) * 100)) || 0;
     vsGold = ~~Number(Math.round((utdwegold / targetwegold) * 100)) || 0;
-    vsGoldSA = ~~Number(Math.round((utdwegoldsa / targetwegold) * 100)) || 0;
+    vsGoldSA = ~~Number(Math.round((utdwegoldsa / utdwegold) * 100)) || 0;
     vsAdsl = ~~Number(Math.round((utdadsl / targetadsl) * 100)) || 0;
-    vsAdslHT = ~~Number(Math.round((utdadslht / targetadsl) * 100)) || 0;
+    vsAdslHT = ~~Number(Math.round((utdadslht / utdadsl) * 100)) || 0;
     vsFixed = ~~Number(Math.round((utdfixed / targetfixed) * 100)) || 0;
     vsWallet = ~~Number(Math.round((utdwallet / targetwallet) * 100)) || 0;
     vsMobile = ~~Number(Math.round((utdmobile / targetmobile) * 100)) || 0;
@@ -582,9 +582,7 @@ function GenerateSalesReport() {
         targetweclub.toString(),
         targetwemix.toString(),
         targetwegold.toString(),
-        "-",
         targetadsl.toString(),
-        "-",
         targetfixed.toString(),
         targetwallet.toString(),
         targetmobile.toString(),
@@ -625,12 +623,10 @@ function GenerateSalesReport() {
     targetweclubAdjusted = targetArrayAdjusted[5];
     targetwemixAdjusted = targetArrayAdjusted[6];
     targetwegoldAdjusted = targetArrayAdjusted[7];
-    targetwegoldsaAdjusted = targetArrayAdjusted[8];
-    targetadslAdjusted = targetArrayAdjusted[9];
-    targetadslhtAdjusted = targetArrayAdjusted[10];
-    targetfixedAdjusted = targetArrayAdjusted[11];
-    targetwalletAdjusted = targetArrayAdjusted[12];
-    targetmobileAdjusted = targetArrayAdjusted[13];
+    targetadslAdjusted = targetArrayAdjusted[8];
+    targetfixedAdjusted = targetArrayAdjusted[9];
+    targetwalletAdjusted = targetArrayAdjusted[10];
+    targetmobileAdjusted = targetArrayAdjusted[11];
     var utdArray = [
         "A",
         utdpayg.toString(),
@@ -640,9 +636,7 @@ function GenerateSalesReport() {
         utdweclub.toString(),
         utdwemix.toString(),
         utdwegold.toString(),
-        utdwegoldsa.toString(),
         utdadsl.toString(),
-        utdadslht.toString(),
         utdfixed.toString(),
         utdwallet.toString(),
         utdmobile.toString(),
@@ -655,9 +649,7 @@ function GenerateSalesReport() {
         utdweclub.toString(),
         utdwemix.toString(),
         utdwegold.toString(),
-        utdwegoldsa.toString(),
         utdadsl.toString(),
-        utdadslht.toString(),
         utdfixed.toString(),
         utdwallet.toString(),
         utdmobile.toString(),
@@ -685,12 +677,10 @@ function GenerateSalesReport() {
     utdweclubAdjusted = utdArrayAdjusted[5];
     utdwemixAdjusted = utdArrayAdjusted[6];
     utdwegoldAdjusted = utdArrayAdjusted[7];
-    utdwegoldsaAdjusted = utdArrayAdjusted[8];
-    utdadslAdjusted = utdArrayAdjusted[9];
-    utdadslhtAdjusted = utdArrayAdjusted[10];
-    utdfixedAdjusted = utdArrayAdjusted[11];
-    utdwalletAdjusted = utdArrayAdjusted[12];
-    utdmobileAdjusted = utdArrayAdjusted[13];
+    utdadslAdjusted = utdArrayAdjusted[8];
+    utdfixedAdjusted = utdArrayAdjusted[9];
+    utdwalletAdjusted = utdArrayAdjusted[10];
+    utdmobileAdjusted = utdArrayAdjusted[11];
     document.getElementById("salesreport").value =
         "Date: " +
         date +
@@ -745,6 +735,14 @@ function GenerateSalesReport() {
         "\n" +
         "RE: " +
         reMobilereport +
+        "\n" +
+        "Standalone: " +
+        vsGoldSA +
+        "%" +
+        "\n" +
+        "ADSL HT: " +
+        vsAdslHT +
+        "%" +
         "\n" +
         "#--------------------------" +
         "\n" +
@@ -812,28 +810,12 @@ function GenerateSalesReport() {
         vsGold +
         "%" +
         "\n" +
-        "** SA  :   " +
-        targetwegoldsaAdjusted +
-        " " +
-        utdwegoldsaAdjusted +
-        " " +
-        vsGoldSA +
-        "%" +
-        "\n" +
         "ADSL   :   " +
         targetadslAdjusted +
         " " +
         utdadslAdjusted +
         " " +
         vsAdsl +
-        "%" +
-        "\n" +
-        "** HT  :   " +
-        targetadslhtAdjusted +
-        " " +
-        utdadslhtAdjusted +
-        " " +
-        vsAdslHT +
         "%" +
         "\n" +
         "Fixed  :   " +

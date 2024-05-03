@@ -287,9 +287,12 @@ function Continue() {
     document.getElementById("todayadsl140").value = "";
     document.getElementById("todayadsl200").value = "";
     document.getElementById("todayadsl250").value = "";
+    document.getElementById("todayadsl300").value = "";
     document.getElementById("todayadsl400").value = "";
+    document.getElementById("todayadsl500").value = "";
     document.getElementById("todayadsl600").value = "";
     document.getElementById("todayadsl1000").value = "";
+    document.getElementById("todayadsl1500").value = "";
     document.getElementById("todayadslannual").value = "";
     document.getElementById("todayfixed").value = "";
     document.getElementById("todaywallet").value = "";
@@ -355,9 +358,12 @@ function NewMonth() {
     document.getElementById("todayadsl140").value = "";
     document.getElementById("todayadsl200").value = "";
     document.getElementById("todayadsl250").value = "";
+    document.getElementById("todayadsl300").value = "";
     document.getElementById("todayadsl400").value = "";
+    document.getElementById("todayadsl500").value = "";
     document.getElementById("todayadsl600").value = "";
     document.getElementById("todayadsl1000").value = "";
+    document.getElementById("todayadsl1500").value = "";
     document.getElementById("todayadslannual").value = "";
     document.getElementById("todayfixed").value = "";
     document.getElementById("todaywallet").value = "";
@@ -426,9 +432,12 @@ function NewUser() {
     document.getElementById("todayadsl140").value = "";
     document.getElementById("todayadsl200").value = "";
     document.getElementById("todayadsl250").value = "";
+    document.getElementById("todayadsl300").value = "";
     document.getElementById("todayadsl400").value = "";
+    document.getElementById("todayadsl500").value = "";
     document.getElementById("todayadsl600").value = "";
     document.getElementById("todayadsl1000").value = "";
+    document.getElementById("todayadsl1500").value = "";
     document.getElementById("todayadslannual").value = "";
     document.getElementById("todayfixed").value = "";
     document.getElementById("todaywallet").value = "";
@@ -627,11 +636,14 @@ function GenerateSalesReport() {
     todayadsl140 = parseInt(document.getElementById("todayadsl140").value) || 0;
     todayadsl200 = parseInt(document.getElementById("todayadsl200").value) || 0;
     todayadsl250 = parseInt(document.getElementById("todayadsl250").value) || 0;
+    todayadsl300 = parseInt(document.getElementById("todayadsl300").value) || 0;
     todayadsl400 = parseInt(document.getElementById("todayadsl400").value) || 0;
+    todayadsl500 = parseInt(document.getElementById("todayadsl500").value) || 0;
     todayadsl600 = parseInt(document.getElementById("todayadsl600").value) || 0;
     todayadsl1000 = parseInt(document.getElementById("todayadsl1000").value) || 0;
+    todayadsl1500 = parseInt(document.getElementById("todayadsl1500").value) || 0;
     todayadslannual = parseInt(document.getElementById("todayadslannual").value) || 0;
-    todayadsl = todayadsl140 + todayadsl200 + todayadsl250 + todayadsl400 + todayadsl600 + todayadsl1000 + todayadslannual || 0;
+    todayadsl = todayadsl140 + todayadsl200 + todayadsl250 + todayadsl300 + todayadsl400 + todayadsl500 + todayadsl600 + todayadsl1000 + todayadsl1500 + todayadslannual || 0;
     if (todayadsl140 == "0") {
         todayadsl140report = "";
     } else {
@@ -647,10 +659,20 @@ function GenerateSalesReport() {
     } else {
         todayadsl250report = todayadsl250 + "*250GB ";
     }
+    if (todayadsl300 == "0") {
+        todayadsl300report = "";
+    } else {
+        todayadsl300report = todayadsl300 + "*300GB ";
+    }
     if (todayadsl400 == "0") {
         todayadsl400report = "";
     } else {
         todayadsl400report = todayadsl400 + "*400GB ";
+    }
+    if (todayadsl500 == "0") {
+        todayadsl500report = "";
+    } else {
+        todayadsl500report = todayadsl500 + "*500GB ";
     }
     if (todayadsl600 == "0") {
         todayadsl600report = "";
@@ -662,14 +684,19 @@ function GenerateSalesReport() {
     } else {
         todayadsl1000report = todayadsl1000 + "*1TB ";
     }
+    if (todayadsl1500 == "0") {
+        todayadsl1500report = "";
+    } else {
+        todayadsl1500report = todayadsl1500 + "*1.5TB ";
+    }
     if (todayadslannual == "0") {
         todayadslannualreport = "";
     } else {
         todayadslannualreport = todayadslannual + "*Annual ";
     }
-    todayadslreport = todayadsl140report + todayadsl200report + todayadsl250report + todayadsl400report + todayadsl600report + todayadsl1000report + todayadslannualreport || 0;
+    todayadslreport = todayadsl140report + todayadsl200report + todayadsl250report + todayadsl300report + todayadsl400report + todayadsl500report + todayadsl600report + todayadsl1000report + todayadsl1500report + todayadslannualreport || 0;
     achievedadsl = parseInt(document.getElementById("achievedadsl").value) || 0;
-    utdadsl = todayadsl140 + todayadsl200 + todayadsl250 + todayadsl400 + todayadsl600 + todayadsl1000 + todayadslannual + achievedadsl || 0;
+    utdadsl = todayadsl140 + todayadsl200 + todayadsl250 + todayadsl300 + todayadsl400 + todayadsl500 + todayadsl600 + todayadsl1000 + todayadsl1500 + todayadslannual + achievedadsl || 0;
     targetadsl = parseInt(document.getElementById("targetadsl").value) || 0;
     todayfixed = parseInt(document.getElementById("todayfixed").value) || 0;
     achievedfixed = parseInt(document.getElementById("achievedfixed").value) || 0;
