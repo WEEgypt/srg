@@ -19,6 +19,9 @@ body {
     max-width: 960px;
     color: var(--color);
 }
+label {
+    vertical-align: middle;
+}
 textarea {
     resize: none;
     width: -webkit-fill-available;
