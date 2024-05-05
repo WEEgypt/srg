@@ -986,6 +986,8 @@ function GenerateSalesReport() {
         "RE: " +
         reMobilereport +
         "\n" +
+        "--------------------------" +
+        "\n" +
         "We Gold SA: " +
         vsGoldSa +
         "%" +
