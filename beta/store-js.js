@@ -267,13 +267,31 @@ function Continue() {
     document.getElementById("todaytazbeet").value = "";
     document.getElementById("todayweclub").value = "";
     document.getElementById("todaywemix").value = "";
-    document.getElementById("todaygoldfmc").value = "";
-    document.getElementById("todaygoldsa").value = "";
+    document.getElementById("todaygold200fmc").value = "";
+    document.getElementById("todaygold400fmc").value = "";
+    document.getElementById("todaygold600fmc").value = "";
+    document.getElementById("todaygold800fmc").value = "";
+    document.getElementById("todaygold1000fmc").value = "";
+    document.getElementById("todaygold1500fmc").value = "";
+    document.getElementById("todaygold200sa").value = "";
+    document.getElementById("todaygold400sa").value = "";
+    document.getElementById("todaygold600sa").value = "";
+    document.getElementById("todaygold800sa").value = "";
+    document.getElementById("todaygold1000sa").value = "";
+    document.getElementById("todaygold1500sa").value = "";
     document.getElementById("todayadsl140").value = "";
-    document.getElementById("todayadslht").value = "";
+    document.getElementById("todayadsl200").value = "";
+    document.getElementById("todayadsl250").value = "";
+    document.getElementById("todayadsl300").value = "";
+    document.getElementById("todayadsl400").value = "";
+    document.getElementById("todayadsl500").value = "";
+    document.getElementById("todayadsl600").value = "";
+    document.getElementById("todayadsl1000").value = "";
+    document.getElementById("todayadsl1500").value = "";
+    document.getElementById("todayadslannual").value = "";
     document.getElementById("todayfixed").value = "";
     document.getElementById("todaywallet").value = "";
-    document.getElementById("todayadsl140bills").value = "";
+    document.getElementById("todayadslbills").value = "";
     document.getElementById("todaypostpaidbills").value = "";
     document.getElementById("todayfixedbills").value = "";
     document.getElementById("todaycash").value = "";
@@ -314,13 +332,31 @@ function NewMonth() {
     document.getElementById("todaytazbeet").value = "";
     document.getElementById("todayweclub").value = "";
     document.getElementById("todaywemix").value = "";
-    document.getElementById("todaygoldfmc").value = "";
-    document.getElementById("todaygoldsa").value = "";
+    document.getElementById("todaygold200fmc").value = "";
+    document.getElementById("todaygold400fmc").value = "";
+    document.getElementById("todaygold600fmc").value = "";
+    document.getElementById("todaygold800fmc").value = "";
+    document.getElementById("todaygold1000fmc").value = "";
+    document.getElementById("todaygold1500fmc").value = "";
+    document.getElementById("todaygold200sa").value = "";
+    document.getElementById("todaygold400sa").value = "";
+    document.getElementById("todaygold600sa").value = "";
+    document.getElementById("todaygold800sa").value = "";
+    document.getElementById("todaygold1000sa").value = "";
+    document.getElementById("todaygold1500sa").value = "";
     document.getElementById("todayadsl140").value = "";
-    document.getElementById("todayadslht").value = "";
+    document.getElementById("todayadsl200").value = "";
+    document.getElementById("todayadsl250").value = "";
+    document.getElementById("todayadsl300").value = "";
+    document.getElementById("todayadsl400").value = "";
+    document.getElementById("todayadsl500").value = "";
+    document.getElementById("todayadsl600").value = "";
+    document.getElementById("todayadsl1000").value = "";
+    document.getElementById("todayadsl1500").value = "";
+    document.getElementById("todayadslannual").value = "";
     document.getElementById("todayfixed").value = "";
     document.getElementById("todaywallet").value = "";
-    document.getElementById("todayadsl140bills").value = "";
+    document.getElementById("todayadslbills").value = "";
     document.getElementById("todaypostpaidbills").value = "";
     document.getElementById("todayfixedbills").value = "";
     document.getElementById("todaycash").value = "";
@@ -364,13 +400,31 @@ function NewStore() {
     document.getElementById("todaytazbeet").value = "";
     document.getElementById("todayweclub").value = "";
     document.getElementById("todaywemix").value = "";
-    document.getElementById("todaygoldfmc").value = "";
-    document.getElementById("todaygoldsa").value = "";
+    document.getElementById("todaygold200fmc").value = "";
+    document.getElementById("todaygold400fmc").value = "";
+    document.getElementById("todaygold600fmc").value = "";
+    document.getElementById("todaygold800fmc").value = "";
+    document.getElementById("todaygold1000fmc").value = "";
+    document.getElementById("todaygold1500fmc").value = "";
+    document.getElementById("todaygold200sa").value = "";
+    document.getElementById("todaygold400sa").value = "";
+    document.getElementById("todaygold600sa").value = "";
+    document.getElementById("todaygold800sa").value = "";
+    document.getElementById("todaygold1000sa").value = "";
+    document.getElementById("todaygold1500sa").value = "";
     document.getElementById("todayadsl140").value = "";
-    document.getElementById("todayadslht").value = "";
+    document.getElementById("todayadsl200").value = "";
+    document.getElementById("todayadsl250").value = "";
+    document.getElementById("todayadsl300").value = "";
+    document.getElementById("todayadsl400").value = "";
+    document.getElementById("todayadsl500").value = "";
+    document.getElementById("todayadsl600").value = "";
+    document.getElementById("todayadsl1000").value = "";
+    document.getElementById("todayadsl1500").value = "";
+    document.getElementById("todayadslannual").value = "";
     document.getElementById("todayfixed").value = "";
     document.getElementById("todaywallet").value = "";
-    document.getElementById("todayadsl140bills").value = "";
+    document.getElementById("todayadslbills").value = "";
     document.getElementById("todaypostpaidbills").value = "";
     document.getElementById("todayfixedbills").value = "";
     document.getElementById("todaycash").value = "";
@@ -443,28 +497,142 @@ function GenerateSalesReport() {
     achievedwemix = parseInt(document.getElementById("achievedwemix").value) || 0;
     utdwemix = todaywemix + achievedwemix || 0;
     targetwemix = parseInt(document.getElementById("targetwemix").value) || 0;
-    todaygoldfmcInput = document.getElementById("todaygoldfmc").value.split(" ");
-    todaygoldfmc = 0;
-    for (i = 0; i < todaygoldfmcInput.length; i++) {
-        todaygoldfmc += parseInt(todaygoldfmcInput[i]) || 0;
+    todaygold200fmcInput = document.getElementById("todaygold200fmc").value.split(" ");
+    todaygold200fmc = 0;
+    for (i = 0; i < todaygold200fmcInput.length; i++) {
+        todaygold200fmc += parseInt(todaygold200fmcInput[i]) || 0;
     }
-    todaygoldsaInput = document.getElementById("todaygoldsa").value.split(" ");
-    todaygoldsa = 0;
-    for (i = 0; i < todaygoldsaInput.length; i++) {
-        todaygoldsa += parseInt(todaygoldsaInput[i]) || 0;
+    todaygold400fmcInput = document.getElementById("todaygold400fmc").value.split(" ");
+    todaygold400fmc = 0;
+    for (i = 0; i < todaygold400fmcInput.length; i++) {
+        todaygold400fmc += parseInt(todaygold400fmcInput[i]) || 0;
     }
-    todaygoldfmcall = todaygoldfmc + todaygoldsa || 0;
-    if (todaygoldfmc == "0") {
-        todaygoldfmcreport = "";
+    todaygold600fmcInput = document.getElementById("todaygold600fmc").value.split(" ");
+    todaygold600fmc = 0;
+    for (i = 0; i < todaygold600fmcInput.length; i++) {
+        todaygold600fmc += parseInt(todaygold600fmcInput[i]) || 0;
+    }
+    todaygold800fmcInput = document.getElementById("todaygold800fmc").value.split(" ");
+    todaygold800fmc = 0;
+    for (i = 0; i < todaygold800fmcInput.length; i++) {
+        todaygold800fmc += parseInt(todaygold800fmcInput[i]) || 0;
+    }
+    todaygold1000fmcInput = document.getElementById("todaygold1000fmc").value.split(" ");
+    todaygold1000fmc = 0;
+    for (i = 0; i < todaygold1000fmcInput.length; i++) {
+        todaygold1000fmc += parseInt(todaygold1000fmcInput[i]) || 0;
+    }
+    todaygold1500fmcInput = document.getElementById("todaygold1500fmc").value.split(" ");
+    todaygold1500fmc = 0;
+    for (i = 0; i < todaygold1500fmcInput.length; i++) {
+        todaygold1500fmc += parseInt(todaygold1500fmcInput[i]) || 0;
+    }
+    todaygold200saInput = document.getElementById("todaygold200sa").value.split(" ");
+    todaygold200sa = 0;
+    for (i = 0; i < todaygold200saInput.length; i++) {
+        todaygold200sa += parseInt(todaygold200saInput[i]) || 0;
+    }
+    todaygold400saInput = document.getElementById("todaygold400sa").value.split(" ");
+    todaygold400sa = 0;
+    for (i = 0; i < todaygold400saInput.length; i++) {
+        todaygold400sa += parseInt(todaygold400saInput[i]) || 0;
+    }
+    todaygold600saInput = document.getElementById("todaygold600sa").value.split(" ");
+    todaygold600sa = 0;
+    for (i = 0; i < todaygold600saInput.length; i++) {
+        todaygold600sa += parseInt(todaygold600saInput[i]) || 0;
+    }
+    todaygold800saInput = document.getElementById("todaygold800sa").value.split(" ");
+    todaygold800sa = 0;
+    for (i = 0; i < todaygold800saInput.length; i++) {
+        todaygold800sa += parseInt(todaygold800saInput[i]) || 0;
+    }
+    todaygold1000saInput = document.getElementById("todaygold1000sa").value.split(" ");
+    todaygold1000sa = 0;
+    for (i = 0; i < todaygold1000saInput.length; i++) {
+        todaygold1000sa += parseInt(todaygold1000saInput[i]) || 0;
+    }
+    todaygold1500saInput = document.getElementById("todaygold1500sa").value.split(" ");
+    todaygold1500sa = 0;
+    for (i = 0; i < todaygold1500saInput.length; i++) {
+        todaygold1500sa += parseInt(todaygold1500saInput[i]) || 0;
+    }
+    todaygoldfmc = todaygold200fmc + todaygold400fmc + todaygold600fmc + todaygold800fmc + todaygold1000fmc + todaygold1500fmc || 0;
+    todaygoldsa = todaygold200sa + todaygold400sa + todaygold600sa + todaygold800sa + todaygold1000sa + todaygold1500sa || 0;
+    todaygold = todaygoldfmc + todaygoldsa || 0;
+    if (todaygold200fmc == "0") {
+        todaygold200fmcreport = "";
     } else {
-        todaygoldfmcreport = todaygoldfmc + "*FMC ";
+        todaygold200fmcreport = todaygold200fmc + "*200FMC ";
     }
-    if (todaygoldsa == "0") {
-        todaygoldsareport = "";
+    if (todaygold400fmc == "0") {
+        todaygold400fmcreport = "";
     } else {
-        todaygoldsareport = todaygoldsa + "*SA ";
+        todaygold400fmcreport = todaygold400fmc + "*400FMC ";
     }
-    todaygoldreport = todaygoldfmcreport + todaygoldsareport || 0;
+    if (todaygold600fmc == "0") {
+        todaygold600fmcreport = "";
+    } else {
+        todaygold600fmcreport = todaygold600fmc + "*600FMC ";
+    }
+    if (todaygold800fmc == "0") {
+        todaygold800fmcreport = "";
+    } else {
+        todaygold800fmcreport = todaygold800fmc + "*800FMC ";
+    }
+    if (todaygold1000fmc == "0") {
+        todaygold1000fmcreport = "";
+    } else {
+        todaygold1000fmcreport = todaygold1000fmc + "*1000FMC ";
+    }
+    if (todaygold1500fmc == "0") {
+        todaygold1500fmcreport = "";
+    } else {
+        todaygold1500fmcreport = todaygold1500fmc + "*1500FMC ";
+    }
+    if (todaygold200sa == "0") {
+        todaygold200sareport = "";
+    } else {
+        todaygold200sareport = todaygold200sa + "*200SA ";
+    }
+    if (todaygold400sa == "0") {
+        todaygold400sareport = "";
+    } else {
+        todaygold400sareport = todaygold400sa + "*400SA ";
+    }
+    if (todaygold600sa == "0") {
+        todaygold600sareport = "";
+    } else {
+        todaygold600sareport = todaygold600sa + "*600SA ";
+    }
+    if (todaygold800sa == "0") {
+        todaygold800sareport = "";
+    } else {
+        todaygold800sareport = todaygold800sa + "*800SA ";
+    }
+    if (todaygold1000sa == "0") {
+        todaygold1000sareport = "";
+    } else {
+        todaygold1000sareport = todaygold1000sa + "*1000SA ";
+    }
+    if (todaygold1500sa == "0") {
+        todaygold1500sareport = "";
+    } else {
+        todaygold1500sareport = todaygold1500sa + "*1500SA ";
+    }
+    todaygoldreport =
+        todaygold200fmcreport +
+            todaygold400fmcreport +
+            todaygold600fmcreport +
+            todaygold800fmcreport +
+            todaygold1000fmcreport +
+            todaygold1500fmcreport +
+            todaygold200sareport +
+            todaygold400sareport +
+            todaygold600sareport +
+            todaygold800sareport +
+            todaygold1000sareport +
+            todaygold1500sareport || 0;
     achievedwegoldfmc = parseInt(document.getElementById("achievedwegoldfmc").value) || 0;
     achievedwegoldsa = parseInt(document.getElementById("achievedwegoldsa").value) || 0;
     utdwegoldfmc = todaygoldfmc + achievedwegoldfmc || 0;
@@ -476,23 +644,105 @@ function GenerateSalesReport() {
     for (i = 0; i < todayadsl140Input.length; i++) {
         todayadsl140 += parseInt(todayadsl140Input[i]) || 0;
     }
-    todayadslhtInput = document.getElementById("todayadslht").value.split(" ");
-    todayadslht = 0;
-    for (i = 0; i < todayadslhtInput.length; i++) {
-        todayadslht += parseInt(todayadslhtInput[i]) || 0;
+    todayadsl200Input = document.getElementById("todayadsl200").value.split(" ");
+    todayadsl200 = 0;
+    for (i = 0; i < todayadsl200Input.length; i++) {
+        todayadsl200 += parseInt(todayadsl200Input[i]) || 0;
     }
+    todayadsl250Input = document.getElementById("todayadsl250").value.split(" ");
+    todayadsl250 = 0;
+    for (i = 0; i < todayadsl250Input.length; i++) {
+        todayadsl250 += parseInt(todayadsl250Input[i]) || 0;
+    }
+    todayadsl300Input = document.getElementById("todayadsl300").value.split(" ");
+    todayadsl300 = 0;
+    for (i = 0; i < todayadsl300Input.length; i++) {
+        todayadsl300 += parseInt(todayadsl300Input[i]) || 0;
+    }
+    todayadsl400Input = document.getElementById("todayadsl400").value.split(" ");
+    todayadsl400 = 0;
+    for (i = 0; i < todayadsl400Input.length; i++) {
+        todayadsl400 += parseInt(todayadsl400Input[i]) || 0;
+    }
+    todayadsl500Input = document.getElementById("todayadsl500").value.split(" ");
+    todayadsl500 = 0;
+    for (i = 0; i < todayadsl500Input.length; i++) {
+        todayadsl500 += parseInt(todayadsl500Input[i]) || 0;
+    }
+    todayadsl600Input = document.getElementById("todayadsl600").value.split(" ");
+    todayadsl600 = 0;
+    for (i = 0; i < todayadsl600Input.length; i++) {
+        todayadsl600 += parseInt(todayadsl600Input[i]) || 0;
+    }
+    todayadsl1000Input = document.getElementById("todayadsl1000").value.split(" ");
+    todayadsl1000 = 0;
+    for (i = 0; i < todayadsl1000Input.length; i++) {
+        todayadsl1000 += parseInt(todayadsl1000Input[i]) || 0;
+    }
+    todayadsl1500Input = document.getElementById("todayadsl1500").value.split(" ");
+    todayadsl1500 = 0;
+    for (i = 0; i < todayadsl1500Input.length; i++) {
+        todayadsl1500 += parseInt(todayadsl1500Input[i]) || 0;
+    }
+    todayadslannualInput = document.getElementById("todayadslannual").value.split(" ");
+    todayadslannual = 0;
+    for (i = 0; i < todayadslannualInput.length; i++) {
+        todayadslannual += parseInt(todayadslannualInput[i]) || 0;
+    }
+    todayadsl140 = todayadsl140 || 0;
+    todayadslht = todayadsl200 + todayadsl250 + todayadsl300 + todayadsl400 + todayadsl500 + todayadsl600 + todayadsl1000 + todayadsl1500 + todayadslannual || 0;
     todayadsl = todayadsl140 + todayadslht || 0;
     if (todayadsl140 == "0") {
         todayadsl140report = "";
     } else {
-        todayadsl140report = todayadsl140 + "*140 ";
+        todayadsl140report = todayadsl140 + "*140GB ";
     }
-    if (todayadslht == "0") {
-        todayadslhtreport = "";
+    if (todayadsl200 == "0") {
+        todayadsl200report = "";
     } else {
-        todayadslhtreport = todayadslht + "*HT ";
+        todayadsl200report = todayadsl200 + "*200GB ";
     }
-    todayadslreport = todayadsl140report + todayadslhtreport || 0;
+    if (todayadsl250 == "0") {
+        todayadsl250report = "";
+    } else {
+        todayadsl250report = todayadsl250 + "*250GB ";
+    }
+    if (todayadsl300 == "0") {
+        todayadsl300report = "";
+    } else {
+        todayadsl300report = todayadsl300 + "*300GB ";
+    }
+    if (todayadsl400 == "0") {
+        todayadsl400report = "";
+    } else {
+        todayadsl400report = todayadsl400 + "*400GB ";
+    }
+    if (todayadsl500 == "0") {
+        todayadsl500report = "";
+    } else {
+        todayadsl500report = todayadsl500 + "*500GB ";
+    }
+    if (todayadsl600 == "0") {
+        todayadsl600report = "";
+    } else {
+        todayadsl600report = todayadsl600 + "*600GB ";
+    }
+    if (todayadsl1000 == "0") {
+        todayadsl1000report = "";
+    } else {
+        todayadsl1000report = todayadsl1000 + "*1TB ";
+    }
+    if (todayadsl1500 == "0") {
+        todayadsl1500report = "";
+    } else {
+        todayadsl1500report = todayadsl1500 + "*1.5TB ";
+    }
+    if (todayadslannual == "0") {
+        todayadslannualreport = "";
+    } else {
+        todayadslannualreport = todayadslannual + "*Annual ";
+    }
+    todayadslreport = todayadsl140report + todayadsl200report + todayadsl250report + todayadsl300report + todayadsl400report + todayadsl500report + todayadsl600report + todayadsl1000report + todayadsl1500report + todayadslannualreport || 0;
     achievedadsl140 = parseInt(document.getElementById("achievedadsl140").value) || 0;
     achievedadslht = parseInt(document.getElementById("achievedadslht").value) || 0;
     utdadsl140 = todayadsl140 + achievedadsl140 || 0;
@@ -515,10 +765,10 @@ function GenerateSalesReport() {
     achievedwallet = parseInt(document.getElementById("achievedwallet").value) || 0;
     utdwallet = todaywallet + achievedwallet || 0;
     targetwallet = parseInt(document.getElementById("targetwallet").value) || 0;
-    todayadsl140billsInput = document.getElementById("todayadsl140bills").value.split(" ");
-    todayadsl140bills = 0;
-    for (i = 0; i < todayadsl140billsInput.length; i++) {
-        todayadsl140bills += parseInt(todayadsl140billsInput[i]) || 0;
+    todayadslbillsInput = document.getElementById("todayadslbills").value.split(" ");
+    todayadslbills = 0;
+    for (i = 0; i < todayadslbillsInput.length; i++) {
+        todayadslbills += parseInt(todayadslbillsInput[i]) || 0;
     }
     todaypostpaidbillsInput = document.getElementById("todaypostpaidbills").value.split(" ");
     todaypostpaidbills = 0;
@@ -535,7 +785,7 @@ function GenerateSalesReport() {
     for (i = 0; i < todaycashInput.length; i++) {
         todaycash += parseInt(todaycashInput[i]) || 0;
     }
-    dailymobile = todaypayg + todaydata + todaysuperkix + todaytazbeet + todayweclub + todaywemix + todaygoldfmc + todaygoldsa;
+    dailymobile = todaypayg + todaydata + todaysuperkix + todaytazbeet + todayweclub + todaywemix + todaygold;
     utdmobile = utdpayg + utddata + utdsuperkix + utdtaz + utdweclub + utdwemix + utdwegold;
     targetmobile = targetpayg + targetdata + targetsuperkix + targettaz + targetwemix + targetweclub + targetwegold;
     vsPAYG = ~~Number(Math.round((utdpayg / targetpayg) * 100)) || 0;
@@ -545,9 +795,9 @@ function GenerateSalesReport() {
     vsWeClub = ~~Number(Math.round((utdweclub / targetweclub) * 100)) || 0;
     vsWeMix = ~~Number(Math.round((utdwemix / targetwemix) * 100)) || 0;
     vsGold = ~~Number(Math.round((utdwegold / targetwegold) * 100)) || 0;
-    vsGoldSA = ~~Number(Math.round((utdwegoldsa / utdwegold) * 100)) || 0;
+    vsGoldSa = ~~Number(Math.round((utdwegoldsa / utdwegold) * 100)) || 0;
     vsAdsl = ~~Number(Math.round((utdadsl / targetadsl) * 100)) || 0;
-    vsAdslHT = ~~Number(Math.round((utdadslht / utdadsl) * 100)) || 0;
+    vsAdslHt = ~~Number(Math.round((utdadslht / utdadsl) * 100)) || 0;
     vsFixed = ~~Number(Math.round((utdfixed / targetfixed) * 100)) || 0;
     vsWallet = ~~Number(Math.round((utdwallet / targetwallet) * 100)) || 0;
     vsMobile = ~~Number(Math.round((utdmobile / targetmobile) * 100)) || 0;
@@ -736,12 +986,12 @@ function GenerateSalesReport() {
         "RE: " +
         reMobilereport +
         "\n" +
-        "Standalone: " +
-        vsGoldSA +
+        "We Gold SA: " +
+        vsGoldSa +
         "%" +
         "\n" +
         "ADSL HT: " +
-        vsAdslHT +
+        vsAdslHt +
         "%" +
         "\n" +
         "#--------------------------" +
@@ -847,7 +1097,7 @@ function GenerateSalesReport() {
         "--------------------------#" +
         "\n" +
         "ADSL Bills: " +
-        todayadsl140bills +
+        todayadslbills +
         "\n" +
         "Postpaid Bills: " +
         todaypostpaidbills +
