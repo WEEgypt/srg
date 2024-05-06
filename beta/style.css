@@ -49,9 +49,6 @@ input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-input:valid {
-  background-color: yellow;
-}
 input:invalid {
     background-color: #ffdddd;
 }
