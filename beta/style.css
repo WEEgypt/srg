@@ -20,6 +20,7 @@ body {
     color: var(--color);
 }
 label {
+    display: inline-block;
     width: 150px;
     vertical-align: middle;
 }
@@ -37,19 +38,7 @@ textarea {
 input[type="number"],
 input[type="text"] {
     width: 180px;
-}
-input[type="number"] {
-    -moz-appearance: textfield;
-    appearance: textfield;
-    margin: 0;
-}
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-input:invalid {
-    background-color: #ffdddd;
+    float: right;
 }
 select {
     width: 33.33%;
@@ -58,6 +47,9 @@ select {
 .date {
     width: 188px;
     float: right;
+}
+input:invalid {
+    background-color: #ffdddd;
 }
 body {
     animation: transitionIn 0.75s;
@@ -71,6 +63,16 @@ body {
         opacity: 1;
         transform: rotatex(0);
     }
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 #areas,
 #stores,
