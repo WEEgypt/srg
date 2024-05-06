@@ -20,7 +20,7 @@ body {
     color: var(--color);
 }
 label {
-    position: relative;
+    position: absolute;
     width: 150px;
 }
 textarea {
