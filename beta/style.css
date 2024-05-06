@@ -50,11 +50,6 @@ select {
 input:invalid {
     background-color: #ffdddd;
 }
-footer {
-    display: inline-block;
-    font-size: 9px;
-    min-width: 300px;
-}
 body {
     animation: transitionIn 0.75s;
 }
