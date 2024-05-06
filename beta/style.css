@@ -38,6 +38,8 @@ textarea {
 input[type="number"],
 input[type="text"] {
     width: 180px;
+    position: relative;
+    margin: auto;
 }
 select {
     width: 33.33%;
