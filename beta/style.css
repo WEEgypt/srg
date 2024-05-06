@@ -20,7 +20,7 @@ body {
     color: var(--color);
 }
 label {
-    display: inline-block;
+    position: fixed;
     width: 150px;
 }
 textarea {
