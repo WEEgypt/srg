@@ -20,7 +20,9 @@ body {
     color: var(--color);
 }
 label {
-    vertical-align: middle;
+    display: inline-block;
+    width: 150px;
+	vertical-align: middle;
 }
 textarea {
     resize: none;
@@ -36,7 +38,6 @@ textarea {
 input[type="number"],
 input[type="text"] {
     width: 180px;
-    float: right;
 }
 select {
     width: 33.33%;
