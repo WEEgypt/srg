@@ -37,7 +37,8 @@ textarea {
 input[type="number"],
 input[type="text"] {
     width: 180px;
-    display: inline-block;
+    display: block;
+    position: fixed;
 }
 select {
     width: 33.33%;
