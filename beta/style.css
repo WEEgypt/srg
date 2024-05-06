@@ -20,7 +20,7 @@ body {
     color: var(--color);
 }
 label {
-    position: absolute;
+    display: inline-block;
     width: 150px;
 }
 textarea {
@@ -37,7 +37,7 @@ textarea {
 input[type="number"],
 input[type="text"] {
     width: 180px;
-    display: block;
+    posision: fixed;
 }
 select {
     width: 33.33%;
