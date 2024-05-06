@@ -1007,7 +1007,7 @@ function GenerateSalesReport() {
     vsWallet = ~~Number(Math.round((utdwallet / targetwallet) * 100)) || 0;
     vsMobile = ~~Number(Math.round((utdmobile / targetmobile) * 100)) || 0;
     reMobile = ~~Number(Math.round((((utdmobile / targetmobile) * 100) / day) * daysinmonth)) || 0;
-    dailyrequired = ~~Number(Math.ceil((targetmobile - utdmobile) / (daysinmonth - day))) || 0;
+    dailyrequired = Math.ceil((targetmobile - utdmobile) / (daysinmonth - day)) || 0;
     if (daysinmonth - day == "0" || dailyrequired <= "0") {
         dailyrequiredreport = "-";
     } else {

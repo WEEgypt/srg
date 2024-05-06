@@ -855,7 +855,7 @@ function GenerateSalesReport() {
     } else {
         todaysalesdetails = todaysales + "\n" + "--------------------------";
     }
-    dailyrequired = ~~Number(Math.ceil((targetmobile - utdmobile) / (daysinmonth - day))) || 0;
+    dailyrequired = Math.ceil((targetmobile - utdmobile) / (daysinmonth - day)) || 0;
     if (daysinmonth - day == "0" || dailyrequired <= "0") {
         dailyrequiredreport = "-";
     } else {
