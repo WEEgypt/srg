@@ -35,10 +35,6 @@ textarea {
     box-sizing: border-box;
     font-family: monospace;
 }
-input[type="number"],
-input[type="text"] {
-    width: 180px;
-}
 select {
     width: 33.33%;
     float: right;
