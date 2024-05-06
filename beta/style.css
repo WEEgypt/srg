@@ -43,6 +43,9 @@ select {
     width: 188px;
     float: right;
 }
+input[type="text"] {
+    font-size:14px;
+}
 input:invalid {
     background-color: #ffdddd;
 }
