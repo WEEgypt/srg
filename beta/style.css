@@ -44,7 +44,7 @@ select {
     float: right;
 }
 input{
-	display: block;
+	display: inline-block;
 	width: 180px;
 	margin-bottom: 1rem;
     font-size: 14px;
