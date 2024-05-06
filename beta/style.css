@@ -43,8 +43,11 @@ select {
     width: 188px;
     float: right;
 }
-input[type="text"] {
-    font-size:24px;
+input{
+	display: block;
+	width: 100%;
+	margin-bottom: 1rem;
+    font-size: 20px;
 }
 input:invalid {
     background-color: #ffdddd;
