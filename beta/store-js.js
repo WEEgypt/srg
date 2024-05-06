@@ -251,10 +251,10 @@ function Continue() {
     document.getElementById("targetweclub").value = localStorage.getItem("targetweclub.store." + x);
     document.getElementById("achievedwemix").value = localStorage.getItem("achievedwemix.store." + x);
     document.getElementById("targetwemix").value = localStorage.getItem("targetwemix.store." + x);
-    document.getElementById("achievedwegoldfmc").value = localStorage.getItem("achievedwegoldfmc.store." + x);
+    document.getElementById("achievedwegoldfmc").value = localStorage.getItem("achievedwegoldfmc.store." + x) || localStorage.getItem("achievedwegold.store." + x);
     document.getElementById("achievedwegoldsa").value = localStorage.getItem("achievedwegoldsa.store." + x);
     document.getElementById("targetwegold").value = localStorage.getItem("targetwegold.store." + x);
-    document.getElementById("achievedadsl140").value = localStorage.getItem("achievedadsl140.store." + x);
+    document.getElementById("achievedadsl140").value = localStorage.getItem("achievedadsl140.store." + x) || localStorage.getItem("achievedadsl.store." + x);
     document.getElementById("achievedadslht").value = localStorage.getItem("achievedadslht.store." + x);
     document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.store." + x);
     document.getElementById("achievedfixed").value = localStorage.getItem("achievedfixed.store." + x);
@@ -263,10 +263,23 @@ function Continue() {
     document.getElementById("targetwallet").value = localStorage.getItem("targetwallet.store." + x);
     document.getElementById("todaypayg").value = "";
     document.getElementById("todaydata").value = "";
-    document.getElementById("todaysuperkix").value = "";
-    document.getElementById("todaytazbeet").value = "";
-    document.getElementById("todayweclub").value = "";
-    document.getElementById("todaywemix").value = "";
+    document.getElementById("todaysuperkix20").value = "";
+    document.getElementById("todaysuperkix25").value = "";
+    document.getElementById("todaysuperkix35").value = "";
+    document.getElementById("todaysuperkix45").value = "";
+    document.getElementById("todaysuperkix65").value = "";
+    document.getElementById("todaysuperkix80").value = "";
+    document.getElementById("todaysuperkix100").value = "";
+    document.getElementById("todaytazbeet30").value = "";
+    document.getElementById("todaytazbeet40").value = "";
+    document.getElementById("todaytazbeet70").value = "";
+    document.getElementById("todaytazbeet110").value = "";
+    document.getElementById("todayweclub25").value = "";
+    document.getElementById("todayweclub40").value = "";
+    document.getElementById("todayweclub65").value = "";
+    document.getElementById("todayweclub100").value = "";
+    document.getElementById("todaywemix165").value = "";
+    document.getElementById("todaywemix240").value = "";
     document.getElementById("todaygold200fmc").value = "";
     document.getElementById("todaygold400fmc").value = "";
     document.getElementById("todaygold600fmc").value = "";
@@ -294,6 +307,7 @@ function Continue() {
     document.getElementById("todayadslbills").value = "";
     document.getElementById("todaypostpaidbills").value = "";
     document.getElementById("todayfixedbills").value = "";
+    document.getElementById("todaysimswap").value = "";
     document.getElementById("todaycash").value = "";
     NextTransform();
     sessionStorage.setItem("stores", localStorage.getItem("stores"));
@@ -328,10 +342,23 @@ function NewMonth() {
     document.getElementById("targetwallet").value = localStorage.getItem("targetwallet.store." + x);
     document.getElementById("todaypayg").value = "";
     document.getElementById("todaydata").value = "";
-    document.getElementById("todaysuperkix").value = "";
-    document.getElementById("todaytazbeet").value = "";
-    document.getElementById("todayweclub").value = "";
-    document.getElementById("todaywemix").value = "";
+    document.getElementById("todaysuperkix20").value = "";
+    document.getElementById("todaysuperkix25").value = "";
+    document.getElementById("todaysuperkix35").value = "";
+    document.getElementById("todaysuperkix45").value = "";
+    document.getElementById("todaysuperkix65").value = "";
+    document.getElementById("todaysuperkix80").value = "";
+    document.getElementById("todaysuperkix100").value = "";
+    document.getElementById("todaytazbeet30").value = "";
+    document.getElementById("todaytazbeet40").value = "";
+    document.getElementById("todaytazbeet70").value = "";
+    document.getElementById("todaytazbeet110").value = "";
+    document.getElementById("todayweclub25").value = "";
+    document.getElementById("todayweclub40").value = "";
+    document.getElementById("todayweclub65").value = "";
+    document.getElementById("todayweclub100").value = "";
+    document.getElementById("todaywemix165").value = "";
+    document.getElementById("todaywemix240").value = "";
     document.getElementById("todaygold200fmc").value = "";
     document.getElementById("todaygold400fmc").value = "";
     document.getElementById("todaygold600fmc").value = "";
@@ -359,6 +386,7 @@ function NewMonth() {
     document.getElementById("todayadslbills").value = "";
     document.getElementById("todaypostpaidbills").value = "";
     document.getElementById("todayfixedbills").value = "";
+    document.getElementById("todaysimswap").value = "";
     document.getElementById("todaycash").value = "";
     NextTransform();
     sessionStorage.setItem("stores", localStorage.getItem("stores"));
@@ -396,10 +424,23 @@ function NewStore() {
     document.getElementById("targetwallet").value = "";
     document.getElementById("todaypayg").value = "";
     document.getElementById("todaydata").value = "";
-    document.getElementById("todaysuperkix").value = "";
-    document.getElementById("todaytazbeet").value = "";
-    document.getElementById("todayweclub").value = "";
-    document.getElementById("todaywemix").value = "";
+    document.getElementById("todaysuperkix20").value = "";
+    document.getElementById("todaysuperkix25").value = "";
+    document.getElementById("todaysuperkix35").value = "";
+    document.getElementById("todaysuperkix45").value = "";
+    document.getElementById("todaysuperkix65").value = "";
+    document.getElementById("todaysuperkix80").value = "";
+    document.getElementById("todaysuperkix100").value = "";
+    document.getElementById("todaytazbeet30").value = "";
+    document.getElementById("todaytazbeet40").value = "";
+    document.getElementById("todaytazbeet70").value = "";
+    document.getElementById("todaytazbeet110").value = "";
+    document.getElementById("todayweclub25").value = "";
+    document.getElementById("todayweclub40").value = "";
+    document.getElementById("todayweclub65").value = "";
+    document.getElementById("todayweclub100").value = "";
+    document.getElementById("todaywemix165").value = "";
+    document.getElementById("todaywemix240").value = "";
     document.getElementById("todaygold200fmc").value = "";
     document.getElementById("todaygold400fmc").value = "";
     document.getElementById("todaygold600fmc").value = "";
@@ -427,6 +468,7 @@ function NewStore() {
     document.getElementById("todayadslbills").value = "";
     document.getElementById("todaypostpaidbills").value = "";
     document.getElementById("todayfixedbills").value = "";
+    document.getElementById("todaysimswap").value = "";
     document.getElementById("todaycash").value = "";
     NextTransform();
 }
@@ -465,37 +507,195 @@ function GenerateSalesReport() {
     achieveddata = parseInt(document.getElementById("achieveddata").value) || 0;
     utddata = todaydata + achieveddata || 0;
     targetdata = parseInt(document.getElementById("targetdata").value) || 0;
-    todaysuperkixInput = document.getElementById("todaysuperkix").value.split(" ");
-    todaysuperkix = 0;
-    for (i = 0; i < todaysuperkixInput.length; i++) {
-        todaysuperkix += parseInt(todaysuperkixInput[i]) || 0;
+    todaysuperkix20Input = document.getElementById("todaysuperkix20").value.split(" ");
+    todaysuperkix20 = 0;
+    for (i = 0; i < todaysuperkix20Input.length; i++) {
+        todaysuperkix20 += parseInt(todaysuperkix20Input[i]) || 0;
     }
+    todaysuperkix25Input = document.getElementById("todaysuperkix25").value.split(" ");
+    todaysuperkix25 = 0;
+    for (i = 0; i < todaysuperkix25Input.length; i++) {
+        todaysuperkix25 += parseInt(todaysuperkix25Input[i]) || 0;
+    }
+    todaysuperkix35Input = document.getElementById("todaysuperkix35").value.split(" ");
+    todaysuperkix35 = 0;
+    for (i = 0; i < todaysuperkix35Input.length; i++) {
+        todaysuperkix35 += parseInt(todaysuperkix35Input[i]) || 0;
+    }
+    todaysuperkix45Input = document.getElementById("todaysuperkix45").value.split(" ");
+    todaysuperkix45 = 0;
+    for (i = 0; i < todaysuperkix45Input.length; i++) {
+        todaysuperkix45 += parseInt(todaysuperkix45Input[i]) || 0;
+    }
+    todaysuperkix65Input = document.getElementById("todaysuperkix65").value.split(" ");
+    todaysuperkix65 = 0;
+    for (i = 0; i < todaysuperkix65Input.length; i++) {
+        todaysuperkix65 += parseInt(todaysuperkix65Input[i]) || 0;
+    }
+    todaysuperkix80Input = document.getElementById("todaysuperkix80").value.split(" ");
+    todaysuperkix80 = 0;
+    for (i = 0; i < todaysuperkix80Input.length; i++) {
+        todaysuperkix80 += parseInt(todaysuperkix80Input[i]) || 0;
+    }
+    todaysuperkix100Input = document.getElementById("todaysuperkix100").value.split(" ");
+    todaysuperkix100 = 0;
+    for (i = 0; i < todaysuperkix100Input.length; i++) {
+        todaysuperkix100 += parseInt(todaysuperkix100Input[i]) || 0;
+    }
+    todaysuperkix = todaysuperkix20 + todaysuperkix25 + todaysuperkix35 + todaysuperkix45 + todaysuperkix65 + todaysuperkix80 + todaysuperkix100 || 0;
+    if (todaysuperkix20 == "0") {
+        todaysuperkix20report = "";
+    } else {
+        todaysuperkix20report = todaysuperkix20 + "*20 ";
+    }
+    if (todaysuperkix25 == "0") {
+        todaysuperkix25report = "";
+    } else {
+        todaysuperkix25report = todaysuperkix25 + "*25 ";
+    }
+    if (todaysuperkix35 == "0") {
+        todaysuperkix35report = "";
+    } else {
+        todaysuperkix35report = todaysuperkix35 + "*35 ";
+    }
+    if (todaysuperkix45 == "0") {
+        todaysuperkix45report = "";
+    } else {
+        todaysuperkix45report = todaysuperkix45 + "*45 ";
+    }
+    if (todaysuperkix65 == "0") {
+        todaysuperkix65report = "";
+    } else {
+        todaysuperkix65report = todaysuperkix65 + "*65 ";
+    }
+    if (todaysuperkix80 == "0") {
+        todaysuperkix80report = "";
+    } else {
+        todaysuperkix80report = todaysuperkix80 + "*80 ";
+    }
+    if (todaysuperkix100 == "0") {
+        todaysuperkix100report = "";
+    } else {
+        todaysuperkix100report = todaysuperkix100 + "*100 ";
+    }
+    todaysuperkixreport = todaysuperkix20report + todaysuperkix25report + todaysuperkix35report + todaysuperkix45report + todaysuperkix65report + todaysuperkix80report + todaysuperkix100report;
     achievedsuperkix = parseInt(document.getElementById("achievedsuperkix").value) || 0;
-    utdsuperkix = todaysuperkix + achievedsuperkix || 0;
+    utdsuperkix = todaysuperkix20 + todaysuperkix25 + todaysuperkix35 + todaysuperkix45 + todaysuperkix65 + todaysuperkix80 + todaysuperkix100 + achievedsuperkix || 0;
     targetsuperkix = parseInt(document.getElementById("targetsuperkix").value) || 0;
-    todaytazbeetInput = document.getElementById("todaytazbeet").value.split(" ");
-    todaytazbeet = 0;
-    for (i = 0; i < todaytazbeetInput.length; i++) {
-        todaytazbeet += parseInt(todaytazbeetInput[i]) || 0;
+    todaytazbeet30Input = document.getElementById("todaytazbeet30").value.split(" ");
+    todaytazbeet30 = 0;
+    for (i = 0; i < todaytazbeet30Input.length; i++) {
+        todaytazbeet30 += parseInt(todaytazbeet30Input[i]) || 0;
     }
+    todaytazbeet40Input = document.getElementById("todaytazbeet40").value.split(" ");
+    todaytazbeet40 = 0;
+    for (i = 0; i < todaytazbeet40Input.length; i++) {
+        todaytazbeet40 += parseInt(todaytazbeet40Input[i]) || 0;
+    }
+    todaytazbeet70Input = document.getElementById("todaytazbeet70").value.split(" ");
+    todaytazbeet70 = 0;
+    for (i = 0; i < todaytazbeet70Input.length; i++) {
+        todaytazbeet70 += parseInt(todaytazbeet70Input[i]) || 0;
+    }
+    todaytazbeet110Input = document.getElementById("todaytazbeet110").value.split(" ");
+    todaytazbeet110 = 0;
+    for (i = 0; i < todaytazbeet110Input.length; i++) {
+        todaytazbeet110 += parseInt(todaytazbeet110Input[i]) || 0;
+    }
+    todaytazbeet = todaytazbeet30 + todaytazbeet40 + todaytazbeet70 + todaytazbeet110 || 0;
+    if (todaytazbeet30 == "0") {
+        todaytazbeet30report = "";
+    } else {
+        todaytazbeet30report = todaytazbeet30 + "*30 ";
+    }
+    if (todaytazbeet40 == "0") {
+        todaytazbeet40report = "";
+    } else {
+        todaytazbeet40report = todaytazbeet40 + "*40 ";
+    }
+    if (todaytazbeet70 == "0") {
+        todaytazbeet70report = "";
+    } else {
+        todaytazbeet70report = todaytazbeet70 + "*70 ";
+    }
+    if (todaytazbeet110 == "0") {
+        todaytazbeet110report = "";
+    } else {
+        todaytazbeet110report = todaytazbeet110 + "*110 ";
+    }
+    todaytazbeetreport = todaytazbeet30report + todaytazbeet40report + todaytazbeet70report + todaytazbeet110report;
     achievedtaz = parseInt(document.getElementById("achievedtaz").value) || 0;
-    utdtaz = todaytazbeet + achievedtaz || 0;
+    utdtaz = todaytazbeet30 + todaytazbeet40 + todaytazbeet70 + todaytazbeet110 + achievedtaz || 0;
     targettaz = parseInt(document.getElementById("targettaz").value) || 0;
-    todayweclubInput = document.getElementById("todayweclub").value.split(" ");
-    todayweclub = 0;
-    for (i = 0; i < todayweclubInput.length; i++) {
-        todayweclub += parseInt(todayweclubInput[i]) || 0;
+    todayweclub25Input = document.getElementById("todayweclub25").value.split(" ");
+    todayweclub25 = 0;
+    for (i = 0; i < todayweclub25Input.length; i++) {
+        todayweclub25 += parseInt(todayweclub25Input[i]) || 0;
     }
+    todayweclub40Input = document.getElementById("todayweclub40").value.split(" ");
+    todayweclub40 = 0;
+    for (i = 0; i < todayweclub40Input.length; i++) {
+        todayweclub40 += parseInt(todayweclub40Input[i]) || 0;
+    }
+    todayweclub65Input = document.getElementById("todayweclub65").value.split(" ");
+    todayweclub65 = 0;
+    for (i = 0; i < todayweclub65Input.length; i++) {
+        todayweclub65 += parseInt(todayweclub65Input[i]) || 0;
+    }
+    todayweclub100Input = document.getElementById("todayweclub100").value.split(" ");
+    todayweclub100 = 0;
+    for (i = 0; i < todayweclub100Input.length; i++) {
+        todayweclub100 += parseInt(todayweclub100Input[i]) || 0;
+    }
+    todayweclub = todayweclub25 + todayweclub40 + todayweclub65 + todayweclub100 || 0;
+    if (todayweclub25 == "0") {
+        todayweclub25report = "";
+    } else {
+        todayweclub25report = todayweclub25 + "*25 ";
+    }
+    if (todayweclub40 == "0") {
+        todayweclub40report = "";
+    } else {
+        todayweclub40report = todayweclub40 + "*40 ";
+    }
+    if (todayweclub65 == "0") {
+        todayweclub65report = "";
+    } else {
+        todayweclub65report = todayweclub65 + "*65 ";
+    }
+    if (todayweclub100 == "0") {
+        todayweclub100report = "";
+    } else {
+        todayweclub100report = todayweclub100 + "*100 ";
+    }
+    todayweclubreport = todayweclub25report + todayweclub40report + todayweclub65report + todayweclub100report;
     achievedweclub = parseInt(document.getElementById("achievedweclub").value) || 0;
-    utdweclub = todayweclub + achievedweclub || 0;
+    utdweclub = todayweclub25 + todayweclub40 + todayweclub65 + todayweclub100 + achievedweclub || 0;
     targetweclub = parseInt(document.getElementById("targetweclub").value) || 0;
-    todaywemixInput = document.getElementById("todaywemix").value.split(" ");
-    todaywemix = 0;
-    for (i = 0; i < todaywemixInput.length; i++) {
-        todaywemix += parseInt(todaywemixInput[i]) || 0;
+    todaywemix165Input = document.getElementById("todaywemix165").value.split(" ");
+    todaywemix165 = 0;
+    for (i = 0; i < todaywemix165Input.length; i++) {
+        todaywemix165 += parseInt(todaywemix165Input[i]) || 0;
     }
+    todaywemix240Input = document.getElementById("todaywemix240").value.split(" ");
+    todaywemix240 = 0;
+    for (i = 0; i < todaywemix240Input.length; i++) {
+        todaywemix240 += parseInt(todaywemix240Input[i]) || 0;
+    }
+    todaywemix = todaywemix165 + todaywemix240 || 0;
+    if (todaywemix165 == "0") {
+        todaywemix165report = "";
+    } else {
+        todaywemix165report = todaywemix165 + "*165 ";
+    }
+    if (todaywemix240 == "0") {
+        todaywemix240report = "";
+    } else {
+        todaywemix240report = todaywemix240 + "*240 ";
+    }
+    todaywemixreport = todaywemix165report + todaywemix240report;
     achievedwemix = parseInt(document.getElementById("achievedwemix").value) || 0;
-    utdwemix = todaywemix + achievedwemix || 0;
+    utdwemix = todaywemix165 + todaywemix240 + achievedwemix || 0;
     targetwemix = parseInt(document.getElementById("targetwemix").value) || 0;
     todaygold200fmcInput = document.getElementById("todaygold200fmc").value.split(" ");
     todaygold200fmc = 0;
@@ -780,14 +980,19 @@ function GenerateSalesReport() {
     for (i = 0; i < todayfixedbillsInput.length; i++) {
         todayfixedbills += parseInt(todayfixedbillsInput[i]) || 0;
     }
+    todaysimswapInput = document.getElementById("todaysimswap").value.split(" ");
+    todaysimswap = 0;
+    for (i = 0; i < todaysimswapInput.length; i++) {
+        todaysimswap += parseInt(todaysimswapInput[i]) || 0;
+    }
     todaycashInput = document.getElementById("todaycash").value.split(" ");
     todaycash = 0;
     for (i = 0; i < todaycashInput.length; i++) {
         todaycash += parseInt(todaycashInput[i]) || 0;
     }
-    dailymobile = todaypayg + todaydata + todaysuperkix + todaytazbeet + todayweclub + todaywemix + todaygold;
-    utdmobile = utdpayg + utddata + utdsuperkix + utdtaz + utdweclub + utdwemix + utdwegold;
-    targetmobile = targetpayg + targetdata + targetsuperkix + targettaz + targetwemix + targetweclub + targetwegold;
+    dailymobile = todaypayg + todaydata + todaysuperkix + todaytazbeet + todayweclub + todaywemix + todaygold || 0;
+    utdmobile = utdpayg + utddata + utdsuperkix + utdtaz + utdweclub + utdwemix + utdwegold || 0;
+    targetmobile = targetpayg + targetdata + targetsuperkix + targettaz + targetwemix + targetweclub + targetwegold || 0;
     vsPAYG = ~~Number(Math.round((utdpayg / targetpayg) * 100)) || 0;
     vsData = ~~Number(Math.round((utddata / targetdata) * 100)) || 0;
     vsSuperKix = ~~Number(Math.round((utdsuperkix / targetsuperkix) * 100)) || 0;
@@ -947,16 +1152,16 @@ function GenerateSalesReport() {
         todaydata +
         "\n" +
         "Kix: " +
-        todaysuperkix +
+        todaysuperkixreport +
         "\n" +
         "Tazbeet: " +
-        todaytazbeet +
+        todaytazbeetreport +
         "\n" +
         "We Club: " +
-        todayweclub +
+        todayweclubreport +
         "\n" +
         "We Mix: " +
-        todaywemix +
+        todaywemixreport +
         "\n" +
         "We Gold: " +
         todaygoldreport +
@@ -1106,6 +1311,9 @@ function GenerateSalesReport() {
         "\n" +
         "Fixed Bills: " +
         todayfixedbills +
+        "\n" +
+        "SIM Swap: " +
+        todaysimswap +
         "\n" +
         "Cash: " +
         todaycash +
