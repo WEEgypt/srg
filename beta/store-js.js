@@ -578,7 +578,7 @@ function GenerateSalesReport() {
     } else {
         todaysuperkix100report = todaysuperkix100 + "*100 ";
     }
-    todaysuperkixreport = todaysuperkix20report + todaysuperkix25report + todaysuperkix35report + todaysuperkix45report + todaysuperkix65report + todaysuperkix80report + todaysuperkix100report;
+    todaysuperkixreport = todaysuperkix20report + todaysuperkix25report + todaysuperkix35report + todaysuperkix45report + todaysuperkix65report + todaysuperkix80report + todaysuperkix100report || 0;
     achievedsuperkix = parseInt(document.getElementById("achievedsuperkix").value) || 0;
     utdsuperkix = todaysuperkix20 + todaysuperkix25 + todaysuperkix35 + todaysuperkix45 + todaysuperkix65 + todaysuperkix80 + todaysuperkix100 + achievedsuperkix || 0;
     targetsuperkix = parseInt(document.getElementById("targetsuperkix").value) || 0;
@@ -623,7 +623,7 @@ function GenerateSalesReport() {
     } else {
         todaytazbeet110report = todaytazbeet110 + "*110 ";
     }
-    todaytazbeetreport = todaytazbeet30report + todaytazbeet40report + todaytazbeet70report + todaytazbeet110report;
+    todaytazbeetreport = todaytazbeet30report + todaytazbeet40report + todaytazbeet70report + todaytazbeet110report || 0;
     achievedtaz = parseInt(document.getElementById("achievedtaz").value) || 0;
     utdtaz = todaytazbeet30 + todaytazbeet40 + todaytazbeet70 + todaytazbeet110 + achievedtaz || 0;
     targettaz = parseInt(document.getElementById("targettaz").value) || 0;
@@ -668,7 +668,7 @@ function GenerateSalesReport() {
     } else {
         todayweclub100report = todayweclub100 + "*100 ";
     }
-    todayweclubreport = todayweclub25report + todayweclub40report + todayweclub65report + todayweclub100report;
+    todayweclubreport = todayweclub25report + todayweclub40report + todayweclub65report + todayweclub100report || 0;
     achievedweclub = parseInt(document.getElementById("achievedweclub").value) || 0;
     utdweclub = todayweclub25 + todayweclub40 + todayweclub65 + todayweclub100 + achievedweclub || 0;
     targetweclub = parseInt(document.getElementById("targetweclub").value) || 0;
@@ -693,7 +693,7 @@ function GenerateSalesReport() {
     } else {
         todaywemix240report = todaywemix240 + "*240 ";
     }
-    todaywemixreport = todaywemix165report + todaywemix240report;
+    todaywemixreport = todaywemix165report + todaywemix240report || 0;
     achievedwemix = parseInt(document.getElementById("achievedwemix").value) || 0;
     utdwemix = todaywemix165 + todaywemix240 + achievedwemix || 0;
     targetwemix = parseInt(document.getElementById("targetwemix").value) || 0;
