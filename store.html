@@ -12,14 +12,14 @@
     </head>
     <body onload="EnableRestore(); GetDate()">
         <div style="text-align: center;">
-            <div style="display: inline-block; text-align: left; min-width: 300px;">
+            <div style="display: inline-block; min-width: 300px; text-align: left;">
                 <br />
                 <br />
                 <br />
                 <div style="display: none;" id="multi">
                     <h3>Multi stores found</h3>
                     <br />
-                    <label style="font-size: 10px;">Choose your store or add another one</label>
+                    <label style="width: max-content; font-size: 10px;">Choose your store or add another one</label>
                     <br />
                     <br />
                     <select id="stores"> </select>
@@ -207,12 +207,23 @@
                     <input type="number" id="achievedwemix" />
                     <br />
                     <br />
-                    <label>We Gold:</label>
-                    <input type="number" id="achievedwegold" />
+                    <br />
+                    <label>We Gold FMC:</label>
+                    <input type="number" id="achievedwegoldfmc" />
                     <br />
                     <br />
-                    <label>ADSL:</label>
-                    <input type="number" id="achievedadsl" />
+                    <label>We Gold SA:</label>
+                    <input type="number" id="achievedwegoldsa" />
+                    <br />
+                    <br />
+                    <br />
+                    <label>ADSL 140 GB:</label>
+                    <input type="number" id="achievedadsl140" />
+                    <br />
+                    <br />
+                    <label>ADSL HT:</label>
+                    <input type="number" id="achievedadslht" />
+                    <br />
                     <br />
                     <br />
                     <label>Fixed:</label>
@@ -238,45 +249,128 @@
                     <input type="text" pattern="[0-9 ]+" id="todaydata" />
                     <br />
                     <br />
-                    <label>Super Kix:</label>
-                    <input type="text" pattern="[0-9 ]+" id="todaysuperkix" />
+                    <br />
+                    <label>Super Kix 20:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaysuperkix20" />
                     <br />
                     <br />
-                    <label>Tazbeet:</label>
-                    <input type="text" pattern="[0-9 ]+" id="todaytazbeet" />
+                    <label>Super Kix 25:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaysuperkix25" />
                     <br />
                     <br />
-                    <label>We Club:</label>
-                    <input type="text" pattern="[0-9 ]+" id="todayweclub" />
+                    <label>Super Kix 35:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaysuperkix35" />
                     <br />
                     <br />
-                    <label>We Mix:</label>
-                    <input type="text" pattern="[0-9 ]+" id="todaywemix" />
+                    <label>Super Kix 45:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaysuperkix45" />
+                    <br />
+                    <br />
+                    <label>Super Kix 65:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaysuperkix65" />
+                    <br />
+                    <br />
+                    <label>Super Kix 80:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaysuperkix80" />
+                    <br />
+                    <br />
+                    <label>Super Kix 100:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaysuperkix100" />
                     <br />
                     <br />
                     <br />
+                    <label>Tazbeet 30:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaytazbeet30" />
+                    <br />
+                    <br />
+                    <label>Tazbeet 40:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaytazbeet40" />
+                    <br />
+                    <br />
+                    <label>Tazbeet 70:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaytazbeet70" />
+                    <br />
+                    <br />
+                    <label>Tazbeet 110:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaytazbeet110" />
+                    <br />
+                    <br />
+                    <br />
+                    <label>We Club 25:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todayweclub25" />
+                    <br />
+                    <br />
+                    <label>We Club 40:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todayweclub40" />
+                    <br />
+                    <br />
+                    <label>We Club 65:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todayweclub65" />
+                    <br />
+                    <br />
+                    <label>We Club 100:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todayweclub100" />
+                    <br />
+                    <br />
+                    <br />
+                    <label>We Mix 165:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaywemix165" />
+                    <br />
+                    <br />
+                    <label>We Mix 240:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaywemix240" />
+                    <br />
+                    <br />
+                    <br />
+                    <h4># FMC</h4>
                     <label>We Gold 200:</label>
-                    <input type="text" pattern="[0-9 ]+" id="todaygold200" />
+                    <input type="text" pattern="[0-9 ]+" id="todaygold200fmc" />
                     <br />
                     <br />
                     <label>We Gold 400:</label>
-                    <input type="text" pattern="[0-9 ]+" id="todaygold400" />
+                    <input type="text" pattern="[0-9 ]+" id="todaygold400fmc" />
                     <br />
                     <br />
                     <label>We Gold 600:</label>
-                    <input type="text" pattern="[0-9 ]+" id="todaygold600" />
+                    <input type="text" pattern="[0-9 ]+" id="todaygold600fmc" />
                     <br />
                     <br />
                     <label>We Gold 800:</label>
-                    <input type="text" pattern="[0-9 ]+" id="todaygold800" />
+                    <input type="text" pattern="[0-9 ]+" id="todaygold800fmc" />
                     <br />
                     <br />
                     <label>We Gold 1000:</label>
-                    <input type="text" pattern="[0-9 ]+" id="todaygold1000" />
+                    <input type="text" pattern="[0-9 ]+" id="todaygold1000fmc" />
                     <br />
                     <br />
                     <label>We Gold 1500:</label>
-                    <input type="text" pattern="[0-9 ]+" id="todaygold1500" />
+                    <input type="text" pattern="[0-9 ]+" id="todaygold1500fmc" />
+                    <br />
+                    <br />
+                    <br />
+                    <h4># Standalone</h4>
+                    <label>We Gold 200:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaygold200sa" />
+                    <br />
+                    <br />
+                    <label>We Gold 400:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaygold400sa" />
+                    <br />
+                    <br />
+                    <label>We Gold 600:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaygold600sa" />
+                    <br />
+                    <br />
+                    <label>We Gold 800:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaygold800sa" />
+                    <br />
+                    <br />
+                    <label>We Gold 1000:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaygold1000sa" />
+                    <br />
+                    <br />
+                    <label>We Gold 1500:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaygold1500sa" />
                     <br />
                     <br />
                     <br />
@@ -292,8 +386,16 @@
                     <input type="text" pattern="[0-9 ]+" id="todayadsl250" />
                     <br />
                     <br />
+                    <label>ADSL 300 GB:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todayadsl300" />
+                    <br />
+                    <br />
                     <label>ADSL 400 GB:</label>
                     <input type="text" pattern="[0-9 ]+" id="todayadsl400" />
+                    <br />
+                    <br />
+                    <label>ADSL 500 GB:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todayadsl500" />
                     <br />
                     <br />
                     <label>ADSL 600 GB:</label>
@@ -302,6 +404,14 @@
                     <br />
                     <label>ADSL 1 TB:</label>
                     <input type="text" pattern="[0-9 ]+" id="todayadsl1000" />
+                    <br />
+                    <br />
+                    <label>ADSL 1.5 TB:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todayadsl1500" />
+                    <br />
+                    <br />
+                    <label>ADSL Annual:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todayadslannual" />
                     <br />
                     <br />
                     <br />
@@ -325,6 +435,10 @@
                     <br />
                     <label>Fixed Bills:</label>
                     <input type="text" pattern="[0-9 ]+" id="todayfixedbills" />
+                    <br />
+                    <br />
+                    <label>SIM Swap:</label>
+                    <input type="text" pattern="[0-9 ]+" id="todaysimswap" />
                     <br />
                     <br />
                     <label>Cash:</label>
