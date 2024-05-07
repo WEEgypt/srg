@@ -15,8 +15,7 @@ body {
     margin: auto;
     width: -webkit-fill-available;
     width: -moz-available;
-    min-width: 360px;
-    max-width: 960px;
+    min-width: max-content;
     color: var(--color);
     animation: transitionIn 0.75s;
 }
@@ -59,8 +58,6 @@ textarea {
     resize: none;
     width: -webkit-fill-available;
     width: -moz-available;
-    min-width: 360px;
-    max-width: 960px;
     height: 460px;
     padding: 10px 10px 10px 10px;
     box-sizing: border-box;
