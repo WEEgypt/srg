@@ -1,0 +1,85 @@
+:root {
+    --bg: #fff;
+    --color: #000;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #000;
+        --color: #fff;
+    }
+}
+body {
+    background-color: var(--bg);
+    font-family: verdana;
+    font-size: 14px;
+    margin: auto;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    min-width: 360px;
+    max-width: 960px;
+    color: var(--color);
+    animation: transitionIn 0.75s;
+}
+label {
+	display: inline-block;
+	min-width: max-content;
+	width: 150px;
+	vertical-align: super;
+}
+input[type="number"],
+input[type="text"] {
+    width: 180px;
+    float: right;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input:invalid {
+    background-color: #ffdddd;
+}
+input {
+    font-size: 14px;
+    color: red;
+}
+select {
+    width: 33.33%;
+    float: right;
+}
+.date {
+    width: 188px;
+    float: right;
+}
+textarea {
+    resize: none;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    min-width: 360px;
+    max-width: 960px;
+    height: 460px;
+    padding: 10px 10px 10px 10px;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+#areas,
+#stores,
+#users {
+    width: 300px;
+    text-align-last: center;
+}
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotatex(-10deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotatex(0);
+    }
+}
