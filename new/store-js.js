@@ -1021,12 +1021,12 @@ function GenerateSalesReport() {
     if (todayadsl == "0") {
         todayadslfordailysales = "";
     } else {
-        todayadslfordailysales = " + " + todayadsl + " ADSL";
+        todayadslfordailysales = "\n" + "+ " + todayadsl + " ADSL";
     }
     if (todayfixed == "0") {
         todayfixedfordailysales = "";
     } else {
-        todayfixedfordailysales = " + " + todayfixed + " Fixed";
+        todayfixedfordailysales = "\n" + "+ " + todayfixed + " Fixed";
     }
     var targetArray = [
         "T",
