@@ -20,6 +20,12 @@ function EnableRestore() {
         }
         document.getElementById("areas").options.add(new Option("Add Another Area", "newarea"));
     }
+    document.getElementById("areas").value = localStorage.getItem("selectedArea");
+}
+function RestoreSelected() {
+    if (document.getElementById("areas").value !== "newarea") {
+        localStorage.setItem("selectedArea", document.getElementById("areas").value);
+    }
 }
 function GetDate() {
     document.getElementById("day").value = new Date().getDate();
@@ -149,6 +155,7 @@ function Back__2() {
             document.getElementById("areas").options.add(new Option(localStorage.getItem("areaname.area." + value), value));
         }
         document.getElementById("areas").options.add(new Option("Add Another Area", "newarea"));
+        document.getElementById("areas").value = localStorage.getItem("selectedArea");
         BackTransform();
     } else {
         Back__1();
@@ -165,6 +172,7 @@ function Back__3() {
             document.getElementById("areas").options.add(new Option(localStorage.getItem("areaname.area." + value), value));
         }
         document.getElementById("areas").options.add(new Option("Add Another Area", "newarea"));
+        document.getElementById("areas").value = localStorage.getItem("selectedArea");
     } else if (basic.style.display === "block") {
         basic.style.display = "none";
         restore.style.display = "block";
@@ -512,6 +520,7 @@ function Save__1() {
     document.getElementById("save__2").innerHTML = "Saved";
     localStorage.setItem("areaRestore", "true");
     localStorage.setItem("areas", sessionStorage.getItem("areas"));
+    localStorage.setItem("selectedArea", sessionStorage.getItem("areas"));
 }
 function Save__2() {
     Save__1();

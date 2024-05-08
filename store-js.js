@@ -20,6 +20,12 @@ function EnableRestore() {
         }
         document.getElementById("stores").options.add(new Option("Add Another Store", "newstore"));
     }
+    document.getElementById("stores").value = localStorage.getItem("selectedStore");
+}
+function RestoreSelected() {
+    if (document.getElementById("stores").value !== "newstore") {
+        localStorage.setItem("selectedStore", document.getElementById("stores").value);
+    }
 }
 function GetDate() {
     document.getElementById("day").value = new Date().getDate();
@@ -149,6 +155,7 @@ function Back__2() {
             document.getElementById("stores").options.add(new Option(localStorage.getItem("storename.store." + value), value));
         }
         document.getElementById("stores").options.add(new Option("Add Another Store", "newstore"));
+        document.getElementById("stores").value = localStorage.getItem("selectedStore");
         BackTransform();
     } else {
         Back__1();
@@ -165,6 +172,7 @@ function Back__3() {
             document.getElementById("stores").options.add(new Option(localStorage.getItem("storename.store." + value), value));
         }
         document.getElementById("stores").options.add(new Option("Add Another Store", "newstore"));
+        document.getElementById("stores").value = localStorage.getItem("selectedStore");
     } else if (basic.style.display === "block") {
         basic.style.display = "none";
         restore.style.display = "block";
@@ -251,10 +259,10 @@ function Continue() {
     document.getElementById("targetweclub").value = localStorage.getItem("targetweclub.store." + x);
     document.getElementById("achievedwemix").value = localStorage.getItem("achievedwemix.store." + x);
     document.getElementById("targetwemix").value = localStorage.getItem("targetwemix.store." + x);
-    document.getElementById("achievedwegoldfmc").value = localStorage.getItem("achievedwegoldfmc.store." + x) || localStorage.getItem("achievedwegold.store." + x);
+    document.getElementById("achievedwegoldfmc").value = localStorage.getItem("achievedwegoldfmc.store." + x);
     document.getElementById("achievedwegoldsa").value = localStorage.getItem("achievedwegoldsa.store." + x);
     document.getElementById("targetwegold").value = localStorage.getItem("targetwegold.store." + x);
-    document.getElementById("achievedadsl140").value = localStorage.getItem("achievedadsl140.store." + x) || localStorage.getItem("achievedadsl.store." + x);
+    document.getElementById("achievedadsl140").value = localStorage.getItem("achievedadsl140.store." + x);
     document.getElementById("achievedadslht").value = localStorage.getItem("achievedadslht.store." + x);
     document.getElementById("targetadsl").value = localStorage.getItem("targetadsl.store." + x);
     document.getElementById("achievedfixed").value = localStorage.getItem("achievedfixed.store." + x);
@@ -1388,6 +1396,7 @@ function Save__1() {
     document.getElementById("save__2").innerHTML = "Saved";
     localStorage.setItem("storeRestore", "true");
     localStorage.setItem("stores", sessionStorage.getItem("stores"));
+    localStorage.setItem("selectedStore", sessionStorage.getItem("stores"));
 }
 function Save__2() {
     Save__1();

@@ -20,6 +20,12 @@ function EnableRestore() {
         }
         document.getElementById("users").options.add(new Option("Add Another Agent", "newuser"));
     }
+    document.getElementById("users").value = localStorage.getItem("selectedUser");
+}
+function RestoreSelected() {
+    if (document.getElementById("users").value !== "newuser") {
+        localStorage.setItem("selectedUser", document.getElementById("users").value);
+    }
 }
 function GetDate() {
     document.getElementById("day").value = new Date().getDate();
@@ -149,6 +155,7 @@ function Back__2() {
             document.getElementById("users").options.add(new Option(localStorage.getItem("yourname.4agent." + value), value));
         }
         document.getElementById("users").options.add(new Option("Add Another Agent", "newuser"));
+        document.getElementById("users").value = localStorage.getItem("selectedUser");
         BackTransform();
     } else {
         Back__1();
@@ -165,6 +172,7 @@ function Back__3() {
             document.getElementById("users").options.add(new Option(localStorage.getItem("yourname.4agent." + value), value));
         }
         document.getElementById("users").options.add(new Option("Add Another Agent", "newuser"));
+        document.getElementById("users").value = localStorage.getItem("selectedUser");
     } else if (basic.style.display === "block") {
         basic.style.display = "none";
         restore.style.display = "block";
@@ -1193,6 +1201,7 @@ function Save__1() {
     document.getElementById("save__2").innerHTML = "Saved";
     localStorage.setItem("agentRestore", "true");
     localStorage.setItem("users", sessionStorage.getItem("users"));
+    localStorage.setItem("selectedUser", sessionStorage.getItem("users"));
 }
 function Save__2() {
     Save__1();
