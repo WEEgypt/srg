@@ -520,7 +520,7 @@ function Save__1() {
     document.getElementById("save__2").innerHTML = "Saved";
     localStorage.setItem("areaRestore", "true");
     localStorage.setItem("areas", sessionStorage.getItem("areas"));
-    localStorage.setItem("selectedArea", sessionStorage.getItem("areas"));
+    localStorage.setItem("selectedArea", localStorage.getItem("currentArea"));
 }
 function Save__2() {
     Save__1();

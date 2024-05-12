@@ -1201,7 +1201,7 @@ function Save__1() {
     document.getElementById("save__2").innerHTML = "Saved";
     localStorage.setItem("agentRestore", "true");
     localStorage.setItem("users", sessionStorage.getItem("users"));
-    localStorage.setItem("selectedUser", sessionStorage.getItem("users"));
+    localStorage.setItem("selectedUser", localStorage.getItem("currentUser"));
 }
 function Save__2() {
     Save__1();
