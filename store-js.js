@@ -1396,7 +1396,7 @@ function Save__1() {
     document.getElementById("save__2").innerHTML = "Saved";
     localStorage.setItem("storeRestore", "true");
     localStorage.setItem("stores", sessionStorage.getItem("stores"));
-    localStorage.setItem("selectedStore", sessionStorage.getItem("stores"));
+    localStorage.setItem("selectedStore", localStorage.getItem("currentStore"));
 }
 function Save__2() {
     Save__1();
