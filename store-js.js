@@ -1598,11 +1598,7 @@ function Summarize__1() {
         "\n" +
         "Total WE Pay: " +
         utdwallet +
-<<<<<<< HEAD
         "\n" +
-=======
-        "\n" +
->>>>>>> 34fb371b73fb28b5afafbfd83e24709bb4f81a7e
         "--------------------------" +
         "\n" +
         "Today Cash Box: " +
@@ -1706,89 +1702,7 @@ function Copy__2() {
     Copy__1();
 }
 function Copy__3() {
-<<<<<<< HEAD
     navigator.clipboard.writeText(summarizedreportForSharing);
-=======
-    summarizedreportValue =
-        "*Date:* " +
-        "*" +
-        date +
-        "*" +
-        "\n" +
-        "*Store:* " +
-        "*" +
-        storename +
-        "*" +
-        "\n" +
-        "*--------------------------*" +
-        "\n" +
-        "*Lines Daily Required:* " +
-        "*" +
-        dailyrequiredreport +
-        "*" +
-        "\n" +
-        "*Lines Today:* " +
-        "*" +
-        dailymobile +
-        "*" +
-        "\n" +
-        "*Total Lines:* " +
-        "*" +
-        utdmobile +
-        "*" +
-        "\n" +
-        "*Per:* " +
-        "*" +
-        vsMobile +
-        "%*" +
-        "\n" +
-        "*--------------------------*" +
-        "\n" +
-        "*WE Gold Daily Required:* " +
-        "*" +
-        dailyrequiredGoldreport +
-        "*" +
-        "\n" +
-        "*WE Gold Today:* " +
-        "*" +
-        todaygold +
-        "*" +
-        "\n" +
-        "*Total WE Gold:* " +
-        "*" +
-        utdwegold +
-        "*" +
-        "\n" +
-        "*Total SA:* " +
-        "*" +
-        utdwegoldsa +
-        "*" +
-        "\n" +
-        "*--------------------------*" +
-        "\n" +
-        "*WE Pay Daily Required:* " +
-        "*" +
-        dailyrequiredWalletreport +
-        "*" +
-        "\n" +
-        "*WE Pay Today:* " +
-        "*" +
-        todaywallet +
-        "*" +
-        "\n" +
-        "*Total WE Pay:* " +
-        "*" +
-        utdwallet +
-        "*" +
-        "\n" +
-        "*--------------------------*" +
-        "\n" +
-        "*Today Cash Box:* " +
-        "*" +
-        todaycash +
-        " LE*";
-    navigator.clipboard.writeText(summarizedreportValue);
->>>>>>> 34fb371b73fb28b5afafbfd83e24709bb4f81a7e
     document.getElementById("copy__3").disabled = true;
     document.getElementById("copy__3").innerHTML = "Copied";
 }
@@ -1808,87 +1722,6 @@ function Share__2() {
     Share__1();
 }
 function Share__3() {
-<<<<<<< HEAD
-=======
-    summarizedreportValue =
-        "*Date:* " +
-        "*" +
-        date +
-        "*" +
-        "\n" +
-        "*Store:* " +
-        "*" +
-        storename +
-        "*" +
-        "\n" +
-        "*--------------------------*" +
-        "\n" +
-        "*Lines Daily Required:* " +
-        "*" +
-        dailyrequiredreport +
-        "*" +
-        "\n" +
-        "*Lines Today:* " +
-        "*" +
-        dailymobile +
-        "*" +
-        "\n" +
-        "*Total Lines:* " +
-        "*" +
-        utdmobile +
-        "*" +
-        "\n" +
-        "*Per:* " +
-        "*" +
-        vsMobile +
-        "%*" +
-        "\n" +
-        "*--------------------------*" +
-        "\n" +
-        "*WE Gold Daily Required:* " +
-        "*" +
-        dailyrequiredGoldreport +
-        "*" +
-        "\n" +
-        "*WE Gold Today:* " +
-        "*" +
-        todaygold +
-        "*" +
-        "\n" +
-        "*Total WE Gold:* " +
-        "*" +
-        utdwegold +
-        "*" +
-        "\n" +
-        "*Total SA:* " +
-        "*" +
-        utdwegoldsa +
-        "*" +
-        "\n" +
-        "*--------------------------*" +
-        "\n" +
-        "*WE Pay Daily Required:* " +
-        "*" +
-        dailyrequiredWalletreport +
-        "*" +
-        "\n" +
-        "*WE Pay Today:* " +
-        "*" +
-        todaywallet +
-        "*" +
-        "\n" +
-        "*Total WE Pay:* " +
-        "*" +
-        utdwallet +
-        "*" +
-        "\n" +
-        "*--------------------------*" +
-        "\n" +
-        "*Today Cash Box:* " +
-        "*" +
-        todaycash +
-        " LE*";
->>>>>>> 34fb371b73fb28b5afafbfd83e24709bb4f81a7e
     if (navigator.share) {
         navigator.share({
             title: "Summarized Report",
