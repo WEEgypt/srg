@@ -1417,6 +1417,7 @@ function Summarize__1() {
         "Total WE Pay: " +
         utdwallet +
         "\n" +
+        "--------------------------" +
         "\n" +
         "Today Cash Box: " +
         todaycash +
@@ -1514,6 +1515,7 @@ function Copy__3() {
         utdwallet +
         "*" +
         "\n" +
+        "*--------------------------*" +
         "\n" +
         "*Today Cash Box:* " +
         "*" +
@@ -1612,6 +1614,7 @@ function Share__3() {
         utdwallet +
         "*" +
         "\n" +
+        "*--------------------------*" +
         "\n" +
         "*Today Cash Box:* " +
         "*" +
