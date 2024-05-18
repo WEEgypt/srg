@@ -501,6 +501,14 @@ function Share__1() {
 function Share__2() {
     Share__1();
 }
+function Print__1() {
+    doc = window.open("", "_blank");
+    doc.document.open();
+    doc.document.write("<html lang=en><head><title>Area Report</title><style>body {font-family: monospace; display: flex;} div {margin: 0px auto 0px auto;}</style></head><body onload=window.print();setTimeout(window.close,1000);><div>");
+    doc.document.write(document.getElementById("salesreport").value.replace(/  /gi, "&nbsp;&nbsp;").replace(/\n/gi, "<br>"));
+    doc.document.write("</div></body></html>");
+    doc.document.close();
+}
 function Save__1() {
     let x = parseInt(localStorage.getItem("currentArea"));
     localStorage.setItem("areaname.area." + x, document.getElementById("areaname").value || "Area " + x);
@@ -524,12 +532,4 @@ function Save__1() {
 }
 function Save__2() {
     Save__1();
-}
-function Print__1() {
-    doc = window.open("", "_blank");
-    doc.document.open();
-    doc.document.write("<html lang=en><head><title>Area Report</title><style>body {font-family: monospace; display: flex;} div {margin: 0px auto 0px auto;}</style></head><body onload=window.print();setTimeout(window.close,1000);><div>");
-    doc.document.write(document.getElementById("salesreport").value.replace(/  /gi, "&nbsp;&nbsp;").replace(/\n/gi, "<br>"));
-    doc.document.write("</div></body></html>");
-    doc.document.close();
 }
