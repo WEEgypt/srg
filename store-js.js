@@ -1234,7 +1234,7 @@ function GenerateSalesReport() {
         vsAdslHt +
         "%" +
         "\n" +
-        "#--------------------------" +
+        "--------------------------" +
         "\n" +
         "Product:   " +
         targetHeader +
@@ -1334,7 +1334,189 @@ function GenerateSalesReport() {
         vsMobile +
         "%" +
         "\n" +
-        "--------------------------#" +
+        "--------------------------" +
+        "\n" +
+        "ADSL Bills: " +
+        todayadslbills +
+        "\n" +
+        "Postpaid Bills: " +
+        todaypostpaidbills +
+        "\n" +
+        "Fixed Bills: " +
+        todayfixedbills +
+        "\n" +
+        "SIM Swap: " +
+        todaysimswap +
+        "\n" +
+        "Cash: " +
+        todaycash +
+        " LE";
+    salesreportForSharing =
+        "Date: " +
+        date +
+        "\n" +
+        "Store: " +
+        storename +
+        "\n" +
+        "--------------------------" +
+        "\n" +
+        "PAYG: " +
+        todaypayg +
+        "\n" +
+        "Data: " +
+        todaydata +
+        "\n" +
+        "Kix: " +
+        todaysuperkixreport +
+        "\n" +
+        "Tazbeet: " +
+        todaytazbeetreport +
+        "\n" +
+        "We Club: " +
+        todayweclubreport +
+        "\n" +
+        "We Mix: " +
+        todaywemixreport +
+        "\n" +
+        "We Gold: " +
+        todaygoldreport +
+        "\n" +
+        "ADSL: " +
+        todayadslreport +
+        "\n" +
+        "Fixed: " +
+        todayfixed +
+        "\n" +
+        "Wallet: " +
+        todaywallet +
+        "\n" +
+        "--------------------------" +
+        "\n" +
+        "Today Sales: " +
+        +dailymobile +
+        " Mob" +
+        todayadslfordailysales +
+        todayfixedfordailysales +
+        "\n" +
+        "--------------------------" +
+        "\n" +
+        "Daily Required: " +
+        dailyrequiredreport +
+        "\n" +
+        "RE: " +
+        reMobilereport +
+        "\n" +
+        "--------------------------" +
+        "\n" +
+        "We Gold SA: " +
+        vsGoldSa +
+        "%" +
+        "\n" +
+        "ADSL HT: " +
+        vsAdslHt +
+        "%" +
+        "\n" +
+        "```--------------------------" +
+        "\n" +
+        "Product:   " +
+        targetHeader +
+        " " +
+        achievedHeader +
+        " VS" +
+        "\n" +
+        "--------------------------" +
+        "\n" +
+        "PAYG   :   " +
+        targetpaygAdjusted +
+        " " +
+        utdpaygAdjusted +
+        " " +
+        vsPAYG +
+        "%" +
+        "\n" +
+        "Data   :   " +
+        targetdataAdjusted +
+        " " +
+        utddataAdjusted +
+        " " +
+        vsData +
+        "%" +
+        "\n" +
+        "Kix    :   " +
+        targetsuperkixAdjusted +
+        " " +
+        utdsuperkixAdjusted +
+        " " +
+        vsSuperKix +
+        "%" +
+        "\n" +
+        "Tazbeet:   " +
+        targettazAdjusted +
+        " " +
+        utdtazAdjusted +
+        " " +
+        vsTaz +
+        "%" +
+        "\n" +
+        "We Club:   " +
+        targetweclubAdjusted +
+        " " +
+        utdweclubAdjusted +
+        " " +
+        vsWeClub +
+        "%" +
+        "\n" +
+        "We Mix :   " +
+        targetwemixAdjusted +
+        " " +
+        utdwemixAdjusted +
+        " " +
+        vsWeMix +
+        "%" +
+        "\n" +
+        "We Gold:   " +
+        targetwegoldAdjusted +
+        " " +
+        utdwegoldAdjusted +
+        " " +
+        vsGold +
+        "%" +
+        "\n" +
+        "ADSL   :   " +
+        targetadslAdjusted +
+        " " +
+        utdadslAdjusted +
+        " " +
+        vsAdsl +
+        "%" +
+        "\n" +
+        "Fixed  :   " +
+        targetfixedAdjusted +
+        " " +
+        utdfixedAdjusted +
+        " " +
+        vsFixed +
+        "%" +
+        "\n" +
+        "Wallet :   " +
+        targetwalletAdjusted +
+        " " +
+        utdwalletAdjusted +
+        " " +
+        vsWallet +
+        "%" +
+        "\n" +
+        "--------------------------" +
+        "\n" +
+        "Total  :   " +
+        targetmobileAdjusted +
+        " " +
+        utdmobileAdjusted +
+        " " +
+        vsMobile +
+        "%" +
+        "\n" +
+        "--------------------------```" +
         "\n" +
         "ADSL Bills: " +
         todayadslbills +
@@ -1417,10 +1599,89 @@ function Summarize__1() {
         "Total WE Pay: " +
         utdwallet +
         "\n" +
+        "--------------------------" +
         "\n" +
         "Today Cash Box: " +
         todaycash +
         " LE";
+    summarizedreportForSharing =
+        "*Date:* " +
+        "*" +
+        date +
+        "*" +
+        "\n" +
+        "*Store:* " +
+        "*" +
+        storename +
+        "*" +
+        "\n" +
+        "*--------------------------*" +
+        "\n" +
+        "*Lines Daily Required:* " +
+        "*" +
+        dailyrequiredreport +
+        "*" +
+        "\n" +
+        "*Lines Today:* " +
+        "*" +
+        dailymobile +
+        "*" +
+        "\n" +
+        "*Total Lines:* " +
+        "*" +
+        utdmobile +
+        "*" +
+        "\n" +
+        "*Per:* " +
+        "*" +
+        vsMobile +
+        "%*" +
+        "\n" +
+        "*--------------------------*" +
+        "\n" +
+        "*WE Gold Daily Required:* " +
+        "*" +
+        dailyrequiredGoldreport +
+        "*" +
+        "\n" +
+        "*WE Gold Today:* " +
+        "*" +
+        todaygold +
+        "*" +
+        "\n" +
+        "*Total WE Gold:* " +
+        "*" +
+        utdwegold +
+        "*" +
+        "\n" +
+        "*Total SA:* " +
+        "*" +
+        utdwegoldsa +
+        "*" +
+        "\n" +
+        "*--------------------------*" +
+        "\n" +
+        "*WE Pay Daily Required:* " +
+        "*" +
+        dailyrequiredWalletreport +
+        "*" +
+        "\n" +
+        "*WE Pay Today:* " +
+        "*" +
+        todaywallet +
+        "*" +
+        "\n" +
+        "*Total WE Pay:* " +
+        "*" +
+        utdwallet +
+        "*" +
+        "\n" +
+        "*--------------------------*" +
+        "\n" +
+        "*Today Cash Box:* " +
+        "*" +
+        todaycash +
+        " LE*";
     document.getElementById("copy__3").disabled = false;
     document.getElementById("copy__3").innerHTML = "Copy";
     document.body.scrollTop = 0;
@@ -1431,8 +1692,7 @@ function Summarize__2() {
     Summarize__1();
 }
 function Copy__1() {
-    salesreportValue = document.getElementById("salesreport").value.replace(/#/gi, "```");
-    navigator.clipboard.writeText(salesreportValue);
+    navigator.clipboard.writeText(salesreportForSharing);
     document.getElementById("copy__1").disabled = true;
     document.getElementById("copy__2").disabled = true;
     document.getElementById("copy__1").innerHTML = "Copied";
@@ -1442,96 +1702,18 @@ function Copy__2() {
     Copy__1();
 }
 function Copy__3() {
-    summarizedreportValue =
-        "*Date:* " +
-        "*" +
-        date +
-        "*" +
-        "\n" +
-        "*Store:* " +
-        "*" +
-        storename +
-        "*" +
-        "\n" +
-        "*--------------------------*" +
-        "\n" +
-        "*Lines Daily Required:* " +
-        "*" +
-        dailyrequiredreport +
-        "*" +
-        "\n" +
-        "*Lines Today:* " +
-        "*" +
-        dailymobile +
-        "*" +
-        "\n" +
-        "*Total Lines:* " +
-        "*" +
-        utdmobile +
-        "*" +
-        "\n" +
-        "*Per:* " +
-        "*" +
-        vsMobile +
-        "%*" +
-        "\n" +
-        "*--------------------------*" +
-        "\n" +
-        "*WE Gold Daily Required:* " +
-        "*" +
-        dailyrequiredGoldreport +
-        "*" +
-        "\n" +
-        "*WE Gold Today:* " +
-        "*" +
-        todaygold +
-        "*" +
-        "\n" +
-        "*Total WE Gold:* " +
-        "*" +
-        utdwegold +
-        "*" +
-        "\n" +
-        "*Total SA:* " +
-        "*" +
-        utdwegoldsa +
-        "*" +
-        "\n" +
-        "*--------------------------*" +
-        "\n" +
-        "*WE Pay Daily Required:* " +
-        "*" +
-        dailyrequiredWalletreport +
-        "*" +
-        "\n" +
-        "*WE Pay Today:* " +
-        "*" +
-        todaywallet +
-        "*" +
-        "\n" +
-        "*Total WE Pay:* " +
-        "*" +
-        utdwallet +
-        "*" +
-        "\n" +
-        "\n" +
-        "*Today Cash Box:* " +
-        "*" +
-        todaycash +
-        " LE*";
-    navigator.clipboard.writeText(summarizedreportValue);
+    navigator.clipboard.writeText(summarizedreportForSharing);
     document.getElementById("copy__3").disabled = true;
     document.getElementById("copy__3").innerHTML = "Copied";
 }
 function Share__1() {
-    salesreportValue = document.getElementById("salesreport").value.replace(/#/gi, "```");
     if (navigator.share) {
         navigator.share({
             title: "Sales Report",
-            text: salesreportValue,
+            text: salesreportForSharing,
         });
     } else {
-        message = window.encodeURIComponent(salesreportValue);
+        message = window.encodeURIComponent(salesreportForSharing);
         link = "https://api.whatsapp.com/send?text=";
         window.open(link + message);
     }
@@ -1540,90 +1722,13 @@ function Share__2() {
     Share__1();
 }
 function Share__3() {
-    summarizedreportValue =
-        "*Date:* " +
-        "*" +
-        date +
-        "*" +
-        "\n" +
-        "*Store:* " +
-        "*" +
-        storename +
-        "*" +
-        "\n" +
-        "*--------------------------*" +
-        "\n" +
-        "*Lines Daily Required:* " +
-        "*" +
-        dailyrequiredreport +
-        "*" +
-        "\n" +
-        "*Lines Today:* " +
-        "*" +
-        dailymobile +
-        "*" +
-        "\n" +
-        "*Total Lines:* " +
-        "*" +
-        utdmobile +
-        "*" +
-        "\n" +
-        "*Per:* " +
-        "*" +
-        vsMobile +
-        "%*" +
-        "\n" +
-        "*--------------------------*" +
-        "\n" +
-        "*WE Gold Daily Required:* " +
-        "*" +
-        dailyrequiredGoldreport +
-        "*" +
-        "\n" +
-        "*WE Gold Today:* " +
-        "*" +
-        todaygold +
-        "*" +
-        "\n" +
-        "*Total WE Gold:* " +
-        "*" +
-        utdwegold +
-        "*" +
-        "\n" +
-        "*Total SA:* " +
-        "*" +
-        utdwegoldsa +
-        "*" +
-        "\n" +
-        "*--------------------------*" +
-        "\n" +
-        "*WE Pay Daily Required:* " +
-        "*" +
-        dailyrequiredWalletreport +
-        "*" +
-        "\n" +
-        "*WE Pay Today:* " +
-        "*" +
-        todaywallet +
-        "*" +
-        "\n" +
-        "*Total WE Pay:* " +
-        "*" +
-        utdwallet +
-        "*" +
-        "\n" +
-        "\n" +
-        "*Today Cash Box:* " +
-        "*" +
-        todaycash +
-        " LE*";
     if (navigator.share) {
         navigator.share({
             title: "Summarized Report",
-            text: summarizedreportValue,
+            text: summarizedreportForSharing,
         });
     } else {
-        message = window.encodeURIComponent(summarizedreportValue);
+        message = window.encodeURIComponent(summarizedreportForSharing);
         link = "https://api.whatsapp.com/send?text=";
         window.open(link + message);
     }
@@ -1632,7 +1737,7 @@ function Print__1() {
     doc = window.open("", "_blank");
     doc.document.open();
     doc.document.write("<html lang=en><head><title>Sales Report</title><style>body {font-family: monospace; display: flex;} div {margin: 0px auto 0px auto;}</style></head><body onload=window.print();setTimeout(window.close,1000);><div>");
-    doc.document.write(document.getElementById("salesreport").value.replace(/  /gi, "&nbsp;&nbsp;").replace(/\n/gi, "<br>").replace(/#/gi, ""));
+    doc.document.write(document.getElementById("salesreport").value.replace(/  /gi, "&nbsp;&nbsp;").replace(/\n/gi, "<br>"));
     doc.document.write("</div></body></html>");
     doc.document.close();
 }
@@ -1640,7 +1745,7 @@ function Print__2() {
     doc = window.open("", "_blank");
     doc.document.open();
     doc.document.write(
-        "<html lang=en><head><title>Summarized Sales Report</title><style>body {font-family: monospace; display: flex;} div {margin: 0px auto 0px auto;}</style></head><body onload=window.print();setTimeout(window.close,1000);><div>"
+        "<html lang=en><head><title>Summarized Report</title><style>body {font-family: monospace; display: flex;} div {margin: 0px auto 0px auto;}</style></head><body onload=window.print();setTimeout(window.close,1000);><div>"
     );
     doc.document.write(document.getElementById("summarizedreport").value.replace(/  /gi, "&nbsp;&nbsp;").replace(/\n/gi, "<br>"));
     doc.document.write("</div></body></html>");

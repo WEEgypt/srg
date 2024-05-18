@@ -462,6 +462,92 @@ function GenerateSalesReport() {
         "VS: " +
         vsMobile +
         "%";
+    salesreportForSharing =
+        "Date: " +
+        date +
+        "\n" +
+        "Area: " +
+        areaname +
+        "\n" +
+        "-------------------------" +
+        "\n" +
+        "*Today Sales: " +
+        todaymobile +
+        " Mob*" +
+        "\n" +
+        "-------------------------" +
+        "\n" +
+        "*We Gold*" +
+        "\n" +
+        "Today: " +
+        todaywegold +
+        "\n" +
+        "TGT: " +
+        targetwegold +
+        " /Ach: " +
+        utdwegold +
+        " /VS: " +
+        vsGold +
+        "%" +
+        "\n" +
+        "-------------------------" +
+        "\n" +
+        "*ADSL*" +
+        "\n" +
+        "Today: " +
+        todayadsl +
+        "\n" +
+        "TGT: " +
+        targetadsl +
+        " /Ach: " +
+        utdadsl +
+        " /VS: " +
+        vsAdsl +
+        "%" +
+        "\n" +
+        "-------------------------" +
+        "\n" +
+        "*Fixed*" +
+        "\n" +
+        "Today: " +
+        todayfixed +
+        "\n" +
+        "TGT: " +
+        targetfixed +
+        " /Ach: " +
+        utdfixed +
+        " /VS: " +
+        vsFixed +
+        "%" +
+        "\n" +
+        "-------------------------" +
+        "\n" +
+        "*Wallet*" +
+        "\n" +
+        "Today: " +
+        todaywallet +
+        "\n" +
+        "TGT: " +
+        targetwallet +
+        " /Ach: " +
+        utdwallet +
+        " /VS: " +
+        vsWallet +
+        "%" +
+        "\n" +
+        "-------------------------" +
+        "\n" +
+        "*Total Activation:* " +
+        "*" +
+        utdmobile +
+        "*" +
+        "\n" +
+        "TGT: " +
+        targetmobile +
+        "\n" +
+        "VS: " +
+        vsMobile +
+        "%";
     document.getElementById("save__1").disabled = false;
     document.getElementById("save__2").disabled = false;
     document.getElementById("copy__1").disabled = false;
@@ -475,8 +561,7 @@ function GenerateSalesReport() {
     NextTransform();
 }
 function Copy__1() {
-    salesreportValue = document.getElementById("salesreport").value;
-    navigator.clipboard.writeText(salesreportValue);
+    navigator.clipboard.writeText(salesreportForSharing);
     document.getElementById("copy__1").disabled = true;
     document.getElementById("copy__2").disabled = true;
     document.getElementById("copy__1").innerHTML = "Copied";
@@ -486,14 +571,13 @@ function Copy__2() {
     Copy__1();
 }
 function Share__1() {
-    salesreportValue = document.getElementById("salesreport").value;
     if (navigator.share) {
         navigator.share({
             title: "Sales Report",
-            text: salesreportValue,
+            text: salesreportForSharing,
         });
     } else {
-        message = window.encodeURIComponent(salesreportValue);
+        message = window.encodeURIComponent(salesreportForSharing);
         link = "https://api.whatsapp.com/send?text=";
         window.open(link + message);
     }
