@@ -87,6 +87,7 @@ function NextTransform() {
     gsap.from("#achieved", { duration: 0.2, xPercent: 50, opacity: 0 });
     gsap.from("#today", { duration: 0.2, xPercent: 50, opacity: 0 });
     gsap.from("#report", { duration: 0.2, xPercent: 50, opacity: 0 });
+    gsap.from("#summarize", { duration: 0.2, xPercent: 50, opacity: 0 });
 }
 function BackTransform() {
     gsap.from("#multi", { duration: 0.2, xPercent: -50, opacity: 0 });
@@ -96,6 +97,7 @@ function BackTransform() {
     gsap.from("#achieved", { duration: 0.2, xPercent: -50, opacity: 0 });
     gsap.from("#today", { duration: 0.2, xPercent: -50, opacity: 0 });
     gsap.from("#report", { duration: 0.2, xPercent: -50, opacity: 0 });
+    gsap.from("#summarize", { duration: 0.2, xPercent: -50, opacity: 0 });
 }
 function Next__1() {
     if (document.getElementById("stores").value == "newstore") {
@@ -236,6 +238,17 @@ function Back__8() {
     Back__7();
     basic.style.display = "block";
     store.style.display = "none";
+}
+function Back__9() {
+    summarize.style.display = "none";
+    report.style.display = "block";
+    document.getElementById("copy__1").disabled = false;
+    document.getElementById("copy__2").disabled = false;
+    document.getElementById("copy__1").innerHTML = "Copy";
+    document.getElementById("copy__2").innerHTML = "Copy";
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    BackTransform();
 }
 function Continue() {
     let x = document.getElementById("stores").value || 1;
@@ -1021,6 +1034,18 @@ function GenerateSalesReport() {
     } else {
         dailyrequiredreport = dailyrequired;
     }
+    dailyrequiredGold = ~~Number(Math.ceil((targetwegold - utdwegold) / (daysinmonth - day))) || 0;
+    if (daysinmonth - day == "0" || dailyrequiredGold <= "0") {
+        dailyrequiredGoldreport = "-";
+    } else {
+        dailyrequiredGoldreport = dailyrequiredGold;
+    }
+    dailyrequiredWallet = ~~Number(Math.ceil((targetwallet - utdwallet) / (daysinmonth - day))) || 0;
+    if (daysinmonth - day == "0" || dailyrequiredWallet <= "0") {
+        dailyrequiredWalletreport = "-";
+    } else {
+        dailyrequiredWalletreport = dailyrequiredWallet;
+    }
     if (daysinmonth - day == "0") {
         reMobilereport = "-";
     } else {
@@ -1328,15 +1353,82 @@ function GenerateSalesReport() {
         " LE";
     document.getElementById("save__1").disabled = false;
     document.getElementById("save__2").disabled = false;
+    document.getElementById("save__3").disabled = false;
     document.getElementById("copy__1").disabled = false;
     document.getElementById("copy__2").disabled = false;
+    document.getElementById("copy__3").disabled = false;
     document.getElementById("save__1").innerHTML = "Save";
     document.getElementById("save__2").innerHTML = "Save";
+    document.getElementById("save__3").innerHTML = "Save";
     document.getElementById("copy__1").innerHTML = "Copy";
     document.getElementById("copy__2").innerHTML = "Copy";
+    document.getElementById("copy__3").innerHTML = "Copy";
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
     NextTransform();
+}
+function Summarize__1() {
+    report.style.display = "none";
+    summarize.style.display = "block";
+    document.getElementById("summarizedreport").value =
+        "Date: " +
+        date +
+        "\n" +
+        "Store: " +
+        storename +
+        "\n" +
+        "--------------------------" +
+        "\n" +
+        "Lines Daily Required: " +
+        dailyrequiredreport +
+        "\n" +
+        "Lines Today: " +
+        dailymobile +
+        "\n" +
+        "Total Lines: " +
+        utdmobile +
+        "\n" +
+        "Per: " +
+        vsMobile +
+        "%" +
+        "\n" +
+        "--------------------------" +
+        "\n" +
+        "WE Gold Daily Required: " +
+        dailyrequiredGoldreport +
+        "\n" +
+        "WE Gold Today: " +
+        todaygold +
+        "\n" +
+        "Total WE Gold: " +
+        utdwegold +
+        "\n" +
+        "Total SA: " +
+        utdwegoldsa +
+        "\n" +
+        "--------------------------" +
+        "\n" +
+        "WE Pay Daily Required: " +
+        dailyrequiredWalletreport +
+        "\n" +
+        "WE Pay Today: " +
+        todaywallet +
+        "\n" +
+        "Total WE Pay: " +
+        utdwallet +
+        "\n" +
+        "\n" +
+        "Today Cash Box: " +
+        todaycash +
+        " LE";
+    document.getElementById("copy__3").disabled = false;
+    document.getElementById("copy__3").innerHTML = "Copy";
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    NextTransform();
+}
+function Summarize__2() {
+    Summarize__1();
 }
 function Copy__1() {
     salesreportValue = document.getElementById("salesreport").value.replace(/#/gi, "```");
@@ -1348,6 +1440,12 @@ function Copy__1() {
 }
 function Copy__2() {
     Copy__1();
+}
+function Copy__3() {
+    summarizedreportValue = document.getElementById("summarizedreport").value.replace(/#/gi, "```");
+    navigator.clipboard.writeText(summarizedreportValue);
+    document.getElementById("copy__3").disabled = true;
+    document.getElementById("copy__3").innerHTML = "Copied";
 }
 function Share__1() {
     salesreportValue = document.getElementById("salesreport").value.replace(/#/gi, "```");
@@ -1364,6 +1462,19 @@ function Share__1() {
 }
 function Share__2() {
     Share__1();
+}
+function Share__3() {
+    summarizedreportValue = document.getElementById("summarizedreport").value.replace(/#/gi, "```");
+    if (navigator.share) {
+        navigator.share({
+            title: "Summarized Report",
+            text: summarizedreportValue,
+        });
+    } else {
+        message = window.encodeURIComponent(document.getElementById("summarizedreport").value);
+        link = "https://api.whatsapp.com/send?text=";
+        window.open(link + message);
+    }
 }
 function Save__1() {
     let x = parseInt(localStorage.getItem("currentStore"));
@@ -1392,8 +1503,10 @@ function Save__1() {
     localStorage.setItem("targetwallet.store." + x, document.getElementById("targetwallet").value);
     document.getElementById("save__1").disabled = true;
     document.getElementById("save__2").disabled = true;
+    document.getElementById("save__3").disabled = true;
     document.getElementById("save__1").innerHTML = "Saved";
     document.getElementById("save__2").innerHTML = "Saved";
+    document.getElementById("save__3").innerHTML = "Saved";
     localStorage.setItem("storeRestore", "true");
     localStorage.setItem("stores", sessionStorage.getItem("stores"));
     localStorage.setItem("selectedStore", localStorage.getItem("currentStore"));
@@ -1401,11 +1514,24 @@ function Save__1() {
 function Save__2() {
     Save__1();
 }
+function Save__3() {
+    Save__1();
+}
 function Print__1() {
     doc = window.open("", "_blank");
     doc.document.open();
     doc.document.write("<html lang=en><head><title>Sales Report</title><style>body {font-family: monospace; display: flex;} div {margin: 0px auto 0px auto;}</style></head><body onload=window.print();setTimeout(window.close,1000);><div>");
     doc.document.write(document.getElementById("salesreport").value.replace(/  /gi, "&nbsp;&nbsp;").replace(/\n/gi, "<br>").replace(/#/gi, ""));
+    doc.document.write("</div></body></html>");
+    doc.document.close();
+}
+function Print__2() {
+    doc = window.open("", "_blank");
+    doc.document.open();
+    doc.document.write(
+        "<html lang=en><head><title>Summarized Sales Report</title><style>body {font-family: monospace; display: flex;} div {margin: 0px auto 0px auto;}</style></head><body onload=window.print();setTimeout(window.close,1000);><div>"
+    );
+    doc.document.write(document.getElementById("summarizedreport").value.replace(/  /gi, "&nbsp;&nbsp;").replace(/\n/gi, "<br>").replace(/#/gi, ""));
     doc.document.write("</div></body></html>");
     doc.document.close();
 }
