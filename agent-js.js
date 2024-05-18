@@ -1164,7 +1164,7 @@ function Share__1() {
             text: salesreportValue,
         });
     } else {
-        message = window.encodeURIComponent(document.getElementById("salesreport").value);
+        message = window.encodeURIComponent(salesreportValue);
         link = "https://api.whatsapp.com/send?text=";
         window.open(link + message);
     }

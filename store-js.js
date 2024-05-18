@@ -1455,7 +1455,7 @@ function Share__1() {
             text: salesreportValue,
         });
     } else {
-        message = window.encodeURIComponent(document.getElementById("salesreport").value);
+        message = window.encodeURIComponent(salesreportValue);
         link = "https://api.whatsapp.com/send?text=";
         window.open(link + message);
     }
@@ -1471,7 +1471,7 @@ function Share__3() {
             text: summarizedreportValue,
         });
     } else {
-        message = window.encodeURIComponent(document.getElementById("summarizedreport").value);
+        message = window.encodeURIComponent(summarizedreportValue);
         link = "https://api.whatsapp.com/send?text=";
         window.open(link + message);
     }
