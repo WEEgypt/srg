@@ -860,8 +860,10 @@ function GenerateSalesReport() {
     todaysales = paygreport + datareport + superkixreport + tazbeetreport + weclubreport + wemixreport + goldreport + adslreport + fixedreport + walletreport;
     if (todaysales == "") {
         todaysalesdetails = "";
+        todaysalesdetailsForSharing = "";
     } else {
-        todaysalesdetails = todaysales + "\n" + "```--------------------------```";
+        todaysalesdetails = todaysales + "\n" + "--------------------------";
+        todaysalesdetailsForSharing = todaysales + "\n" + "```--------------------------```";
     }
     dailyrequired = ~~Number(Math.ceil((targetmobile - utdmobile) / (daysinmonth - day))) || 0;
     if (daysinmonth - day == "0" || dailyrequired <= "0") {
@@ -1141,7 +1143,7 @@ function GenerateSalesReport() {
         yourname +
         "\n" +
         "```--------------------------```" +
-        todaysalesdetails +
+        todaysalesdetailsForSharing +
         "\n" +
         "Today Sales: " +
         +dailymobile +
