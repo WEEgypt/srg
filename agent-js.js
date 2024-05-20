@@ -861,7 +861,7 @@ function GenerateSalesReport() {
     if (todaysales == "") {
         todaysalesdetails = "";
     } else {
-        todaysalesdetails = todaysales + "\n" + "--------------------------";
+        todaysalesdetails = todaysales + "\n" + "```--------------------------```";
     }
     dailyrequired = ~~Number(Math.ceil((targetmobile - utdmobile) / (daysinmonth - day))) || 0;
     if (daysinmonth - day == "0" || dailyrequired <= "0") {
@@ -1140,7 +1140,7 @@ function GenerateSalesReport() {
         "Name: " +
         yourname +
         "\n" +
-        "--------------------------" +
+        "```--------------------------```" +
         todaysalesdetails +
         "\n" +
         "Today Sales: " +
@@ -1149,7 +1149,7 @@ function GenerateSalesReport() {
         todayadslfordailysales +
         todayfixedfordailysales +
         "\n" +
-        "--------------------------" +
+        "```--------------------------```" +
         "\n" +
         "Daily Required: " +
         dailyrequiredreport +
