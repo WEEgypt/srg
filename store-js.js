@@ -1176,7 +1176,7 @@ function GenerateSalesReport() {
         "Store: " +
         storename +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "PAYG: " +
         todaypayg +
@@ -1208,7 +1208,7 @@ function GenerateSalesReport() {
         "Wallet: " +
         todaywallet +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "Today Sales: " +
         +dailymobile +
@@ -1216,7 +1216,7 @@ function GenerateSalesReport() {
         todayadslfordailysales +
         todayfixedfordailysales +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "Daily Required: " +
         dailyrequiredreport +
@@ -1224,7 +1224,7 @@ function GenerateSalesReport() {
         "RE: " +
         reMobilereport +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "We Gold SA: " +
         vsGoldSa +
@@ -1234,7 +1234,7 @@ function GenerateSalesReport() {
         vsAdslHt +
         "%" +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "Product:   " +
         targetHeader +
@@ -1242,7 +1242,7 @@ function GenerateSalesReport() {
         achievedHeader +
         " VS" +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "PAYG   :   " +
         targetpaygAdjusted +
@@ -1324,7 +1324,7 @@ function GenerateSalesReport() {
         vsWallet +
         "%" +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "Total  :   " +
         targetmobileAdjusted +
@@ -1334,7 +1334,7 @@ function GenerateSalesReport() {
         vsMobile +
         "%" +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "ADSL Bills: " +
         todayadslbills +
@@ -1358,7 +1358,7 @@ function GenerateSalesReport() {
         "Store: " +
         storename +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "PAYG: " +
         todaypayg +
@@ -1390,7 +1390,7 @@ function GenerateSalesReport() {
         "Wallet: " +
         todaywallet +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "Today Sales: " +
         +dailymobile +
@@ -1398,7 +1398,7 @@ function GenerateSalesReport() {
         todayadslfordailysales +
         todayfixedfordailysales +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "Daily Required: " +
         dailyrequiredreport +
@@ -1406,7 +1406,7 @@ function GenerateSalesReport() {
         "RE: " +
         reMobilereport +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "We Gold SA: " +
         vsGoldSa +
@@ -1416,7 +1416,7 @@ function GenerateSalesReport() {
         vsAdslHt +
         "%" +
         "\n" +
-        "```--------------------------" +
+        "```---------------------------" +
         "\n" +
         "Product:   " +
         targetHeader +
@@ -1424,7 +1424,7 @@ function GenerateSalesReport() {
         achievedHeader +
         " VS" +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "PAYG   :   " +
         targetpaygAdjusted +
@@ -1506,7 +1506,7 @@ function GenerateSalesReport() {
         vsWallet +
         "%" +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "Total  :   " +
         targetmobileAdjusted +
@@ -1516,7 +1516,7 @@ function GenerateSalesReport() {
         vsMobile +
         "%" +
         "\n" +
-        "--------------------------```" +
+        "---------------------------```" +
         "\n" +
         "ADSL Bills: " +
         todayadslbills +
@@ -1559,7 +1559,7 @@ function Summarize__1() {
         "Store: " +
         storename +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "Lines Daily Required: " +
         dailyrequiredreport +
@@ -1574,7 +1574,7 @@ function Summarize__1() {
         vsMobile +
         "%" +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "WE Gold Daily Required: " +
         dailyrequiredGoldreport +
@@ -1588,7 +1588,7 @@ function Summarize__1() {
         "Total SA: " +
         utdwegoldsa +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "WE Pay Daily Required: " +
         dailyrequiredWalletreport +
@@ -1599,7 +1599,7 @@ function Summarize__1() {
         "Total WE Pay: " +
         utdwallet +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "Today Cash Box: " +
         todaycash +
@@ -1615,7 +1615,7 @@ function Summarize__1() {
         storename +
         "*" +
         "\n" +
-        "*--------------------------*" +
+        "*---------------------------*" +
         "\n" +
         "*Lines Daily Required:* " +
         "*" +
@@ -1637,7 +1637,7 @@ function Summarize__1() {
         vsMobile +
         "%*" +
         "\n" +
-        "*--------------------------*" +
+        "*---------------------------*" +
         "\n" +
         "*WE Gold Daily Required:* " +
         "*" +
@@ -1659,7 +1659,7 @@ function Summarize__1() {
         utdwegoldsa +
         "*" +
         "\n" +
-        "*--------------------------*" +
+        "*---------------------------*" +
         "\n" +
         "*WE Pay Daily Required:* " +
         "*" +
@@ -1676,7 +1676,7 @@ function Summarize__1() {
         utdwallet +
         "*" +
         "\n" +
-        "*--------------------------*" +
+        "*---------------------------*" +
         "\n" +
         "*Today Cash Box:* " +
         "*" +

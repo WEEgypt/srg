@@ -861,7 +861,7 @@ function GenerateSalesReport() {
     if (todaysales == "") {
         todaysalesdetails = "";
     } else {
-        todaysalesdetails = todaysales + "\n" + "--------------------------";
+        todaysalesdetails = todaysales + "\n" + "---------------------------";
     }
     dailyrequired = ~~Number(Math.ceil((targetmobile - utdmobile) / (daysinmonth - day))) || 0;
     if (daysinmonth - day == "0" || dailyrequired <= "0") {
@@ -999,7 +999,7 @@ function GenerateSalesReport() {
         "Name: " +
         yourname +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         todaysalesdetails +
         "\n" +
         "Today Sales: " +
@@ -1008,7 +1008,7 @@ function GenerateSalesReport() {
         todayadslfordailysales +
         todayfixedfordailysales +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "Daily Required: " +
         dailyrequiredreport +
@@ -1016,7 +1016,7 @@ function GenerateSalesReport() {
         "RE: " +
         reMobilereport +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "Product:   " +
         targetHeader +
@@ -1024,7 +1024,7 @@ function GenerateSalesReport() {
         achievedHeader +
         " VS" +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "PAYG   :   " +
         targetpaygAdjusted +
@@ -1106,7 +1106,7 @@ function GenerateSalesReport() {
         vsWallet +
         "%" +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "Total  :   " +
         targetmobileAdjusted +
@@ -1116,7 +1116,7 @@ function GenerateSalesReport() {
         vsMobile +
         "%" +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "ADSL Bills: " +
         todayadslbills +
@@ -1140,7 +1140,7 @@ function GenerateSalesReport() {
         "Name: " +
         yourname +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         todaysalesdetails +
         "\n" +
         "Today Sales: " +
@@ -1149,7 +1149,7 @@ function GenerateSalesReport() {
         todayadslfordailysales +
         todayfixedfordailysales +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "Daily Required: " +
         dailyrequiredreport +
@@ -1157,7 +1157,7 @@ function GenerateSalesReport() {
         "RE: " +
         reMobilereport +
         "\n" +
-        "```--------------------------" +
+        "```---------------------------" +
         "\n" +
         "Product:   " +
         targetHeader +
@@ -1165,7 +1165,7 @@ function GenerateSalesReport() {
         achievedHeader +
         " VS" +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "PAYG   :   " +
         targetpaygAdjusted +
@@ -1247,7 +1247,7 @@ function GenerateSalesReport() {
         vsWallet +
         "%" +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "Total  :   " +
         targetmobileAdjusted +
@@ -1257,7 +1257,7 @@ function GenerateSalesReport() {
         vsMobile +
         "%" +
         "\n" +
-        "--------------------------```" +
+        "---------------------------```" +
         "\n" +
         "ADSL Bills: " +
         todayadslbills +
