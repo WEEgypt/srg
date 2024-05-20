@@ -1559,7 +1559,7 @@ function Summarize__1() {
         "Store: " +
         storename +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "Lines Daily Required: " +
         dailyrequiredreport +
@@ -1574,7 +1574,7 @@ function Summarize__1() {
         vsMobile +
         "%" +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "WE Gold Daily Required: " +
         dailyrequiredGoldreport +
@@ -1588,7 +1588,7 @@ function Summarize__1() {
         "Total SA: " +
         utdwegoldsa +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "WE Pay Daily Required: " +
         dailyrequiredWalletreport +
@@ -1599,7 +1599,7 @@ function Summarize__1() {
         "Total WE Pay: " +
         utdwallet +
         "\n" +
-        "--------------------------" +
+        "---------------------------" +
         "\n" +
         "Today Cash Box: " +
         todaycash +

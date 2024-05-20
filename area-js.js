@@ -385,13 +385,13 @@ function GenerateSalesReport() {
         "Area: " +
         areaname +
         "\n" +
-        "-------------------------" +
+        "---------------------------" +
         "\n" +
         "Today Sales: " +
         todaymobile +
         " Mob" +
         "\n" +
-        "-------------------------" +
+        "---------------------------" +
         "\n" +
         "We Gold" +
         "\n" +
@@ -406,7 +406,7 @@ function GenerateSalesReport() {
         vsGold +
         "%" +
         "\n" +
-        "-------------------------" +
+        "---------------------------" +
         "\n" +
         "ADSL" +
         "\n" +
@@ -421,7 +421,7 @@ function GenerateSalesReport() {
         vsAdsl +
         "%" +
         "\n" +
-        "-------------------------" +
+        "---------------------------" +
         "\n" +
         "Fixed" +
         "\n" +
@@ -436,7 +436,7 @@ function GenerateSalesReport() {
         vsFixed +
         "%" +
         "\n" +
-        "-------------------------" +
+        "---------------------------" +
         "\n" +
         "Wallet" +
         "\n" +
@@ -451,7 +451,7 @@ function GenerateSalesReport() {
         vsWallet +
         "%" +
         "\n" +
-        "-------------------------" +
+        "---------------------------" +
         "\n" +
         "Total Activation: " +
         utdmobile +
