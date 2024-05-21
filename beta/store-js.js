@@ -825,265 +825,351 @@ function GenerateSalesReport() {
         });
         return array;
     }
-        todaypaygAdjusted = todaysalesArrayAdjusted[0];
-        todaydataAdjusted = todaysalesArrayAdjusted[1];
-        todaysuperkix20Adjusted = todaysalesArrayAdjusted[2];
-        todaysuperkix25Adjusted = todaysalesArrayAdjusted[3];
-        todaysuperkix35Adjusted = todaysalesArrayAdjusted[4];
-        todaysuperkix45Adjusted = todaysalesArrayAdjusted[5];
-        todaysuperkix65Adjusted = todaysalesArrayAdjusted[6];
-        todaysuperkix80Adjusted = todaysalesArrayAdjusted[7];
-        todaysuperkix100Adjusted = todaysalesArrayAdjusted[8];
-        todaytazbeet30Adjusted = todaysalesArrayAdjusted[9];
-        todaytazbeet40Adjusted = todaysalesArrayAdjusted[10];
-        todaytazbeet70Adjusted = todaysalesArrayAdjusted[11];
-        todaytazbeet110Adjusted = todaysalesArrayAdjusted[12];
-        todayweclub25Adjusted = todaysalesArrayAdjusted[13];
-        todayweclub40Adjusted = todaysalesArrayAdjusted[14];
-        todayweclub65Adjusted = todaysalesArrayAdjusted[15];
-        todayweclub100Adjusted = todaysalesArrayAdjusted[16];
-        todaywemix165Adjusted = todaysalesArrayAdjusted[17];
-        todaywemix240Adjusted = todaysalesArrayAdjusted[18];
-        todaygold200fmcAdjusted = todaysalesArrayAdjusted[19];
-        todaygold400fmcAdjusted = todaysalesArrayAdjusted[20];
-        todaygold600fmcAdjusted = todaysalesArrayAdjusted[21];
-        todaygold800fmcAdjusted = todaysalesArrayAdjusted[22];
-        todaygold1000fmcAdjusted = todaysalesArrayAdjusted[23];
-        todaygold1500fmcAdjusted = todaysalesArrayAdjusted[24];
-        todaygold200saAdjusted = todaysalesArrayAdjusted[25];
-        todaygold400saAdjusted = todaysalesArrayAdjusted[26];
-        todaygold600saAdjusted = todaysalesArrayAdjusted[27];
-        todaygold800saAdjusted = todaysalesArrayAdjusted[28];
-        todaygold1000saAdjusted = todaysalesArrayAdjusted[29];
-        todaygold1500saAdjusted = todaysalesArrayAdjusted[30];
-        todayadsl140Adjusted = todaysalesArrayAdjusted[31];
-        todayadsl200Adjusted = todaysalesArrayAdjusted[32];
-        todayadsl250Adjusted = todaysalesArrayAdjusted[33];
-        todayadsl300Adjusted = todaysalesArrayAdjusted[34];
-        todayadsl400Adjusted = todaysalesArrayAdjusted[35];
-        todayadsl500Adjusted = todaysalesArrayAdjusted[36];
-        todayadsl600Adjusted = todaysalesArrayAdjusted[37];
-        todayadsl1000Adjusted = todaysalesArrayAdjusted[38];
-        todayadsl1500Adjusted = todaysalesArrayAdjusted[39];
-        todayadslannualAdjusted = todaysalesArrayAdjusted[40];
-        todayfixedAdjusted = todaysalesArrayAdjusted[41];
-        todaywalletAdjusted = todaysalesArrayAdjusted[42];
+    todaypaygAdjusted = todaysalesArrayAdjusted[0];
+    todaydataAdjusted = todaysalesArrayAdjusted[1];
+    todaysuperkix20Adjusted = todaysalesArrayAdjusted[2];
+    todaysuperkix25Adjusted = todaysalesArrayAdjusted[3];
+    todaysuperkix35Adjusted = todaysalesArrayAdjusted[4];
+    todaysuperkix45Adjusted = todaysalesArrayAdjusted[5];
+    todaysuperkix65Adjusted = todaysalesArrayAdjusted[6];
+    todaysuperkix80Adjusted = todaysalesArrayAdjusted[7];
+    todaysuperkix100Adjusted = todaysalesArrayAdjusted[8];
+    todaytazbeet30Adjusted = todaysalesArrayAdjusted[9];
+    todaytazbeet40Adjusted = todaysalesArrayAdjusted[10];
+    todaytazbeet70Adjusted = todaysalesArrayAdjusted[11];
+    todaytazbeet110Adjusted = todaysalesArrayAdjusted[12];
+    todayweclub25Adjusted = todaysalesArrayAdjusted[13];
+    todayweclub40Adjusted = todaysalesArrayAdjusted[14];
+    todayweclub65Adjusted = todaysalesArrayAdjusted[15];
+    todayweclub100Adjusted = todaysalesArrayAdjusted[16];
+    todaywemix165Adjusted = todaysalesArrayAdjusted[17];
+    todaywemix240Adjusted = todaysalesArrayAdjusted[18];
+    todaygold200fmcAdjusted = todaysalesArrayAdjusted[19];
+    todaygold400fmcAdjusted = todaysalesArrayAdjusted[20];
+    todaygold600fmcAdjusted = todaysalesArrayAdjusted[21];
+    todaygold800fmcAdjusted = todaysalesArrayAdjusted[22];
+    todaygold1000fmcAdjusted = todaysalesArrayAdjusted[23];
+    todaygold1500fmcAdjusted = todaysalesArrayAdjusted[24];
+    todaygold200saAdjusted = todaysalesArrayAdjusted[25];
+    todaygold400saAdjusted = todaysalesArrayAdjusted[26];
+    todaygold600saAdjusted = todaysalesArrayAdjusted[27];
+    todaygold800saAdjusted = todaysalesArrayAdjusted[28];
+    todaygold1000saAdjusted = todaysalesArrayAdjusted[29];
+    todaygold1500saAdjusted = todaysalesArrayAdjusted[30];
+    todayadsl140Adjusted = todaysalesArrayAdjusted[31];
+    todayadsl200Adjusted = todaysalesArrayAdjusted[32];
+    todayadsl250Adjusted = todaysalesArrayAdjusted[33];
+    todayadsl300Adjusted = todaysalesArrayAdjusted[34];
+    todayadsl400Adjusted = todaysalesArrayAdjusted[35];
+    todayadsl500Adjusted = todaysalesArrayAdjusted[36];
+    todayadsl600Adjusted = todaysalesArrayAdjusted[37];
+    todayadsl1000Adjusted = todaysalesArrayAdjusted[38];
+    todayadsl1500Adjusted = todaysalesArrayAdjusted[39];
+    todayadslannualAdjusted = todaysalesArrayAdjusted[40];
+    todayfixedAdjusted = todaysalesArrayAdjusted[41];
+    todaywalletAdjusted = todaysalesArrayAdjusted[42];
     if (todaypayg == "0") {
         todaypaygreport = "";
+        todaypaygreportForSharing = "";
     } else {
         todaypaygreport = "\n" + todaypaygAdjusted + " * PAYG";
+        todaypaygreportForSharing = "\n" + "```" + todaypaygAdjusted + "```" + " * PAYG";
     }
     if (todaydata == "0") {
         todaydatareport = "";
+        todaydatareportForSharing = "";
     } else {
         todaydatareport = "\n" + todaydataAdjusted + " * Data";
+        todaydatareportForSharing = "\n" + "```" + todaydataAdjusted + "```" + " * Data";
     }
     if (todaysuperkix20 == "0") {
         todaysuperkix20report = "";
+        todaysuperkix20reportForSharing = "";
     } else {
         todaysuperkix20report = "\n" + todaysuperkix20Adjusted + " * Kix 20";
+        todaysuperkix20reportForSharing = "\n" + "```" + todaysuperkix20Adjusted + "```" + " * Kix 20";
     }
     if (todaysuperkix25 == "0") {
         todaysuperkix25report = "";
+        todaysuperkix25reportForSharing = "";
     } else {
         todaysuperkix25report = "\n" + todaysuperkix25Adjusted + " * Kix 25";
+        todaysuperkix25reportForSharing = "\n" + "```" + todaysuperkix25Adjusted + "```" + " * Kix 25";
     }
     if (todaysuperkix35 == "0") {
         todaysuperkix35report = "";
+        todaysuperkix35reportForSharing = "";
     } else {
         todaysuperkix35report = "\n" + todaysuperkix35Adjusted + " * Kix 35";
+        todaysuperkix35reportForSharing = "\n" + "```" + todaysuperkix35Adjusted + "```" + " * Kix 35";
     }
     if (todaysuperkix45 == "0") {
         todaysuperkix45report = "";
+        todaysuperkix45reportForSharing = "";
     } else {
         todaysuperkix45report = "\n" + todaysuperkix45Adjusted + " * Kix 45";
+        todaysuperkix45reportForSharing = "\n" + "```" + todaysuperkix45Adjusted + "```" + " * Kix 45";
     }
     if (todaysuperkix65 == "0") {
         todaysuperkix65report = "";
+        todaysuperkix65reportForSharing = "";
     } else {
         todaysuperkix65report = "\n" + todaysuperkix65Adjusted + " * Kix 65";
+        todaysuperkix65reportForSharing = "\n" + "```" + todaysuperkix65Adjusted + "```" + " * Kix 65";
     }
     if (todaysuperkix80 == "0") {
         todaysuperkix80report = "";
+        todaysuperkix80reportForSharing = "";
     } else {
         todaysuperkix80report = "\n" + todaysuperkix80Adjusted + " * Kix 80";
+        todaysuperkix80reportForSharing = "\n" + "```" + todaysuperkix80Adjusted + "```" + " * Kix 80";
     }
     if (todaysuperkix100 == "0") {
         todaysuperkix100report = "";
+        todaysuperkix100reportForSharing = "";
     } else {
         todaysuperkix100report = "\n" + todaysuperkix100Adjusted + " * Kix 100";
+        todaysuperkix100reportForSharing = "\n" + "```" + todaysuperkix100Adjusted + "```" + " * Kix 100";
     }
     if (todaytazbeet30 == "0") {
         todaytazbeet30report = "";
+        todaytazbeet30reportForSharing = "";
     } else {
         todaytazbeet30report = "\n" + todaytazbeet30Adjusted + " * Tazbeet 30";
+        todaytazbeet30reportForSharing = "\n" + "```" + todaytazbeet30Adjusted + "```" + " * Tazbeet 30";
     }
     if (todaytazbeet40 == "0") {
         todaytazbeet40report = "";
+        todaytazbeet40reportForSharing = "";
     } else {
         todaytazbeet40report = "\n" + todaytazbeet40Adjusted + " * Tazbeet 40";
+        todaytazbeet40reportForSharing = "\n" + "```" + todaytazbeet40Adjusted + "```" + " * Tazbeet 40";
     }
     if (todaytazbeet70 == "0") {
         todaytazbeet70report = "";
+        todaytazbeet70reportForSharing = "";
     } else {
         todaytazbeet70report = "\n" + todaytazbeet70Adjusted + " * Tazbeet 70";
+        todaytazbeet70reportForSharing = "\n" + "```" + todaytazbeet70Adjusted + "```" + " * Tazbeet 70";
     }
     if (todaytazbeet110 == "0") {
         todaytazbeet110report = "";
+        todaytazbeet110reportForSharing = "";
     } else {
         todaytazbeet110report = "\n" + todaytazbeet110Adjusted + " * Tazbeet 110";
+        todaytazbeet110reportForSharing = "\n" + "```" + todaytazbeet110Adjusted + "```" + " * Tazbeet 110";
     }
     if (todayweclub25 == "0") {
         todayweclub25report = "";
+        todayweclub25reportForSharing = "";
     } else {
         todayweclub25report = "\n" + todayweclub25Adjusted + " * We Club 25";
+        todayweclub25reportForSharing = "\n" + "```" + todayweclub25Adjusted + "```" + " * We Club 25";
     }
     if (todayweclub40 == "0") {
         todayweclub40report = "";
+        todayweclub40reportForSharing = "";
     } else {
         todayweclub40report = "\n" + todayweclub40Adjusted + " * We Club 40";
+        todayweclub40reportForSharing = "\n" + "```" + todayweclub40Adjusted + "```" + " * We Club 40";
     }
     if (todayweclub65 == "0") {
         todayweclub65report = "";
+        todayweclub65reportForSharing = "";
     } else {
         todayweclub65report = "\n" + todayweclub65Adjusted + " * We Club 65";
+        todayweclub65reportForSharing = "\n" + "```" + todayweclub65Adjusted + "```" + " * We Club 65";
     }
     if (todayweclub100 == "0") {
         todayweclub100report = "";
+        todayweclub100reportForSharing = "";
     } else {
         todayweclub100report = "\n" + todayweclub100Adjusted + " * We Club 100";
+        todayweclub100reportForSharing = "\n" + "```" + todayweclub100Adjusted + "```" + " * We Club 100";
     }
     if (todaywemix165 == "0") {
         todaywemix165report = "";
+        todaywemix165reportForSharing = "";
     } else {
         todaywemix165report = "\n" + todaywemix165Adjusted + " * We Mix 165";
+        todaywemix165reportForSharing = "\n" + "```" + todaywemix165Adjusted + "```" + " * We Mix 165";
     }
     if (todaywemix240 == "0") {
         todaywemix240report = "";
+        todaywemix240reportForSharing = "";
     } else {
         todaywemix240report = "\n" + todaywemix240Adjusted + " * We Mix 240";
+        todaywemix240reportForSharing = "\n" + "```" + todaywemix240Adjusted + "```" + " * We Mix 240";
     }
     if (todaygold200fmc == "0") {
         todaygold200fmcreport = "";
+        todaygold200fmcreportForSharing = "";
     } else {
         todaygold200fmcreport = "\n" + todaygold200fmcAdjusted + " * We Gold 200 FMC";
+        todaygold200fmcreportForSharing = "\n" + "```" + todaygold200fmcAdjusted + "```" + " * We Gold 200 FMC";
     }
     if (todaygold400fmc == "0") {
         todaygold400fmcreport = "";
+        todaygold400fmcreportForSharing = "";
     } else {
         todaygold400fmcreport = "\n" + todaygold400fmcAdjusted + " * We Gold 400 FMC";
+        todaygold400fmcreportForSharing = "\n" + "```" + todaygold400fmcAdjusted + "```" + " * We Gold 400 FMC";
     }
     if (todaygold600fmc == "0") {
         todaygold600fmcreport = "";
+        todaygold600fmcreportForSharing = "";
     } else {
         todaygold600fmcreport = "\n" + todaygold600fmcAdjusted + " * We Gold 600 FMC";
+        todaygold600fmcreportForSharing = "\n" + "```" + todaygold600fmcAdjusted + "```" + " * We Gold 600 FMC";
     }
     if (todaygold800fmc == "0") {
         todaygold800fmcreport = "";
+        todaygold800fmcreportForSharing = "";
     } else {
         todaygold800fmcreport = "\n" + todaygold800fmcAdjusted + " * We Gold 800 FMC";
+        todaygold800fmcreportForSharing = "\n" + "```" + todaygold800fmcAdjusted + "```" + " * We Gold 800 FMC";
     }
     if (todaygold1000fmc == "0") {
         todaygold1000fmcreport = "";
+        todaygold1000fmcreportForSharing = "";
     } else {
         todaygold1000fmcreport = "\n" + todaygold1000fmcAdjusted + " * We Gold 1000 FMC";
+        todaygold1000fmcreportForSharing = "\n" + "```" + todaygold1000fmcAdjusted + "```" + " * We Gold 1000 FMC";
     }
     if (todaygold1500fmc == "0") {
         todaygold1500fmcreport = "";
+        todaygold1500fmcreportForSharing = "";
     } else {
         todaygold1500fmcreport = "\n" + todaygold1500fmcAdjusted + " * We Gold 1500 FMC";
+        todaygold1500fmcreportForSharing = "\n" + "```" + todaygold1500fmcAdjusted + "```" + " * We Gold 1500 FMC";
     }
     if (todaygold200sa == "0") {
         todaygold200sareport = "";
+        todaygold200sareportForSharing = "";
     } else {
         todaygold200sareport = "\n" + todaygold200saAdjusted + " * We Gold 200 SA";
+        todaygold200sareportForSharing = "\n" + "```" + todaygold200saAdjusted + "```" + " * We Gold 200 SA";
     }
     if (todaygold400sa == "0") {
         todaygold400sareport = "";
+        todaygold400sareportForSharing = "";
     } else {
         todaygold400sareport = "\n" + todaygold400saAdjusted + " * We Gold 400 SA";
+        todaygold400sareportForSharing = "\n" + "```" + todaygold400saAdjusted + "```" + " * We Gold 400 SA";
     }
     if (todaygold600sa == "0") {
         todaygold600sareport = "";
+        todaygold600sareportForSharing = "";
     } else {
         todaygold600sareport = "\n" + todaygold600saAdjusted + " * We Gold 600 SA";
+        todaygold600sareportForSharing = "\n" + "```" + todaygold600saAdjusted + "```" + " * We Gold 600 SA";
     }
     if (todaygold800sa == "0") {
         todaygold800sareport = "";
+        todaygold800sareportForSharing = "";
     } else {
         todaygold800sareport = "\n" + todaygold800saAdjusted + " * We Gold 800 SA";
+        todaygold800sareportForSharing = "\n" + "```" + todaygold800saAdjusted + "```" + " * We Gold 800 SA";
     }
     if (todaygold1000sa == "0") {
         todaygold1000sareport = "";
+        todaygold1000sareportForSharing = "";
     } else {
         todaygold1000sareport = "\n" + todaygold1000saAdjusted + " * We Gold 1000 SA";
+        todaygold1000sareportForSharing = "\n" + "```" + todaygold1000saAdjusted + "```" + " * We Gold 1000 SA";
     }
     if (todaygold1500sa == "0") {
         todaygold1500sareport = "";
+        todaygold1500sareportForSharing = "";
     } else {
         todaygold1500sareport = "\n" + todaygold1500saAdjusted + " * We Gold 1500 SA";
+        todaygold1500sareportForSharing = "\n" + "```" + todaygold1500saAdjusted + "```" + " * We Gold 1500 SA";
     }
     if (todayadsl140 == "0") {
         todayadsl140report = "";
+        todayadsl140reportForSharing = "";
     } else {
         todayadsl140report = "\n" + todayadsl140Adjusted + " * ADSL 140GB";
+        todayadsl140reportForSharing = "\n" + "```" + todayadsl140Adjusted + "```" + " * ADSL 140GB";
     }
     if (todayadsl200 == "0") {
         todayadsl200report = "";
+        todayadsl200reportForSharing = "";
     } else {
         todayadsl200report = "\n" + todayadsl200Adjusted + " * ADSL 200GB";
+        todayadsl200reportForSharing = "\n" + "```" + todayadsl200Adjusted + "```" + " * ADSL 200GB";
     }
     if (todayadsl250 == "0") {
         todayadsl250report = "";
+        todayadsl250reportForSharing = "";
     } else {
         todayadsl250report = "\n" + todayadsl250Adjusted + " * ADSL 250GB";
+        todayadsl250reportForSharing = "\n" + "```" + todayadsl250Adjusted + "```" + " * ADSL 250GB";
     }
     if (todayadsl300 == "0") {
         todayadsl300report = "";
+        todayadsl300reportForSharing = "";
     } else {
         todayadsl300report = "\n" + todayadsl300Adjusted + " * ADSL 300GB";
+        todayadsl300reportForSharing = "\n" + "```" + todayadsl300Adjusted + "```" + " * ADSL 300GB";
     }
     if (todayadsl400 == "0") {
         todayadsl400report = "";
+        todayadsl400reportForSharing = "";
     } else {
         todayadsl400report = "\n" + todayadsl400Adjusted + " * ADSL 400GB";
+        todayadsl400reportForSharing = "\n" + "```" + todayadsl400Adjusted + "```" + " * ADSL 400GB";
     }
     if (todayadsl500 == "0") {
         todayadsl500report = "";
+        todayadsl500reportForSharing = "";
     } else {
         todayadsl500report = "\n" + todayadsl500Adjusted + " * ADSL 500GB";
+        todayadsl500reportForSharing = "\n" + "```" + todayadsl500Adjusted + "```" + " * ADSL 500GB";
     }
     if (todayadsl600 == "0") {
         todayadsl600report = "";
+        todayadsl600reportForSharing = "";
     } else {
         todayadsl600report = "\n" + todayadsl600Adjusted + " * ADSL 600GB";
+        todayadsl600reportForSharing = "\n" + "```" + todayadsl600Adjusted + "```" + " * ADSL 600GB";
     }
     if (todayadsl1000 == "0") {
         todayadsl1000report = "";
+        todayadsl1000reportForSharing = "";
     } else {
         todayadsl1000report = "\n" + todayadsl1000Adjusted + " * ADSL 1TB";
+        todayadsl1000reportForSharing = "\n" + "```" + todayadsl1000Adjusted + "```" + " * ADSL 1TB";
     }
     if (todayadsl1500 == "0") {
         todayadsl1500report = "";
+        todayadsl1500reportForSharing = "";
     } else {
         todayadsl1500report = "\n" + todayadsl1500Adjusted + " * ADSL 1.5TB";
+        todayadsl1500reportForSharing = "\n" + "```" + todayadsl1500Adjusted + "```" + " * ADSL 1.5TB";
     }
     if (todayadslannual == "0") {
         todayadslannualreport = "";
+        todayadslannualreportForSharing = "";
     } else {
         todayadslannualreport = "\n" + todayadslannualAdjusted + " * ADSL Annual";
+        todayadslannualreportForSharing = "\n" + "```" + todayadslannualAdjusted + "```" + " * ADSL Annual";
     }
     if (todayfixed == "0") {
         todayfixedreport = "";
+        todayfixedreportForSharing = "";
     } else {
         todayfixedreport = "\n" + todayfixedAdjusted + " * Fixed";
+        todayfixedreportForSharing = "\n" + "```" + todayfixedAdjusted + "```" + " * Fixed";
     }
     if (todaywallet == "0") {
         todaywalletreport = "";
+        todaywalletreportForSharing = "";
     } else {
         todaywalletreport = "\n" + todaywalletAdjusted + " * Wallet";
+        todaywalletreportForSharing = "\n" + "```" + todaywalletAdjusted + "```" + " * Wallet";
     }
-	todaysales =
+    todaysales =
         todaypaygreport +
         todaydatareport +
         todaysuperkix20report +
@@ -1127,222 +1213,7 @@ function GenerateSalesReport() {
         todayadslannualreport +
         todayfixedreport +
         todaywalletreport;
-    if (todaypayg == "0") {
-        todaypaygreportForSharing = "";
-    } else {
-        todaypaygreportForSharing = "\n" + "```" + todaypaygAdjusted + "```" + " * PAYG";
-    }
-    if (todaydata == "0") {
-        todaydatareportForSharing = "";
-    } else {
-        todaydatareportForSharing = "\n" + "```" + todaydataAdjusted + "```" + " * Data";
-    }
-    if (todaysuperkix20 == "0") {
-        todaysuperkix20reportForSharing = "";
-    } else {
-        todaysuperkix20reportForSharing = "\n" + "```" + todaysuperkix20Adjusted + "```" + " * Kix 20";
-    }
-    if (todaysuperkix25 == "0") {
-        todaysuperkix25reportForSharing = "";
-    } else {
-        todaysuperkix25reportForSharing = "\n" + "```" + todaysuperkix25Adjusted + "```" + " * Kix 25";
-    }
-    if (todaysuperkix35 == "0") {
-        todaysuperkix35reportForSharing = "";
-    } else {
-        todaysuperkix35reportForSharing = "\n" + "```" + todaysuperkix35Adjusted + "```" + " * Kix 35";
-    }
-    if (todaysuperkix45 == "0") {
-        todaysuperkix45reportForSharing = "";
-    } else {
-        todaysuperkix45reportForSharing = "\n" + "```" + todaysuperkix45Adjusted + "```" + " * Kix 45";
-    }
-    if (todaysuperkix65 == "0") {
-        todaysuperkix65reportForSharing = "";
-    } else {
-        todaysuperkix65reportForSharing = "\n" + "```" + todaysuperkix65Adjusted + "```" + " * Kix 65";
-    }
-    if (todaysuperkix80 == "0") {
-        todaysuperkix80reportForSharing = "";
-    } else {
-        todaysuperkix80reportForSharing = "\n" + "```" + todaysuperkix80Adjusted + "```" + " * Kix 80";
-    }
-    if (todaysuperkix100 == "0") {
-        todaysuperkix100reportForSharing = "";
-    } else {
-        todaysuperkix100reportForSharing = "\n" + "```" + todaysuperkix100Adjusted + "```" + " * Kix 100";
-    }
-    if (todaytazbeet30 == "0") {
-        todaytazbeet30reportForSharing = "";
-    } else {
-        todaytazbeet30reportForSharing = "\n" + "```" + todaytazbeet30Adjusted + "```" + " * Tazbeet 30";
-    }
-    if (todaytazbeet40 == "0") {
-        todaytazbeet40reportForSharing = "";
-    } else {
-        todaytazbeet40reportForSharing = "\n" + "```" + todaytazbeet40Adjusted + "```" + " * Tazbeet 40";
-    }
-    if (todaytazbeet70 == "0") {
-        todaytazbeet70reportForSharing = "";
-    } else {
-        todaytazbeet70reportForSharing = "\n" + "```" + todaytazbeet70Adjusted + "```" + " * Tazbeet 70";
-    }
-    if (todaytazbeet110 == "0") {
-        todaytazbeet110reportForSharing = "";
-    } else {
-        todaytazbeet110reportForSharing = "\n" + "```" + todaytazbeet110Adjusted + "```" + " * Tazbeet 110";
-    }
-    if (todayweclub25 == "0") {
-        todayweclub25reportForSharing = "";
-    } else {
-        todayweclub25reportForSharing = "\n" + "```" + todayweclub25Adjusted + "```" + " * We Club 25";
-    }
-    if (todayweclub40 == "0") {
-        todayweclub40reportForSharing = "";
-    } else {
-        todayweclub40reportForSharing = "\n" + "```" + todayweclub40Adjusted + "```" + " * We Club 40";
-    }
-    if (todayweclub65 == "0") {
-        todayweclub65reportForSharing = "";
-    } else {
-        todayweclub65reportForSharing = "\n" + "```" + todayweclub65Adjusted + "```" + " * We Club 65";
-    }
-    if (todayweclub100 == "0") {
-        todayweclub100reportForSharing = "";
-    } else {
-        todayweclub100reportForSharing = "\n" + "```" + todayweclub100Adjusted + "```" + " * We Club 100";
-    }
-    if (todaywemix165 == "0") {
-        todaywemix165reportForSharing = "";
-    } else {
-        todaywemix165reportForSharing = "\n" + "```" + todaywemix165Adjusted + "```" + " * We Mix 165";
-    }
-    if (todaywemix240 == "0") {
-        todaywemix240reportForSharing = "";
-    } else {
-        todaywemix240reportForSharing = "\n" + "```" + todaywemix240Adjusted + "```" + " * We Mix 240";
-    }
-    if (todaygold200fmc == "0") {
-        todaygold200fmcreportForSharing = "";
-    } else {
-        todaygold200fmcreportForSharing = "\n" + "```" + todaygold200fmcAdjusted + "```" + " * We Gold 200 FMC";
-    }
-    if (todaygold400fmc == "0") {
-        todaygold400fmcreportForSharing = "";
-    } else {
-        todaygold400fmcreportForSharing = "\n" + "```" + todaygold400fmcAdjusted + "```" + " * We Gold 400 FMC";
-    }
-    if (todaygold600fmc == "0") {
-        todaygold600fmcreportForSharing = "";
-    } else {
-        todaygold600fmcreportForSharing = "\n" + "```" + todaygold600fmcAdjusted + "```" + " * We Gold 600 FMC";
-    }
-    if (todaygold800fmc == "0") {
-        todaygold800fmcreportForSharing = "";
-    } else {
-        todaygold800fmcreportForSharing = "\n" + "```" + todaygold800fmcAdjusted + "```" + " * We Gold 800 FMC";
-    }
-    if (todaygold1000fmc == "0") {
-        todaygold1000fmcreportForSharing = "";
-    } else {
-        todaygold1000fmcreportForSharing = "\n" + "```" + todaygold1000fmcAdjusted + "```" + " * We Gold 1000 FMC";
-    }
-    if (todaygold1500fmc == "0") {
-        todaygold1500fmcreportForSharing = "";
-    } else {
-        todaygold1500fmcreportForSharing = "\n" + "```" + todaygold1500fmcAdjusted + "```" + " * We Gold 1500 FMC";
-    }
-    if (todaygold200sa == "0") {
-        todaygold200sareportForSharing = "";
-    } else {
-        todaygold200sareportForSharing = "\n" + "```" + todaygold200saAdjusted + "```" + " * We Gold 200 SA";
-    }
-    if (todaygold400sa == "0") {
-        todaygold400sareportForSharing = "";
-    } else {
-        todaygold400sareportForSharing = "\n" + "```" + todaygold400saAdjusted + "```" + " * We Gold 400 SA";
-    }
-    if (todaygold600sa == "0") {
-        todaygold600sareportForSharing = "";
-    } else {
-        todaygold600sareportForSharing = "\n" + "```" + todaygold600saAdjusted + "```" + " * We Gold 600 SA";
-    }
-    if (todaygold800sa == "0") {
-        todaygold800sareportForSharing = "";
-    } else {
-        todaygold800sareportForSharing = "\n" + "```" + todaygold800saAdjusted + "```" + " * We Gold 800 SA";
-    }
-    if (todaygold1000sa == "0") {
-        todaygold1000sareportForSharing = "";
-    } else {
-        todaygold1000sareportForSharing = "\n" + "```" + todaygold1000saAdjusted + "```" + " * We Gold 1000 SA";
-    }
-    if (todaygold1500sa == "0") {
-        todaygold1500sareportForSharing = "";
-    } else {
-        todaygold1500sareportForSharing = "\n" + "```" + todaygold1500saAdjusted + "```" + " * We Gold 1500 SA";
-    }
-    if (todayadsl140 == "0") {
-        todayadsl140reportForSharing = "";
-    } else {
-        todayadsl140reportForSharing = "\n" + "```" + todayadsl140Adjusted + "```" + " * ADSL 140GB";
-    }
-    if (todayadsl200 == "0") {
-        todayadsl200reportForSharing = "";
-    } else {
-        todayadsl200reportForSharing = "\n" + "```" + todayadsl200Adjusted + "```" + " * ADSL 200GB";
-    }
-    if (todayadsl250 == "0") {
-        todayadsl250reportForSharing = "";
-    } else {
-        todayadsl250reportForSharing = "\n" + "```" + todayadsl250Adjusted + "```" + " * ADSL 250GB";
-    }
-    if (todayadsl300 == "0") {
-        todayadsl300reportForSharing = "";
-    } else {
-        todayadsl300reportForSharing = "\n" + "```" + todayadsl300Adjusted + "```" + " * ADSL 300GB";
-    }
-    if (todayadsl400 == "0") {
-        todayadsl400reportForSharing = "";
-    } else {
-        todayadsl400reportForSharing = "\n" + "```" + todayadsl400Adjusted + "```" + " * ADSL 400GB";
-    }
-    if (todayadsl500 == "0") {
-        todayadsl500reportForSharing = "";
-    } else {
-        todayadsl500reportForSharing = "\n" + "```" + todayadsl500Adjusted + "```" + " * ADSL 500GB";
-    }
-    if (todayadsl600 == "0") {
-        todayadsl600reportForSharing = "";
-    } else {
-        todayadsl600reportForSharing = "\n" + "```" + todayadsl600Adjusted + "```" + " * ADSL 600GB";
-    }
-    if (todayadsl1000 == "0") {
-        todayadsl1000reportForSharing = "";
-    } else {
-        todayadsl1000reportForSharing = "\n" + "```" + todayadsl1000Adjusted + "```" + " * ADSL 1TB";
-    }
-    if (todayadsl1500 == "0") {
-        todayadsl1500reportForSharing = "";
-    } else {
-        todayadsl1500reportForSharing = "\n" + "```" + todayadsl1500Adjusted + "```" + " * ADSL 1.5TB";
-    }
-    if (todayadslannual == "0") {
-        todayadslannualreportForSharing = "";
-    } else {
-        todayadslannualreportForSharing = "\n" + "```" + todayadslannualAdjusted + "```" + " * ADSL Annual";
-    }
-    if (todayfixed == "0") {
-        todayfixedreportForSharing = "";
-    } else {
-        todayfixedreportForSharing = "\n" + "```" + todayfixedAdjusted + "```" + " * Fixed";
-    }
-    if (todaywallet == "0") {
-        todaywalletreportForSharing = "";
-    } else {
-        todaywalletreportForSharing = "\n" + "```" + todaywalletAdjusted + "```" + " * Wallet";
-    }
-	todaysalesForSharing =
+    todaysalesForSharing =
         todaypaygreportForSharing +
         todaydatareportForSharing +
         todaysuperkix20reportForSharing +
@@ -1387,11 +1258,11 @@ function GenerateSalesReport() {
         todayfixedreportForSharing +
         todaywalletreportForSharing;
     if (todaysales == "") {
-        todaysalesreport = "\n" + "--------------------------";
-        todaysalesreportForSharing = "\n" + "```--------------------------```";
+        todaysalesreport = "";
+        todaysalesreportForSharing = "";
     } else {
-        todaysalesreport = "\n" + "--------------------------" + todaysales + "\n" + "--------------------------";
-        todaysalesreportForSharing = "\n" + "```--------------------------```" + todaysalesForSharing + "\n" + "```--------------------------```";
+        todaysalesreport = todaysales + "\n" + "--------------------------";
+        todaysalesreportForSharing = todaysalesForSharing + "\n" + "```--------------------------```";
     }
     todayadslbillsInput = document.getElementById("todayadslbills").value.split(" ");
     todayadslbills = 0;
@@ -1414,12 +1285,6 @@ function GenerateSalesReport() {
         todaycash += parseInt(todaycashInput[i]) || 0;
     }
     dailymobile = todaypayg + todaydata + todaysuperkix + todaytazbeet + todayweclub + todaywemix + todaygold || 0;
-	
-    if (dailymobile <= "1") {
-        dailymobilereport = dailymobile + " Line";
-    } else {
-        dailymobilereport = dailymobile + " Lines";
-    }
     utdmobile = utdpayg + utddata + utdsuperkix + utdtaz + utdweclub + utdwemix + utdwegold || 0;
     targetmobile = targetpayg + targetdata + targetsuperkix + targettaz + targetwemix + targetweclub + targetwegold || 0;
     vsPAYG = ~~Number(Math.round((utdpayg / targetpayg) * 100)) || 0;
@@ -1575,10 +1440,10 @@ function GenerateSalesReport() {
         storename +
         "\n" +
         "--------------------------" +
+        todaysalesreport +
         "\n" +
         "Today Sales: " +
-		dailymobilereport +
-		todaysalesreport +
+        dailymobile +
         "\n" +
         "Daily Required: " +
         dailyrequiredreport +
@@ -1696,16 +1561,17 @@ function GenerateSalesReport() {
         vsAdslHt +
         "%" +
         "\n" +
-        "ADSL Bills: " +
+        "\n" +
+        "* ADSL Bills: " +
         todayadslbills +
         "\n" +
-        "Postpaid Bills: " +
+        "* Postpaid Bills: " +
         todaypostpaidbills +
         "\n" +
-        "Fixed Bills: " +
+        "* Fixed Bills: " +
         todayfixedbills +
         "\n" +
-        "Cash: " +
+        "* Cash: " +
         todaycash +
         " LE";
     salesreportForSharing =
@@ -1716,10 +1582,10 @@ function GenerateSalesReport() {
         storename +
         "\n" +
         "```--------------------------```" +
+        todaysalesreportForSharing +
         "\n" +
         "Today Sales: " +
-		dailymobilereport +
-		todaysalesreportForSharing +
+        dailymobile +
         "\n" +
         "Daily Required: " +
         dailyrequiredreport +
@@ -1837,16 +1703,17 @@ function GenerateSalesReport() {
         vsAdslHt +
         "%" +
         "\n" +
-        "ADSL Bills: " +
+        "\n" +
+        "* ADSL Bills: " +
         todayadslbills +
         "\n" +
-        "Postpaid Bills: " +
+        "* Postpaid Bills: " +
         todaypostpaidbills +
         "\n" +
-        "Fixed Bills: " +
+        "* Fixed Bills: " +
         todayfixedbills +
         "\n" +
-        "Cash: " +
+        "* Cash: " +
         todaycash +
         " LE";
     document.getElementById("save__1").disabled = false;
