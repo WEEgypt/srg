@@ -387,7 +387,7 @@ function GenerateSalesReport() {
         "\n" +
         "--------------------------" +
         "\n" +
-        "Today Sales: " +
+        "Today Lines: " +
         todaymobile +
         " Mob" +
         "\n" +
@@ -471,7 +471,7 @@ function GenerateSalesReport() {
         "\n" +
         "```--------------------------```" +
         "\n" +
-        "Today Sales: " +
+        "Today Lines: " +
         todaymobile +
         " Mob" +
         "\n" +

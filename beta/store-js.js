@@ -1442,7 +1442,7 @@ function GenerateSalesReport() {
         "--------------------------" +
         todaysalesreport +
         "\n" +
-        "* Today Sales: " +
+        "* Today Lines: " +
         dailymobile +
         "\n" +
         "* Daily Required: " +
@@ -1583,7 +1583,7 @@ function GenerateSalesReport() {
         "```--------------------------```" +
         todaysalesreportForSharing +
         "\n" +
-        "* Today Sales: " +
+        "* Today Lines: " +
         dailymobile +
         "\n" +
         "* Daily Required: " +
