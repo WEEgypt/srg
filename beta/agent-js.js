@@ -1429,14 +1429,22 @@ function GenerateSalesReport() {
         "--------------------------" +
         todaysalesreport +
         "\n" +
-        "Today Sales: " +
+        "* Today Sales: " +
         dailymobile +
         "\n" +
-        "Daily Required: " +
+        "* Daily Required: " +
         dailyrequiredreport +
         "\n" +
-        "RE: " +
+        "* RE: " +
         reMobilereport +
+        "\n" +
+        "* We Gold SA: " +
+        vsGoldSa +
+        "%" +
+        "\n" +
+        "* ADSL High Tariff: " +
+        vsAdslHt +
+        "%" +
         "\n" +
         "--------------------------" +
         "\n" +
@@ -1540,15 +1548,6 @@ function GenerateSalesReport() {
         "\n" +
         "--------------------------" +
         "\n" +
-        "We Gold Standalone: " +
-        vsGoldSa +
-        "%" +
-        "\n" +
-        "ADSL High Tariff: " +
-        vsAdslHt +
-        "%" +
-        "\n" +
-        "\n" +
         "* ADSL Bills: " +
         todayadslbills +
         "\n" +
@@ -1571,14 +1570,22 @@ function GenerateSalesReport() {
         "```--------------------------```" +
         todaysalesreportForSharing +
         "\n" +
-        "Today Sales: " +
+        "* Today Sales: " +
         dailymobile +
         "\n" +
-        "Daily Required: " +
+        "* Daily Required: " +
         dailyrequiredreport +
         "\n" +
-        "RE: " +
+        "* RE: " +
         reMobilereport +
+        "\n" +
+        "* We Gold SA: " +
+        vsGoldSa +
+        "%" +
+        "\n" +
+        "* ADSL High Tariff: " +
+        vsAdslHt +
+        "%" +
         "\n" +
         "```--------------------------" +
         "\n" +
@@ -1681,15 +1688,6 @@ function GenerateSalesReport() {
         "%" +
         "\n" +
         "--------------------------```" +
-        "\n" +
-        "We Gold Standalone: " +
-        vsGoldSa +
-        "%" +
-        "\n" +
-        "ADSL High Tariff: " +
-        vsAdslHt +
-        "%" +
-        "\n" +
         "\n" +
         "* ADSL Bills: " +
         todayadslbills +

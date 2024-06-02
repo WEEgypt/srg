@@ -477,7 +477,7 @@ function GenerateSalesReport() {
         "\n" +
         "```--------------------------```" +
         "\n" +
-        "* *We Gold*" +
+        "* We Gold" +
         "\n" +
         "Today: " +
         todaywegold +
@@ -492,7 +492,7 @@ function GenerateSalesReport() {
         "\n" +
         "```--------------------------```" +
         "\n" +
-        "* *ADSL*" +
+        "* ADSL" +
         "\n" +
         "Today: " +
         todayadsl +
@@ -507,7 +507,7 @@ function GenerateSalesReport() {
         "\n" +
         "```--------------------------```" +
         "\n" +
-        "* *Fixed*" +
+        "* Fixed" +
         "\n" +
         "Today: " +
         todayfixed +
@@ -522,7 +522,7 @@ function GenerateSalesReport() {
         "\n" +
         "```--------------------------```" +
         "\n" +
-        "* *Wallet*" +
+        "* Wallet" +
         "\n" +
         "Today: " +
         todaywallet +
