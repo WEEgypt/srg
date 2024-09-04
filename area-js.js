@@ -616,7 +616,7 @@ function Save__1() {
     localStorage.setItem("areaRestore", "true");
     localStorage.setItem("areas", sessionStorage.getItem("areas"));
     localStorage.setItem("selectedArea", localStorage.getItem("currentArea"));
-    localStorage.setItem("activeAreas", localStorage.getItem("areas") - localStorage.getItem("removedArea"));
+    localStorage.setItem("activeAreas", localStorage.getItem("areas") - localStorage.getItem("removedAreas"));
 }
 function Save__2() {
     Save__1();
@@ -644,7 +644,7 @@ function RemoveArea() {
             localStorage.setItem("selectedArea", selectedArea);
         }
         localStorage.setItem("activeAreas", localStorage.getItem("activeAreas") - 1);
-        localStorage.setItem("removedArea", parseInt(localStorage.getItem("removedArea")) + 1 || 1);
+        localStorage.setItem("removedAreas", parseInt(localStorage.getItem("removedAreas")) + 1 || 1);
         if (localStorage.getItem("activeAreas") < "1") {
             for (i = 1; i <= localStorage.getItem("areas"); i++) {
                 localStorage.removeItem("deleteArea" + i);
@@ -652,7 +652,7 @@ function RemoveArea() {
             localStorage.removeItem("activeAreas");
             localStorage.removeItem("currentArea");
             localStorage.removeItem("selectedArea");
-            localStorage.removeItem("removedArea");
+            localStorage.removeItem("removedAreas");
             localStorage.removeItem("areaRestore");
             localStorage.removeItem("areas");
         }

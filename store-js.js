@@ -1971,7 +1971,7 @@ function Save__1() {
     localStorage.setItem("storeRestore", "true");
     localStorage.setItem("stores", sessionStorage.getItem("stores"));
     localStorage.setItem("selectedStore", localStorage.getItem("currentStore"));
-    localStorage.setItem("activeStores", localStorage.getItem("stores") - localStorage.getItem("removedStore"));
+    localStorage.setItem("activeStores", localStorage.getItem("stores") - localStorage.getItem("removedStores"));
 }
 function Save__2() {
     Save__1();
@@ -2014,7 +2014,7 @@ function RemoveStore() {
             localStorage.setItem("selectedStore", selectedStore);
         }
         localStorage.setItem("activeStores", localStorage.getItem("activeStores") - 1);
-        localStorage.setItem("removedStore", parseInt(localStorage.getItem("removedStore")) + 1 || 1);
+        localStorage.setItem("removedStores", parseInt(localStorage.getItem("removedStores")) + 1 || 1);
         if (localStorage.getItem("activeStores") < "1") {
             for (i = 1; i <= localStorage.getItem("stores"); i++) {
                 localStorage.removeItem("deleteStore" + i);
@@ -2022,7 +2022,7 @@ function RemoveStore() {
             localStorage.removeItem("activeStores");
             localStorage.removeItem("currentStore");
             localStorage.removeItem("selectedStore");
-            localStorage.removeItem("removedStore");
+            localStorage.removeItem("removedStores");
             localStorage.removeItem("storeRestore");
             localStorage.removeItem("stores");
         }

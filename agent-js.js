@@ -1783,7 +1783,7 @@ function Save__1() {
     localStorage.setItem("agentRestore", "true");
     localStorage.setItem("users", sessionStorage.getItem("users"));
     localStorage.setItem("selectedUser", localStorage.getItem("currentUser"));
-    localStorage.setItem("activeUsers", localStorage.getItem("users") - localStorage.getItem("removedUser"));
+    localStorage.setItem("activeUsers", localStorage.getItem("users") - localStorage.getItem("removedUsers"));
 }
 function Save__2() {
     Save__1();
@@ -1823,7 +1823,7 @@ function RemoveUser() {
             localStorage.setItem("selectedUser", selectedUser);
         }
         localStorage.setItem("activeUsers", localStorage.getItem("activeUsers") - 1);
-        localStorage.setItem("removedUser", parseInt(localStorage.getItem("removedUser")) + 1 || 1);
+        localStorage.setItem("removedUsers", parseInt(localStorage.getItem("removedUsers")) + 1 || 1);
         if (localStorage.getItem("activeUsers") < "1") {
             for (i = 1; i <= localStorage.getItem("users"); i++) {
                 localStorage.removeItem("deleteUser" + i);
@@ -1831,7 +1831,7 @@ function RemoveUser() {
             localStorage.removeItem("activeUsers");
             localStorage.removeItem("currentUser");
             localStorage.removeItem("selectedUser");
-            localStorage.removeItem("removedUser");
+            localStorage.removeItem("removedUsers");
             localStorage.removeItem("agentRestore");
             localStorage.removeItem("users");
         }
