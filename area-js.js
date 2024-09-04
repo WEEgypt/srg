@@ -13,7 +13,7 @@ function EnableRestore() {
     if (localStorage.getItem("areas") > "1") {
         let x = localStorage.getItem("areas");
         for (i = 1; i <= x; i++) {
-            if (localStorage.getItem("deletedArea" + i) == "true") continue;
+            if (localStorage.getItem("deleteArea" + i) == "true") continue;
             value = parseInt([i]);
             document.getElementById("areas").options.add(new Option(localStorage.getItem("areaname.area." + value), value));
         }
@@ -154,7 +154,7 @@ function Back__2() {
         restore.style.display = "none";
         let x = localStorage.getItem("areas");
         for (i = 1; i <= x; i++) {
-            if (localStorage.getItem("deletedArea" + i) == "true") continue;
+            if (localStorage.getItem("deleteArea" + i) == "true") continue;
             value = parseInt([i]);
             document.getElementById("areas").options.add(new Option(localStorage.getItem("areaname.area." + value), value));
         }
@@ -172,7 +172,7 @@ function Back__3() {
         document.getElementById("areas").innerHTML = "";
         let x = localStorage.getItem("areas");
         for (i = 1; i <= x; i++) {
-            if (localStorage.getItem("deletedArea" + i) == "true") continue;
+            if (localStorage.getItem("deleteArea" + i) == "true") continue;
             value = parseInt([i]);
             document.getElementById("areas").options.add(new Option(localStorage.getItem("areaname.area." + value), value));
         }
@@ -622,10 +622,10 @@ function Save__2() {
     Save__1();
 }
 function RemoveArea() {
-    let text = "This action cannot be undone. Are you sure you want to delete this record?";
+    let x = parseInt(localStorage.getItem("selectedArea"));
+    let text = "Are you sure you want to delete " + localStorage.getItem("areaname.area." + x) + "?";
     if (confirm(text) == true) {
-        let x = parseInt(localStorage.getItem("selectedArea"));
-        localStorage.setItem("deletedArea" + x, "true");
+        localStorage.setItem("deleteArea" + x, "true");
         localStorage.removeItem("areaname.area." + x);
         localStorage.removeItem("achievedmobile.area." + x);
         localStorage.removeItem("targetmobile.area." + x);
@@ -639,7 +639,7 @@ function RemoveArea() {
         localStorage.removeItem("targetwallet.area." + x);
         let selectedArea = localStorage.getItem("areas");
         for (i = 1; i <= selectedArea; i++) {
-            if (localStorage.getItem("deletedArea" + i) == "true") continue;
+            if (localStorage.getItem("deleteArea" + i) == "true") continue;
             selectedArea = parseInt([i]);
             localStorage.setItem("selectedArea", selectedArea);
         }

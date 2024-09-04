@@ -13,7 +13,7 @@ function EnableRestore() {
     if (localStorage.getItem("users") > "1") {
         let x = localStorage.getItem("users");
         for (i = 1; i <= x; i++) {
-            if (localStorage.getItem("deletedUser" + i) == "true") continue;
+            if (localStorage.getItem("deleteUser" + i) == "true") continue;
             value = parseInt([i]);
             document.getElementById("users").options.add(new Option(localStorage.getItem("yourname.agent." + value), value));
         }
@@ -154,7 +154,7 @@ function Back__2() {
         restore.style.display = "none";
         let x = localStorage.getItem("users");
         for (i = 1; i <= x; i++) {
-            if (localStorage.getItem("deletedUser" + i) == "true") continue;
+            if (localStorage.getItem("deleteUser" + i) == "true") continue;
             value = parseInt([i]);
             document.getElementById("users").options.add(new Option(localStorage.getItem("yourname.agent." + value), value));
         }
@@ -172,7 +172,7 @@ function Back__3() {
         document.getElementById("users").innerHTML = "";
         let x = localStorage.getItem("users");
         for (i = 1; i <= x; i++) {
-            if (localStorage.getItem("deletedUser" + i) == "true") continue;
+            if (localStorage.getItem("deleteUser" + i) == "true") continue;
             value = parseInt([i]);
             document.getElementById("users").options.add(new Option(localStorage.getItem("yourname.agent." + value), value));
         }
@@ -1789,24 +1789,36 @@ function Save__2() {
     Save__1();
 }
 function RemoveUser() {
-    let text = "This action cannot be undone. Are you sure you want to delete this record?";
+    let x = parseInt(localStorage.getItem("selectedUser"));
+    let text = "Are you sure you want to delete " + localStorage.getItem("yourname.agent." + x) + "?";
     if (confirm(text) == true) {
-        let x = parseInt(localStorage.getItem("selectedUser"));
-        localStorage.setItem("deletedUser" + x, "true");
-        localStorage.removeItem("areaname.area." + x);
-        localStorage.removeItem("achievedmobile.area." + x);
-        localStorage.removeItem("targetmobile.area." + x);
-        localStorage.removeItem("achievedwegold.area." + x);
-        localStorage.removeItem("targetwegold.area." + x);
-        localStorage.removeItem("achievedadsl.area." + x);
-        localStorage.removeItem("targetadsl.area." + x);
-        localStorage.removeItem("achievedfixed.area." + x);
-        localStorage.removeItem("targetfixed.area." + x);
-        localStorage.removeItem("achievedwallet.area." + x);
-        localStorage.removeItem("targetwallet.area." + x);
+        localStorage.setItem("deleteUser" + x, "true");
+        localStorage.removeItem("yourname.agent." + x);
+        localStorage.removeItem("achievedpayg.agent." + x);
+        localStorage.removeItem("targetpayg.agent." + x);
+        localStorage.removeItem("achieveddata.agent." + x);
+        localStorage.removeItem("targetdata.agent." + x);
+        localStorage.removeItem("achievedsuperkix.agent." + x);
+        localStorage.removeItem("targetsuperkix.agent." + x);
+        localStorage.removeItem("achievedtaz.agent." + x);
+        localStorage.removeItem("targettaz.agent." + x);
+        localStorage.removeItem("achievedweclub.agent." + x);
+        localStorage.removeItem("targetweclub.agent." + x);
+        localStorage.removeItem("achievedwemix.agent." + x);
+        localStorage.removeItem("targetwemix.agent." + x);
+        localStorage.removeItem("achievedwegoldfmc.agent." + x);
+        localStorage.removeItem("achievedwegoldsa.agent." + x);
+        localStorage.removeItem("targetwegold.agent." + x);
+        localStorage.removeItem("achievedadsl140.agent." + x);
+        localStorage.removeItem("achievedadslht.agent." + x);
+        localStorage.removeItem("targetadsl.agent." + x);
+        localStorage.removeItem("achievedfixed.agent." + x);
+        localStorage.removeItem("targetfixed.agent." + x);
+        localStorage.removeItem("achievedwallet.agent." + x);
+        localStorage.removeItem("targetwallet.agent." + x);
         let selectedUser = localStorage.getItem("users");
         for (i = 1; i <= selectedUser; i++) {
-            if (localStorage.getItem("deletedUser" + i) == "true") continue;
+            if (localStorage.getItem("deleteUser" + i) == "true") continue;
             selectedUser = parseInt([i]);
             localStorage.setItem("selectedUser", selectedUser);
         }

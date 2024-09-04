@@ -13,7 +13,7 @@ function EnableRestore() {
     if (localStorage.getItem("stores") > "1") {
         let x = localStorage.getItem("stores");
         for (i = 1; i <= x; i++) {
-            if (localStorage.getItem("deletedStore" + i) == "true") continue;
+            if (localStorage.getItem("deleteStore" + i) == "true") continue;
             value = parseInt([i]);
             document.getElementById("stores").options.add(new Option(localStorage.getItem("storename.store." + value), value));
         }
@@ -156,7 +156,7 @@ function Back__2() {
         restore.style.display = "none";
         let x = localStorage.getItem("stores");
         for (i = 1; i <= x; i++) {
-            if (localStorage.getItem("deletedStore" + i) == "true") continue;
+            if (localStorage.getItem("deleteStore" + i) == "true") continue;
             value = parseInt([i]);
             document.getElementById("stores").options.add(new Option(localStorage.getItem("storename.store." + value), value));
         }
@@ -174,7 +174,7 @@ function Back__3() {
         document.getElementById("stores").innerHTML = "";
         let x = localStorage.getItem("stores");
         for (i = 1; i <= x; i++) {
-            if (localStorage.getItem("deletedStore" + i) == "true") continue;
+            if (localStorage.getItem("deleteStore" + i) == "true") continue;
             value = parseInt([i]);
             document.getElementById("stores").options.add(new Option(localStorage.getItem("storename.store." + value), value));
         }
@@ -1980,24 +1980,36 @@ function Save__3() {
     Save__1();
 }
 function RemoveStore() {
-    let text = "This action cannot be undone. Are you sure you want to delete this record?";
+    let x = parseInt(localStorage.getItem("selectedStore"));
+    let text = "Are you sure you want to delete " + localStorage.getItem("storename.store." + x) + "?";
     if (confirm(text) == true) {
-        let x = parseInt(localStorage.getItem("selectedStore"));
-        localStorage.setItem("deletedStore" + x, "true");
-        localStorage.removeItem("areaname.area." + x);
-        localStorage.removeItem("achievedmobile.area." + x);
-        localStorage.removeItem("targetmobile.area." + x);
-        localStorage.removeItem("achievedwegold.area." + x);
-        localStorage.removeItem("targetwegold.area." + x);
-        localStorage.removeItem("achievedadsl.area." + x);
-        localStorage.removeItem("targetadsl.area." + x);
-        localStorage.removeItem("achievedfixed.area." + x);
-        localStorage.removeItem("targetfixed.area." + x);
-        localStorage.removeItem("achievedwallet.area." + x);
-        localStorage.removeItem("targetwallet.area." + x);
+        localStorage.setItem("deleteStore" + x, "true");
+        localStorage.removeItem("storename.store." + x);
+        localStorage.removeItem("achievedpayg.store." + x);
+        localStorage.removeItem("targetpayg.store." + x);
+        localStorage.removeItem("achieveddata.store." + x);
+        localStorage.removeItem("targetdata.store." + x);
+        localStorage.removeItem("achievedsuperkix.store." + x);
+        localStorage.removeItem("targetsuperkix.store." + x);
+        localStorage.removeItem("achievedtaz.store." + x);
+        localStorage.removeItem("targettaz.store." + x);
+        localStorage.removeItem("achievedweclub.store." + x);
+        localStorage.removeItem("targetweclub.store." + x);
+        localStorage.removeItem("achievedwemix.store." + x);
+        localStorage.removeItem("targetwemix.store." + x);
+        localStorage.removeItem("achievedwegoldfmc.store." + x);
+        localStorage.removeItem("achievedwegoldsa.store." + x);
+        localStorage.removeItem("targetwegold.store." + x);
+        localStorage.removeItem("achievedadsl140.store." + x);
+        localStorage.removeItem("achievedadslht.store." + x);
+        localStorage.removeItem("targetadsl.store." + x);
+        localStorage.removeItem("achievedfixed.store." + x);
+        localStorage.removeItem("targetfixed.store." + x);
+        localStorage.removeItem("achievedwallet.store." + x);
+        localStorage.removeItem("targetwallet.store." + x);
         let selectedStore = localStorage.getItem("stores");
         for (i = 1; i <= selectedStore; i++) {
-            if (localStorage.getItem("deletedStore" + i) == "true") continue;
+            if (localStorage.getItem("deleteStore" + i) == "true") continue;
             selectedStore = parseInt([i]);
             localStorage.setItem("selectedStore", selectedStore);
         }
