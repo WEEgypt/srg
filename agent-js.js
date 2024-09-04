@@ -1825,7 +1825,15 @@ function RemoveUser() {
         localStorage.setItem("activeUsers", localStorage.getItem("activeUsers") - 1);
         localStorage.setItem("removedUser", parseInt(localStorage.getItem("removedUser")) + 1 || 1);
         if (localStorage.getItem("activeUsers") < "1") {
-            localStorage.clear();
+            for (i = 1; i <= localStorage.getItem("users"); i++) {
+                localStorage.removeItem("deleteUser" + i);
+            }
+            localStorage.removeItem("activeUsers");
+            localStorage.removeItem("currentUser");
+            localStorage.removeItem("selectedUser");
+            localStorage.removeItem("removedUser");
+            localStorage.removeItem("agentRestore");
+            localStorage.removeItem("users");
         }
         location.reload();
     } else {

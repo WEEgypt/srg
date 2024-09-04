@@ -2016,7 +2016,15 @@ function RemoveStore() {
         localStorage.setItem("activeStores", localStorage.getItem("activeStores") - 1);
         localStorage.setItem("removedStore", parseInt(localStorage.getItem("removedStore")) + 1 || 1);
         if (localStorage.getItem("activeStores") < "1") {
-            localStorage.clear();
+            for (i = 1; i <= localStorage.getItem("stores"); i++) {
+                localStorage.removeItem("deleteStore" + i);
+            }
+            localStorage.removeItem("activeStores");
+            localStorage.removeItem("currentStore");
+            localStorage.removeItem("selectedStore");
+            localStorage.removeItem("removedStore");
+            localStorage.removeItem("storeRestore");
+            localStorage.removeItem("stores");
         }
         location.reload();
     } else {

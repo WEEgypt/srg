@@ -646,7 +646,15 @@ function RemoveArea() {
         localStorage.setItem("activeAreas", localStorage.getItem("activeAreas") - 1);
         localStorage.setItem("removedArea", parseInt(localStorage.getItem("removedArea")) + 1 || 1);
         if (localStorage.getItem("activeAreas") < "1") {
-            localStorage.clear();
+            for (i = 1; i <= localStorage.getItem("areas"); i++) {
+                localStorage.removeItem("deleteArea" + i);
+            }
+            localStorage.removeItem("activeAreas");
+            localStorage.removeItem("currentArea");
+            localStorage.removeItem("selectedArea");
+            localStorage.removeItem("removedArea");
+            localStorage.removeItem("areaRestore");
+            localStorage.removeItem("areas");
         }
         location.reload();
     } else {
