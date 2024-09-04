@@ -7,18 +7,21 @@ function EnableRestore() {
         sessionStorage.removeItem("users");
         sessionStorage.removeItem("newuser");
     } else {
-        sessionStorage.setItem("users", "1");
+        sessionStorage.setItem("users", localStorage.getItem("users") || 1);
         localStorage.setItem("currentUser", "1");
     }
     if (localStorage.getItem("users") > "1") {
-        multi.style.display = "block";
-        restore.style.display = "none";
         let x = localStorage.getItem("users");
-        for (i = 0; i < x; i++) {
-            value = parseInt([i]) + 1;
+        for (i = 1; i <= x; i++) {
+            if (localStorage.getItem("deletedUser" + i) == "true") continue;
+            value = parseInt([i]);
             document.getElementById("users").options.add(new Option(localStorage.getItem("yourname.agent." + value), value));
         }
         document.getElementById("users").options.add(new Option("Add Another Agent", "newuser"));
+    }
+    if (localStorage.getItem("activeUsers") > "1") {
+        multi.style.display = "block";
+        restore.style.display = "none";
     }
     document.getElementById("users").value = localStorage.getItem("selectedUser");
 }
@@ -145,13 +148,14 @@ function Back__1() {
     window.open("index.html", "_self");
 }
 function Back__2() {
-    if (localStorage.getItem("users") > "1") {
+    if (localStorage.getItem("activeUsers") > "1") {
         document.getElementById("users").innerHTML = "";
         multi.style.display = "block";
         restore.style.display = "none";
         let x = localStorage.getItem("users");
-        for (i = 0; i < x; i++) {
-            value = parseInt([i]) + 1;
+        for (i = 1; i <= x; i++) {
+            if (localStorage.getItem("deletedUser" + i) == "true") continue;
+            value = parseInt([i]);
             document.getElementById("users").options.add(new Option(localStorage.getItem("yourname.agent." + value), value));
         }
         document.getElementById("users").options.add(new Option("Add Another Agent", "newuser"));
@@ -162,13 +166,14 @@ function Back__2() {
     }
 }
 function Back__3() {
-    if (basic.style.display === "block" && localStorage.getItem("users") > "1" && sessionStorage.getItem("newuser") == "true") {
+    if (basic.style.display === "block" && localStorage.getItem("activeUsers") > "1" && sessionStorage.getItem("newuser") == "true") {
         basic.style.display = "none";
         multi.style.display = "block";
         document.getElementById("users").innerHTML = "";
         let x = localStorage.getItem("users");
-        for (i = 0; i < x; i++) {
-            value = parseInt([i]) + 1;
+        for (i = 1; i <= x; i++) {
+            if (localStorage.getItem("deletedUser" + i) == "true") continue;
+            value = parseInt([i]);
             document.getElementById("users").options.add(new Option(localStorage.getItem("yourname.agent." + value), value));
         }
         document.getElementById("users").options.add(new Option("Add Another Agent", "newuser"));
@@ -1778,7 +1783,40 @@ function Save__1() {
     localStorage.setItem("agentRestore", "true");
     localStorage.setItem("users", sessionStorage.getItem("users"));
     localStorage.setItem("selectedUser", localStorage.getItem("currentUser"));
+    localStorage.setItem("activeUsers", localStorage.getItem("users") - localStorage.getItem("removedUser"));
 }
 function Save__2() {
     Save__1();
+}
+function RemoveUser() {
+    let text = "This action cannot be undone. Are you sure you want to delete this record?";
+    if (confirm(text) == true) {
+        let x = parseInt(localStorage.getItem("selectedUser"));
+        localStorage.setItem("deletedUser" + x, "true");
+        localStorage.removeItem("areaname.area." + x);
+        localStorage.removeItem("achievedmobile.area." + x);
+        localStorage.removeItem("targetmobile.area." + x);
+        localStorage.removeItem("achievedwegold.area." + x);
+        localStorage.removeItem("targetwegold.area." + x);
+        localStorage.removeItem("achievedadsl.area." + x);
+        localStorage.removeItem("targetadsl.area." + x);
+        localStorage.removeItem("achievedfixed.area." + x);
+        localStorage.removeItem("targetfixed.area." + x);
+        localStorage.removeItem("achievedwallet.area." + x);
+        localStorage.removeItem("targetwallet.area." + x);
+        let selectedUser = localStorage.getItem("users");
+        for (i = 1; i <= selectedUser; i++) {
+            if (localStorage.getItem("deletedUser" + i) == "true") continue;
+            selectedUser = parseInt([i]);
+            localStorage.setItem("selectedUser", selectedUser);
+        }
+        localStorage.setItem("activeUsers", localStorage.getItem("activeUsers") - 1);
+        localStorage.setItem("removedUser", parseInt(localStorage.getItem("removedUser")) + 1 || 1);
+        if (localStorage.getItem("activeUsers") < "1") {
+            localStorage.clear();
+        }
+        location.reload();
+    } else {
+        return false;
+    }
 }

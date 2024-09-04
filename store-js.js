@@ -7,18 +7,21 @@ function EnableRestore() {
         sessionStorage.removeItem("stores");
         sessionStorage.removeItem("newstore");
     } else {
-        sessionStorage.setItem("stores", "1");
+        sessionStorage.setItem("stores", localStorage.getItem("stores") || 1);
         localStorage.setItem("currentStore", "1");
     }
     if (localStorage.getItem("stores") > "1") {
-        multi.style.display = "block";
-        restore.style.display = "none";
         let x = localStorage.getItem("stores");
-        for (i = 0; i < x; i++) {
-            value = parseInt([i]) + 1;
+        for (i = 1; i <= x; i++) {
+            if (localStorage.getItem("deletedStore" + i) == "true") continue;
+            value = parseInt([i]);
             document.getElementById("stores").options.add(new Option(localStorage.getItem("storename.store." + value), value));
         }
         document.getElementById("stores").options.add(new Option("Add Another Store", "newstore"));
+    }
+    if (localStorage.getItem("activeStores") > "1") {
+        multi.style.display = "block";
+        restore.style.display = "none";
     }
     document.getElementById("stores").value = localStorage.getItem("selectedStore");
 }
@@ -147,13 +150,14 @@ function Back__1() {
     window.open("index.html", "_self");
 }
 function Back__2() {
-    if (localStorage.getItem("stores") > "1") {
+    if (localStorage.getItem("activeStores") > "1") {
         document.getElementById("stores").innerHTML = "";
         multi.style.display = "block";
         restore.style.display = "none";
         let x = localStorage.getItem("stores");
-        for (i = 0; i < x; i++) {
-            value = parseInt([i]) + 1;
+        for (i = 1; i <= x; i++) {
+            if (localStorage.getItem("deletedStore" + i) == "true") continue;
+            value = parseInt([i]);
             document.getElementById("stores").options.add(new Option(localStorage.getItem("storename.store." + value), value));
         }
         document.getElementById("stores").options.add(new Option("Add Another Store", "newstore"));
@@ -164,13 +168,14 @@ function Back__2() {
     }
 }
 function Back__3() {
-    if (basic.style.display === "block" && localStorage.getItem("stores") > "1" && sessionStorage.getItem("newstore") == "true") {
+    if (basic.style.display === "block" && localStorage.getItem("activeStores") > "1" && sessionStorage.getItem("newstore") == "true") {
         basic.style.display = "none";
         multi.style.display = "block";
         document.getElementById("stores").innerHTML = "";
         let x = localStorage.getItem("stores");
-        for (i = 0; i < x; i++) {
-            value = parseInt([i]) + 1;
+        for (i = 1; i <= x; i++) {
+            if (localStorage.getItem("deletedStore" + i) == "true") continue;
+            value = parseInt([i]);
             document.getElementById("stores").options.add(new Option(localStorage.getItem("storename.store." + value), value));
         }
         document.getElementById("stores").options.add(new Option("Add Another Store", "newstore"));
@@ -1966,10 +1971,43 @@ function Save__1() {
     localStorage.setItem("storeRestore", "true");
     localStorage.setItem("stores", sessionStorage.getItem("stores"));
     localStorage.setItem("selectedStore", localStorage.getItem("currentStore"));
+    localStorage.setItem("activeStores", localStorage.getItem("stores") - localStorage.getItem("removedStore"));
 }
 function Save__2() {
     Save__1();
 }
 function Save__3() {
     Save__1();
+}
+function RemoveStore() {
+    let text = "This action cannot be undone. Are you sure you want to delete this record?";
+    if (confirm(text) == true) {
+        let x = parseInt(localStorage.getItem("selectedStore"));
+        localStorage.setItem("deletedStore" + x, "true");
+        localStorage.removeItem("areaname.area." + x);
+        localStorage.removeItem("achievedmobile.area." + x);
+        localStorage.removeItem("targetmobile.area." + x);
+        localStorage.removeItem("achievedwegold.area." + x);
+        localStorage.removeItem("targetwegold.area." + x);
+        localStorage.removeItem("achievedadsl.area." + x);
+        localStorage.removeItem("targetadsl.area." + x);
+        localStorage.removeItem("achievedfixed.area." + x);
+        localStorage.removeItem("targetfixed.area." + x);
+        localStorage.removeItem("achievedwallet.area." + x);
+        localStorage.removeItem("targetwallet.area." + x);
+        let selectedStore = localStorage.getItem("stores");
+        for (i = 1; i <= selectedStore; i++) {
+            if (localStorage.getItem("deletedStore" + i) == "true") continue;
+            selectedStore = parseInt([i]);
+            localStorage.setItem("selectedStore", selectedStore);
+        }
+        localStorage.setItem("activeStores", localStorage.getItem("activeStores") - 1);
+        localStorage.setItem("removedStore", parseInt(localStorage.getItem("removedStore")) + 1 || 1);
+        if (localStorage.getItem("activeStores") < "1") {
+            localStorage.clear();
+        }
+        location.reload();
+    } else {
+        return false;
+    }
 }
