@@ -1981,7 +1981,7 @@ function Save__3() {
 }
 function RemoveStore() {
     let x = parseInt(localStorage.getItem("selectedStore"));
-    let text = "Are you sure you want to delete " + localStorage.getItem("storename.store." + x) + "?";
+    let text = "Are you sure you want to delete " + '"' + localStorage.getItem("storename.store." + x) + '"?';
     if (confirm(text) == true) {
         localStorage.setItem("deleteStore" + x, "true");
         localStorage.removeItem("storename.store." + x);

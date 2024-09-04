@@ -1790,7 +1790,7 @@ function Save__2() {
 }
 function RemoveUser() {
     let x = parseInt(localStorage.getItem("selectedUser"));
-    let text = "Are you sure you want to delete " + localStorage.getItem("yourname.agent." + x) + "?";
+    let text = "Are you sure you want to delete " + '"' + localStorage.getItem("yourname.agent." + x) + '"?';
     if (confirm(text) == true) {
         localStorage.setItem("deleteUser" + x, "true");
         localStorage.removeItem("yourname.agent." + x);

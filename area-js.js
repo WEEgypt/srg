@@ -623,7 +623,7 @@ function Save__2() {
 }
 function RemoveArea() {
     let x = parseInt(localStorage.getItem("selectedArea"));
-    let text = "Are you sure you want to delete " + localStorage.getItem("areaname.area." + x) + "?";
+    let text = "Are you sure you want to delete " + '"' + localStorage.getItem("areaname.area." + x) + '"?';
     if (confirm(text) == true) {
         localStorage.setItem("deleteArea" + x, "true");
         localStorage.removeItem("areaname.area." + x);
