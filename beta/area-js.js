@@ -596,9 +596,7 @@ function Print__1() {
     doc.document.write("</div></body></html>");
 	doc.window.print();
     doc.document.close();
-	setTimeout(() => {
-		doc.window.close();
-	}, 2000);
+	doc.window.close();
 }
 function Save__1() {
     let x = parseInt(localStorage.getItem("currentArea"));
