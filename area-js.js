@@ -597,16 +597,9 @@ function Print__1() {
     doc.document.close();
     doc.window.print();
 
-if (doc.window.matchMedia) {
-    var printQuery = doc.window.matchMedia('print');
-    printQuery.addListener(function() {
-        var screenQuery = doc.window.matchMedia('screen');
-        screenQuery.addListener(function() {
-            //actions after print dialog close here
-            doc.window.close();
-        });
-    });
-}
+setTimeout(function () { doc.window.print(); }, 500);
+        doc.window.onfocus = function () { setTimeout(function () { doc.window.close(); }, 500); }
+
 
 
     
