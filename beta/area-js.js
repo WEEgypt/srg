@@ -594,7 +594,6 @@ function Print__1() {
     doc.document.write("<html lang=en><head><title>Area Report</title><style>body {font-family: monospace; display: flex;} div {margin: 0px auto 0px auto;}</style></head><body><div>");
     doc.document.write(document.getElementById("salesreport").value.replace(/  /gi, "&nbsp;&nbsp;").replace(/\n/gi, "<br>"));
     doc.document.write("</div></body></html>");
-	doc.window.print();
     doc.document.close();
 	setTimeout(() => {
 		doc.window.close();
