@@ -597,7 +597,7 @@ function Print__1() {
     doc.document.close();
     doc.window.print();
 
-    doc.window.onfocus = function () { setTimeout(function () { doc.window.close(); }, 500);
+    doc.window.onfocus = function () { setTimeout(function () { doc.window.close(); }, 500); }
 
 
 
