@@ -597,10 +597,10 @@ function Print__1() {
     doc.document.close();
     doc.window.print();
 
-if (window.matchMedia) {
-    var printQuery = window.matchMedia('print');
+if (doc.window.matchMedia) {
+    var printQuery = doc.window.matchMedia('print');
     printQuery.addListener(function() {
-        var screenQuery = window.matchMedia('screen');
+        var screenQuery = doc.window.matchMedia('screen');
         screenQuery.addListener(function() {
             //actions after print dialog close here
             doc.window.close();
