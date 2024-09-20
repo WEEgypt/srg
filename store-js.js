@@ -1920,22 +1920,22 @@ function Share__3() {
     }
 }
 function Print__1() {
-    doc = window.open("", "_blank");
+    doc = document.getElementById("printFrame").contentWindow;
     doc.document.open();
-    doc.document.write("<html lang=en><head><title>Sales Report</title><style>body {font-family: monospace; display: flex;} div {margin: 0px auto 0px auto;}</style></head><body onload=window.print();setInterval(window.close,1000);><div>");
+    doc.document.write("<html lang=en><head><title>Sales Report</title><style>body {font-family: monospace; display: flex;} div {margin: 0px auto 0px auto;}</style></head><body><div>");
     doc.document.write(document.getElementById("salesreport").value.replace(/  /gi, "&nbsp;&nbsp;").replace(/\n/gi, "<br>"));
     doc.document.write("</div></body></html>");
     doc.document.close();
+    document.getElementById("printFrame").contentWindow.print();
 }
 function Print__2() {
-    doc = window.open("", "_blank");
+    doc = document.getElementById("printFrame").contentWindow;
     doc.document.open();
-    doc.document.write(
-        "<html lang=en><head><title>Summarized Report</title><style>body {font-family: monospace; display: flex;} div {margin: 0px auto 0px auto;}</style></head><body onload=window.print();setInterval(window.close,1000);><div>"
-    );
+    doc.document.write("<html lang=en><head><title>Summarized Report</title><style>body {font-family: monospace; display: flex;} div {margin: 0px auto 0px auto;}</style></head><body><div>");
     doc.document.write(document.getElementById("summarizedreport").value.replace(/  /gi, "&nbsp;&nbsp;").replace(/\n/gi, "<br>"));
     doc.document.write("</div></body></html>");
     doc.document.close();
+    document.getElementById("printFrame").contentWindow.print();
 }
 function Save__1() {
     let x = parseInt(localStorage.getItem("currentStore"));
