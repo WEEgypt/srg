@@ -431,13 +431,21 @@
 });
 
 {
-    const isInWebAppiOS = window.navigator.standalone === true;
+    const isInWebAppiOS = !window.navigator.standalone === true;
     if (isInWebAppiOS) {
         PullToRefresh.init({
             mainElement: "body",
             triggerElement: "html",
             onRefresh() {
-                window.location.href = "index.html";
+                if (window.location.toString().includes("agent")) {
+                    window.location.href = "agent.html";
+                } else if (window.location.toString().includes("store")) {
+                    window.location.href = "store.html";
+                } else if (window.location.toString().includes("area")) {
+                    window.location.href = "area.html";
+                } else {
+                    window.location.href = "index.html";
+                }
             },
         });
     }
