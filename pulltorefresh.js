@@ -437,7 +437,7 @@
             mainElement: "body",
             triggerElement: "html",
             onRefresh() {
-                window.location.reload();
+                window.location.href = "index.html";
             },
         });
     }
