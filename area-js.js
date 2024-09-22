@@ -657,7 +657,7 @@ function RemoveArea() {
             localStorage.removeItem("areaRestore");
             localStorage.removeItem("areas");
         }
-        location.reload();
+        window.location.href = "area.html";
     } else {
         return false;
     }

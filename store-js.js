@@ -2026,7 +2026,7 @@ function RemoveStore() {
             localStorage.removeItem("storeRestore");
             localStorage.removeItem("stores");
         }
-        location.reload();
+        window.location.href = "store.html";
     } else {
         return false;
     }

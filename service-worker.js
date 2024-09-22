@@ -14,8 +14,24 @@
 }
 self.addEventListener("install", (event) => {
     event.waitUntil(
-        caches.open("my-pwa-cache").then((cache) => {
-            return cache.addAll(["agent.html", "agent-js.js", "area.html", "area-js.js", "icon.png", "index.html", "manifest.webmanifest", "pulltorefresh.js", "store.html", "store-js.js", "style.css", "transformer.js"]);
+        caches.open("SRG-cache-v1").then((cache) => {
+            return cache.addAll([
+                "agent.html",
+                "agent-js.js",
+                "area.html",
+                "area-js.js",
+                "icon.png",
+                "icon512_maskable.png",
+                "icon512_rounded.png",
+                "index.html",
+                "manifest.json",
+                "pulltorefresh.js",
+                "service-worker.js",
+                "store.html",
+                "store-js.js",
+                "style.css",
+                "transformer.js",
+            ]);
         })
     );
 });

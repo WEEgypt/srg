@@ -1837,7 +1837,7 @@ function RemoveUser() {
             localStorage.removeItem("agentRestore");
             localStorage.removeItem("users");
         }
-        location.reload();
+        window.location.href = "agent.html";
     } else {
         return false;
     }
