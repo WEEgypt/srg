@@ -1,7 +1,7 @@
 {
     "name": "Sales Report Generator",
     "short_name": "SRG",
-    "start_url": "index.html",
+    "start_url": "./index.html",
     "display": "standalone",
     "orientation": "any",
     "lang": "en-US",
