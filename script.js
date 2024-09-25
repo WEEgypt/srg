@@ -1,5 +1,5 @@
 function goTo(Link) {
-    window.location.replace = Link;
+    window.location.replace(Link);
 }
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
