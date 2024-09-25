@@ -147,7 +147,7 @@ function Next__5() {
     NextTransform();
 }
 function Back__1() {
-    window.open("index.html", "_self");
+    window.location.href = "index.html";
 }
 function Back__2() {
     if (localStorage.getItem("activeStores") > "1") {
