@@ -3,7 +3,6 @@
     "short_name": "SRG",
     "start_url": "./index.html",
     "display": "standalone",
-    "orientation": "any",
     "lang": "en-US",
     "background_color": "#5b2c92",
     "description": "Sales Report Generator - Developed by Mamdouh Khalaf.",
