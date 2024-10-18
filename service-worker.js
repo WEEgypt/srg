@@ -1,6 +1,6 @@
 const CACHE_NAME = "srg-v1";
-const OFFLINE_URL = "/offline.html";
-const NOT_FOUND_URL = "/404.html";
+const OFFLINE_URL = "./offline.html";
+const NOT_FOUND_URL = "./404.html";
 const ASSETS_TO_CACHE = [
   "./",
   "./404.html",
