@@ -1,49 +1,80 @@
 const CACHE_NAME = "srg-v1";
+const OFFLINE_URL = "/offline.html";
+const NOT_FOUND_URL = "/404.html";
 const ASSETS_TO_CACHE = [
-    "./",
-    "./icon.png",
-    "./icon512_rounded.png",
-    "./icon512_maskable.png",
-    "./index.html",
-    "./store.html",
-    "./agent.html",
-    "./area.html",
-    "./404.html",
-    "./script.js",
-    "./store.js",
-    "./agent.js",
-    "./area.js",
-    "./service-worker.js",
-    "./transformer.js",
-    "./style.css",
-    "./manifest.json",
+  "/",
+  "/icon.png",
+  "/icon512_rounded.png",
+  "/icon512_maskable.png",
+  "/index.html",
+  "/store.html",
+  "/agent.html",
+  "/area.html",
+  "/404.html",
+  "/script.js",
+  "/store.js",
+  "/agent.js",
+  "/area.js",
+  "/service-worker.js",
+  "/transformer.js",
+  "/style.css",
+  "/manifest.json",
 ];
 self.addEventListener("install", (event) => {
-    event.waitUntil(
-        caches.open(CACHE_NAME).then((cache) => {
-            console.log("Opened cache");
-            return cache.addAll(ASSETS_TO_CACHE);
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(ASSETS_TO_CACHE);
+    })
+  );
+  self.skipWaiting();
+});
+
+self.addEventListener("fetch", (event) => {
+  const requestURL = new URL(event.request.url);
+  if (
+    requestURL.protocol === "chrome-extension:" ||
+    event.request.method !== "GET"
+  ) {
+    return;
+  }
+  event.respondWith(
+    caches.match(event.request).then((cachedResponse) => {
+      if (cachedResponse) {
+        return cachedResponse;
+      }
+      return fetch(event.request)
+        .then((networkResponse) => {
+          if (
+            !networkResponse ||
+            networkResponse.status !== 200 ||
+            networkResponse.type === "opaque"
+          ) {
+            if (networkResponse && networkResponse.status === 404) {
+              return caches.match(NOT_FOUND_URL);
+            }
+            return networkResponse;
+          }
+          return caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, networkResponse.clone());
+            return networkResponse;
+          });
         })
-    );
-    self.skipWaiting();
+        .catch(() => {
+          return caches.match(OFFLINE_URL);
+        });
+    })
+  );
 });
 self.addEventListener("activate", (event) => {
-    event.waitUntil(
-        caches.keys().then((cacheNames) => {
-            return Promise.all(cacheNames.filter((cacheName) => cacheName !== CACHE_NAME).map((cacheName) => caches.delete(cacheName)));
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== CACHE_NAME) {
+            return caches.delete(cacheName);
+          }
         })
-    );
-    self.clients.claim();
-});
-self.addEventListener("fetch", (event) => {
-    event.respondWith(
-        caches
-            .match(event.request)
-            .then((response) => {
-                return response || fetch(event.request);
-            })
-            .catch(() => {
-                return caches.match("./404.html");
-            })
-    );
+      );
+    })
+  );
 });
