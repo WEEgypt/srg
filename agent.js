@@ -359,35 +359,35 @@ function Continue() {
   );
   document.getElementById("todaypayg").value = "";
   document.getElementById("todaydata").value = "";
-  document.getElementById("todaysuperkix20").value = "";
   document.getElementById("todaysuperkix25").value = "";
-  document.getElementById("todaysuperkix35").value = "";
+  document.getElementById("todaysuperkix32").value = "";
   document.getElementById("todaysuperkix45").value = "";
-  document.getElementById("todaysuperkix65").value = "";
-  document.getElementById("todaysuperkix80").value = "";
-  document.getElementById("todaysuperkix100").value = "";
-  document.getElementById("todaytazbeet30").value = "";
+  document.getElementById("todaysuperkix60").value = "";
+  document.getElementById("todaysuperkix85").value = "";
+  document.getElementById("todaysuperkix105").value = "";
+  document.getElementById("todaysuperkix130").value = "";
   document.getElementById("todaytazbeet40").value = "";
-  document.getElementById("todaytazbeet70").value = "";
-  document.getElementById("todaytazbeet110").value = "";
-  document.getElementById("todayweclub25").value = "";
-  document.getElementById("todayweclub40").value = "";
-  document.getElementById("todayweclub65").value = "";
-  document.getElementById("todayweclub100").value = "";
-  document.getElementById("todaywemix165").value = "";
-  document.getElementById("todaywemix240").value = "";
-  document.getElementById("todaygold200fmc").value = "";
-  document.getElementById("todaygold400fmc").value = "";
-  document.getElementById("todaygold600fmc").value = "";
-  document.getElementById("todaygold800fmc").value = "";
-  document.getElementById("todaygold1000fmc").value = "";
-  document.getElementById("todaygold1500fmc").value = "";
-  document.getElementById("todaygold200sa").value = "";
-  document.getElementById("todaygold400sa").value = "";
-  document.getElementById("todaygold600sa").value = "";
-  document.getElementById("todaygold800sa").value = "";
-  document.getElementById("todaygold1000sa").value = "";
-  document.getElementById("todaygold1500sa").value = "";
+  document.getElementById("todaytazbeet50").value = "";
+  document.getElementById("todaytazbeet90").value = "";
+  document.getElementById("todaytazbeet145").value = "";
+  document.getElementById("todayweclub32").value = "";
+  document.getElementById("todayweclub50").value = "";
+  document.getElementById("todayweclub85").value = "";
+  document.getElementById("todayweclub130").value = "";
+  document.getElementById("todaywemix215").value = "";
+  document.getElementById("todaywemix310").value = "";
+  document.getElementById("todaygold260fmc").value = "";
+  document.getElementById("todaygold525fmc").value = "";
+  document.getElementById("todaygold775fmc").value = "";
+  document.getElementById("todaygold1050fmc").value = "";
+  document.getElementById("todaygold1300fmc").value = "";
+  document.getElementById("todaygold2000fmc").value = "";
+  document.getElementById("todaygold260sa").value = "";
+  document.getElementById("todaygold525sa").value = "";
+  document.getElementById("todaygold775sa").value = "";
+  document.getElementById("todaygold1050sa").value = "";
+  document.getElementById("todaygold1300sa").value = "";
+  document.getElementById("todaygold2000sa").value = "";
   document.getElementById("todayadsl140").value = "";
   document.getElementById("todayadsl200").value = "";
   document.getElementById("todayadsl250").value = "";
@@ -459,35 +459,35 @@ function NewMonth() {
   );
   document.getElementById("todaypayg").value = "";
   document.getElementById("todaydata").value = "";
-  document.getElementById("todaysuperkix20").value = "";
   document.getElementById("todaysuperkix25").value = "";
-  document.getElementById("todaysuperkix35").value = "";
+  document.getElementById("todaysuperkix32").value = "";
   document.getElementById("todaysuperkix45").value = "";
-  document.getElementById("todaysuperkix65").value = "";
-  document.getElementById("todaysuperkix80").value = "";
-  document.getElementById("todaysuperkix100").value = "";
-  document.getElementById("todaytazbeet30").value = "";
+  document.getElementById("todaysuperkix60").value = "";
+  document.getElementById("todaysuperkix85").value = "";
+  document.getElementById("todaysuperkix105").value = "";
+  document.getElementById("todaysuperkix130").value = "";
   document.getElementById("todaytazbeet40").value = "";
-  document.getElementById("todaytazbeet70").value = "";
-  document.getElementById("todaytazbeet110").value = "";
-  document.getElementById("todayweclub25").value = "";
-  document.getElementById("todayweclub40").value = "";
-  document.getElementById("todayweclub65").value = "";
-  document.getElementById("todayweclub100").value = "";
-  document.getElementById("todaywemix165").value = "";
-  document.getElementById("todaywemix240").value = "";
-  document.getElementById("todaygold200fmc").value = "";
-  document.getElementById("todaygold400fmc").value = "";
-  document.getElementById("todaygold600fmc").value = "";
-  document.getElementById("todaygold800fmc").value = "";
-  document.getElementById("todaygold1000fmc").value = "";
-  document.getElementById("todaygold1500fmc").value = "";
-  document.getElementById("todaygold200sa").value = "";
-  document.getElementById("todaygold400sa").value = "";
-  document.getElementById("todaygold600sa").value = "";
-  document.getElementById("todaygold800sa").value = "";
-  document.getElementById("todaygold1000sa").value = "";
-  document.getElementById("todaygold1500sa").value = "";
+  document.getElementById("todaytazbeet50").value = "";
+  document.getElementById("todaytazbeet90").value = "";
+  document.getElementById("todaytazbeet145").value = "";
+  document.getElementById("todayweclub32").value = "";
+  document.getElementById("todayweclub50").value = "";
+  document.getElementById("todayweclub85").value = "";
+  document.getElementById("todayweclub130").value = "";
+  document.getElementById("todaywemix215").value = "";
+  document.getElementById("todaywemix310").value = "";
+  document.getElementById("todaygold260fmc").value = "";
+  document.getElementById("todaygold525fmc").value = "";
+  document.getElementById("todaygold775fmc").value = "";
+  document.getElementById("todaygold1050fmc").value = "";
+  document.getElementById("todaygold1300fmc").value = "";
+  document.getElementById("todaygold2000fmc").value = "";
+  document.getElementById("todaygold260sa").value = "";
+  document.getElementById("todaygold525sa").value = "";
+  document.getElementById("todaygold775sa").value = "";
+  document.getElementById("todaygold1050sa").value = "";
+  document.getElementById("todaygold1300sa").value = "";
+  document.getElementById("todaygold2000sa").value = "";
   document.getElementById("todayadsl140").value = "";
   document.getElementById("todayadsl200").value = "";
   document.getElementById("todayadsl250").value = "";
@@ -561,35 +561,35 @@ function NewUser() {
   );
   document.getElementById("todaypayg").value = "";
   document.getElementById("todaydata").value = "";
-  document.getElementById("todaysuperkix20").value = "";
   document.getElementById("todaysuperkix25").value = "";
-  document.getElementById("todaysuperkix35").value = "";
+  document.getElementById("todaysuperkix32").value = "";
   document.getElementById("todaysuperkix45").value = "";
-  document.getElementById("todaysuperkix65").value = "";
-  document.getElementById("todaysuperkix80").value = "";
-  document.getElementById("todaysuperkix100").value = "";
-  document.getElementById("todaytazbeet30").value = "";
+  document.getElementById("todaysuperkix60").value = "";
+  document.getElementById("todaysuperkix85").value = "";
+  document.getElementById("todaysuperkix105").value = "";
+  document.getElementById("todaysuperkix130").value = "";
   document.getElementById("todaytazbeet40").value = "";
-  document.getElementById("todaytazbeet70").value = "";
-  document.getElementById("todaytazbeet110").value = "";
-  document.getElementById("todayweclub25").value = "";
-  document.getElementById("todayweclub40").value = "";
-  document.getElementById("todayweclub65").value = "";
-  document.getElementById("todayweclub100").value = "";
-  document.getElementById("todaywemix165").value = "";
-  document.getElementById("todaywemix240").value = "";
-  document.getElementById("todaygold200fmc").value = "";
-  document.getElementById("todaygold400fmc").value = "";
-  document.getElementById("todaygold600fmc").value = "";
-  document.getElementById("todaygold800fmc").value = "";
-  document.getElementById("todaygold1000fmc").value = "";
-  document.getElementById("todaygold1500fmc").value = "";
-  document.getElementById("todaygold200sa").value = "";
-  document.getElementById("todaygold400sa").value = "";
-  document.getElementById("todaygold600sa").value = "";
-  document.getElementById("todaygold800sa").value = "";
-  document.getElementById("todaygold1000sa").value = "";
-  document.getElementById("todaygold1500sa").value = "";
+  document.getElementById("todaytazbeet50").value = "";
+  document.getElementById("todaytazbeet90").value = "";
+  document.getElementById("todaytazbeet145").value = "";
+  document.getElementById("todayweclub32").value = "";
+  document.getElementById("todayweclub50").value = "";
+  document.getElementById("todayweclub85").value = "";
+  document.getElementById("todayweclub130").value = "";
+  document.getElementById("todaywemix215").value = "";
+  document.getElementById("todaywemix310").value = "";
+  document.getElementById("todaygold260fmc").value = "";
+  document.getElementById("todaygold525fmc").value = "";
+  document.getElementById("todaygold775fmc").value = "";
+  document.getElementById("todaygold1050fmc").value = "";
+  document.getElementById("todaygold1300fmc").value = "";
+  document.getElementById("todaygold2000fmc").value = "";
+  document.getElementById("todaygold260sa").value = "";
+  document.getElementById("todaygold525sa").value = "";
+  document.getElementById("todaygold775sa").value = "";
+  document.getElementById("todaygold1050sa").value = "";
+  document.getElementById("todaygold1300sa").value = "";
+  document.getElementById("todaygold2000sa").value = "";
   document.getElementById("todayadsl140").value = "";
   document.getElementById("todayadsl200").value = "";
   document.getElementById("todayadsl250").value = "";
@@ -643,13 +643,6 @@ function GenerateSalesReport() {
   achieveddata = parseInt(document.getElementById("achieveddata").value) || 0;
   utddata = todaydata + achieveddata || 0;
   targetdata = parseInt(document.getElementById("targetdata").value) || 0;
-  todaysuperkix20Input = document
-    .getElementById("todaysuperkix20")
-    .value.split(" ");
-  todaysuperkix20 = 0;
-  for (i = 0; i < todaysuperkix20Input.length; i++) {
-    todaysuperkix20 += parseInt(todaysuperkix20Input[i]) || 0;
-  }
   todaysuperkix25Input = document
     .getElementById("todaysuperkix25")
     .value.split(" ");
@@ -657,12 +650,12 @@ function GenerateSalesReport() {
   for (i = 0; i < todaysuperkix25Input.length; i++) {
     todaysuperkix25 += parseInt(todaysuperkix25Input[i]) || 0;
   }
-  todaysuperkix35Input = document
-    .getElementById("todaysuperkix35")
+  todaysuperkix32Input = document
+    .getElementById("todaysuperkix32")
     .value.split(" ");
-  todaysuperkix35 = 0;
-  for (i = 0; i < todaysuperkix35Input.length; i++) {
-    todaysuperkix35 += parseInt(todaysuperkix35Input[i]) || 0;
+  todaysuperkix32 = 0;
+  for (i = 0; i < todaysuperkix32Input.length; i++) {
+    todaysuperkix32 += parseInt(todaysuperkix32Input[i]) || 0;
   }
   todaysuperkix45Input = document
     .getElementById("todaysuperkix45")
@@ -671,55 +664,55 @@ function GenerateSalesReport() {
   for (i = 0; i < todaysuperkix45Input.length; i++) {
     todaysuperkix45 += parseInt(todaysuperkix45Input[i]) || 0;
   }
-  todaysuperkix65Input = document
-    .getElementById("todaysuperkix65")
+  todaysuperkix60Input = document
+    .getElementById("todaysuperkix60")
     .value.split(" ");
-  todaysuperkix65 = 0;
-  for (i = 0; i < todaysuperkix65Input.length; i++) {
-    todaysuperkix65 += parseInt(todaysuperkix65Input[i]) || 0;
+  todaysuperkix60 = 0;
+  for (i = 0; i < todaysuperkix60Input.length; i++) {
+    todaysuperkix60 += parseInt(todaysuperkix60Input[i]) || 0;
   }
-  todaysuperkix80Input = document
-    .getElementById("todaysuperkix80")
+  todaysuperkix85Input = document
+    .getElementById("todaysuperkix85")
     .value.split(" ");
-  todaysuperkix80 = 0;
-  for (i = 0; i < todaysuperkix80Input.length; i++) {
-    todaysuperkix80 += parseInt(todaysuperkix80Input[i]) || 0;
+  todaysuperkix85 = 0;
+  for (i = 0; i < todaysuperkix85Input.length; i++) {
+    todaysuperkix85 += parseInt(todaysuperkix85Input[i]) || 0;
   }
-  todaysuperkix100Input = document
-    .getElementById("todaysuperkix100")
+  todaysuperkix105Input = document
+    .getElementById("todaysuperkix105")
     .value.split(" ");
-  todaysuperkix100 = 0;
-  for (i = 0; i < todaysuperkix100Input.length; i++) {
-    todaysuperkix100 += parseInt(todaysuperkix100Input[i]) || 0;
+  todaysuperkix105 = 0;
+  for (i = 0; i < todaysuperkix105Input.length; i++) {
+    todaysuperkix105 += parseInt(todaysuperkix105Input[i]) || 0;
+  }
+  todaysuperkix130Input = document
+    .getElementById("todaysuperkix130")
+    .value.split(" ");
+  todaysuperkix130 = 0;
+  for (i = 0; i < todaysuperkix130Input.length; i++) {
+    todaysuperkix130 += parseInt(todaysuperkix130Input[i]) || 0;
   }
   todaysuperkix =
-    todaysuperkix20 +
-      todaysuperkix25 +
-      todaysuperkix35 +
+    todaysuperkix25 +
+      todaysuperkix32 +
       todaysuperkix45 +
-      todaysuperkix65 +
-      todaysuperkix80 +
-      todaysuperkix100 || 0;
+      todaysuperkix60 +
+      todaysuperkix85 +
+      todaysuperkix105 +
+      todaysuperkix130 || 0;
   achievedsuperkix =
     parseInt(document.getElementById("achievedsuperkix").value) || 0;
   utdsuperkix =
-    todaysuperkix20 +
-      todaysuperkix25 +
-      todaysuperkix35 +
+    todaysuperkix25 +
+      todaysuperkix32 +
       todaysuperkix45 +
-      todaysuperkix65 +
-      todaysuperkix80 +
-      todaysuperkix100 +
+      todaysuperkix60 +
+      todaysuperkix85 +
+      todaysuperkix105 +
+      todaysuperkix130 +
       achievedsuperkix || 0;
   targetsuperkix =
     parseInt(document.getElementById("targetsuperkix").value) || 0;
-  todaytazbeet30Input = document
-    .getElementById("todaytazbeet30")
-    .value.split(" ");
-  todaytazbeet30 = 0;
-  for (i = 0; i < todaytazbeet30Input.length; i++) {
-    todaytazbeet30 += parseInt(todaytazbeet30Input[i]) || 0;
-  }
   todaytazbeet40Input = document
     .getElementById("todaytazbeet40")
     .value.split(" ");
@@ -727,185 +720,192 @@ function GenerateSalesReport() {
   for (i = 0; i < todaytazbeet40Input.length; i++) {
     todaytazbeet40 += parseInt(todaytazbeet40Input[i]) || 0;
   }
-  todaytazbeet70Input = document
-    .getElementById("todaytazbeet70")
+  todaytazbeet50Input = document
+    .getElementById("todaytazbeet50")
     .value.split(" ");
-  todaytazbeet70 = 0;
-  for (i = 0; i < todaytazbeet70Input.length; i++) {
-    todaytazbeet70 += parseInt(todaytazbeet70Input[i]) || 0;
+  todaytazbeet50 = 0;
+  for (i = 0; i < todaytazbeet50Input.length; i++) {
+    todaytazbeet50 += parseInt(todaytazbeet50Input[i]) || 0;
   }
-  todaytazbeet110Input = document
-    .getElementById("todaytazbeet110")
+  todaytazbeet90Input = document
+    .getElementById("todaytazbeet90")
     .value.split(" ");
-  todaytazbeet110 = 0;
-  for (i = 0; i < todaytazbeet110Input.length; i++) {
-    todaytazbeet110 += parseInt(todaytazbeet110Input[i]) || 0;
+  todaytazbeet90 = 0;
+  for (i = 0; i < todaytazbeet90Input.length; i++) {
+    todaytazbeet90 += parseInt(todaytazbeet90Input[i]) || 0;
+  }
+  todaytazbeet145Input = document
+    .getElementById("todaytazbeet145")
+    .value.split(" ");
+  todaytazbeet145 = 0;
+  for (i = 0; i < todaytazbeet145Input.length; i++) {
+    todaytazbeet145 += parseInt(todaytazbeet145Input[i]) || 0;
   }
   todaytazbeet =
-    todaytazbeet30 + todaytazbeet40 + todaytazbeet70 + todaytazbeet110 || 0;
+    todaytazbeet40 + todaytazbeet50 + todaytazbeet90 + todaytazbeet145 || 0;
   achievedtaz = parseInt(document.getElementById("achievedtaz").value) || 0;
   utdtaz =
-    todaytazbeet30 +
-      todaytazbeet40 +
-      todaytazbeet70 +
-      todaytazbeet110 +
+    todaytazbeet40 +
+      todaytazbeet50 +
+      todaytazbeet90 +
+      todaytazbeet145 +
       achievedtaz || 0;
   targettaz = parseInt(document.getElementById("targettaz").value) || 0;
-  todayweclub25Input = document
-    .getElementById("todayweclub25")
+  todayweclub32Input = document
+    .getElementById("todayweclub32")
     .value.split(" ");
-  todayweclub25 = 0;
-  for (i = 0; i < todayweclub25Input.length; i++) {
-    todayweclub25 += parseInt(todayweclub25Input[i]) || 0;
+  todayweclub32 = 0;
+  for (i = 0; i < todayweclub32Input.length; i++) {
+    todayweclub32 += parseInt(todayweclub32Input[i]) || 0;
   }
-  todayweclub40Input = document
-    .getElementById("todayweclub40")
+  todayweclub50Input = document
+    .getElementById("todayweclub50")
     .value.split(" ");
-  todayweclub40 = 0;
-  for (i = 0; i < todayweclub40Input.length; i++) {
-    todayweclub40 += parseInt(todayweclub40Input[i]) || 0;
+  todayweclub50 = 0;
+  for (i = 0; i < todayweclub50Input.length; i++) {
+    todayweclub50 += parseInt(todayweclub50Input[i]) || 0;
   }
-  todayweclub65Input = document
-    .getElementById("todayweclub65")
+  todayweclub85Input = document
+    .getElementById("todayweclub85")
     .value.split(" ");
-  todayweclub65 = 0;
-  for (i = 0; i < todayweclub65Input.length; i++) {
-    todayweclub65 += parseInt(todayweclub65Input[i]) || 0;
+  todayweclub85 = 0;
+  for (i = 0; i < todayweclub85Input.length; i++) {
+    todayweclub85 += parseInt(todayweclub85Input[i]) || 0;
   }
-  todayweclub100Input = document
-    .getElementById("todayweclub100")
+  todayweclub130Input = document
+    .getElementById("todayweclub130")
     .value.split(" ");
-  todayweclub100 = 0;
-  for (i = 0; i < todayweclub100Input.length; i++) {
-    todayweclub100 += parseInt(todayweclub100Input[i]) || 0;
+  todayweclub130 = 0;
+  for (i = 0; i < todayweclub130Input.length; i++) {
+    todayweclub130 += parseInt(todayweclub130Input[i]) || 0;
   }
   todayweclub =
-    todayweclub25 + todayweclub40 + todayweclub65 + todayweclub100 || 0;
+    todayweclub32 + todayweclub50 + todayweclub85 + todayweclub130 || 0;
   achievedweclub =
     parseInt(document.getElementById("achievedweclub").value) || 0;
   utdweclub =
-    todayweclub25 +
-      todayweclub40 +
-      todayweclub65 +
-      todayweclub100 +
+    todayweclub32 +
+      todayweclub50 +
+      todayweclub85 +
+      todayweclub130 +
       achievedweclub || 0;
   targetweclub = parseInt(document.getElementById("targetweclub").value) || 0;
-  todaywemix165Input = document
-    .getElementById("todaywemix165")
+  todaywemix215Input = document
+    .getElementById("todaywemix215")
     .value.split(" ");
-  todaywemix165 = 0;
-  for (i = 0; i < todaywemix165Input.length; i++) {
-    todaywemix165 += parseInt(todaywemix165Input[i]) || 0;
+  todaywemix215 = 0;
+  for (i = 0; i < todaywemix215Input.length; i++) {
+    todaywemix215 += parseInt(todaywemix215Input[i]) || 0;
   }
-  todaywemix240Input = document
-    .getElementById("todaywemix240")
+  todaywemix310Input = document
+    .getElementById("todaywemix310")
     .value.split(" ");
-  todaywemix240 = 0;
-  for (i = 0; i < todaywemix240Input.length; i++) {
-    todaywemix240 += parseInt(todaywemix240Input[i]) || 0;
+  todaywemix310 = 0;
+  for (i = 0; i < todaywemix310Input.length; i++) {
+    todaywemix310 += parseInt(todaywemix310Input[i]) || 0;
   }
-  todaywemix = todaywemix165 + todaywemix240 || 0;
+  todaywemix = todaywemix215 + todaywemix310 || 0;
   achievedwemix = parseInt(document.getElementById("achievedwemix").value) || 0;
-  utdwemix = todaywemix165 + todaywemix240 + achievedwemix || 0;
+  utdwemix = todaywemix215 + todaywemix310 + achievedwemix || 0;
   targetwemix = parseInt(document.getElementById("targetwemix").value) || 0;
-  todaygold200fmcInput = document
-    .getElementById("todaygold200fmc")
+  todaygold260fmcInput = document
+    .getElementById("todaygold260fmc")
     .value.split(" ");
-  todaygold200fmc = 0;
-  for (i = 0; i < todaygold200fmcInput.length; i++) {
-    todaygold200fmc += parseInt(todaygold200fmcInput[i]) || 0;
+  todaygold260fmc = 0;
+  for (i = 0; i < todaygold260fmcInput.length; i++) {
+    todaygold260fmc += parseInt(todaygold260fmcInput[i]) || 0;
   }
-  todaygold400fmcInput = document
-    .getElementById("todaygold400fmc")
+  todaygold525fmcInput = document
+    .getElementById("todaygold525fmc")
     .value.split(" ");
-  todaygold400fmc = 0;
-  for (i = 0; i < todaygold400fmcInput.length; i++) {
-    todaygold400fmc += parseInt(todaygold400fmcInput[i]) || 0;
+  todaygold525fmc = 0;
+  for (i = 0; i < todaygold525fmcInput.length; i++) {
+    todaygold525fmc += parseInt(todaygold525fmcInput[i]) || 0;
   }
-  todaygold600fmcInput = document
-    .getElementById("todaygold600fmc")
+  todaygold775fmcInput = document
+    .getElementById("todaygold775fmc")
     .value.split(" ");
-  todaygold600fmc = 0;
-  for (i = 0; i < todaygold600fmcInput.length; i++) {
-    todaygold600fmc += parseInt(todaygold600fmcInput[i]) || 0;
+  todaygold775fmc = 0;
+  for (i = 0; i < todaygold775fmcInput.length; i++) {
+    todaygold775fmc += parseInt(todaygold775fmcInput[i]) || 0;
   }
-  todaygold800fmcInput = document
-    .getElementById("todaygold800fmc")
+  todaygold1050fmcInput = document
+    .getElementById("todaygold1050fmc")
     .value.split(" ");
-  todaygold800fmc = 0;
-  for (i = 0; i < todaygold800fmcInput.length; i++) {
-    todaygold800fmc += parseInt(todaygold800fmcInput[i]) || 0;
+  todaygold1050fmc = 0;
+  for (i = 0; i < todaygold1050fmcInput.length; i++) {
+    todaygold1050fmc += parseInt(todaygold1050fmcInput[i]) || 0;
   }
-  todaygold1000fmcInput = document
-    .getElementById("todaygold1000fmc")
+  todaygold1300fmcInput = document
+    .getElementById("todaygold1300fmc")
     .value.split(" ");
-  todaygold1000fmc = 0;
-  for (i = 0; i < todaygold1000fmcInput.length; i++) {
-    todaygold1000fmc += parseInt(todaygold1000fmcInput[i]) || 0;
+  todaygold1300fmc = 0;
+  for (i = 0; i < todaygold1300fmcInput.length; i++) {
+    todaygold1300fmc += parseInt(todaygold1300fmcInput[i]) || 0;
   }
-  todaygold1500fmcInput = document
-    .getElementById("todaygold1500fmc")
+  todaygold2000fmcInput = document
+    .getElementById("todaygold2000fmc")
     .value.split(" ");
-  todaygold1500fmc = 0;
-  for (i = 0; i < todaygold1500fmcInput.length; i++) {
-    todaygold1500fmc += parseInt(todaygold1500fmcInput[i]) || 0;
+  todaygold2000fmc = 0;
+  for (i = 0; i < todaygold2000fmcInput.length; i++) {
+    todaygold2000fmc += parseInt(todaygold2000fmcInput[i]) || 0;
   }
-  todaygold200saInput = document
-    .getElementById("todaygold200sa")
+  todaygold260saInput = document
+    .getElementById("todaygold260sa")
     .value.split(" ");
-  todaygold200sa = 0;
-  for (i = 0; i < todaygold200saInput.length; i++) {
-    todaygold200sa += parseInt(todaygold200saInput[i]) || 0;
+  todaygold260sa = 0;
+  for (i = 0; i < todaygold260saInput.length; i++) {
+    todaygold260sa += parseInt(todaygold260saInput[i]) || 0;
   }
-  todaygold400saInput = document
-    .getElementById("todaygold400sa")
+  todaygold525saInput = document
+    .getElementById("todaygold525sa")
     .value.split(" ");
-  todaygold400sa = 0;
-  for (i = 0; i < todaygold400saInput.length; i++) {
-    todaygold400sa += parseInt(todaygold400saInput[i]) || 0;
+  todaygold525sa = 0;
+  for (i = 0; i < todaygold525saInput.length; i++) {
+    todaygold525sa += parseInt(todaygold525saInput[i]) || 0;
   }
-  todaygold600saInput = document
-    .getElementById("todaygold600sa")
+  todaygold775saInput = document
+    .getElementById("todaygold775sa")
     .value.split(" ");
-  todaygold600sa = 0;
-  for (i = 0; i < todaygold600saInput.length; i++) {
-    todaygold600sa += parseInt(todaygold600saInput[i]) || 0;
+  todaygold775sa = 0;
+  for (i = 0; i < todaygold775saInput.length; i++) {
+    todaygold775sa += parseInt(todaygold775saInput[i]) || 0;
   }
-  todaygold800saInput = document
-    .getElementById("todaygold800sa")
+  todaygold1050saInput = document
+    .getElementById("todaygold1050sa")
     .value.split(" ");
-  todaygold800sa = 0;
-  for (i = 0; i < todaygold800saInput.length; i++) {
-    todaygold800sa += parseInt(todaygold800saInput[i]) || 0;
+  todaygold1050sa = 0;
+  for (i = 0; i < todaygold1050saInput.length; i++) {
+    todaygold1050sa += parseInt(todaygold1050saInput[i]) || 0;
   }
-  todaygold1000saInput = document
-    .getElementById("todaygold1000sa")
+  todaygold1300saInput = document
+    .getElementById("todaygold1300sa")
     .value.split(" ");
-  todaygold1000sa = 0;
-  for (i = 0; i < todaygold1000saInput.length; i++) {
-    todaygold1000sa += parseInt(todaygold1000saInput[i]) || 0;
+  todaygold1300sa = 0;
+  for (i = 0; i < todaygold1300saInput.length; i++) {
+    todaygold1300sa += parseInt(todaygold1300saInput[i]) || 0;
   }
-  todaygold1500saInput = document
-    .getElementById("todaygold1500sa")
+  todaygold2000saInput = document
+    .getElementById("todaygold2000sa")
     .value.split(" ");
-  todaygold1500sa = 0;
-  for (i = 0; i < todaygold1500saInput.length; i++) {
-    todaygold1500sa += parseInt(todaygold1500saInput[i]) || 0;
+  todaygold2000sa = 0;
+  for (i = 0; i < todaygold2000saInput.length; i++) {
+    todaygold2000sa += parseInt(todaygold2000saInput[i]) || 0;
   }
   todaygoldfmc =
-    todaygold200fmc +
-      todaygold400fmc +
-      todaygold600fmc +
-      todaygold800fmc +
-      todaygold1000fmc +
-      todaygold1500fmc || 0;
+    todaygold260fmc +
+      todaygold525fmc +
+      todaygold775fmc +
+      todaygold1050fmc +
+      todaygold1300fmc +
+      todaygold2000fmc || 0;
   todaygoldsa =
-    todaygold200sa +
-      todaygold400sa +
-      todaygold600sa +
-      todaygold800sa +
-      todaygold1000sa +
-      todaygold1500sa || 0;
+    todaygold260sa +
+      todaygold525sa +
+      todaygold775sa +
+      todaygold1050sa +
+      todaygold1300sa +
+      todaygold2000sa || 0;
   todaygold = todaygoldfmc + todaygoldsa || 0;
   achievedwegoldfmc =
     parseInt(document.getElementById("achievedwegoldfmc").value) || 0;
@@ -1011,35 +1011,35 @@ function GenerateSalesReport() {
   var todaysalesArray = [
     todaypayg.toString(),
     todaydata.toString(),
-    todaysuperkix20.toString(),
     todaysuperkix25.toString(),
-    todaysuperkix35.toString(),
+    todaysuperkix32.toString(),
     todaysuperkix45.toString(),
-    todaysuperkix65.toString(),
-    todaysuperkix80.toString(),
-    todaysuperkix100.toString(),
-    todaytazbeet30.toString(),
+    todaysuperkix60.toString(),
+    todaysuperkix85.toString(),
+    todaysuperkix105.toString(),
+    todaysuperkix130.toString(),
     todaytazbeet40.toString(),
-    todaytazbeet70.toString(),
-    todaytazbeet110.toString(),
-    todayweclub25.toString(),
-    todayweclub40.toString(),
-    todayweclub65.toString(),
-    todayweclub100.toString(),
-    todaywemix165.toString(),
-    todaywemix240.toString(),
-    todaygold200fmc.toString(),
-    todaygold400fmc.toString(),
-    todaygold600fmc.toString(),
-    todaygold800fmc.toString(),
-    todaygold1000fmc.toString(),
-    todaygold1500fmc.toString(),
-    todaygold200sa.toString(),
-    todaygold400sa.toString(),
-    todaygold600sa.toString(),
-    todaygold800sa.toString(),
-    todaygold1000sa.toString(),
-    todaygold1500sa.toString(),
+    todaytazbeet50.toString(),
+    todaytazbeet90.toString(),
+    todaytazbeet145.toString(),
+    todayweclub32.toString(),
+    todayweclub50.toString(),
+    todayweclub85.toString(),
+    todayweclub130.toString(),
+    todaywemix215.toString(),
+    todaywemix310.toString(),
+    todaygold260fmc.toString(),
+    todaygold525fmc.toString(),
+    todaygold775fmc.toString(),
+    todaygold1050fmc.toString(),
+    todaygold1300fmc.toString(),
+    todaygold2000fmc.toString(),
+    todaygold260sa.toString(),
+    todaygold525sa.toString(),
+    todaygold775sa.toString(),
+    todaygold1050sa.toString(),
+    todaygold1300sa.toString(),
+    todaygold2000sa.toString(),
     todayadsl140.toString(),
     todayadsl200.toString(),
     todayadsl250.toString(),
@@ -1065,35 +1065,35 @@ function GenerateSalesReport() {
   }
   todaypaygAdjusted = todaysalesArrayAdjusted[0];
   todaydataAdjusted = todaysalesArrayAdjusted[1];
-  todaysuperkix20Adjusted = todaysalesArrayAdjusted[2];
-  todaysuperkix25Adjusted = todaysalesArrayAdjusted[3];
-  todaysuperkix35Adjusted = todaysalesArrayAdjusted[4];
-  todaysuperkix45Adjusted = todaysalesArrayAdjusted[5];
-  todaysuperkix65Adjusted = todaysalesArrayAdjusted[6];
-  todaysuperkix80Adjusted = todaysalesArrayAdjusted[7];
-  todaysuperkix100Adjusted = todaysalesArrayAdjusted[8];
-  todaytazbeet30Adjusted = todaysalesArrayAdjusted[9];
-  todaytazbeet40Adjusted = todaysalesArrayAdjusted[10];
-  todaytazbeet70Adjusted = todaysalesArrayAdjusted[11];
-  todaytazbeet110Adjusted = todaysalesArrayAdjusted[12];
-  todayweclub25Adjusted = todaysalesArrayAdjusted[13];
-  todayweclub40Adjusted = todaysalesArrayAdjusted[14];
-  todayweclub65Adjusted = todaysalesArrayAdjusted[15];
-  todayweclub100Adjusted = todaysalesArrayAdjusted[16];
-  todaywemix165Adjusted = todaysalesArrayAdjusted[17];
-  todaywemix240Adjusted = todaysalesArrayAdjusted[18];
-  todaygold200fmcAdjusted = todaysalesArrayAdjusted[19];
-  todaygold400fmcAdjusted = todaysalesArrayAdjusted[20];
-  todaygold600fmcAdjusted = todaysalesArrayAdjusted[21];
-  todaygold800fmcAdjusted = todaysalesArrayAdjusted[22];
-  todaygold1000fmcAdjusted = todaysalesArrayAdjusted[23];
-  todaygold1500fmcAdjusted = todaysalesArrayAdjusted[24];
-  todaygold200saAdjusted = todaysalesArrayAdjusted[25];
-  todaygold400saAdjusted = todaysalesArrayAdjusted[26];
-  todaygold600saAdjusted = todaysalesArrayAdjusted[27];
-  todaygold800saAdjusted = todaysalesArrayAdjusted[28];
-  todaygold1000saAdjusted = todaysalesArrayAdjusted[29];
-  todaygold1500saAdjusted = todaysalesArrayAdjusted[30];
+  todaysuperkix25Adjusted = todaysalesArrayAdjusted[2];
+  todaysuperkix32Adjusted = todaysalesArrayAdjusted[3];
+  todaysuperkix45Adjusted = todaysalesArrayAdjusted[4];
+  todaysuperkix60Adjusted = todaysalesArrayAdjusted[5];
+  todaysuperkix85Adjusted = todaysalesArrayAdjusted[6];
+  todaysuperkix105Adjusted = todaysalesArrayAdjusted[7];
+  todaysuperkix130Adjusted = todaysalesArrayAdjusted[8];
+  todaytazbeet40Adjusted = todaysalesArrayAdjusted[9];
+  todaytazbeet50Adjusted = todaysalesArrayAdjusted[10];
+  todaytazbeet90Adjusted = todaysalesArrayAdjusted[11];
+  todaytazbeet145Adjusted = todaysalesArrayAdjusted[12];
+  todayweclub32Adjusted = todaysalesArrayAdjusted[13];
+  todayweclub50Adjusted = todaysalesArrayAdjusted[14];
+  todayweclub85Adjusted = todaysalesArrayAdjusted[15];
+  todayweclub130Adjusted = todaysalesArrayAdjusted[16];
+  todaywemix215Adjusted = todaysalesArrayAdjusted[17];
+  todaywemix310Adjusted = todaysalesArrayAdjusted[18];
+  todaygold260fmcAdjusted = todaysalesArrayAdjusted[19];
+  todaygold525fmcAdjusted = todaysalesArrayAdjusted[20];
+  todaygold775fmcAdjusted = todaysalesArrayAdjusted[21];
+  todaygold1050fmcAdjusted = todaysalesArrayAdjusted[22];
+  todaygold1300fmcAdjusted = todaysalesArrayAdjusted[23];
+  todaygold2000fmcAdjusted = todaysalesArrayAdjusted[24];
+  todaygold260saAdjusted = todaysalesArrayAdjusted[25];
+  todaygold525saAdjusted = todaysalesArrayAdjusted[26];
+  todaygold775saAdjusted = todaysalesArrayAdjusted[27];
+  todaygold1050saAdjusted = todaysalesArrayAdjusted[28];
+  todaygold1300saAdjusted = todaysalesArrayAdjusted[29];
+  todaygold2000saAdjusted = todaysalesArrayAdjusted[30];
   todayadsl140Adjusted = todaysalesArrayAdjusted[31];
   todayadsl200Adjusted = todaysalesArrayAdjusted[32];
   todayadsl250Adjusted = todaysalesArrayAdjusted[33];
@@ -1122,14 +1122,6 @@ function GenerateSalesReport() {
     todaydatareportForSharing =
       "\n" + "```" + todaydataAdjusted + "```" + " * Data";
   }
-  if (todaysuperkix20 == "0") {
-    todaysuperkix20report = "";
-    todaysuperkix20reportForSharing = "";
-  } else {
-    todaysuperkix20report = "\n" + todaysuperkix20Adjusted + " * Kix 20";
-    todaysuperkix20reportForSharing =
-      "\n" + "```" + todaysuperkix20Adjusted + "```" + " * Kix 20";
-  }
   if (todaysuperkix25 == "0") {
     todaysuperkix25report = "";
     todaysuperkix25reportForSharing = "";
@@ -1138,13 +1130,13 @@ function GenerateSalesReport() {
     todaysuperkix25reportForSharing =
       "\n" + "```" + todaysuperkix25Adjusted + "```" + " * Kix 25";
   }
-  if (todaysuperkix35 == "0") {
-    todaysuperkix35report = "";
-    todaysuperkix35reportForSharing = "";
+  if (todaysuperkix32 == "0") {
+    todaysuperkix32report = "";
+    todaysuperkix32reportForSharing = "";
   } else {
-    todaysuperkix35report = "\n" + todaysuperkix35Adjusted + " * Kix 35";
-    todaysuperkix35reportForSharing =
-      "\n" + "```" + todaysuperkix35Adjusted + "```" + " * Kix 35";
+    todaysuperkix32report = "\n" + todaysuperkix32Adjusted + " * Kix 32";
+    todaysuperkix32reportForSharing =
+      "\n" + "```" + todaysuperkix32Adjusted + "```" + " * Kix 32";
   }
   if (todaysuperkix45 == "0") {
     todaysuperkix45report = "";
@@ -1154,37 +1146,37 @@ function GenerateSalesReport() {
     todaysuperkix45reportForSharing =
       "\n" + "```" + todaysuperkix45Adjusted + "```" + " * Kix 45";
   }
-  if (todaysuperkix65 == "0") {
-    todaysuperkix65report = "";
-    todaysuperkix65reportForSharing = "";
+  if (todaysuperkix60 == "0") {
+    todaysuperkix60report = "";
+    todaysuperkix60reportForSharing = "";
   } else {
-    todaysuperkix65report = "\n" + todaysuperkix65Adjusted + " * Kix 65";
-    todaysuperkix65reportForSharing =
-      "\n" + "```" + todaysuperkix65Adjusted + "```" + " * Kix 65";
+    todaysuperkix60report = "\n" + todaysuperkix60Adjusted + " * Kix 60";
+    todaysuperkix60reportForSharing =
+      "\n" + "```" + todaysuperkix60Adjusted + "```" + " * Kix 60";
   }
-  if (todaysuperkix80 == "0") {
-    todaysuperkix80report = "";
-    todaysuperkix80reportForSharing = "";
+  if (todaysuperkix85 == "0") {
+    todaysuperkix85report = "";
+    todaysuperkix85reportForSharing = "";
   } else {
-    todaysuperkix80report = "\n" + todaysuperkix80Adjusted + " * Kix 80";
-    todaysuperkix80reportForSharing =
-      "\n" + "```" + todaysuperkix80Adjusted + "```" + " * Kix 80";
+    todaysuperkix85report = "\n" + todaysuperkix85Adjusted + " * Kix 85";
+    todaysuperkix85reportForSharing =
+      "\n" + "```" + todaysuperkix85Adjusted + "```" + " * Kix 85";
   }
-  if (todaysuperkix100 == "0") {
-    todaysuperkix100report = "";
-    todaysuperkix100reportForSharing = "";
+  if (todaysuperkix105 == "0") {
+    todaysuperkix105report = "";
+    todaysuperkix105reportForSharing = "";
   } else {
-    todaysuperkix100report = "\n" + todaysuperkix100Adjusted + " * Kix 100";
-    todaysuperkix100reportForSharing =
-      "\n" + "```" + todaysuperkix100Adjusted + "```" + " * Kix 100";
+    todaysuperkix105report = "\n" + todaysuperkix105Adjusted + " * Kix 105";
+    todaysuperkix105reportForSharing =
+      "\n" + "```" + todaysuperkix105Adjusted + "```" + " * Kix 105";
   }
-  if (todaytazbeet30 == "0") {
-    todaytazbeet30report = "";
-    todaytazbeet30reportForSharing = "";
+  if (todaysuperkix130 == "0") {
+    todaysuperkix130report = "";
+    todaysuperkix130reportForSharing = "";
   } else {
-    todaytazbeet30report = "\n" + todaytazbeet30Adjusted + " * Tazbeet 30";
-    todaytazbeet30reportForSharing =
-      "\n" + "```" + todaytazbeet30Adjusted + "```" + " * Tazbeet 30";
+    todaysuperkix130report = "\n" + todaysuperkix130Adjusted + " * Kix 130";
+    todaysuperkix130reportForSharing =
+      "\n" + "```" + todaysuperkix130Adjusted + "```" + " * Kix 130";
   }
   if (todaytazbeet40 == "0") {
     todaytazbeet40report = "";
@@ -1194,173 +1186,181 @@ function GenerateSalesReport() {
     todaytazbeet40reportForSharing =
       "\n" + "```" + todaytazbeet40Adjusted + "```" + " * Tazbeet 40";
   }
-  if (todaytazbeet70 == "0") {
-    todaytazbeet70report = "";
-    todaytazbeet70reportForSharing = "";
+  if (todaytazbeet50 == "0") {
+    todaytazbeet50report = "";
+    todaytazbeet50reportForSharing = "";
   } else {
-    todaytazbeet70report = "\n" + todaytazbeet70Adjusted + " * Tazbeet 70";
-    todaytazbeet70reportForSharing =
-      "\n" + "```" + todaytazbeet70Adjusted + "```" + " * Tazbeet 70";
+    todaytazbeet50report = "\n" + todaytazbeet50Adjusted + " * Tazbeet 50";
+    todaytazbeet50reportForSharing =
+      "\n" + "```" + todaytazbeet50Adjusted + "```" + " * Tazbeet 50";
   }
-  if (todaytazbeet110 == "0") {
-    todaytazbeet110report = "";
-    todaytazbeet110reportForSharing = "";
+  if (todaytazbeet90 == "0") {
+    todaytazbeet90report = "";
+    todaytazbeet90reportForSharing = "";
   } else {
-    todaytazbeet110report = "\n" + todaytazbeet110Adjusted + " * Tazbeet 110";
-    todaytazbeet110reportForSharing =
-      "\n" + "```" + todaytazbeet110Adjusted + "```" + " * Tazbeet 110";
+    todaytazbeet90report = "\n" + todaytazbeet90Adjusted + " * Tazbeet 90";
+    todaytazbeet90reportForSharing =
+      "\n" + "```" + todaytazbeet90Adjusted + "```" + " * Tazbeet 90";
   }
-  if (todayweclub25 == "0") {
-    todayweclub25report = "";
-    todayweclub25reportForSharing = "";
+  if (todaytazbeet145 == "0") {
+    todaytazbeet145report = "";
+    todaytazbeet145reportForSharing = "";
   } else {
-    todayweclub25report = "\n" + todayweclub25Adjusted + " * We Club 25";
-    todayweclub25reportForSharing =
-      "\n" + "```" + todayweclub25Adjusted + "```" + " * We Club 25";
+    todaytazbeet145report = "\n" + todaytazbeet145Adjusted + " * Tazbeet 145";
+    todaytazbeet145reportForSharing =
+      "\n" + "```" + todaytazbeet145Adjusted + "```" + " * Tazbeet 145";
   }
-  if (todayweclub40 == "0") {
-    todayweclub40report = "";
-    todayweclub40reportForSharing = "";
+  if (todayweclub32 == "0") {
+    todayweclub32report = "";
+    todayweclub32reportForSharing = "";
   } else {
-    todayweclub40report = "\n" + todayweclub40Adjusted + " * We Club 40";
-    todayweclub40reportForSharing =
-      "\n" + "```" + todayweclub40Adjusted + "```" + " * We Club 40";
+    todayweclub32report = "\n" + todayweclub32Adjusted + " * We Club 32";
+    todayweclub32reportForSharing =
+      "\n" + "```" + todayweclub32Adjusted + "```" + " * We Club 32";
   }
-  if (todayweclub65 == "0") {
-    todayweclub65report = "";
-    todayweclub65reportForSharing = "";
+  if (todayweclub50 == "0") {
+    todayweclub50report = "";
+    todayweclub50reportForSharing = "";
   } else {
-    todayweclub65report = "\n" + todayweclub65Adjusted + " * We Club 65";
-    todayweclub65reportForSharing =
-      "\n" + "```" + todayweclub65Adjusted + "```" + " * We Club 65";
+    todayweclub50report = "\n" + todayweclub50Adjusted + " * We Club 50";
+    todayweclub50reportForSharing =
+      "\n" + "```" + todayweclub50Adjusted + "```" + " * We Club 50";
   }
-  if (todayweclub100 == "0") {
-    todayweclub100report = "";
-    todayweclub100reportForSharing = "";
+  if (todayweclub85 == "0") {
+    todayweclub85report = "";
+    todayweclub85reportForSharing = "";
   } else {
-    todayweclub100report = "\n" + todayweclub100Adjusted + " * We Club 100";
-    todayweclub100reportForSharing =
-      "\n" + "```" + todayweclub100Adjusted + "```" + " * We Club 100";
+    todayweclub85report = "\n" + todayweclub85Adjusted + " * We Club 85";
+    todayweclub85reportForSharing =
+      "\n" + "```" + todayweclub85Adjusted + "```" + " * We Club 85";
   }
-  if (todaywemix165 == "0") {
-    todaywemix165report = "";
-    todaywemix165reportForSharing = "";
+  if (todayweclub130 == "0") {
+    todayweclub130report = "";
+    todayweclub130reportForSharing = "";
   } else {
-    todaywemix165report = "\n" + todaywemix165Adjusted + " * We Mix 165";
-    todaywemix165reportForSharing =
-      "\n" + "```" + todaywemix165Adjusted + "```" + " * We Mix 165";
+    todayweclub130report = "\n" + todayweclub130Adjusted + " * We Club 130";
+    todayweclub130reportForSharing =
+      "\n" + "```" + todayweclub130Adjusted + "```" + " * We Club 130";
   }
-  if (todaywemix240 == "0") {
-    todaywemix240report = "";
-    todaywemix240reportForSharing = "";
+  if (todaywemix215 == "0") {
+    todaywemix215report = "";
+    todaywemix215reportForSharing = "";
   } else {
-    todaywemix240report = "\n" + todaywemix240Adjusted + " * We Mix 240";
-    todaywemix240reportForSharing =
-      "\n" + "```" + todaywemix240Adjusted + "```" + " * We Mix 240";
+    todaywemix215report = "\n" + todaywemix215Adjusted + " * We Mix 215";
+    todaywemix215reportForSharing =
+      "\n" + "```" + todaywemix215Adjusted + "```" + " * We Mix 215";
   }
-  if (todaygold200fmc == "0") {
-    todaygold200fmcreport = "";
-    todaygold200fmcreportForSharing = "";
+  if (todaywemix310 == "0") {
+    todaywemix310report = "";
+    todaywemix310reportForSharing = "";
   } else {
-    todaygold200fmcreport =
-      "\n" + todaygold200fmcAdjusted + " * We Gold 200 FMC";
-    todaygold200fmcreportForSharing =
-      "\n" + "```" + todaygold200fmcAdjusted + "```" + " * We Gold 200 FMC";
+    todaywemix310report = "\n" + todaywemix310Adjusted + " * We Mix 310";
+    todaywemix310reportForSharing =
+      "\n" + "```" + todaywemix310Adjusted + "```" + " * We Mix 310";
   }
-  if (todaygold400fmc == "0") {
-    todaygold400fmcreport = "";
-    todaygold400fmcreportForSharing = "";
+  if (todaygold260fmc == "0") {
+    todaygold260fmcreport = "";
+    todaygold260fmcreportForSharing = "";
   } else {
-    todaygold400fmcreport =
-      "\n" + todaygold400fmcAdjusted + " * We Gold 400 FMC";
-    todaygold400fmcreportForSharing =
-      "\n" + "```" + todaygold400fmcAdjusted + "```" + " * We Gold 400 FMC";
+    todaygold260fmcreport =
+      "\n" + todaygold260fmcAdjusted + " * We Gold 260 FMC";
+    todaygold260fmcreportForSharing =
+      "\n" + "```" + todaygold260fmcAdjusted + "```" + " * We Gold 260 FMC";
   }
-  if (todaygold600fmc == "0") {
-    todaygold600fmcreport = "";
-    todaygold600fmcreportForSharing = "";
+  if (todaygold525fmc == "0") {
+    todaygold525fmcreport = "";
+    todaygold525fmcreportForSharing = "";
   } else {
-    todaygold600fmcreport =
-      "\n" + todaygold600fmcAdjusted + " * We Gold 600 FMC";
-    todaygold600fmcreportForSharing =
-      "\n" + "```" + todaygold600fmcAdjusted + "```" + " * We Gold 600 FMC";
+    todaygold525fmcreport =
+      "\n" + todaygold525fmcAdjusted + " * We Gold 525 FMC";
+    todaygold525fmcreportForSharing =
+      "\n" + "```" + todaygold525fmcAdjusted + "```" + " * We Gold 525 FMC";
   }
-  if (todaygold800fmc == "0") {
-    todaygold800fmcreport = "";
-    todaygold800fmcreportForSharing = "";
+  if (todaygold775fmc == "0") {
+    todaygold775fmcreport = "";
+    todaygold775fmcreportForSharing = "";
   } else {
-    todaygold800fmcreport =
-      "\n" + todaygold800fmcAdjusted + " * We Gold 800 FMC";
-    todaygold800fmcreportForSharing =
-      "\n" + "```" + todaygold800fmcAdjusted + "```" + " * We Gold 800 FMC";
+    todaygold775fmcreport =
+      "\n" + todaygold775fmcAdjusted + " * We Gold 775 FMC";
+    todaygold775fmcreportForSharing =
+      "\n" + "```" + todaygold775fmcAdjusted + "```" + " * We Gold 775 FMC";
   }
-  if (todaygold1000fmc == "0") {
-    todaygold1000fmcreport = "";
-    todaygold1000fmcreportForSharing = "";
+  if (todaygold1050fmc == "0") {
+    todaygold1050fmcreport = "";
+    todaygold1050fmcreportForSharing = "";
   } else {
-    todaygold1000fmcreport =
-      "\n" + todaygold1000fmcAdjusted + " * We Gold 1000 FMC";
-    todaygold1000fmcreportForSharing =
-      "\n" + "```" + todaygold1000fmcAdjusted + "```" + " * We Gold 1000 FMC";
+    todaygold1050fmcreport =
+      "\n" + todaygold1050fmcAdjusted + " * We Gold 1050 FMC";
+    todaygold1050fmcreportForSharing =
+      "\n" + "```" + todaygold1050fmcAdjusted + "```" + " * We Gold 1050 FMC";
   }
-  if (todaygold1500fmc == "0") {
-    todaygold1500fmcreport = "";
-    todaygold1500fmcreportForSharing = "";
+  if (todaygold1300fmc == "0") {
+    todaygold1300fmcreport = "";
+    todaygold1300fmcreportForSharing = "";
   } else {
-    todaygold1500fmcreport =
-      "\n" + todaygold1500fmcAdjusted + " * We Gold 1500 FMC";
-    todaygold1500fmcreportForSharing =
-      "\n" + "```" + todaygold1500fmcAdjusted + "```" + " * We Gold 1500 FMC";
+    todaygold1300fmcreport =
+      "\n" + todaygold1300fmcAdjusted + " * We Gold 1300 FMC";
+    todaygold1300fmcreportForSharing =
+      "\n" + "```" + todaygold1300fmcAdjusted + "```" + " * We Gold 1300 FMC";
   }
-  if (todaygold200sa == "0") {
-    todaygold200sareport = "";
-    todaygold200sareportForSharing = "";
+  if (todaygold2000fmc == "0") {
+    todaygold2000fmcreport = "";
+    todaygold2000fmcreportForSharing = "";
   } else {
-    todaygold200sareport = "\n" + todaygold200saAdjusted + " * We Gold 200 SA";
-    todaygold200sareportForSharing =
-      "\n" + "```" + todaygold200saAdjusted + "```" + " * We Gold 200 SA";
+    todaygold2000fmcreport =
+      "\n" + todaygold2000fmcAdjusted + " * We Gold 2000 FMC";
+    todaygold2000fmcreportForSharing =
+      "\n" + "```" + todaygold2000fmcAdjusted + "```" + " * We Gold 2000 FMC";
   }
-  if (todaygold400sa == "0") {
-    todaygold400sareport = "";
-    todaygold400sareportForSharing = "";
+  if (todaygold260sa == "0") {
+    todaygold260sareport = "";
+    todaygold260sareportForSharing = "";
   } else {
-    todaygold400sareport = "\n" + todaygold400saAdjusted + " * We Gold 400 SA";
-    todaygold400sareportForSharing =
-      "\n" + "```" + todaygold400saAdjusted + "```" + " * We Gold 400 SA";
+    todaygold260sareport = "\n" + todaygold260saAdjusted + " * We Gold 260 SA";
+    todaygold260sareportForSharing =
+      "\n" + "```" + todaygold260saAdjusted + "```" + " * We Gold 260 SA";
   }
-  if (todaygold600sa == "0") {
-    todaygold600sareport = "";
-    todaygold600sareportForSharing = "";
+  if (todaygold525sa == "0") {
+    todaygold525sareport = "";
+    todaygold525sareportForSharing = "";
   } else {
-    todaygold600sareport = "\n" + todaygold600saAdjusted + " * We Gold 600 SA";
-    todaygold600sareportForSharing =
-      "\n" + "```" + todaygold600saAdjusted + "```" + " * We Gold 600 SA";
+    todaygold525sareport = "\n" + todaygold525saAdjusted + " * We Gold 525 SA";
+    todaygold525sareportForSharing =
+      "\n" + "```" + todaygold525saAdjusted + "```" + " * We Gold 525 SA";
   }
-  if (todaygold800sa == "0") {
-    todaygold800sareport = "";
-    todaygold800sareportForSharing = "";
+  if (todaygold775sa == "0") {
+    todaygold775sareport = "";
+    todaygold775sareportForSharing = "";
   } else {
-    todaygold800sareport = "\n" + todaygold800saAdjusted + " * We Gold 800 SA";
-    todaygold800sareportForSharing =
-      "\n" + "```" + todaygold800saAdjusted + "```" + " * We Gold 800 SA";
+    todaygold775sareport = "\n" + todaygold775saAdjusted + " * We Gold 775 SA";
+    todaygold775sareportForSharing =
+      "\n" + "```" + todaygold775saAdjusted + "```" + " * We Gold 775 SA";
   }
-  if (todaygold1000sa == "0") {
-    todaygold1000sareport = "";
-    todaygold1000sareportForSharing = "";
+  if (todaygold1050sa == "0") {
+    todaygold1050sareport = "";
+    todaygold1050sareportForSharing = "";
   } else {
-    todaygold1000sareport =
-      "\n" + todaygold1000saAdjusted + " * We Gold 1000 SA";
-    todaygold1000sareportForSharing =
-      "\n" + "```" + todaygold1000saAdjusted + "```" + " * We Gold 1000 SA";
+    todaygold1050sareport = "\n" + todaygold1050saAdjusted + " * We Gold 1050 SA";
+    todaygold1050sareportForSharing =
+      "\n" + "```" + todaygold1050saAdjusted + "```" + " * We Gold 1050 SA";
   }
-  if (todaygold1500sa == "0") {
-    todaygold1500sareport = "";
-    todaygold1500sareportForSharing = "";
+  if (todaygold1300sa == "0") {
+    todaygold1300sareport = "";
+    todaygold1300sareportForSharing = "";
   } else {
-    todaygold1500sareport =
-      "\n" + todaygold1500saAdjusted + " * We Gold 1500 SA";
-    todaygold1500sareportForSharing =
-      "\n" + "```" + todaygold1500saAdjusted + "```" + " * We Gold 1500 SA";
+    todaygold1300sareport =
+      "\n" + todaygold1300saAdjusted + " * We Gold 1300 SA";
+    todaygold1300sareportForSharing =
+      "\n" + "```" + todaygold1300saAdjusted + "```" + " * We Gold 1300 SA";
+  }
+  if (todaygold2000sa == "0") {
+    todaygold2000sareport = "";
+    todaygold2000sareportForSharing = "";
+  } else {
+    todaygold2000sareport =
+      "\n" + todaygold2000saAdjusted + " * We Gold 2000 SA";
+    todaygold2000sareportForSharing =
+      "\n" + "```" + todaygold2000saAdjusted + "```" + " * We Gold 2000 SA";
   }
   if (todayadsl140 == "0") {
     todayadsl140report = "";
@@ -1461,35 +1461,35 @@ function GenerateSalesReport() {
   todaysales =
     todaypaygreport +
     todaydatareport +
-    todaysuperkix20report +
     todaysuperkix25report +
-    todaysuperkix35report +
+    todaysuperkix32report +
     todaysuperkix45report +
-    todaysuperkix65report +
-    todaysuperkix80report +
-    todaysuperkix100report +
-    todaytazbeet30report +
+    todaysuperkix60report +
+    todaysuperkix85report +
+    todaysuperkix105report +
+    todaysuperkix130report +
     todaytazbeet40report +
-    todaytazbeet70report +
-    todaytazbeet110report +
-    todayweclub25report +
-    todayweclub40report +
-    todayweclub65report +
-    todayweclub100report +
-    todaywemix165report +
-    todaywemix240report +
-    todaygold200fmcreport +
-    todaygold400fmcreport +
-    todaygold600fmcreport +
-    todaygold800fmcreport +
-    todaygold1000fmcreport +
-    todaygold1500fmcreport +
-    todaygold200sareport +
-    todaygold400sareport +
-    todaygold600sareport +
-    todaygold800sareport +
-    todaygold1000sareport +
-    todaygold1500sareport +
+    todaytazbeet50report +
+    todaytazbeet90report +
+    todaytazbeet145report +
+    todayweclub32report +
+    todayweclub50report +
+    todayweclub85report +
+    todayweclub130report +
+    todaywemix215report +
+    todaywemix310report +
+    todaygold260fmcreport +
+    todaygold525fmcreport +
+    todaygold775fmcreport +
+    todaygold1050fmcreport +
+    todaygold1300fmcreport +
+    todaygold2000fmcreport +
+    todaygold260sareport +
+    todaygold525sareport +
+    todaygold775sareport +
+    todaygold1050sareport +
+    todaygold1300sareport +
+    todaygold2000sareport +
     todayadsl140report +
     todayadsl200report +
     todayadsl250report +
@@ -1505,35 +1505,35 @@ function GenerateSalesReport() {
   todaysalesForSharing =
     todaypaygreportForSharing +
     todaydatareportForSharing +
-    todaysuperkix20reportForSharing +
     todaysuperkix25reportForSharing +
-    todaysuperkix35reportForSharing +
+    todaysuperkix32reportForSharing +
     todaysuperkix45reportForSharing +
-    todaysuperkix65reportForSharing +
-    todaysuperkix80reportForSharing +
-    todaysuperkix100reportForSharing +
-    todaytazbeet30reportForSharing +
+    todaysuperkix60reportForSharing +
+    todaysuperkix85reportForSharing +
+    todaysuperkix105reportForSharing +
+    todaysuperkix130reportForSharing +
     todaytazbeet40reportForSharing +
-    todaytazbeet70reportForSharing +
-    todaytazbeet110reportForSharing +
-    todayweclub25reportForSharing +
-    todayweclub40reportForSharing +
-    todayweclub65reportForSharing +
-    todayweclub100reportForSharing +
-    todaywemix165reportForSharing +
-    todaywemix240reportForSharing +
-    todaygold200fmcreportForSharing +
-    todaygold400fmcreportForSharing +
-    todaygold600fmcreportForSharing +
-    todaygold800fmcreportForSharing +
-    todaygold1000fmcreportForSharing +
-    todaygold1500fmcreportForSharing +
-    todaygold200sareportForSharing +
-    todaygold400sareportForSharing +
-    todaygold600sareportForSharing +
-    todaygold800sareportForSharing +
-    todaygold1000sareportForSharing +
-    todaygold1500sareportForSharing +
+    todaytazbeet50reportForSharing +
+    todaytazbeet90reportForSharing +
+    todaytazbeet145reportForSharing +
+    todayweclub32reportForSharing +
+    todayweclub50reportForSharing +
+    todayweclub85reportForSharing +
+    todayweclub130reportForSharing +
+    todaywemix215reportForSharing +
+    todaywemix310reportForSharing +
+    todaygold260fmcreportForSharing +
+    todaygold525fmcreportForSharing +
+    todaygold775fmcreportForSharing +
+    todaygold1050fmcreportForSharing +
+    todaygold1300fmcreportForSharing +
+    todaygold2000fmcreportForSharing +
+    todaygold260sareportForSharing +
+    todaygold525sareportForSharing +
+    todaygold775sareportForSharing +
+    todaygold1050sareportForSharing +
+    todaygold1300sareportForSharing +
+    todaygold2000sareportForSharing +
     todayadsl140reportForSharing +
     todayadsl200reportForSharing +
     todayadsl250reportForSharing +
