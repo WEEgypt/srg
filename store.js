@@ -1504,10 +1504,10 @@ function GenerateSalesReport() {
         "* RE: " +
         reMobilereport +
         "\n" +
-        "* We Air Sales: " +
+        "* We Air: " +
         utdweair +
         "\n" +
-        "* MiFi Sales: " +
+        "* MiFi: " +
         utdmifi +
         "\n" +
         "--------------------------" +
@@ -1643,10 +1643,10 @@ function GenerateSalesReport() {
         "* RE: " +
         reMobilereport +
         "\n" +
-        "* We Air Sales: " +
+        "* We Air: " +
         utdweair +
         "\n" +
-        "* MiFi Sales: " +
+        "* MiFi: " +
         utdmifi +
         "\n" +
         "```--------------------------" +
