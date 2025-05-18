@@ -1504,12 +1504,6 @@ function GenerateSalesReport() {
         "* RE: " +
         reMobilereport +
         "\n" +
-        "* We Air: " +
-        utdweair +
-        "\n" +
-        "* MiFi: " +
-        utdmifi +
-        "\n" +
         "--------------------------" +
         "\n" +
         "Product:   " +
@@ -1612,6 +1606,14 @@ function GenerateSalesReport() {
         "\n" +
         "--------------------------" +
         "\n" +
+        "* Devices: " +
+        utdweair +
+        " We Air & " +
+        utdmifi +
+        " MiFi" +
+        "\n" +
+        "--------------------------" +
+        "\n" +
         "* ADSL Bills: " +
         todayadslbills +
         "\n" +
@@ -1642,12 +1644,6 @@ function GenerateSalesReport() {
         "\n" +
         "* RE: " +
         reMobilereport +
-        "\n" +
-        "* We Air: " +
-        utdweair +
-        "\n" +
-        "* MiFi: " +
-        utdmifi +
         "\n" +
         "```--------------------------" +
         "\n" +
@@ -1750,6 +1746,14 @@ function GenerateSalesReport() {
         "%" +
         "\n" +
         "--------------------------```" +
+        "\n" +
+        "* Devices: " +
+        utdweair +
+        " We Air & " +
+        utdmifi +
+        " MiFi" +
+        "\n" +
+        "```--------------------------```" +
         "\n" +
         "* ADSL Bills: " +
         todayadslbills +
