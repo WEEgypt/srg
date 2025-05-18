@@ -1606,7 +1606,7 @@ function GenerateSalesReport() {
         "\n" +
         "--------------------------" +
         "\n" +
-        "* Devices: " +
+        "* " +
         utdweair +
         " We Air & " +
         utdmifi +
@@ -1747,7 +1747,7 @@ function GenerateSalesReport() {
         "\n" +
         "--------------------------```" +
         "\n" +
-        "* Devices: " +
+        "* " +
         utdweair +
         " We Air & " +
         utdmifi +
