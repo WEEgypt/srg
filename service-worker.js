@@ -1,4 +1,4 @@
-const CACHE_NAME = "srg-v3";
+const CACHE_NAME = "srg-v4";
 const OFFLINE_URL = "./offline.html";
 const NOT_FOUND_URL = "./404.html";
 const ASSETS_TO_CACHE = [
